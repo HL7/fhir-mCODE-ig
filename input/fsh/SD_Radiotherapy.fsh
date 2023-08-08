@@ -14,18 +14,14 @@ RuleSet: IdentifierDisplayName  // FHIR-32239
 Invariant:  termination-reason-invariant 
 Description: "Certain statusReason values are allowed only when status is stopped" 
 Severity: #error
-* expression =  "statusReason.exists() and statusReason.coding.exists() and (statusReason.coding.system = 'http://snomed.info/sct' and 
-(statusReason.coding.code = '182992009' or statusReason.coding.code = '266721009' or statusReason.coding.code = '407563006' or statusReason.coding.code = '160932005' or
- statusReason.coding.code = '105480006' or statusReason.coding.code = '184081006' or statusReason.coding.code = '309846006' or statusReason.coding.code = '399307001' or 
- statusReason.coding.code = '419620001' or statusReason.coding.code = '7058009' or statusReason.coding.code = '443729008' or statusReason.coding.code = '77386006')) implies status = 'stopped'"
+* expression =  "statusReason.exists() and statusReason.coding.exists(
+      system = 'http://snomed.info/sct' and (code = '182992009' or code = '266721009' or code = '407563006' or code = '160932005' or
+ code = '105480006' or code = '184081006' or code = '309846006' or code = '399307001' or  code = '419620001' or code = '7058009' or code = '443729008' or code = '77386006')) implies status = 'stopped'"
 
 Invariant:  termination-reason-code-invariant 
 Description: "When status is stopped, only certain statusReason values are allowed"
 Severity: #error
-* expression = "status = 'stopped' and statusReason.exists() and statusReason.coding.exists() implies (statusReason.coding.system = 'http://snomed.info/sct' and 
-(statusReason.coding.code = '182992009' or statusReason.coding.code = '266721009' or statusReason.coding.code = '407563006' or statusReason.coding.code = '160932005' or
- statusReason.coding.code = '105480006' or statusReason.coding.code = '184081006' or statusReason.coding.code = '309846006' or statusReason.coding.code = '399307001' or 
- statusReason.coding.code = '419620001' or statusReason.coding.code = '7058009' or statusReason.coding.code = '443729008' or statusReason.coding.code = '77386006'))"
+* expression = "status = 'stopped' and statusReason.exists() and statusReason.coding.exists() implies statusReason.coding.exists(system = 'http://snomed.info/sct' and (code = '182992009' or code = '266721009' or code = '407563006' or code = '160932005' or code = '105480006' or code = '184081006' or code = '309846006' or code = '399307001' or code = '419620001' or code = '7058009' or code = '443729008' or code = '77386006'))"
 
 Profile:  RadiotherapyCourseSummary
 Parent:   USCoreProcedure  // considered one procedure with multiple parts
@@ -88,72 +84,79 @@ Description: "Extension capturing modality and technique of a given radiotherapy
 
 Invariant: ModalityTextRequiredForOther
 Description:  "Require a text literal for code other"
-* expression = "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
-         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(coding.system = 'http://terminology.hl7.org/CodeSystem/v3-NullFlavor' and coding.code = 'UNC')
+* expression = 
+     "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
+      extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists() and
+      extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.coding.exists(system = 'http://terminology.hl7.org/CodeSystem/v3-NullFlavor' and code = 'UNC')
    implies
-       extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(text)"
+      extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.text.exists()"
 * severity =  #error
 
 
 Invariant: TechniqueTextRequiredForOther
 Description:  "Require a text literal for code other"
-Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
-         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(coding.system = 'http://terminology.hl7.org/CodeSystem/v3-NullFlavor' and coding.code = 'UNC')
+Expression: 
+     "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
+      extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists() and
+      extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.coding.exists(system = 'http://terminology.hl7.org/CodeSystem/v3-NullFlavor' and code = 'UNC')
    implies
-       extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(text)"
+      extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.text.exists()"
 Severity: #error
 
 RuleSet: ModTechniqueConstraint(modCode, techCodes)
-* expression = "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
-         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
-         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(coding.system = 'http://snomed.info/sct' and coding.code = '{modCode}')
+* expression = 
+     "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
+      extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists() and
+      extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.coding.exists(system = 'http://snomed.info/sct' and code = '{modCode}')
    implies
-         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists( {techCodes})"
+      extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
+      extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists() and
+      extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.coding.exists({techCodes})"
 * severity = #error
 
 Invariant: TechniquesForPhotonBeamModality
 Description: "Allowed Techniques for Photon Beam Modality"
-* insert ModTechniqueConstraint([[1156506007]], [[(coding.code = 'UNC' or coding.code = '441799006' or coding.code = '1156530009' or coding.code = '1162782007' or coding.code = '1156526006' or coding.code = '168524008' or coding.code = '1156530009' or coding.code = '1163157007')]])
+* insert ModTechniqueConstraint([[1156506007]], [[code = 'UNC' or code = '441799006' or code = '1156530009' or code = '1162782007' or code = '1156526006' or code = '168524008' or code = '1156530009' or code = '1163157007']])
 
 Invariant: TechniquesForElectronBeamModality
 Description:  "Allowed Techniques for Electron Beam Modality"
-* insert ModTechniqueConstraint([[45643008]], [[(coding.code = 'UNC' or coding.code = '1162782007' or coding.code = '1156526006' or coding.code = '168524008' or coding.code = '1163157007')]])
+* insert ModTechniqueConstraint([[45643008]], [[code = 'UNC' or code = '1162782007' or code = '1156526006' or code = '168524008' or code = '1163157007']])
 
 Invariant: TechniquesForNeutronBeamModality
 Description:  "Allowed Techniques for Neutron Beam Modality"
-* insert ModTechniqueConstraint([[80347004]], [[(coding.code = 'UNC' or coding.code = '169317000' or coding.code = '1162782007')]])
+* insert ModTechniqueConstraint([[80347004]], [[code = 'UNC' or code = '169317000' or code = '1162782007']])
 
 Invariant: TechniquesForCarbonIonBeamModality
 Description:  "Allowed Techniques for Carbon Ion Beam Modality"
-* insert ModTechniqueConstraint([[1156505006]], [[(coding.code = 'UNC' or coding.code = '1156529004' or coding.code = '1156528007' or coding.code='1204242009')]])
+* insert ModTechniqueConstraint([[1156505006]], [[code = 'UNC' or code = '1156529004' or code = '1156528007' or code='1204242009']])
 
 Invariant: TechniquesForProtonBeamModality
 Description:  "Allowed Techniques for Proton Beam Modality"
-* insert ModTechniqueConstraint([[10611004]], [[(coding.code = 'UNC' or coding.code = '1156529004' or coding.code = '1156528007' or coding.code = '1204242009' or coding.code = '1163157007')]])
+* insert ModTechniqueConstraint([[10611004]], [[code = 'UNC' or code = '1156529004' or code = '1156528007' or code = '1204242009' or code = '1163157007']])
 
 Invariant: TechniquesForInternalRadiotherapyPermanentSeeds
 Description:  "Allowed Techniques for Internal Radiotherapy - Permanent Seeds"
-* insert ModTechniqueConstraint([[169359004]], [[(coding.code = 'UNC' or coding.code = '113120007')]])
+* insert ModTechniqueConstraint([[169359004]], [[code = 'UNC' or code = '113120007']])
 
 Invariant: TechniquesForLowDoseRateUsingTempRadSource
 Description:  "Allowed Techniques for Low Dose Rate Using Temp Radiation Source"
-* insert ModTechniqueConstraint([[1156708005]], [[(coding.code = 'UNC' or coding.code = '384692006' or coding.code = '113120007' or coding.code = '14473006')]])
+* insert ModTechniqueConstraint([[1156708005]], [[code = 'UNC' or code = '384692006' or code = '113120007' or code = '14473006']])
 
 Invariant: TechniquesForPulsedDoseRate
 Description:  "Allowed Techniques for Pulsed Dose Rate"
-* insert ModTechniqueConstraint([[1156384006]], [[(coding.code = 'UNC' or coding.code = '1156384006')]])
+* insert ModTechniqueConstraint([[1156384006]], [[code = 'UNC' or code = '1156384006']])
 
 Invariant: TechniquesForHighDoseRate
 Description:  "Allowed Techniques for High Dose Rate"
-* insert ModTechniqueConstraint([[394902000]], [[(coding.code = 'UNC' or coding.code = '394902000')]])
+* insert ModTechniqueConstraint([[394902000]], [[code = 'UNC' or code = '394902000']])
 
 Invariant: TechniquesForHighDoseRateElectronic
 Description:  "Allowed Techniques for High Dose Rate Electronic"
-* insert ModTechniqueConstraint([[438629002]], [[(coding.code = 'UNC' or coding.code = '384692006' or coding.code = '1156382005' or coding.code = '113120007' or coding.code = '384691004' or coding.code = '168524008' or coding.code = '14473006')]])
+* insert ModTechniqueConstraint([[438629002]], [[code = 'UNC' or code = '384692006' or code = '1156382005' or code = '113120007' or code = '384691004' or code = '168524008' or code = '14473006']])
 
 Invariant: TechniquesForRadioPharmaceutical
 Description:  "Allowed Techniques for Radiopharmaceutical"
-* insert ModTechniqueConstraint([[440252007]], [[(coding.code = 'UNC' or coding.code = '16560241000119104' or coding.code = '1156383000' or coding.code = '384692006' or coding.code = '113120007')]])
+* insert ModTechniqueConstraint([[440252007]], [[code = 'UNC' or code = '16560241000119104' or code = '1156383000' or code = '384692006' or code = '113120007']])
 
 /*
 
@@ -215,7 +218,7 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(coding.system = 'http://snomed.info/sct' and  (coding.code = 'UNC' or coding.code = '113120007'))"
 Severity: #error
 
-Invariant: TechniquesForLowDoseRateUsingTempRadSourcev1
+ TechniquesForLowDoseRateUsingTempRadSourcev1
 Description:  "Allowed Techniques for Low Dose Rate Using Temp Radiation Source"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and

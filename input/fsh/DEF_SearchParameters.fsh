@@ -11,8 +11,8 @@ Title: "Search by _id in Patients with multipleOr"
 * base[0] = #Patient
 * type = #token
 * multipleOr = true
-* expression = "Resource.id"
-* xpath = "f:Resource/f:id"
+* expression = "Patient.id"
+* xpath = "f:Patient/f:id"
 * xpathUsage = #normal
 
 Instance: Condition-code

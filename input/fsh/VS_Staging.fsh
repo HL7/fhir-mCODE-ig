@@ -25,7 +25,7 @@ Description: "Codes that identify the kind of stage reported in an Observation, 
 * SCT#371494008 "pN category (observable entity)"
 * SCT#384625004 "pT category (observable entity)"
 //* include codes from system SCT where concept is-a #399390009 "Tumor-node-metastasis (TNM) stage grouping (observable entity)"
-* SCT#399390009 "TNM stage grouping (observable entity)"
+* SCT#399390009 "Tumor-node-metastasis (TNM) stage grouping (observable entity)"
 * SCT#399537006 "Clinical TNM stage grouping (observable entity)"
 * SCT#399588009 "Pathologic TNM stage grouping (observable entity)"
 //* include codes from system SCT where concept is-a #385361009 "International Federation of Gynecology and Obstetrics stage for gynecological malignancy (observable entity)"
@@ -36,7 +36,7 @@ Description: "Codes that identify the kind of stage reported in an Observation, 
 * SCT#385375002 "FIGO stage for endometrial carcinoma (observable entity)"
 * SCT#385369006 "FIGO stage for vulvar carcinoma (observable entity)"
 * SCT#385373009 "FIGO uterine tumor stage (observable entity)"
-//* include codes from system SCT where concept is-a #371508000 "Tumor stage (observable entity)"
+//* include codes from system SCT where concept descendant-of #371508000 "Tumor stage (observable entity)"
 * SCT#385388004 "Lymphoma stage (observable entity)"
 // singletons
 * SCT#385349001 "Clinical stage (observable entity)"

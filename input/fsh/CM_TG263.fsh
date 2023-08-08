@@ -656,7 +656,7 @@ Usage: #definition
 * insert MapConcept(#VB_S5, "Sacral Vertebra S5", #21452006, "Structure of fifth sacral vertebra (body structure\)")
 * insert MapConcept(#VB_T, "Thoracic Vertebra", #35769007, "Bone structure of thoracic vertebra (body structure\)")
 * insert MapConcept(#VB_T01, "Thoracic Vertebra T1", #56094003, "Structure of body of first thoracic vertebra (body structure\)")
-* insert MapConcept(#VB_T02, "Thoracic Vertebra T2", #50060007, "Structure of body of secon thoracic vertebra (body structure\)")
+* insert MapConcept(#VB_T02, "Thoracic Vertebra T2", #50060007, "Structure of body of second thoracic vertebra (body structure\)")
 * insert MapConcept(#VB_T03, "Thoracic Vertebra T3", #73138009, "Structure of body of third thoracic vertebra (body structure\)")
 * insert MapConcept(#VB_T04, "Thoracic Vertebra T4", #86197001, "Structure of body of fourth thoracic vertebra (body structure\)")
 * insert MapConcept(#VB_T05, "Thoracic Vertebra T5", #6105006, "Structure of body of fifth thoracic vertebra (body structure\)")

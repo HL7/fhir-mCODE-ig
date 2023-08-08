@@ -629,7 +629,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#21452006 "Structure of fifth sacral vertebra (body structure)" // Sacral Vertebra S5
 * SCT#35769007 "Bone structure of thoracic vertebra (body structure)" // Thoracic Vertebra
 * SCT#56094003 "Structure of body of first thoracic vertebra (body structure)" // Thoracic Vertebra T1
-* SCT#50060007 "Structure of body of secon thoracic vertebra (body structure)" // Thoracic Vertebra T2
+* SCT#50060007 "Structure of body of second thoracic vertebra (body structure)" // Thoracic Vertebra T2
 * SCT#73138009 "Structure of body of third thoracic vertebra (body structure)" // Thoracic Vertebra T3
 * SCT#86197001 "Structure of body of fourth thoracic vertebra (body structure)" // Thoracic Vertebra T4
 * SCT#6105006 "Structure of body of fifth thoracic vertebra (body structure)" // Thoracic Vertebra T5

@@ -85,7 +85,7 @@ This extension is deprecated since it is redundant with the statusReason field."
 * value[x] only CodeableConcept
 * value[x] from TreatmentTerminationReasonVS (extensible)
 * value[x] 1..1
-* ^status = #retired 
+* ^status = #retired
 
 Extension: ProcedureIntent
 Id: mcode-procedure-intent

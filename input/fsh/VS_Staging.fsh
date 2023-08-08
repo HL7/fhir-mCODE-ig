@@ -20,7 +20,7 @@ Description: "Codes that identify the kind of stage reported in an Observation, 
 * SCT#399387003 "cM category (observable entity)"
 * SCT#399534004 "cN category (observable entity)"
 * SCT#399504009 "cT category (observable entity)"
-* SCT#106249008 "TNM classification of malignant tumor after operation"
+* SCT#106249008 "TNM classification of malignant tumor after operation (observable entity)"
 * SCT#371497001 "pM category (observable entity)"
 * SCT#371494008 "pN category (observable entity)"
 * SCT#384625004 "pT category (observable entity)"

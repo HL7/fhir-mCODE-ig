@@ -440,7 +440,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#71836000 "Nasopharyngeal structure (body structure)" // Nasal part of pharynx
 * SCT#59441001 "Structure of lymph node (body structure)" // Lymph Node
 * SCT#16051009 "Structure of apical axillary lymph node (body structure)" // Set of apical axillary lymphatic vessels
-* SCT#283001 "Structure of central axillary lymph node (body structure) |" // Set of central axillary lymphatic vessels
+* SCT#283001 "Structure of central axillary lymph node (body structure)" // Set of central axillary lymphatic vessels
 * SCT#68171009 "Axillary lymph node structure (body structure)" // Axillary lymphatic chain Left
 * SCT#33770006 "Structure of lateral axillary lymph node (body structure)" // Axillary lymphatic chain - Lateral Left
 * SCT#69691007 "Structure of pectoral axillary lymph node (body structure)" // Axillary lymphatic chain - Pectoral Left
@@ -629,7 +629,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#21452006 "Structure of fifth sacral vertebra (body structure)" // Sacral Vertebra S5
 * SCT#35769007 "Bone structure of thoracic vertebra (body structure)" // Thoracic Vertebra
 * SCT#56094003 "Structure of body of first thoracic vertebra (body structure)" // Thoracic Vertebra T1
-* SCT#50060007 "Structure of body of secon thoracic vertebra (body structure)" // Thoracic Vertebra T2
+* SCT#50060007 "Structure of body of second thoracic vertebra (body structure)" // Thoracic Vertebra T2
 * SCT#73138009 "Structure of body of third thoracic vertebra (body structure)" // Thoracic Vertebra T3
 * SCT#86197001 "Structure of body of fourth thoracic vertebra (body structure)" // Thoracic Vertebra T4
 * SCT#6105006 "Structure of body of fifth thoracic vertebra (body structure)" // Thoracic Vertebra T5

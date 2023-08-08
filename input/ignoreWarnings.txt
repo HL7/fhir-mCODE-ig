@@ -19,19 +19,20 @@ Error from server: Unable to provide support for code system http://www.ama-assn
 Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
 Unknown System 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated)
 Unknown System 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' specified, so Concepts and Filters can't be checked (Details: The CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl is unknown (from Tx-Server))
-Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
 Code System URI 'http://www.ncbi.nlm.nih.gov/gtr' is unknown so the code cannot be validated
 Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
-Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
-Code System URI 'http://www.ncbi.nlm.nih.gov/refseq' is unknown so the code cannot be validated
 Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
-Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
 Code System URI 'https://www.gensop.com' is unknown so the code cannot be validated
-Code System URI 'http://terminology.hl7.org/CodeSystem/icd-o-3' is unknown so the code cannot be validated
 Unknown Source Code System TG263, so the source codes cannot be checked
-Unable to check whether the code is in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs|3.0.0
+Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs|3.0.0
+The definition for the Code System with URI 'http://terminology.hl7.org/CodeSystem/icd-o-3' doesnt provide any codes so the code cannot be validated
+The definition for the Code System with URI 'http://www.genenames.org' doesnt provide any codes so the code cannot be validated
+The definition for the Code System with URI 'http://www.ncbi.nlm.nih.gov/refseq' doesnt provide any codes so the code cannot be validated
+The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesnt provide any codes so the code cannot be validated
+The definition for the Code System with URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' doesnt provide any codes so the code cannot be validated
+The definition for the Code System with URI 'http://www.ncbi.nlm.nih.gov/clinvar' doesnt provide any codes so the code cannot be validated
 
-# UNABLE TO RESOLVE LOINC LIST ELEMENTS
+# UNABLE TO RESOLVE LOINC LIST ANSWER CODES
 The valueSet reference http://loinc.org/vs/LL529-9 on element Observation.interpretation could not be resolved
 The valueSet reference http://loinc.org/vs/LL5323-2 on element Observation.component.value[x] could not be resolved
 The valueSet reference http://loinc.org/vs/LL378-1 on element Observation.component.value[x] could not be resolved
@@ -42,7 +43,6 @@ The valueSet reference http://loinc.org/vs/LL1971-2 on element Observation.value
 The valueSet reference http://loinc.org/vs/LL4048-6 on element Observation.method could not be resolved
 The valueSet reference http://loinc.org/vs/LL1040-6 on element Observation.component.value[x] could not be resolved
 The valueSet reference http://loinc.org/vs/LL4986-7 on element Observation.interpretation could not be resolved
-The valueSet reference http://loinc.org/vs/LL4986-7 on element Observation.interpretation could not be resolved
 
 # SUPPRESS INFORMATION MESSAGES "DOES NOT MATCH ANY KNOWN SLICE" DUE TO TERMINOLOGY LIMITATIONS
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|3.0.0
@@ -51,10 +51,25 @@ This element does not match any known slice defined in the profile http://hl7.or
 
 # DETAILS MESSAGES (THEY APPEAR FOR GROUPING PURPOSES ONLY)
 Details for Observation/genomic-variant-jenny-m matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
-Details for Observation/tnm-clinical-stage-group-jenny-m matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 Details for Observation/gx-genomic-variant-somatic-polrmt matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 Details for Observation/gx-genomic-variant-somatic-pof1b matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 Details for Observation/gx-genomic-variant-somatic-bap1-indel matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
-Details for Observation/gx-genomic-variant-somatic-polrmt matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
-Details for Observation/gx-genomic-variant-somatic-pof1b matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
-Details for Observation/gx-genomic-variant-somatic-bap1-indel matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+
+# ERROR MESSAGE ON HGVS NOMECLATURE
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NM_004656.4:c.1768C>T)
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NP_004647.1:p.(Gln590Ter))
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NM_001307940.2:c.430C>T)
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NP_001294869.1:p.(Pro144Ser))
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NM_005035.4:c.598G>A)
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NP_005026.3:p.(Gly200Arg))
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NC_000016.10:g.23603471G>T)
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NM_005157.6(ABL1):c.1076T>G)
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NG_005905.2:g.126148_126152del)
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NC_000016.10:g.23603471G>T)
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NM_000455.5:c.725G>A)
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NM_004656.4:c.1768C>T)
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NP_004647.1:p.(Gln590Ter))
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NM_001307940.2:c.430C>T)
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NP_001294869.1:p.(Pro144Ser))
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NM_005035.4:c.598G>A)
+None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NP_005026.3:p.(Gly200Arg))

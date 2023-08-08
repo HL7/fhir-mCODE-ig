@@ -255,7 +255,7 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#260521003  "Internal (qualifier value)"
 * SCT#261074009  "External (qualifier value)"
 * SCT#260548002  "Oral (qualifier value)"
-* SCT#18769003   "Adjacent" // aka "Juxta-posed (qualifier value)"
+* SCT#18769003   "Juxta-posed (qualifier value)" // aka "Adjacent"
 * SCT#1217011006 "Non-adjacent (qualifier value)"
 * SCT#258400004 "Lymph node level I (qualifier value)"
 * SCT#1162616006 "Lymph node level IA (qualifier value)"
@@ -600,7 +600,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#46105003 "Vocal cord structure (body structure)" // Vocal Cords
 * SCT#45292006 "Vulval structure (body structure)" // Vulva
 * SCT#263355003 "Vaginal wall (body structure)" // Wall of vagina
-* SCT#38266002 "Entire body as a whole (body structure) |" // Only the body
+* SCT#38266002 "Entire body as a whole (body structure)" // Only the body
 * SCT#75330005 "Structure of red bone marrow (body structure)" // Active Bone Marrow
 * SCT#52940008 "Thyroid cartilage structure (body structure)" // Thyroid cartilage
 * SCT#15328005 "Structure of suprasellar region (body structure)" // Suprasellar Cistern

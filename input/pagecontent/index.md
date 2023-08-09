@@ -17,21 +17,21 @@ mCODE consists of approximately 30 FHIR profiles organized into six thematic gro
 
 The overall scope of mCODE and the relationships between mCODE profiles is shown in the following diagram (not all details are shown). Click on items to see their underlying definitions. When viewing the diagram, please note:
 
-1. mCODE does not define a specific set of information that must be collected for each cancer patient. Instead, mCODE presents a set of patterns or templates, including controlled terminologies, to be used when certain data in the above groups are shared. 
+* mCODE does not define a specific set of information that must be collected for each cancer patient. Instead, mCODE presents a set of patterns or templates, including controlled terminologies, to be used when certain data in the above groups are shared. 
 
-> **Example:** mCODE includes a FHIR profile for ECOG performance status, but clearly not every cancer patient undergoes such an evaluation. However, if a patient *has had* an ECOG performance evaluation, that information must be shared in a manner conforming to mCODE's ECOG profile. 
+  ***Example:** mCODE includes a FHIR profile for ECOG performance status, but clearly not every cancer patient undergoes such an evaluation. However, if a patient has had an ECOG performance evaluation, that information must be shared in a manner conforming to mCODE's ECOG profile.*
 
-2. The need to conform to mCODE profiles when sharing information may influence the way data is collected at the source and recorded in an EHR, for example, by tailoring the values included in a pick-list.
+* The need to conform to mCODE profiles when sharing information may influence the way data is collected at the source and recorded in an EHR, for example, by tailoring the values included in a pick-list.
 
-> **Example:** mCODE provides a specific set of values for [procedure intent][ProcedureIntentVS]. The need for terminology mapping can be minimized if the EHR offers these specific choices.
+  ***Example:** mCODE provides a specific set of values for [procedure intent][ProcedureIntentVS]. The need for terminology mapping can be minimized if the EHR offers these specific choices.*
 
-3. The absence of an mCODE profile only means that mCODE does not impose any specific requirements for how that type of information is represented (above and beyond the base FHIR specification). In other words, if mCODE does not have a profile for some type of data, it still can be included with mCODE data using an appropriate resource or profile.
+* The lack of an mCODE profile only means that mCODE does not impose any specific requirements on that type of information (above and beyond the base FHIR specification). In other words, if mCODE does not have a profile for some type of data, it still can be included with mCODE data using an appropriate resource or profile.
 
-> **Example:** mCODE does not include a profile for care teams. However, users can share care team information using [FHIR's CareTeam resource](https://hl7.org/fhir/R4B/careteam.html), using a profile such as [US Core CareTeam](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-careteam.html).
+  ***Example:** mCODE does not include a profile for care teams. However, users can share care team information using [FHIR's CareTeam resource](https://hl7.org/fhir/R4B/careteam.html), using a profile such as [US Core CareTeam](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-careteam.html).*
   
-4. Additional profiles can be derived from mCODE. It is expected that mCODE will serve as the basis for future implementation guides dealing with new use cases, particular types of cancer, or specific demographic groups.
+* Additional profiles can be derived from mCODE. It is expected that mCODE will serve as the basis for future implementation guides dealing with new use cases, particular types of cancer, or specific demographic groups.
 
-> **Example:** A group of surgeons may collaborate to create a profile for reconstructive procedures, assuring mCODE compliance by deriving their profile from mCODE's [CancerRelatedSurgicalProcedure] profile.
+  ***Example:** A group of surgeons collaborate on creation of a profile for reconstructive procedures, assuring mCODE compliance by deriving their profile from mCODE's [CancerRelatedSurgicalProcedure] profile.*
 
 <object data="mCodeDiagram.svg" type="image/svg+xml"></object>
 <br/>

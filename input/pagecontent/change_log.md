@@ -49,6 +49,9 @@ An mCODE user [pointed out](https://chat.fhir.org/#narrow/stream/179234-Cancer-I
 ### Relaxing Required Bindings for stage.type on PrimaryCancerCondition ([FHIR-41031](https://jira.hl7.org/browse/FHIR-41031)
 The binding strength of `Condition.stage.type` in the [PrimaryCancerCondition] profile has been relaxed to extensible, since it is unreasonable to expect that the [CancerStagingMethodVS] valueset will encompass all possible staging methods.
 
+### Change Conformance Verb from MUST to SHALL ([FHIR-40931](https://jira.hl7.org/browse/FHIR-40931))
+HL7 specifications use [RFC 2119](https://tools.ietf.org/html/rfc2119) keywords to indicate conformance requirement levels. In RFC 2119, the words MUST, REQUIRED, and SHALL are synonymous. The mCODE specification has always used MUST and SHALL interchangeably. Even though this is 100% acceptable within RFC 2119, FHIR specifications generally prefer the word SHALL, so the specification was changed to follow this precedent.
+
 <br/>
 <br/>
 ----

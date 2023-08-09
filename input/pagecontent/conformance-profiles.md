@@ -93,9 +93,8 @@ An mCODE data element is **required** if any of the following criteria are met:
 
 * The element is a top-level element (a first-level property of the resource) and its minimum cardinality is > 0 in the profile.
 * The element not a top-level element (a second-level property or below), its minimum cardinality is > 0, and all elements directly containing that element have minimum cardinality > 0 in the profile.
-* The element is not a top-level element, its minimum cardinality is > 0, and its immediate higher-level containing element exists in an _instance_ attempting to conform to the profile.
 
-Note that a data element may be `1..1`, but if it is contained by an optional element, then it is not required unless its containing element is actually present.
+In terms of instances, if profile P has an optional element A whose child element B has minimum cardinality > 0, then any instance where element A is present will only conform to P if element B is present.
 
 ### Must-Implement Summary
 

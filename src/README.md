@@ -27,7 +27,7 @@ You **do not** need to re-run SUSHI or the IG Publisher before running the tests
 The invariant `must-have-focus-or-specimen-invariant` (defined for the tumor size profile) has the following contents:
 
     Invariant: must-have-focus-or-specimen-invariant
-    Description: "Either `focus` OR `specimen` MUST be populated"
+    Description: "Either `focus` OR `specimen` SHALL be populated"
     Expression: "(focus.exists() or specimen.exists()) and (focus.exists() and specimen.exists()).not()"
     Severity: #error
 

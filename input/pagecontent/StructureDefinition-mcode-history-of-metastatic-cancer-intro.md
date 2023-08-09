@@ -5,7 +5,7 @@ To query for a history of metastatic cancer implementers should look for instanc
 
 ### Conformance
 
-Observation resources associated with an [in-scope patient] with a Observation.code in the value set [HistoryMetastaticMalignantNeoplasmVS] MUST conform to this profile.  Any resource intended to conform to this profile SHOULD populate `meta.profile` accordingly.
+Observation resources associated with an [in-scope patient] with a Observation.code in the value set [HistoryMetastaticMalignantNeoplasmVS] SHALL conform to this profile.  Any resource intended to conform to this profile SHOULD populate `meta.profile` accordingly.
 
 
 {% include markdown-link-references.md %}

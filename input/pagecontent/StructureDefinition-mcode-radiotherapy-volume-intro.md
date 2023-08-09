@@ -23,6 +23,6 @@ A known limitation of the RadiotherapyVolume is that it accepts only one coded l
 
 ### Conformance
 
-BodyStructure resources whose morphology has a code from the value set [RadiotherapyVolumeTypeVS] MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an [in-scope patient] that would reasonably be expected to conform to this profile SHOULD be published in this form. Any resource intended to conform to this profile SHOULD populate `meta.profile` accordingly.
+BodyStructure resources whose morphology has a code from the value set [RadiotherapyVolumeTypeVS] SHALL conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an [in-scope patient] that would reasonably be expected to conform to this profile SHOULD be published in this form. Any resource intended to conform to this profile SHOULD populate `meta.profile` accordingly.
 
 {% include markdown-link-references.md %}

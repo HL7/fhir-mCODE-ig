@@ -49,6 +49,9 @@ An mCODE user [pointed out](https://chat.fhir.org/#narrow/stream/179234-Cancer-I
 ### Relaxing Required Bindings for stage.type on PrimaryCancerCondition ([FHIR-41031](https://jira.hl7.org/browse/FHIR-41031)
 The binding strength of `Condition.stage.type` in the [PrimaryCancerCondition] profile has been relaxed to extensible, since it is unreasonable to expect that the [CancerStagingMethodVS] valueset will encompass all possible staging methods.
 
+### Change Conformance Verb from MUST to SHALL ([FHIR-40931](https://jira.hl7.org/browse/FHIR-40931))
+HL7 specifications use [RFC 2119](https://tools.ietf.org/html/rfc2119) keywords to indicate conformance requirement levels. In RFC 2119, the words MUST, REQUIRED, and SHALL are synonymous. The mCODE specification has always used MUST and SHALL interchangeably. Even though this is 100% acceptable within RFC 2119, FHIR specifications generally prefer the word SHALL, so the specification was changed to follow this precedent.
+
 <br/>
 <br/>
 ----
@@ -71,7 +74,7 @@ Due to copyright restrictions still in effect, specific AJCC codes cannot be enu
 
 This change addresses the issue <https://jira.hl7.org/browse/FHIR-37593>.
 
-The binding strength for these value sets remains "preferred", meaning that the SNOMED codes are not required. However, any alternative codes MUST be AJCC codes. This has been implemented through addition of [maximum value sets](http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet) to the bindings. The maximum value sets are:
+The binding strength for these value sets remains "preferred", meaning that the SNOMED codes are not required. However, any alternative codes SHALL be AJCC codes. This has been implemented through addition of [maximum value sets](http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet) to the bindings. The maximum value sets are:
 
 * [TNMStageGroupMaxVS]
 * [TNMPrimaryTumorCategoryMaxVS]
@@ -172,7 +175,7 @@ As a result, there are new required values for `Condition.category` or `Observat
 mCODE is now is explicitly dependent on the [Genomics Reporting IG STU2 (v2.0.0)](http://hl7.org/fhir/uv/genomics-reporting/STU2/index.html) (GRIG). This eliminates the duplication of profiles that existed in STU 1 and STU 2, and assures that the two IGs remain in synchronization. The following changes were made:
 
 * [GenomicsReport], [GenomicRegionStudied], and [GenomicVariant] now inherit from the corresponding profiles in GRIG.
-* Inheritance from US Core was removed from these profiles, since FHIR does not allow a profile to have two parents. Instances MUST be consistent with US Core but the FHIR IG Publisher does not recognize US Core compliance because it does not derive from inheritance.
+* Inheritance from US Core was removed from these profiles, since FHIR does not allow a profile to have two parents. Instances SHALL be consistent with US Core but the FHIR IG Publisher does not recognize US Core compliance because it does not derive from inheritance.
 * Component names in genomics examples were aligned to the component names in GRIG.
 * The diagnosticImplication component of GenomicVariant (present in STU 2) does not exist in GRIG. Users should express diagnostic implications of a variant using the GRIG [DiagnosticImplication](http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-diagnostic-implication.html) profile.
 * Value sets that are no longer required because equivalents are defined externally in GRIG were removed: HGNCVS, HGVSVS, GenomicMolecularConsequenceVS, ClinvarVS, and DNAChangeTypeVS.

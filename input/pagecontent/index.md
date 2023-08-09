@@ -2,7 +2,7 @@
 
 Cancer is among the leading causes of death worldwide. According to the National Cancer Institute, in the United States, 39.5 percent of men and women will be diagnosed with cancer at some point during their lifetimes. In 2020, an estimated 1,806,590 new cases of cancer will be diagnosed in the United States and 606,520 people will die from the disease. While these numbers are staggering, the silver lining in the wide prevalence of cancer is the potential to learn from treatment of millions of patients. If we had research-quality data from all cancer patients, it would enable better health outcomes. Today, we lack the data models, technologies, and methods to capture that data.
 
-[mCODE™](https://mcodeinitiative.org/) (short for Minimal Common Oncology Data Elements) is an initiative intended to assemble a core set of structured data elements for oncology electronic health records (EHRs). mCODE is a step towards capturing research-quality data from the treatment of all cancer patients. This would enable the treatment of every cancer patient to contribute to [comparative effectiveness analysis (CEA)](https://en.wikipedia.org/wiki/Comparative_effectiveness_research) of cancer treatments by allowing for easier methods of data exchange between health systems.
+[mCODE™](https://mcodeinitiative.org/) (short for Minimal Common Oncology Data Elements) is an initiative intended to increase interoperability by assembling a core set of structured data elements for oncology electronic health records (EHRs). mCODE is a step towards capturing research-quality data from the treatment of all cancer patients. This would enable the treatment of every cancer patient to contribute to [comparative effectiveness analysis (CEA)](https://en.wikipedia.org/wiki/Comparative_effectiveness_research) of cancer treatments by allowing for easier methods of data exchange between health systems.
 
 ### Overview
 
@@ -15,24 +15,31 @@ mCODE consists of approximately 30 FHIR profiles organized into six thematic gro
 * [Cancer Treatments Group](group-treatment.html)
 * [Outcomes Group](group-outcome.html)
 
-The overall scope of mCODE and the relationships between mCODE profiles is illustrated in the following diagram (not all details are shown). Click on items to see their underlying definitions.
+The overall scope of mCODE and the relationships between mCODE profiles is shown in the following diagram (not all details are shown). Click on items to see their underlying definitions. When viewing the diagram, please note:
+
+1. mCODE does not define a specific set of information that must be collected for each cancer patient. Instead, mCODE presents a set of patterns or templates, including controlled terminologies, to be used when certain data in the above groups are shared. 
+
+> **Example:** mCODE includes a FHIR profile for ECOG performance status, but clearly not every cancer patient undergoes such an evaluation. However, if a patient *has had* an ECOG performance evaluation, that information must be shared in a manner conforming to mCODE's ECOG profile. 
+
+2. The need to conform to mCODE profiles when sharing information may influence the way data is collected at the source and recorded in an EHR, for example, by tailoring the values included in a pick-list.
+
+> **Example:** mCODE provides a specific set of values for [procedure intent][ProcedureIntentVS]. The need for terminology mapping can be minimized if the EHR offers these specific choices.
+
+3. The absence of an mCODE profile only means that mCODE does not impose any specific requirements for how that type of information is represented (above and beyond the base FHIR specification). In other words, if mCODE does not have a profile for some type of data, it still can be included with mCODE data using an appropriate resource or profile.
+
+> **Example:** mCODE does not include a profile for care teams. However, users can share care team information using [FHIR's CareTeam resource](https://hl7.org/fhir/R4B/careteam.html), using a profile such as [US Core CareTeam](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-careteam.html).
+  
+4. Additional profiles can be derived from mCODE. It is expected that mCODE will serve as the basis for future implementation guides dealing with new use cases, particular types of cancer, or specific demographic groups.
+
+> **Example:** A group of surgeons may collaborate to create a profile for reconstructive procedures, assuring mCODE compliance by deriving their profile from mCODE's [CancerRelatedSurgicalProcedure] profile.
 
 <object data="mCodeDiagram.svg" type="image/svg+xml"></object>
 <br/>
 
-### Extensibility
-
-mCODE is an extensible standard, open to increased scope (horizontal extensibility) and to more specific subcases (vertical extensibility):
-
-* mCODE is horizontally extensible in the sense that information not specifically covered by an mCODE profile is not excluded. For example, there is no specific profile for care teams in mCODE, but sharing care team information is essential in some workflows. In such cases, the user should express this information using an appropriate FHIR resources and/or profiles. Users will need to exercise judgment regarding the best choice of profiles.
-
-* mCODE is vertically extensible in the sense that more specific profiles can be derived from mCODE. For example, a user could create a profile for a specific type of procedure, such as a reconstructive procedure, using the mCODE procedure profile as a parent. It is expected that mCODE will serve as the basis for future implementation guides dealing with new use cases, particular types of cancer, or specific demographic groups.
-
-To be perfectly clear, if mCODE does not have a profile for some type of data, it CAN be included with mCODE data using an appropriate resource or profile.
 
 ### Data Dictionary
 
-Readers should also take note of the [Data Dictionary](dictionary.html), a flattened list of data elements in mCODE in Microsoft Excel format. There is also a [Data Dictionary Differential](dictionary.html#data-dictionary-differential) that compares STU 3 with STU 2 on an element-by-element basis.
+Readers should take note of the [Data Dictionary](dictionary.html), a flattened list of data elements in mCODE in Microsoft Excel format. There is also a [Data Dictionary Differential](dictionary.html#data-dictionary-differential) that compares STU 3 with STU 2 on an element-by-element basis.
 
 The Data Dictionary comes with several caveats:
 
@@ -49,7 +56,7 @@ In late 2018, [American Society of Clinical Oncology (ASCO®)](https://www.asco.
 * **Use Case 1**: [Comparative Effectiveness Analysis and Cooperative Decision Making](mCODE-UseCase-RCC.docx)
 * **Use Case 2**: [Comparative Effectiveness Analysis with Next Generation Sequencing (NGS)](mCODE-UseCase-NGS.docx)
 
-After the initial analysis, an open survey was conducted to validate and prioritize the data elements from these use cases. Down-scoping was conducted based on the likelihood the data elements would be found in current EHRs, and if collecting the data would place undue burden on clinicians. In 2019, mCODE was balloted and approved as an HL7 Standard for Trial Use (STU 1). In the ensuing period, mCODE was piloted at a number of clinical sites, facilitated by the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home). Use cases are tracked [here](https://confluence.hl7.org/display/COD/CodeX+Use+Cases). Incorporating that experience, the second trial use publication (STU 2) was balloted in May 2021, and published in January 2022. A non-balloted update containing terminology updates, version 2.1, was published in March 2023.
+After the initial analysis, an open survey was conducted to validate and prioritize the data elements from these use cases. Down-scoping was conducted based on the likelihood the data elements would be found in current EHRs, and if collecting the data would place undue burden on clinicians. In 2019, mCODE was balloted and approved as an HL7 Standard for Trial Use (STU 1). In the ensuing period, mCODE was piloted at a number of clinical sites, facilitated by the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home). Use cases are tracked [here](https://confluence.hl7.org/display/COD/CodeX+Use+Cases). Incorporating that experience, the second trial use publication (STU 2) was balloted in May 2021, and published in January 2022. A non-balloted update containing terminology updates, version 2.1, was published in March 2023. STU 3 was balloted in April-May 2023.
 
 ### Sources
 
@@ -59,9 +66,10 @@ In addition to information obtained from subject matter experts, several existin
 * [American College of Surgeons(ACS): Standards for Registry Entry (STORE)](https://www.facs.org/-/media/files/quality-programs/cancer/ncdb/store_manual_2021.ashx)
 * [American Society for Radiation Oncology (ASTRO): Minimum Data Elements for Radiation Oncology](https://www.practicalradonc.org/article/S1879-8500(19)30232-2/fulltext)
 * [American Society for Radiation Oncology (ASTRO) Commission on Cancer Workgroup: A Multidisciplinary Consensus Recommendation on a Synoptic Radiation Treatment Summary](https://www.practicalradonc.org/article/S1879-8500(20)30002-3/fulltext)
-* [American Joint Committee on Cancer (AJCC): Staging Manual (8th Edition) Breast Cancer Chapter](https://cancerstaging.org/references-tools/deskreferences/Pages/Breast-Cancer-Staging.aspx)
+* [American Joint Committee on Cancer (AJCC): Staging Manual (8th Edition)](https://www.facs.org/quality-programs/cancer-programs/american-joint-committee-on-cancer/)
 * [Clinical Data Interchange Standards Consortium (CDISC): Therapeutic Area User Guides (TAUG)](https://www.cdisc.org/standards/therapeutic-areas/disease-area)
 * [College of American Pathologists (CAP): Cancer Protocols](https://www.cap.org/protocols-and-guidelines)
+* [The DICOM Standard](https://www.dicomstandard.org/)
 * [HL7 CDA R2 IG: Reporting to Public Health Cancer Registries from Ambulatory Healthcare Providers](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=383)
 * [HL7 FHIR Genomics Reporting Implementation Guidance (STU1)](http://hl7.org/fhir/uv/genomics-reporting/index.html)
 * [Human Genome Organization (HUGO): Gene Nomenclature Committee](https://www.genenames.org/)
@@ -88,7 +96,7 @@ The authors gratefully acknowledge the leadership of Dr. Monica Bertagnolli, for
 
 The authors recognize HL7 sponsorship and input from [Clinical Interoperability Council](http://www.hl7.org/Special/committees/cic/index.cfm), with special thanks to Laura Heermann Langford, Russell Leftwich, and James McClay. The [HL7 Clinical Genomics Work Group](https://confluence.hl7.org/display/CGW) has been a consistent and constructive partner during this project. Lloyd McKenzie and Grahame Grieve contributed to mCODE in countless ways with their outstanding energy and dedication.
 
-Andre Quina and Nichole Ng guide the overall mCODE effort at MITRE. Key MITRE contributors include Mark Kramer, May Terry, Max Masnick, Saul Kravitz, Su Chen, Rute Martins, Chris Moesel, Caroline Potteiger, Anthony DiDonato, and Sharon Sebastian. Su Chen leads the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home), a member-driven community accelerating implementation around mCODE standard. Capability statements were rendered with tools developed by Eric Haas and modified by Corey Spears. Max Masnick wrote the [Data Dictionary generator](https://github.com/HL7/fhir-mCODE-ig/tree/master/data-dictionary).
+Andre Quina and Nichole Ng guide the overall mCODE effort at MITRE. Key MITRE contributors include Mark Kramer, May Terry, Max Masnick, Saul Kravitz, Su Chen, Rute Martins, Chris Moesel, Caroline Potteiger, Anthony DiDonato, and Sharon Sebastian. Su Chen leads the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home), a member-driven community accelerating implementation around mCODE standard. Capability statements were rendered with tools developed by Eric Haas and modified by Corey Spears. Max Masnick wrote the [Data Dictionary generator](https://github.com/HL7/fhir-mCODE-ig/tree/master/data-dictionary) (now known as the IG Summary Tool)
 
 ### Contact Information
 

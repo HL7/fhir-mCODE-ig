@@ -182,7 +182,7 @@ mCODE is now is explicitly dependent on the [Genomics Reporting IG STU2 (v2.0.0)
 
 ### Change in mCODE Bundle Slicing
 
-The mCODE bundle definition now slices on resource type, rather than profile. Slicing logic was changed because, in some cases, instances could not be assigned unambigously to a slice, causing the FHIR validator to output errors. With this change, the assignment to a slice will always be unambiguous. This change has no effect on the contents or use of the mCODE bundle.
+The mCODE bundle definition now slices on resource type, rather than profile. Slicing logic was changed because, in some cases, instances could not be assigned unambiguously to a slice, causing the FHIR validator to output errors. With this change, the assignment to a slice will always be unambiguous. This change has no effect on the contents or use of the mCODE bundle.
 
 ### Addition of Patient History of Metastatic Cancer
 

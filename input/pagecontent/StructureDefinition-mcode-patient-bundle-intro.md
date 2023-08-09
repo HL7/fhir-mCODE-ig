@@ -1,6 +1,6 @@
 ### Usage
 
-The bundle MUST contain exactly one Patient resource conforming to the [CancerPatient] profile (any patient conforming with US Core Patient is also conformant). The bundle MUST also contain following mCODE-conformant resources, if available to the server:
+The bundle SHALL contain exactly one Patient resource conforming to the [CancerPatient] profile (any patient conforming with US Core Patient is also conformant). The bundle SHALL also contain following mCODE-conformant resources, if available to the server:
 
 * FHIR Observation Resources, if they exist for the patient, including but not limited to: [CancerDiseaseStatus], [CancerStage] (TNM and non-TNM), [Comorbidities], [ECOGPerformanceStatus], [GenomicRegionStudied], [GenomicVariant], [KarnofskyPerformanceStatus], [TumorMarkerTest], [TumorSize], and [USCoreVitalSigns].
 * FHIR Condition Resources, if they exist for the patient, including but not limited to: [PrimaryCancerCondition], [SecondaryCancerConditio], and [HistoryOfMetastaticCancer].
@@ -23,6 +23,6 @@ By default, this Bundle includes _all_ required resources described above, irres
 
 ### Conformance
 
-The bundle itself MUST validate against the current profile.
+The bundle itself SHALL validate against the current profile.
 
 {% include markdown-link-references.md %}

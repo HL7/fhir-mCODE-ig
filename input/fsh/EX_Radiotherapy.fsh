@@ -24,10 +24,12 @@ Description: "Example of radiotherapy treatment summary involving external beam 
     * valueCodeableConcept = NULLFLAVOR#UNC "un-encoded"
     * valueCodeableConcept.text = "Three dimensional external beam radiation therapy (procedure) - my version"
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
-* extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
+//* extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
+* extension[doseDeliveredToVolume][0].extension[effectiveDoseDelivered].valueQuantity = 60 'BED'
 * extension[doseDeliveredToVolume][0].extension[fractionsDelivered].valueUnsignedInt = 30
 * extension[doseDeliveredToVolume][1].extension[volume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes-treatment-volume)
-* extension[doseDeliveredToVolume][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+//* extension[doseDeliveredToVolume][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[doseDeliveredToVolume][1].extension[effectiveDoseDelivered].valueQuantity = 50 'BED'
 * extension[doseDeliveredToVolume][1].extension[fractionsDelivered].valueUnsignedInt = 25
 * subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)

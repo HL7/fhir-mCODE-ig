@@ -286,6 +286,21 @@ Description: "The number of sessions in a course of radiotherapy."
 * value[x] only unsignedInt
 * value[x] 1..1
 
+CodeSystem: EffectiveDoseUnitsCS
+Id: mcode-effective-dose-units-vs 
+Title: "Radiotherapy Effective Dose Units CodeSystem"
+Description: "Radiotherapy Effective Dose Units based on TG263"
+* #Gy "Grey"
+* #CGE "Cobalt grey-equivalent"
+* #EQD2Gy "Equivalent Dose in 2 Gy Fractions"
+* #BED "Biologically Effective Dose"
+
+ValueSet: EffectiveDoseUnitsVS
+Id: mcode-effective-dose-units-vs 
+Title: "Radiotherapy Effective Dose Units ValueSet"
+Description: "Radiotherapy Effective Dose Units based on TG263"
+* include codes from system EffectiveDoseUnitsCS 
+
 Extension: RadiotherapyDoseDeliveredToVolume
 Id: mcode-radiotherapy-dose-delivered-to-volume
 Title: "Radiotherapy Dose Delivered To Volume Extension"
@@ -301,7 +316,7 @@ Description: "Dose delivered to a given radiotherapy volume."
 * extension[totalDoseDelivered].value[x] only Quantity
 * extension[totalDoseDelivered].valueQuantity = UCUM#cGy
 * extension[effectiveDoseDelivered].value[x] only Quantity
-* extension[effectiveDoseDelivered].valueQuantity = UCUM#cGy
+* extension[effectiveDoseDelivered].valueQuantity from EffectiveDoseUnitsVS (required)
 * extension[fractionsDelivered].value[x] only unsignedInt
 // Definitions of in-line extensions
 * extension[volume] ^short = "Volume in the body where radiation was delivered"

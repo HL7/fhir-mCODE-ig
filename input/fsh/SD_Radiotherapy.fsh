@@ -290,6 +290,8 @@ CodeSystem: EffectiveDoseUnitsCS
 Id: mcode-effective-dose-units-vs 
 Title: "Radiotherapy Effective Dose Units CodeSystem"
 Description: "Radiotherapy Effective Dose Units based on TG263"
+* ^experimental = false
+* ^caseSensitive = true
 * #CGE "Cobalt grey-equivalent"
 * #EQD2Gy "Equivalent Dose in 2 Gy Fractions"
 * #BED "Biologically Effective Dose"

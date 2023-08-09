@@ -290,7 +290,6 @@ CodeSystem: EffectiveDoseUnitsCS
 Id: mcode-effective-dose-units-vs 
 Title: "Radiotherapy Effective Dose Units CodeSystem"
 Description: "Radiotherapy Effective Dose Units based on TG263"
-* #Gy "Grey"
 * #CGE "Cobalt grey-equivalent"
 * #EQD2Gy "Equivalent Dose in 2 Gy Fractions"
 * #BED "Biologically Effective Dose"
@@ -300,6 +299,7 @@ Id: mcode-effective-dose-units-vs
 Title: "Radiotherapy Effective Dose Units ValueSet"
 Description: "Radiotherapy Effective Dose Units based on TG263"
 * include codes from system EffectiveDoseUnitsCS 
+* UCUM#Gy "Grey"
 
 Extension: RadiotherapyDoseDeliveredToVolume
 Id: mcode-radiotherapy-dose-delivered-to-volume

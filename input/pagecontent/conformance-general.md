@@ -1,5 +1,5 @@
 
-This section outlines requirements and recommendations for mCODE participants. The conformance verbs - SHALL or MUST, SHOULD, and MAY - are defined in [FHIR Conformance Rules](http://hl7.org/fhir/R4/conformance-rules.html).
+This section outlines requirements and recommendations for mCODE participants. The conformance verbs - SHALL, SHOULD, and MAY - are defined in [FHIR Conformance Rules](http://hl7.org/fhir/R4/conformance-rules.html). MUST, MUST NOT, SHALL NOT, and REQUIRED are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119). 
 
 ### mCODE Participant Roles
 
@@ -8,11 +8,11 @@ Two roles for **mCODE Participants** are defined:
 * **mCODE Data Sender** - a participant in exchange of mCODE data who provides mCODE data in response to a data query or autonomously pushes mCODE data to an mCODE receiver. The Data Sender does not have to be the originator of the data it possesses. The Data Sender role is similar to a [US Core Responder](https://www.hl7.org/fhir/us/core/#us-core-actors), except the data sent is not assumed to be a response to a query.
 * **mCODE Data Receiver** - a participant in exchange of mCODE data who accepts mCODE data from an mCODE Data Sender. The Data Receiver may receive data as part of a predetermined workflow, or initiate the exchange via a query or on a regular basis via subscription. The Receiver role is similar to a [US Core Requestor](https://www.hl7.org/fhir/us/core/#us-core-actors), except the data does not have to be explicitly requested.
 
-This IG currently only provides CapabilityStatements and documentation for "pull" (query-response) architectures, however, regardless how exchanges occur, all participants MUST follow the conformance requirements in this IG, **except** those specifically identified as applying only to pull architectures.
+This IG currently only provides CapabilityStatements and documentation for "pull" (query-response) architectures, however, regardless how exchanges occur, all participants SHALL follow the conformance requirements in this IG, **except** those specifically identified as applying only to pull architectures.
 
-### "MUST" Requirements for Conformance
+### "SHALL" Requirements for Conformance
 
-mCODE participants MUST meet the following requirements for conformance:
+mCODE participants SHALL meet the following requirements for conformance:
 
 1. [Identify in-scope patients](#identify-in-scope-patients)
 1. [Follow conformance requirements for supported profiles](#follow-conformance-requirements-for-supported-profiles)
@@ -36,13 +36,13 @@ mCODE Senders MUST be able to populate data elements Must-Support (MS) obligatio
 
 #### Support Querying mCODE-Conforming Resources
 
-mCODE defines operations that Senders and Receivers use to exchange mCODE information. In a "pull" (query-response) architecture, Senders MUST support the requests below for retrieving all resources conforming to a given mCODE Profile, UNLESS they do not support the profile at all (see ["Support All mCODE Profiles"](#support-all-mcode-profiles) below). For more details on the conformance requirements for Senders and Receivers, see [Profile Conformance](conformance-profiles.html).
+mCODE defines operations that Senders and Receivers use to exchange mCODE information. In a "pull" (query-response) architecture, Senders SHALL support the requests below for retrieving all resources conforming to a given mCODE Profile, UNLESS they do not support the profile at all (see ["Support All mCODE Profiles"](#support-all-mcode-profiles) below). For more details on the conformance requirements for Senders and Receivers, see [Profile Conformance](conformance-profiles.html).
 
 Note that the requests below may return resources associated with patients who are not [in-scope patients]. These resources MAY not conform to mCODE profiles.
 
 * Patient
   * [CancerPatient]\: see [Identifying In-Scope Patients](conformance-patients.html) for the options to retrieve all conforming resources
-  * [HumanSpecimen]\: Depends on type, for example: `GET [base]/Specimen?type=http://terminology.hl7.org/CodeSystem/v2-0487|TUMOR` (note that `TUMOR` MUST be capitalized)
+  * [HumanSpecimen]\: Depends on type, for example: `GET [base]/Specimen?type=http://terminology.hl7.org/CodeSystem/v2-0487|TUMOR` (note that `TUMOR` must be capitalized)
   * [MCODEPatientBundle]\: see [Support the mCODE Bundle](#support-the-mcode-patient-bundle)
   * [MCODEPatientGroup]\: n/a
 
@@ -65,7 +65,7 @@ Note that the requests below may return resources associated with patients who a
   * [ECOGPerformanceStatus]\: `GET [base]/Observation?code=http://loinc.org|89247-1`
   * [KarnofskyPerformanceStatus]\: `GET [base]/Observation?code=http://loinc.org|89243-0`
   * [FHIR Vital Signs](https://www.hl7.org/fhir/observation-vitalsigns.html) and [US Core Vital Signs](https://hl7.org/fhir/us/core/3.2.0/StructureDefinition-us-core-vital-signs.html): `GET [base]/Observation?category=vital-signs`
-  * [US Core DiagnosticReport Profile for Laboratory Results Reporting](http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html): `GET [base]/DiagnosticReport?category=LAB` (note that `LAB` MUST be capitalized)
+  * [US Core DiagnosticReport Profile for Laboratory Results Reporting](http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html): `GET [base]/DiagnosticReport?category=LAB` (note that `LAB` must be capitalized)
   * [US Core Laboratory Result Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html): `GET [base]/Observation?category=laboratory`
 
 * Genomics
@@ -90,9 +90,9 @@ Note that the requests below may return resources associated with patients who a
 
 #### Publish a CapabilityStatement Identifying Supported Profiles and Operations
 
-Each mCODE participant MUST publish a FHIR CapabilityStatement listing their supported profiles, by declaring the profile in `CapabilityStatement.rest.resource.supportedProfile`. The CapabilityStatement SHALL be returned in response to a `GET [base]/metadata` request.
+Each mCODE participant SHALL publish a FHIR CapabilityStatement listing their supported profiles, by declaring the profile in `CapabilityStatement.rest.resource.supportedProfile`. The CapabilityStatement SHALL be returned in response to a `GET [base]/metadata` request.
 
-ALL mCODE participants MUST at minimum support the [CancerPatient] and [PrimaryCancerCondition] profiles.
+ALL mCODE participants SHALL at minimum support the [CancerPatient] and [PrimaryCancerCondition] profiles.
 
 #### Support US Core Conformance Requirements
 

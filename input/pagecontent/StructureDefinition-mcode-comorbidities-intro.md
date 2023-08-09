@@ -41,6 +41,6 @@ A comorbid condition risk index, if it exists, is reported in `Observation.value
 
 ### Conformance
 
-Observation resources associated with an [in-scope patient] with `Observation.code` of SCT#398192003 "Co-morbid conditions (finding)" MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an [in-scope patient] that would reasonably be expected to conform to this profile SHOULD be published in this form.
+Observation resources associated with an [in-scope patient] with `Observation.code` of SCT#398192003 "Co-morbid conditions (finding)" SHALL conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an [in-scope patient] that would reasonably be expected to conform to this profile SHOULD be published in this form.
 
 {% include markdown-link-references.md %}

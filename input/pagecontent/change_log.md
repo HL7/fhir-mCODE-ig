@@ -71,7 +71,7 @@ Due to copyright restrictions still in effect, specific AJCC codes cannot be enu
 
 This change addresses the issue <https://jira.hl7.org/browse/FHIR-37593>.
 
-The binding strength for these value sets remains "preferred", meaning that the SNOMED codes are not required. However, any alternative codes MUST be AJCC codes. This has been implemented through addition of [maximum value sets](http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet) to the bindings. The maximum value sets are:
+The binding strength for these value sets remains "preferred", meaning that the SNOMED codes are not required. However, any alternative codes SHALL be AJCC codes. This has been implemented through addition of [maximum value sets](http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet) to the bindings. The maximum value sets are:
 
 * [TNMStageGroupMaxVS]
 * [TNMPrimaryTumorCategoryMaxVS]
@@ -172,7 +172,7 @@ As a result, there are new required values for `Condition.category` or `Observat
 mCODE is now is explicitly dependent on the [Genomics Reporting IG STU2 (v2.0.0)](http://hl7.org/fhir/uv/genomics-reporting/STU2/index.html) (GRIG). This eliminates the duplication of profiles that existed in STU 1 and STU 2, and assures that the two IGs remain in synchronization. The following changes were made:
 
 * [GenomicsReport], [GenomicRegionStudied], and [GenomicVariant] now inherit from the corresponding profiles in GRIG.
-* Inheritance from US Core was removed from these profiles, since FHIR does not allow a profile to have two parents. Instances MUST be consistent with US Core but the FHIR IG Publisher does not recognize US Core compliance because it does not derive from inheritance.
+* Inheritance from US Core was removed from these profiles, since FHIR does not allow a profile to have two parents. Instances SHALL be consistent with US Core but the FHIR IG Publisher does not recognize US Core compliance because it does not derive from inheritance.
 * Component names in genomics examples were aligned to the component names in GRIG.
 * The diagnosticImplication component of GenomicVariant (present in STU 2) does not exist in GRIG. Users should express diagnostic implications of a variant using the GRIG [DiagnosticImplication](http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-diagnostic-implication.html) profile.
 * Value sets that are no longer required because equivalents are defined externally in GRIG were removed: HGNCVS, HGVSVS, GenomicMolecularConsequenceVS, ClinvarVS, and DNAChangeTypeVS.

@@ -4029,7 +4029,7 @@
     {
       "title": "Cytologic Evidence of Malignancy Value Set",
       "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cytologic-evidence-malignancy-vs",
-      "description": "Types of cytological evience of malignancy, coded in SNOMED CT or ICD-10-CM."
+      "description": "Types of cytological evidence of malignancy, coded in SNOMED CT or ICD-10-CM."
     },
     {
       "title": "Histology Morphology Behavior Value Set",

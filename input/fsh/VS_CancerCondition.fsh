@@ -121,7 +121,7 @@ Description:    "Types of melanoma in-situ, coded in SNOMED CT or ICD-10-CM."
 ValueSet:  CytologicEvidenceOfMalignancyVS
 Id: mcode-cytologic-evidence-malignancy-vs
 Title: "Cytologic Evidence of Malignancy Value Set"
-Description:    "Types of cytological evience of malignancy, coded in SNOMED CT or ICD-10-CM."
+Description:    "Types of cytological evidence of malignancy, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
 * SCT#126361000119107 "Cytological evidence of malignancy on anal Papanicolaou smear (finding)"

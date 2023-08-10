@@ -6,7 +6,7 @@
 # PARSING ERROR DURING TERMINOLOGY EXPANSION
 Error from server: Error parsing HGVS response: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
 
-# SUPPRESS US CORE COMPLIANCE WARNINGS.  For STU2, exceptions to US Core parent profiles was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard: 28-0-1. See https://jira.hl7.org/browse/FHIR-30707. For STU3, exceptions to US Core parent profiles was approved by the Cross-Group Projects Work Group on 2/9/2023 Saul Kravitz/Floyd Eisenberg: 23-0-2. See https://jira.hl7.org/browse/FHIR-40383
+# SUPPRESS US CORE COMPLIANCE WARNINGS.  For STU2, exceptions to US Core parent profiles was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard: 28-0-1. See https://jira.hl7.org/browse/FHIR-30707. For STU3, exceptions to US Core parent profiles was approved by the Cross-Group Projects Work Group on 2/9/2023 Saul Kravitz/Floyd Eisenberg: 23-0-2. See https://jira.hl7.org/browse/FHIR-40383.  A variance for an additional Observation added in STU3 was approved by the Cross-Group Projects Work Group on 8/10/23.  See https://jira.hl7.org/browse/FHIR-41710.
 US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 US FHIR Usage rules require that all profiles on Specimen derive from the core US profile
 US FHIR Usage rules require that all profiles on DiagnosticReport derive from one of the base US profiles

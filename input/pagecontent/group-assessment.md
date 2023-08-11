@@ -40,7 +40,6 @@ Recurrences and unrelated cancers sometimes occur years after previous metastati
 ### Value Sets
 
 * [ECOG performance status] (external)
-* [HistoryOfMetastaticMalignantNeoplasmVS]
 * [Karnofsky performance status] (external)
 
 {% include markdown-link-references.md %}

@@ -133,7 +133,6 @@ Based on user feedback on the complexity of the STU 2 design, [comorbidities][Co
   * A code for "multiple" was added to RadiotherapyTreatmentLocationQualifierVS
   * "Noncompliance with treatment (finding)" was added to TreatmentTerminationReasonVS
   * In some intensionally-defined SNOMED CT value sets, the `is-a` operator was replaced with the `descendant-of` operator, removing the top-level code when it was not a valid choice.
-  * New value set, [HistoryOfMetastaticMalignantNeoplasmVS], was added for enabling more complete reporting of patient history.
 
 ### Relaxing Required Bindings in Profiles and Extensions Related to Radiotherapy
 Based on user feedback that the required bindings on certain fields were a barrier to broader implementation the following changes were made:

@@ -18,9 +18,10 @@ Allowed combinations of modality and technique are shown here and enforced by in
 | Brachytherapy| High Dose Rate  | Intracavitary, IMB, Interstitial, Intravascular, Intraluminal, IORT, Surface, UNC (.text required) |
 | Brachytherapy| High dose rate electronic  | Intracavitary, IMB, Interstitial, Intraluminal, IORT, Surface, UNC (.text required) |
 | Brachytherapy| Radiopharmaceutical  | Oral, Intravascular, Intracavitary, Interstitial, UNC (.text required) |
-
-It will not always be possible for systems to map modalities and techniques to the coded values defined here, since the system may have been configured with a local codesystem, or the values may have been recorded as a text string.  In order to enable systems to produce mCODE-conformant data, an "un-encoded" value ([HL7 Codesystem NullFlavor](https://terminology.hl7.org/CodeSystem-v3-NullFlavor.html) value 'UNC') is included in the value sets for both modality and technique.  If the "un-encoded" value is used, a text literal that specifies the value SHALL be provided in the `.text` element of the CodeableConcept. This requirement is enforced by an invariant.
 {: .grid }
+
+It may not be possible to map modalities and techniques to the coded values defined here, since the system may have been configured with a local code system, or the values may have been recorded as text strings. In order to enable systems to produce mCODE-conformant data, an "un-encoded" value ([HL7 Codesystem NullFlavor](https://terminology.hl7.org/CodeSystem-v3-NullFlavor.html) value `UNC`) is included in the value sets for both modality and technique. `UNC` means the original text or a local code has not been translated or encoded to the approved value set due to limitations of the sending system. If the `UNC` value is used, a text literal that specifies the source value SHALL be provided in the `.text` element of the CodeableConcept. This requirement is enforced by an invariant.
+
 
 Technique Acronyms:
 

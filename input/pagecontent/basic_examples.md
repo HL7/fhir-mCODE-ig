@@ -53,6 +53,11 @@
 
 * [Genomic Diagnostic Report - John Anyperson](DiagnosticReport-genomics-report-john-anyperson.html)
 
+### [History of Metastatic Cancer][HistoryOfMetastaticCancer]
+
+* [History of Cancer Metastatic to Liver](Observation-history-of-cancer-metastatic-to-liver.html)
+* [No History of Metastatic Cancer (explicit assertion)](Observation-no-history-of-metastatic-cancer.html)
+
 ### [Human Specimen][HumanSpecimen]
 
 * [Human Specimen - Lung](Specimen-human-specimen-lung.html)

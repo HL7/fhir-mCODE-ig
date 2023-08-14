@@ -350,21 +350,21 @@ Description: "Hemoglobin lab result to support TNMStageGroup example"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 * valueQuantity = 13.5 'g/dl' "g/dl"
 
-Instance: history-metastatic-cancer-jenny-m 
+Instance: history-of-cancer-metastatic-to-liver
 InstanceOf: HistoryOfMetastaticCancer
-Description: "Example showing history of metastatic cancer"
+Description: "Example showing history of metastatic cancer in liver."
 * status = #final 
-* code = SCT_TBD#1287652008 "History of metastatic malignant neoplasm (situation)"
-* subject = Reference(cancer-patient-jenny-m)
+* code = SCT#1098951000119108 "History of cancer metastatic to liver (situation)"
+* subject = Reference(cancer-patient-adam-everyman)
 * effectiveDateTime = "2018-11-16"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
-Instance: no-history-metastatic-cancer-jenny-m 
+Instance: no-history-metastatic-cancer 
 InstanceOf: HistoryOfMetastaticCancer
 Description: "Example showing no history of metastatic cancer"
 * status = #final 
 * code = SCT_TBD#1287652008 "History of metastatic malignant neoplasm (situation)"
-* subject = Reference(cancer-patient-jenny-m)
+* subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2018-11-16"
 * performer = Reference(us-core-practitioner-owen-oncologist)
-* valueBoolean = false 
+* valueBoolean = false

@@ -5,7 +5,7 @@ Parent: Observation
 Id: mcode-history-of-metastatic-cancer
 Title: "History of Metastatic Cancer"
 Description: "Records the existence of a past episode of metastatic cancer, for the purpose of long term management and tracking."
-* code = HistoryOfMetastaticMalignantNeoplasmVS (required)
+* code from HistoryOfMetastaticMalignantNeoplasmVS (required)
 * value[x] only boolean // If false indicates no history of metastatic cancer
 * value[x] 0..1 MS ?!  // modifies meaning of the observation
 * value[x] ^defaultValueBoolean = true   // If absent, value is true.  

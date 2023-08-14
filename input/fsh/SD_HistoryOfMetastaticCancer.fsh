@@ -8,7 +8,9 @@ Description: "Records the existence of a past episode of metastatic cancer, for 
 * code from HistoryOfMetastaticMalignantNeoplasmVS (required)
 * value[x] only boolean // If false indicates no history of metastatic cancer
 * value[x] 0..1 MS ?!  // modifies meaning of the observation
-* value[x] ^defaultValueBoolean = true   // If absent, value is true.  
+* value[x] ^isModifierReason = "When value is false, the resource semantics are reversed and the resource represents an assertion of NO history of metastatic cancer (either absolutely, or of the type indicated by Observation.code)"
+// Cannot have a default value; Rule sdf-21: 'Default values can only be specified on specializations' 
+//* value[x] ^defaultValueBoolean = true   // If absent, value is true.  
 
 ValueSet: HistoryOfMetastaticMalignantNeoplasmVS
 Id: mcode-history-of-metastatic-malignant-neoplasm-vs

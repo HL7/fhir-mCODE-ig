@@ -359,7 +359,7 @@ Description: "Example showing history of metastatic cancer in liver."
 * effectiveDateTime = "2018-11-16"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
-Instance: no-history-metastatic-cancer 
+Instance: no-history-of-metastatic-cancer 
 InstanceOf: HistoryOfMetastaticCancer
 Description: "Example showing no history of metastatic cancer"
 * status = #final 

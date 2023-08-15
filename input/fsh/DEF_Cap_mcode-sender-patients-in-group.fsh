@@ -27,6 +27,6 @@ Usage: #definition
 * insert mCODE_CapabilityStatement_Patient_Server_Common_Rules
 * rest[0].resource[0].searchParam[0].name = "_id"
 * rest[0].resource[0].searchParam[0].type = #token
-* rest[0].resource[0].searchParam[0].definition = "http://hl7.org/fhir/us/mcode/SearchParameter/Patient-id"
+* rest[0].resource[0].searchParam[0].definition = "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-id"
 * rest[0].resource[0].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[0].searchParam[0].extension.valueCode = #SHALL

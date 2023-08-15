@@ -34,11 +34,63 @@
 
 		{# TODO
 		Possible improvements could include:
-			verifying extension url instead of assuming the extension is for conformance requirement (SHALL, SHOULD, MAY)
+			verifying extension url instead of assuming the extension is for conformance requirement (SHALL, SHOULD, MAY) - switch to using macros
 			Some search parameters that go to the general HL7 search site might have modifiers ":" that need to be removed (Any other decorations?)
 			Add messages and document elements
 			More details on security than just the description? 
 		#}
+		{# Summary table capability expectation symbol handling #}
+		{% set expectation_symbols = {"SHALL": "&#x2666;", "SHOULD": "&#x22C4;", "MAY": "&#x25BF;"} %}
+		{%- macro expectation_symbol(element) -%}
+			{%- if element.extension -%}
+				{%- for extension in element.extension -%}
+					{%- if extension.url == 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation' -%}<span title="{{extension.valueCode}}"><sup>{{ expectation_symbols[extension.valueCode]|safe }}</sup></span>{%- endif -%}
+				{%- endfor -%}
+			{%- endif -%}
+		{% endmacro -%}
+		{%- macro string_and_expectation_symbol(parent, name) -%}
+			{%- if parent[name] -%}
+				{%- for element in parent[name] -%}
+					{{element}}
+					{%- if parent['_' + name] -%}{{expectation_symbol(parent['_' + name][loop.index - 1])}}
+					{%- endif -%}
+					{%- if not loop.last %}, {% endif -%}
+				{%- endfor -%}
+			{%- endif -%}
+		{% endmacro -%}
+
+		
+		{%- macro display_expectation_verb(element, alternate_text) -%}
+		{% set vars = {'expectation_text': False} %}
+			{%- if element.extension -%}
+				{%- for extension in element.extension -%}
+					{%- if extension.url == 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation' -%}{{extension.valueCode}}{%- if vars.update({'expectation_text': True}) -%}{%- endif -%}{%- endif -%}
+				{%- endfor -%}
+			{%- endif -%}
+			{%- if vars.expectation_text == False and alternate_text != '' -%}{{alternate_text}}{%- endif -%}
+		{% endmacro -%}
+
+		{%- macro get_expectation_verb(element) -%}
+			{%- if element.extension -%}
+				{%- for extension in element.extension -%}
+					{%- if extension.url == 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation' -%}{{extension.valueCode}}{%- endif -%}
+				{%- endfor -%}
+			{%- endif -%}
+		{% endmacro -%}
+
+{#x
+
+		{%- macro expectation_verb_template(element, alternate_text) -%}
+		{% set vars = {'expectation_text': False} %}
+			{%- if element.extension -%}
+				{%- for extension in element.extension -%}
+					{%- if extension.url == 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation' -%}{{extension.valueCode}}{%- if vars.update({'expectation_text': True}) -%}{%- endif -%}{%- endif -%}
+				{%- endfor -%}
+			{%- endif -%}
+			{%- if vars.expectation_text == False and alternate_text != '' -%}{{alternate_text}}{%- endif -%}
+		{% endmacro -%}
+		
+#}
 	</head>
 	<body>
 		<div xmlns="http://www.w3.org/1999/xhtml">
@@ -48,23 +100,21 @@
 				<li><b>Implementation Guide Version:</b> {{cs.version}}</li>
 				<li><b>FHIR Version:</b> {{cs.fhirVersion}}</li>
 				<li><b>Intended Use:</b> {{cs.kind.capitalize()}}</li>
-				<li><b>Supported Formats:</b>
-				{% if cs._format %}
-				{% for format in cs.format %}
-                    <strong>{{cs._format[loop.index0].extension[0].valueCode}}</strong>
-                    support {{ format | upper }}
-					{%- if not loop.last %}, {% endif %}
-                {% endfor %}
-                {% else %}
+				<li><b>Supported Formats: </b>
+				{% if cs._format -%}
+					{%- for format in cs.format -%}
+						<strong>{{get_expectation_verb(cs._format[loop.index0])}}</strong> support {{ format | upper }}
+						{%- if not loop.last %}, {% endif -%}
+					{%- endfor -%}
+                {%- else -%}
                     {{ cs.format | join(', ') | upper }}
-				{% endif %}
+				{%- endif -%}
 				</li>
 				{%if cs.patchFormat %}
 				<li><b>Supported Patch Formats:</b>
 				{% if cs._patchFormat %}
 				{% for patchFormat in cs.patchFormat %}
-                    <strong>{{cs._patchFormat[loop.index0].extension[0].valueCode}}</strong>
-                    support {{ patchFormat | upper }}
+					<strong>{{get_expectation_verb(cs._patchFormat[loop.index0])}}</strong> support {{ format | upper }}
 					{%- if not loop.last %}, {% endif %}
                 {% endfor %}
                 {% else %}
@@ -88,7 +138,7 @@
 				{% set ns = namespace(shall=false) %}
 				{% for ig in cs.implementationGuide %}
 					{% if (cs._implementationGuide[loop.index0] and
-					cs._implementationGuide[loop.index0].extension[0].valueCode=="SHALL") %}
+					get_expectation_verb(cs._implementationGuide[loop.index0])=="SHALL") %}
 				{% set ns.shall = true %}
 					{% endif %}
 				{% endfor %}
@@ -96,7 +146,7 @@
 					<h3 class="no_toc" id="shall_igs">SHALL Support the Following Implementation Guides:</h3>
 					{% for ig in cs.implementationGuide %}
 						{% if (cs._implementationGuide[loop.index0] and
-						cs._implementationGuide[loop.index0].extension[0].valueCode=="SHALL") %}
+						get_expectation_verb(cs._implementationGuide[loop.index0])=="SHALL") %}
 							<ul>
 								<li><a href="{% if igurl_map[ig] %}{{igurl_map[ig]}}{% else %}{{ig}}{% endif %}">{% if igname_map[ig] %}{{igname_map[ig]}}{% else %}{{ig}}{% endif %}</a></li>
 							</ul>
@@ -108,7 +158,7 @@
 			{% set ns = namespace(should=false) %}
 				{% for ig in cs.implementationGuide %}
 					{% if (cs._implementationGuide[loop.index0] and
-					cs._implementationGuide[loop.index0].extension[0].valueCode=="SHOULD") %}
+					get_expectation_verb(cs._implementationGuide[loop.index0])=="SHOULD") %}
 				{% set ns.should = true %}
 					{% endif %}
 				{% endfor %}
@@ -116,7 +166,7 @@
 					<h3 class="no_toc" id="should_igs">SHOULD Support the Following Implementation Guides:</h3>
 					{% for ig in cs.implementationGuide %}
 						{% if (cs._implementationGuide[loop.index0] and
-						cs._implementationGuide[loop.index0].extension[0].valueCode=="SHOULD") %}
+						get_expectation_verb(cs._implementationGuide[loop.index0])=="SHOULD") %}
 							<ul>
 								<li><a href="{% if igurl_map[ig] %}{{igurl_map[ig]}}{% else %}{{ig}}{% endif %}">{% if igname_map[ig] %}{{igname_map[ig]}}{% else %}{{ig}}{% endif %}</a></li>
 							</ul>
@@ -128,7 +178,7 @@
 				{% for ig in cs.implementationGuide %}
 					{% if cs._implementationGuide %}
 						{% if (cs._implementationGuide[loop.index0] == None or
-						cs._implementationGuide[loop.index0].extension[0].valueCode=="MAY") %}
+						get_expectation_verb(cs._implementationGuide[loop.index0])=="MAY") %}
 						{% set ns.may = true %}
 						{% endif %}
 					{% endif %}
@@ -137,7 +187,7 @@
 					<h3 class="no_toc" id="may_igs">MAY Support the Following Implementation Guides:</h3>
 					{% for ig in cs.implementationGuide %}
 					{% if (cs._implementationGuide[loop.index0] == None or
-					cs._implementationGuide[loop.index0].extension[0].valueCode=="MAY") %}
+					get_expectation_verb(cs._implementationGuide[loop.index0])=="MAY") %}
 							<ul>
 								<li><a href="{% if igurl_map[ig] %}{{igurl_map[ig]}}{% else %}{{ig}}{% endif %}">{% if igname_map[ig] %}{{igname_map[ig]}}{% else %}{{ig}}{% endif %}</a></li>
 							</ul>
@@ -160,7 +210,7 @@
 					{% set ns = namespace(shall=false) %}
 					{% for cap in cs.instantiates %}
 						{% if (cs._instantiates[loop.index0] and
-						cs._instantiates[loop.index0].extension[0].valueCode=="SHALL") %}
+						get_expectation_verb(cs._instantiates[loop.index0])=="SHALL") %}
 						{% set ns.shall = true %}
 						{% endif %}
 					{% endfor %}
@@ -169,7 +219,7 @@
 						<ul>
 							{% for cap in cs.instantiates %}
 								{% if (cs._instantiates[loop.index0] and
-								cs._instantiates[loop.index0].extension[0].valueCode=="SHALL") %}
+								get_expectation_verb(cs._instantiates[loop.index0])=="SHALL") %}
 									<li><a href="{% if csurl_map[cap] %}{{csurl_map[cap]}}{% else %}{{cap}}{% endif %}">{% if csname_map[cap] %}{{csname_map[cap]}}{% else %}{{cap}}{% endif %}</a></li>
 								{% endif %}
 							{% endfor %}
@@ -179,7 +229,7 @@
 					{% set ns = namespace(should=false) %}
 					{% for cap in cs.instantiates %}
 						{% if (cs._instantiates[loop.index0] and
-							cs._instantiates[loop.index0].extension[0].valueCode=="SHOULD") %}
+							get_expectation_verb(cs._instantiates[loop.index0])=="SHOULD") %}
 							{% set ns.should = true %}
 						{% endif %}
 					{% endfor %}
@@ -188,7 +238,7 @@
 						<ul>
 							{% for cap in cs.instantiates %}
 								{% if (cs._instantiates[loop.index0] and
-								cs._instantiates[loop.index0].extension[0].valueCode=="SHOULD") %}
+								get_expectation_verb(cs._instantiates[loop.index0])=="SHOULD") %}
 									<li><a href="{% if csurl_map[cap] %}{{csurl_map[cap]}}{% else %}{{cap}}{% endif %}">{% if csname_map[cap] %}{{csname_map[cap]}}{% else %}{{cap}}{% endif %}</a></li>
 								{% endif %}
 							{% endfor %}
@@ -211,7 +261,7 @@
                     {% set ns = namespace(shall=false) %}
                     {% for cap in cs.imports %}
                         {% if (cs._imports[loop.index0] and
-                        cs._imports[loop.index0].extension[0].valueCode=="SHALL") %}
+                        get_expectation_verb(cs._imports[loop.index0])=="SHALL") %}
                         {% set ns.shall = true %}
                         {% endif %}
                     {% endfor %}
@@ -220,7 +270,7 @@
                         <ul>
                             {% for cap in cs.imports %}
                                 {% if (cs._imports[loop.index0] and
-                                cs._imports[loop.index0].extension[0].valueCode=="SHALL") %}
+                                get_expectation_verb(cs._imports[loop.index0])=="SHALL") %}
 								<li><a href="{% if csurl_map[cap] %}{{csurl_map[cap]}}{% else %}{{cap}}{% endif %}">{% if csname_map[cap] %}{{csname_map[cap]}}{% else %}{{cap}}{% endif %}</a></li>
                                 {% endif %}
                             {% endfor %}
@@ -230,7 +280,7 @@
                     {% set ns = namespace(should=false) %}
                     {% for cap in cs.imports %}
                         {% if (cs._imports[loop.index0] and
-                            cs._imports[loop.index0].extension[0].valueCode=="SHOULD") %}
+                            get_expectation_verb(cs._imports[loop.index0])=="SHOULD") %}
                             {% set ns.should = true %}
                         {% endif %}
                     {% endfor %}
@@ -239,7 +289,7 @@
                         <ul>
                             {% for cap in cs.imports %}
                                 {% if (cs._imports[loop.index0] and
-                                cs._imports[loop.index0].extension[0].valueCode=="SHOULD") %}
+                                get_expectation_verb(cs._imports[loop.index0])=="SHOULD") %}
 								<li><a href="{% if csurl_map[cap] %}{{csurl_map[cap]}}{% else %}{{cap}}{% endif %}">{% if csname_map[cap] %}{{csname_map[cap]}}{% else %}{{cap}}{% endif %}</a></li>
                                 {% endif %}
                             {% endfor %}
@@ -271,11 +321,12 @@
 					{{rest.security.description | markdown | safe }}
 					{% endif %}
 
+
 					{% if rest.interaction  %}
 						<p><strong>Summary of {{rest.mode.capitalize()}} Wide Interactions</strong></p>
 						<ul>
 							{% for r in rest.interaction %}
-								<li>{% if r.extension %}<strong>{{r.extension[0].valueCode }}</strong> support the {% endif %}<code>{{r.code}}</code>
+								<li>{% if get_expectation_verb(r) %}<strong>{{get_expectation_verb(r)}}</strong> support the {% endif %}<code>{{r.code}}</code>
 									{%- if r.documentation %}<sup>+</sup>{% endif %} interaction.</li>
 							{% endfor %}
 						</ul>
@@ -290,7 +341,7 @@
 						<p><strong>Summary of {{rest.mode.capitalize()}} Wide Operations</strong></p>
 						<ul>
 							{% for r in rest.operation %}
-								<li>{% if r.extension %}<strong>{{r.extension[0].valueCode }}</strong> support the {% endif %}<a href="{% if path_map[r.definition.reference]%}{{path_map[r.definition.reference]}}{% else %}{{r.definition}}{% endif %}"><code>${{r.name}}</code></a>
+								<li>{% if get_expectation_verb(r) %}<strong>{{get_expectation_verb(r)}}</strong> support the {% endif %}<a href="{% if path_map[r.definition.reference]%}{{path_map[r.definition.reference]}}{% else %}{{r.definition}}{% endif %}"><code>${{r.name}}</code></a>
 									{%- if r.documentation %}<sup>+</sup>{% endif %} operation.</li>
 							{% endfor %}
 						</ul>
@@ -305,7 +356,7 @@
 						<p><strong>Summary of {{rest.mode.capitalize()}} Wide Search Parameters</strong></p>
 						<ul>
 							{% for r in rest.searchParam %}
-								<li>{% if r.extension %}<strong>{{r.extension[0].valueCode }}</strong> support the {% endif %}<a href="{% if path_map[r.definition.reference]%}{{path_map[r.definition.reference]}}{% else %}{{r.definition}}{% endif %}"><code>{{r.name}}</code></a>
+								<li>{% if get_expectation_verb(r) %}<strong>{{get_expectation_verb(r)}}</strong> support the {% endif %}<a href="{% if path_map[r.definition.reference]%}{{path_map[r.definition.reference]}}{% else %}{{r.definition}}{% endif %}"><code>{{r.name}}</code></a>
 									{%- if r.documentation %}<sup>+</sup>{% endif %} search parameter.</li>
 							{% endfor %}
 						</ul>
@@ -321,6 +372,7 @@
 						<h3 class="no_toc" id="resource--details">RESTful Capabilities by Resource/Profile:</h3>
 
 						<p><strong>Summary</strong></p>
+						<p>{%- for key, value in expectation_symbols.items() -%}<i>{{value|safe}} = <b>{{key}}</b> expectation</i>; {%- endfor -%}</p>
 						<table class="grid">
 							<thead>
 								<tr>
@@ -337,58 +389,73 @@
 								{% for r in rest.resource %}
 								<tr>
 									<td>
-										<a href="#{{r.type | lower }}">{{r.type}}</a>
+										<a href="#{{r.type | lower }}"><span style="white-space: nowrap;">{{r.type}}{{expectation_symbol(r)}}</span></a>
 									</td>
 									<td>
 										{% if r.interaction %}{% for i in r.interaction %}
-											{{i.code}}
-											{%- if not loop.last %}, {% endif %}
-											{%  endfor %}
-										{% endif %}
+											<span style="white-space: nowrap;">{{i.code}}{{expectation_symbol(i)}}
+											{%- if not loop.last %}, {% endif -%}</span>
+											{%- endfor -%}
+										{%- endif -%}
 									</td>
 
 									<!-- Supported Profiles -->
 									<td>
-										{% if r.supportedProfile %}{% for i in r.supportedProfile %}
-											<a href="{% if path_map[i] %}{{path_map[i]}}{% elif purl_map[i] %}{{purl_map[i]}}{% else %}{{i}}{% endif %}">{% if pname_map[i] %}{{pname_map[i]}}{% else %}({{i}}){% endif %}</a>
-											{%- if not loop.last %}, {% endif %}
-											{%  endfor %}
+										{% if r.supportedProfile %}{% for supportedProfile in r.supportedProfile %}
+											<span style="white-space: nowrap;"><a href="{% if path_map[i] %}{{path_map[supportedProfile]}}{% elif purl_map[i] %}{{purl_map[supportedProfile]}}{% else %}{{supportedProfile}}{% endif %}">{%- if supportedProfile[:40]|lower == 'http://hl7.org/fhir/structuredefinition/'-%}FHIR {{r.type}}{%- elif pname_map[supportedProfile] -%}{{pname_map[supportedProfile]}}{%- else -%}({{supportedProfile}}){%- endif -%}</a>{%- if r._supportedProfile -%}{{expectation_symbol(r._supportedProfile[loop.index - 1])}}{%- endif -%}
+											{% if not loop.last %}, {% endif %}</span> 
+											{% endfor %}
 										{% endif %}
 									</td>
 
-									<!-- Supported Searches -->
+									<!-- Supported Searches will need to do some sort of mapping instead of join to get the expectations printed out -->
 									<td>
-										{% if r.searchParam %}{{ r.searchParam|join(', ', attribute='name') }}{% if r.extension %}
-										{%- for s in r.extension if s.url == "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" %}
-											{%- if loop.first %}, {% endif %}
-											{%- for combo in s.extension if combo.url == 'required' or combo.url == 'optional'-%}
-											{{combo.valueString}}
-											{%- if not loop.last %}+{% endif %}
-											{%- endfor %}
-										{%- if not loop.last %}, {% endif %}
-										{%- endfor %}
-										{% endif %}
-										{% endif %}
+										{%- if r.searchParam -%}
+											{%- for searchParam in r.searchParam %}
+												<span style="white-space: nowrap;">{{searchParam.name}}{{expectation_symbol(searchParam)}}
+												{%- if not loop.last %}, {% endif %}</span>
+											{% endfor -%}
+											{% if r.extension %}
+												{%- for s in r.extension if s.url == "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" %}
+													<span style="white-space: nowrap;">
+													{%- if loop.first %}, {% endif %}
+													{%- for combo in s.extension if combo.url == 'required' or combo.url == 'optional'-%}
+														{%- if combo.url == 'optional' -%}<i>{%- endif -%}{{combo.valueString}}{%- if combo.url == 'optional' -%}</i>{%- endif -%}
+														{%- if not loop.last %}+{% endif %}
+													{%- endfor -%}
+													{{expectation_symbol(s)}}
+													{%- if not loop.last %}, {% endif -%}
+													</span>
+												{%- endfor -%}
+											{%- endif -%}
+										{%- endif -%}
 									</td>
 
 									<!-- Supported _includes -->
 									<td>
-										{% if r.searchInclude%}{{r.searchInclude | join(', ') }}{% endif %}
+										{{string_and_expectation_symbol(r, 'searchInclude')}}
 									</td>
 
 									<!-- Supported _revincludes -->
 									<td>
-										{% if r.searchRevInclude%}{{r.searchRevInclude | join(', ') }}{% endif %}
+										{{string_and_expectation_symbol(r, 'searchRevInclude')}}
+										<!--{% if r.searchRevInclude%}{{r.searchRevInclude | join(', ') }}{% endif %}-->
 									</td>
 
 									<!-- Supported Operations -->
 									<td>
-										{% if r.operation %}${{r.operation | join(', $',attribute='name') }}{% endif %}
+										{%- if r.operation -%}
+											{%- for operation in r.operation -%}
+												<span style="white-space: nowrap;">${{operation.name}}{{expectation_symbol(operation)}}
+												{%- if not loop.last %}, {% endif -%}</span>
+											{%- endfor -%}
+										{%- endif -%}
 									</td>
 								</tr>
 								{% endfor %}
 							</tbody>
 						</table>
+						
 
 
 
@@ -398,7 +465,7 @@
 						{% for r in rest.resource %}
 							<h4 class="no_toc" id="{{r.type | lower }}">{{r.type}}</h4>
 
-							<p>Conformance Expectation:	<strong>{% if r.extension[0] %}{{r.extension[0].valueCode}}{% else %}(conformance expectation undefined){% endif %}</strong></p>
+							<p>Conformance Expectation:	<strong>{{display_expectation_verb(r, '(conformance expectation undefined)')}}</strong></p>
 
 							{% if r.documentation %}<p>Resource Specific Documentation:</p>
 								<blockquote>{{ r.documentation | markdown | safe }}</blockquote>{% endif %}
@@ -409,7 +476,7 @@
 								<ul>
 									{% for i in r.supportedProfile %}
 										{% if r._supportedProfile[loop.index0]%}
-											<li><strong>{{r._supportedProfile[loop.index0].extension[0].valueCode}}</strong> support:
+											<li><strong>{{display_expectation_verb(r._supportedProfile[loop.index0], '')}}</strong> support:
 										{% else %}<li>
 										{%  endif %}
 												<a href="{% if path_map[i] %}{{path_map[i]}}{% elif purl_map[i] %}{{purl_map[i]}}{% else %}{{i}}{% endif %}">{% if pname_map[i] %}{{pname_map[i]}}{% else %}({{i}}){% endif %}</a>{%- if not loop.last %}, {% endif %}
@@ -429,45 +496,45 @@
 
 							{% if r.interaction %}<p>Profile Interaction Summary:</p>
 								{% set ns = namespace(shall=false,should=false,may=false,none=false) %}
-								{%for i in r.interaction if i.extension %}
-									{% if i.extension[0].valueCode == 'SHALL' %}
+								{%for i in r.interaction if get_expectation_verb(i) %}
+									{% if get_expectation_verb(i) == 'SHALL' %}
 										{% set ns.shall = true %}
-									{% elif i.extension[0].valueCode == 'SHOULD' %}
+									{% elif get_expectation_verb(i) == 'SHOULD' %}
 										{% set ns.should = true %}
-									{% elif i.extension[0].valueCode == 'MAY' %}
+									{% elif get_expectation_verb(i) == 'MAY' %}
 										{% set ns.may = true %}
 									{% else %}
 										{% set ns.none = true %}
 									{% endif %}
 								{% endfor %}
-								{%for i in r.interaction if not i.extension[0] %}
+								{%for i in r.interaction if not get_expectation_verb(i) %}
 									{% set ns.none = true %}
 								{%- endfor %}
 
 								<ul>
 									{% if ns.shall %}
-										<li><strong>SHALL</strong> support {%for i in r.interaction if i.extension[0] and i.extension[0].valueCode == 'SHALL' %}
+										<li><strong>SHALL</strong> support {%for i in r.interaction if get_expectation_verb(i) == 'SHALL' %}
 											<code>{{i.code}}</code>
 											{%- if i.documentation %}<sup>+</sup>{% endif %}
 											{%- if not loop.last %}, {% endif %}
 										{%- endfor %}.</li>
 									{%- endif %}
 									{% if ns.should %}
-										<li><strong>SHOULD</strong> support {%for i in r.interaction if i.extension[0] and i.extension[0].valueCode == 'SHOULD' %}
+										<li><strong>SHOULD</strong> support {%for i in r.interaction if get_expectation_verb(i) == 'SHOULD' %}
 											<code>{{i.code}}</code>
 											{%- if i.documentation %}<sup>+</sup>{% endif %}
 											{%- if not loop.last %}, {% endif %}
 										{%- endfor %}.</li>
 									{%- endif %}
 									{% if ns.may %}
-										<li><strong>MAY</strong> support {%for i in r.interaction if i.extension[0] and i.extension[0].valueCode == 'MAY' %}
+										<li><strong>MAY</strong> support {%for i in r.interaction if get_expectation_verb(i) == 'MAY' %}
 											<code>{{i.code}}</code>
 											{%- if i.documentation %}<sup>+</sup>{% endif %}
 											{%- if not loop.last %}, {% endif %}
 										{%- endfor %}.</li>
 									{%- endif %}
 									{% if ns.none %}
-										<li>{%for i in r.interaction if not i.extension[0] %}
+										<li>{%for i in r.interaction if not get_expectation_verb(i) %}
 											<code>{{i.code}}</code>
 											{%- if i.documentation %}<sup>+</sup>{% endif %}
 											{%- if not loop.last %}, {% endif %}
@@ -486,44 +553,44 @@
 							{% if r.operation %}<p>Operation Summary:</p>
 								{% set ns = namespace(shall=false,should=false,may=false,none=false) %}
 								{%for i in r.operation if i.extension %}
-									{% if i.extension[0].valueCode == 'SHALL' %}
+									{% if get_expectation_verb(i) == 'SHALL' %}
 										{% set ns.shall = true %}
-									{% elif i.extension[0].valueCode == 'SHOULD' %}
+									{% elif get_expectation_verb(i) == 'SHOULD' %}
 										{% set ns.should = true %}
-									{% elif i.extension[0].valueCode == 'MAY' %}
+									{% elif get_expectation_verb(i) == 'MAY' %}
 										{% set ns.may = true %}
 									{% else %}
 										{% set ns.none = true %}
 									{% endif %}
 								{% endfor %}
-								{%for i in r.operation if not i.extension[0] %}
+								{%for i in r.operation if not get_expectation_verb(i) %}
 									{% set ns.none = true %}
 								{%- endfor %}
 
 								<ul>
 									{% if ns.shall %}
-										<li><strong>SHALL</strong> support {%for i in r.operation if i.extension[0] and i.extension[0].valueCode == 'SHALL' %}
+										<li><strong>SHALL</strong> support {%for i in r.operation if get_expectation_verb(i) == 'SHALL' %}
 											<code>${{i.name}}</code>
 											{%- if i.documentation %}<sup>+</sup>{% endif %}
 											{%- if not loop.last %}, {% endif %}
 										{%- endfor %}.</li>
 									{%- endif %}
 									{% if ns.should %}
-										<li><strong>SHOULD</strong> support {%for i in r.operation if i.extension[0] and i.extension[0].valueCode == 'SHOULD' %}
+										<li><strong>SHOULD</strong> support {%for i in r.operation if get_expectation_verb(i) == 'SHOULD' %}
 											<code>${{i.name}}</code>
 											{%- if i.documentation %}<sup>+</sup>{% endif %}
 											{%- if not loop.last %}, {% endif %}
 										{%- endfor %}.</li>
 									{%- endif %}
 									{% if ns.may %}
-										<li><strong>MAY</strong> support {%for i in r.operation if i.extension[0] and i.extension[0].valueCode == 'MAY' %}
+										<li><strong>MAY</strong> support {%for i in r.operation if get_expectation_verb(i) == 'MAY' %}
 											<code>${{i.name}}</code>
 											{%- if i.documentation %}<sup>+</sup>{% endif %}
 											{%- if not loop.last %}, {% endif %}
 										{%- endfor %}.</li>
 									{%- endif %}
 									{% if ns.none %}
-										<li>{%for i in r.operation if not i.extension[0] %}
+										<li>{%for i in r.operation if not get_expectation_verb(i) %}
 											<code>${{i.name}}</code>
 											{%- if i.documentation %}<sup>+</sup>{% endif %}
 											{%- if not loop.last %}, {% endif %}
@@ -538,7 +605,7 @@
 								{% endfor %}
 							{% endif %}
 
-
+ns.n
 
 							{% set ns = namespace(modify=false) %}
 							{% if r.interaction %}
@@ -556,12 +623,12 @@
 									<ul>
 										{%for i in r.interaction if i.code == "create" %}
 											<li>
-												A {{ rest.mode | capitalize }} <strong>{% if i.extension %}{{ i.extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong> be capable of {% if rest.mode == 'server' %}creating{% else %}posting{% endif %} a{{ns.n}} {{r.type}} resource using:
+												A {{ rest.mode | capitalize }} <strong>{{display_expectation_verb(i, '(conformance expectation undefined)')}}</strong> be capable of {% if rest.mode == 'server' %}creating{% else %}posting{% endif %} a{{ns.n}} {{r.type}} resource using:
 												<code class="highlighter-rouge">POST [base]/{{r.type}}/[id]{?_format=[mime-type]}</code>
 												{% if r.conditionalCreate %}
 													<ul>
 														<li>
-															A {{ rest.mode | capitalize }} <strong>{% if r._conditionalRead and r._conditionalCreate[0].extension[0] %}{{ r._conditionalCreate[0].extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong> be capable of the conditional create of a{{ns.n}} {{r.type}} resource using header:
+															A {{ rest.mode | capitalize }} <strong>{%- if r._conditionalCreate -%}{{display_expectation_verb(r._conditionalCreate[0], '(conformance expectation undefined)')}}{%- else %}(conformance expectation undefined){% endif -%}</strong> be capable of the conditional create of a{{ns.n}} {{r.type}} resource using header:
 															<code class="highlighter-rouge">If-None-Exist: [search parameters]</code>
 														</li>
 													</ul>
@@ -570,12 +637,12 @@
 										{%endfor %}
 										{%for i in r.interaction if i.code == "update" %}
 											<li>
-												A {{ rest.mode | capitalize }} <strong>{% if i.extension %}{{ i.extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong> be capable of {% if rest.mode == 'server' %}updating{% else %}putting{% endif %} an existing {{r.type}} resource using:
+												A {{ rest.mode | capitalize }} <strong>{{display_expectation_verb(i, '(conformance expectation undefined)')}}</strong> be capable of {% if rest.mode == 'server' %}updating{% else %}putting{% endif %} an existing {{r.type}} resource using:
 												<code class="highlighter-rouge">PUT [base]/{{r.type}}/[id]{?_format=[mime-type]}</code>
 												{% if r.conditionalUpdate %}
 													<ul>
 														<li>
-															A {{ rest.mode | capitalize }} <strong>{% if r._conditionalRead and r._conditionalUpdate[0].extension[0] %}{{ r._conditionalUpdate[0].extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong> be capable of the conditional update of a{{ns.n}} {{r.type}} resource using:
+															A {{ rest.mode | capitalize }} <strong>{%- if r._conditionalUpdate -%}{{display_expectation_verb(r._conditionalUpdate[0], '(conformance expectation undefined)')}}{%- else %}(conformance expectation undefined){% endif -%}</strong> be capable of the conditional update of a{{ns.n}} {{r.type}} resource using:
 															<code class="highlighter-rouge">PUT [base]/[{{r.type}}]?[search parameters]</code>
 														</li>
 													</ul>
@@ -584,15 +651,15 @@
 										{%endfor %}
 										{%for i in r.interaction if i.code == "delete" %}
 											<li>
-												A {{ rest.mode | capitalize }} <strong>{% if i.extension %}{{ i.extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong> be capable of {% if rest.mode == 'server' %}deleting{% else %}deleting{% endif %} a{{ns.n}} {{r.type}} resource using:
+												A {{ rest.mode | capitalize }} <strong>{{display_expectation_verb(i, '(conformance expectation undefined)')}}</strong> be capable of {% if rest.mode == 'server' %}deleting{% else %}deleting{% endif %} a{{ns.n}} {{r.type}} resource using:
 												<code class="highlighter-rouge">DELETE [base]/{{r.type}}/[id]</code>
 												{% if r.conditionalDelete %}
 													<ul>
 														<li>
 															{% if r.conditionalDelete == "not-supported" %}
-																A {{ rest.mode | capitalize }} <strong>{% if r._conditionalDelete and r._conditionalDelete[0].extension[0] %}{{ r._conditionalDelete[0].extension[0].valueCode }} NOT{% else %}doesn't{% endif %}</strong> support conditional delete of {{r.type}} resources.
+																A {{ rest.mode | capitalize }} <strong>{% if r._conditionalDelete %}{{display_expectation_verb(r._conditionalDelete[0], 'DOES')}} NOT{% else %}DOES NOT{% endif %}</strong> support conditional delete of {{r.type}} resources.
 															{% else %}
-																A {{ rest.mode | capitalize }} <strong>{% if r._conditionalDelete and r._conditionalDelete[0].extension[0] %}{{ r._conditionalDelete[0].extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong> support {{r.conditionalDelete}} conditional delete of {{r.type}} resources using:
+																A {{ rest.mode | capitalize }} <strong>{%- if r._conditionalDelete -%}{{display_expectation_verb(r._conditionalDelete[0], '(conformance expectation undefined)')}}{%- else %}(conformance expectation undefined){% endif -%}</strong> support {{r.conditionalDelete}} conditional delete of {{r.type}} resources using:
 																<code class="highlighter-rouge">DELETE [base]/[{{r.type}}]/?[search parameters]</code>
 															{% endif %}
 														</li>
@@ -602,7 +669,7 @@
 										{%endfor %}
 										{%for i in r.interaction if i.code == "patch" %}
 											<li>
-												A {{ rest.mode | capitalize }} <strong>{% if i.extension %}{{ i.extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong> be capable of {% if rest.mode == 'server' %}patching{% else %}patching{% endif %} an existing {{r.type}} resource using:
+												A {{ rest.mode | capitalize }} <strong>{{display_expectation_verb(i, '(conformance expectation undefined)')}}</strong> be capable of {% if rest.mode == 'server' %}patching{% else %}patching{% endif %} an existing {{r.type}} resource using:
 												<code class="highlighter-rouge">PATCH [base]/{{r.type}}/[id]{?_format=[mime-type]}</code>
 											</li>
 										{%endfor %}
@@ -626,19 +693,19 @@
 									<ul>
 										{%for i in r.interaction if i.code == "read" %}
 											<li>
-												A {{ rest.mode | capitalize }} <strong>{% if i.extension %}{{ i.extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong> be capable of {% if rest.mode == 'server' %}returning{% else %}fetching{% endif %} a{{ns.n}} {{r.type}} resource using:
+												A {{ rest.mode | capitalize }} <strong>{{display_expectation_verb(i, '(conformance expectation undefined)')}}</strong> be capable of {% if rest.mode == 'server' %}returning{% else %}fetching{% endif %} a{{ns.n}} {{r.type}} resource using:
 												<code class="highlighter-rouge">GET [base]/{{r.type}}/[id]</code>
 												{% if r.conditionalRead %}
 													<ul>
 														<li>
 															{% if r.conditionalRead == "not-supported" %}
-																A {{ rest.mode | capitalize }} <strong>{% if r._conditionalRead and r._conditionalRead[0].extension[0] %}{{ r._conditionalRead[0].extension[0].valueCode }} NOT{% else %}doesn't{% endif %}</strong> support conditional read of {{r.type}} resources.
+																A {{ rest.mode | capitalize }} <strong>{% if r._conditionalRead %}{{display_expectation_verb(r._conditionalRead[0], 'DOES')}} NOT{% else %}DOES NOT{% endif %}</strong> support conditional read of {{r.type}} resources.
 															{% elif r.conditionalRead == "modified-since" %}
-																A {{ rest.mode | capitalize }} <strong>{% if r._conditionalRead and r._conditionalRead[0].extension[0] %}{{ r._conditionalRead[0].extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong> support conditional read of {{r.type}} resources only with the If-Modified-Since HTTP Header.
+																A {{ rest.mode | capitalize }} <strong>{%- if r._conditionalRead -%}{{display_expectation_verb(r._conditionalRead[0], '(conformance expectation undefined)')}}{%- else %}(conformance expectation undefined){% endif -%}</strong> support conditional read of {{r.type}} resources only with the If-Modified-Since HTTP Header.
 															{% elif r.conditionalRead == "not-match" %}
-																A {{ rest.mode | capitalize }} <strong>{% if r._conditionalRead and r._conditionalRead[0].extension[0] %}{{ r._conditionalRead[0].extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong> support conditional read of {{r.type}} resources only with the If-None-Match HTTP Header.
+																A {{ rest.mode | capitalize }} <strong>{%- if r._conditionalRead -%}{{display_expectation_verb(r._conditionalRead[0], '(conformance expectation undefined)')}}{%- else %}(conformance expectation undefined){% endif -%}</strong> support conditional read of {{r.type}} resources only with the If-None-Match HTTP Header.
 															{% elif r.conditionalRead == "full-support" %}
-																A {{ rest.mode | capitalize }} <strong>{% if r._conditionalRead and r._conditionalRead[0].extension[0] %}{{ r._conditionalRead[0].extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong> support conditional read of {{r.type}} resources with both If-Modified-Since and If-None-Match HTTP Headers.
+																A {{ rest.mode | capitalize }} <strong>{%- if r._conditionalRead -%}{{display_expectation_verb(r._conditionalRead[0], '(conformance expectation undefined)')}}{%- else %}(conformance expectation undefined){% endif -%}</strong> support conditional read of {{r.type}} resources with both If-Modified-Since and If-None-Match HTTP Headers.
 															{% endif %}
 														</li>
 													</ul>
@@ -647,32 +714,32 @@
 										{%endfor %}
 										{%for i in r.interaction if i.code == "vread" %}
 											<li>
-												A {{ rest.mode | capitalize }} <strong>{% if i.extension %}{{ i.extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong> be capable of {% if rest.mode == 'server' %}returning{% else %}fetching{% endif %} a{{ns.n}} {{r.type}} resource using:
+												A {{ rest.mode | capitalize }} <strong>{{display_expectation_verb(i, '(conformance expectation undefined)')}}</strong> be capable of {% if rest.mode == 'server' %}returning{% else %}fetching{% endif %} a{{ns.n}} {{r.type}} resource using:
 												<code class="highlighter-rouge">GET [base]/{{r.type}}/[id]/_history/vid</code>
 											</li>
 										{%endfor %}
 										{%for i in r.interaction if i.code == "search-type" %}
 											<li>
-												A {{ rest.mode | capitalize }} <strong>{% if i.extension %}{{ i.extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong> be capable of {% if rest.mode == 'server' %}returning{% else %}fetching{% endif %} resources matching a search query using:
+												A {{ rest.mode | capitalize }} <strong>{{display_expectation_verb(i, '(conformance expectation undefined)')}}</strong> be capable of {% if rest.mode == 'server' %}returning{% else %}fetching{% endif %} resources matching a search query using:
 												<code class="highlighter-rouge">GET [base]/{{r.type}}/[id]{?[parameters]{&amp;_format=[mime-type]}}</code>
 											</li>
 										{%endfor %}
 										{%for i in r.interaction if i.code == "history-instance" %}
 											<li>
-												A {{ rest.mode | capitalize }} <strong>{% if i.extension %}{{ i.extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong> be capable of {% if rest.mode == 'server' %}returning{% else %}fetching{% endif %} a history of a {{r.type}} using:
+												A {{ rest.mode | capitalize }} <strong>{{display_expectation_verb(i, '(conformance expectation undefined)')}}</strong> be capable of {% if rest.mode == 'server' %}returning{% else %}fetching{% endif %} a history of a {{r.type}} using:
 												<code class="highlighter-rouge">GET [base]/{{r.type}}/[id]/_history{?[parameters]&amp;_format=[mime-type]}</code>
 											</li>
 										{%endfor %}
 										{%for i in r.interaction if i.code == "history-type" %}
 											<li>
-												A {{ rest.mode | capitalize }} <strong>{% if i.extension %}{{ i.extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong> be capable of {% if rest.mode == 'server' %}returning{% else %}fetching{% endif %} the history of {{r.type}} resources using:
+												A {{ rest.mode | capitalize }} <strong>{{display_expectation_verb(i, '(conformance expectation undefined)')}}</strong> be capable of {% if rest.mode == 'server' %}returning{% else %}fetching{% endif %} the history of {{r.type}} resources using:
 												<code class="highlighter-rouge">GET [base]/{{r.type}}/_history{?[parameters]&amp;_format=[mime-type]}</code>
 											</li>
 										{%endfor %}
 
 										{%if r.searchInclude %}
 											<li>
-												A {{ rest.mode | capitalize }} <strong>{% if r._searchInclude and r._searchInclude[0].extension[0] %}{{ r._searchInclude[0].extension[0].valueCode }} {% else %}(conformance expectation undefined){% endif %}</strong> be capable of supporting the following _includes:
+												A {{ rest.mode | capitalize }} <strong>{%- if r._searchInclude -%}{{display_expectation_verb(r._searchInclude[0], '(conformance expectation undefined)')}}{%- else %}(conformance expectation undefined){% endif -%}</strong> be capable of supporting the following _includes:
 												<ul>
 													{% for include in r.searchInclude %}
 														<li>{{include}} - <code class="highlighter-rouge">GET [base]/{{r.type}}?[parameter=value]&amp;_include={{include}}</code></li>
@@ -684,7 +751,7 @@
 
 										{%if r.searchRevInclude %}
 											<li>
-												A {{ rest.mode | capitalize }} <strong>{% if r._searchRevInclude and r._searchRevInclude[0].extension[0] %}{{ r._searchRevInclude[0].extension[0].valueCode }} {% else %}(conformance expectation undefined){% endif %}</strong> be capable of supporting the following _revincludes:
+												A {{ rest.mode | capitalize }} <strong>{%- if r._searchRevInclude -%}{{display_expectation_verb(r._searchRevInclude[0], '(conformance expectation undefined)')}}{%- else %}(conformance expectation undefined){% endif -%}</strong> be capable of supporting the following _revincludes:
 												<ul>
 													{% for revinclude in r.searchRevInclude %}
 														<li>{{revinclude}} - <code class="highlighter-rouge">GET [base]/{{r.type}}?[parameter=value]&amp;_revinclude={{revinclude}}</code></li>
@@ -698,7 +765,7 @@
 									{% if r.searchParam %}
 										<!-- Only included search parameters that are not MAY or there is no conformance requirement included -->
 										{% set ns = namespace(sps=false) %}
-										{%- for s in r.searchParam if not s.extension or (s.extension and s.extension[0].valueCode != "MAY") -%}
+										{%- for s in r.searchParam if not s.extension or (s.extension and get_expectation_verb(s) != "MAY") -%}
 											{% set ns.sps=true %}
 										{% endfor %}
 										{% if ns.sps %}
@@ -713,10 +780,10 @@
 													</tr>
 												</thead>
 												<tbody>
-													{%- for s in r.searchParam if not s.extension or (s.extension and s.extension[0].valueCode != "MAY") -%}
+													{%- for s in r.searchParam if not s.extension or (s.extension and get_expectation_verb(s) != "MAY") -%}
 													<tr>
 														<td>
-															<strong>{% if s.extension %}{{ s.extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong>
+															<strong>{{display_expectation_verb(s, '(conformance expectation undefined)')}}</strong>
 														</td>
 														<td>
 															{% set name_anchor = s.name.split(':')[0] %}
@@ -813,8 +880,8 @@
 															<td>
 																{%- for combo in combos.extension if combo.url == 'required' or combo.url == 'optional'-%}
 																	{% set sc = combo.valueString %}
-																	{%- for s in r.searchParam if sc == s.name -%}
-																		{% set ns.spr = s.type %}
+																	{%- for s in r.searchParam %}{% if sc == s.name -%}
+																		{% set ns.spr = s.type %}{%endif%}
 																	{%- endfor %}{% if sp_map[combo.valueString] %}{{sp_map[combo.valueString]}}{% else %}{{ns.spr}}{%endif%}
 																	{%- if not loop.last %}+{% endif %}
 																{%- endfor %}
@@ -822,13 +889,14 @@
 															<td>
 																<code class="highlighter-rouge">GET [base]/{{r.type}}?
 																	{%- for combo in combos.extension if combo.url == 'required' or combo.url == 'optional'-%}{% set sc = combo.valueString %}{%- for s in r.searchParam if sc == s.name -%}
-																			{% set ns.type = s.type %}
-																			{% set ns.name = s.name %}
-																		{%- endfor %}{%- set p = combo.valueString -%}{% if sp_map[combo.valueString] %}
+																			{%- set ns.type = s.type -%}
+																			{%- set ns.name = s.name -%}
+																		{%- endfor %}{%- set p = combo.valueString -%}
+																		{%- if sp_map[combo.valueString] -%}
 																			{%- set t = sp_map[combo.valueString] -%}
-																		{% else %}
+																		{%- else -%}
 																			{%- set t = ns.type -%}
-																		{% endif %}{{p}}{%- if p == '_id' %}=[id]
+																		{%- endif -%}{{p}}{%- if p == '_id' %}=[id]
 																		{%- elif p == '_lastUpdated' %}=[dateTime]
 																		{%- elif p == '_tag' %}=[system]|[code]
 																		{%- elif p == '_profile' %}=[type]
@@ -851,7 +919,7 @@
 																		{%- elif p == '_query' %}=[name]&amp;[parameters]
 																		{%- elif p == '_format' %}=[mime-type]
 																		{%- elif p == '_pretty' %}=[true|false]
-																		{%- elif p in ['us-core-includeprovenance'] %}
+																		{%- elif p in ['us-core-includeprovenance'] -%}
 																		{%- elif t == 'reference' %}=[type]/[id]
 																		{%- elif t == 'status' %}=[status]
 																		{%- elif t == 'composite' %}=[code]&amp;[value]
@@ -859,7 +927,7 @@
 																		{%- elif t == 'string' %}=[{{p}}]
 																		{%- elif t == 'token' %}=[system]|[code]
 																		{%- else %}=[{{p}}]
-																		{%- endif %}{%- if not loop.last %}&amp;{%- endif %}{%- endfor -%}
+																		{%- endif %}{%- if not loop.last -%}&amp;{%- endif -%}{%- endfor -%}
 																</code>
 															</td>
 														</tr>

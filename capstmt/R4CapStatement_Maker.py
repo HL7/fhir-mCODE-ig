@@ -1,8 +1,7 @@
 '''
 Benjamin Langley
 
-Usage: python3 R4CapStatement_NarrativeMaker.py [json file (wildcards supported)] {[Artifacts Folder]}
-Wildcards for json file name will iterate on all matches (i.e. support for generating narratives for multiple CapabilityStatement files at the same time)
+Usage: python3 R4CapStatement_Maker.py [xlsx file]
 Dependecies: 
     fhirclient
     pandas
@@ -17,23 +16,16 @@ To install all dependencies: pip3 install -r requirements.txt
 to run on windows: python -m pip ...
 
 NOTE: this requires the r4models to be installed in the fhirclient pip site-package, to be installed in [installdir]/lib/python/site-packages/fhirclient
+Email Eric Haas for these models
 
-
-Modified from: 
-https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/R4CapStatement_Maker.ipynb
-and jinja template from
-https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/R4capabilitystatement-server.j2
+Modified from: https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/R4CapStatement_Maker.ipynb
 '''
 import sys
 import os
 import os.path
 from os import path
-from os.path import exists
-import glob
 import validators
 import fhirclient.r4models.capabilitystatement as CS
-import fhirclient.r4models.implementationguide as IG
-import fhirclient.r4models.structuredefinition as SD
 import fhirclient.r4models.codeableconcept as CC
 import fhirclient.r4models.fhirdate as D
 import fhirclient.r4models.extension as X
@@ -44,9 +36,8 @@ import re
 
 import tarfile
 # import fhirclient.r4models.narrative as N
-import json
 from json import dumps, loads
-from requests import post, get
+from requests import post
 from pathlib import Path
 from collections import namedtuple
 from pandas import *
@@ -55,7 +46,6 @@ from stringcase import snakecase, titlecase
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from commonmark import commonmark
 from lxml import etree
-
 
 # GLOBALS
 fhir_base_url = 'http://hl7.org/fhir/'
@@ -78,54 +68,140 @@ none_list = ['', ' ', 'none', 'n/a', 'N/A', 'N', 'False']
 sep_list = (',', ';', ' ', ', ', '; ')
 f_now = D.FHIRDate(str(date.today()))
 
-
-
-class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKCYAN = '\033[96m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
-
 def markdown(text, *args, **kwargs):
     return commonmark(text, *args, **kwargs)
 
 def main():
     if (len(sys.argv) < 2):
         print(
-            "Error: missing json file - correct usage is:\n\tpython3 R4CapStatement_NarrativeMaker.py [json file (wildcards supported)] {[Artifacts Folder]}\n\n\tWildcards for json file name will iterate on all matches (i.e. support for generating narratives for multiple CapabilityStatement files at the same time)")
+            "Error: missing xlsx file - correct usage is:\n\tpython3 R4CapStatement_Maker.py [xlsx file]")
         return
 
-    #xls = sys.argv[1]
+    xls = sys.argv[1]
 
-    #in_json_file = sys.argv[1]
-    artifacts_folder = ""
-    
-    if len(sys.argv) > 2:
-        artifacts_folder = sys.argv[2]
+    print('....creating CapabilityStatement.....')
 
-    for pattern in sys.argv[1:]:
-        for filename in glob.glob(pattern):
-            if os.path.isfile(filename):
-                generate_single(filename, artifacts_folder)
+    # Read the config sheet from the spreadsheet
+    # use the index_col = 0 for setting the first row as the index
+    config_df = read_excel(xls, 'config', na_filter=False, index_col=0)
 
+    # --------- ig specific variable -------------------
+    pre = config_df.Value.pre  # for Titles - not sure this is actually used
+    canon = config_df.Value.canon  # don't forget the slash  - fix using os.join or path
+    publisher = config_df.Value.publisher
+    restinteraction = config_df.Value.rest
+    publisher_endpoint = dict(
+        system=config_df.Value.publishersystem,
+        value=config_df.Value.publishervalue,
+    )
+  
+    definitions_file = config_df.Value.definitions_file   #source of  spec.internal file manually extracted from downloaded spec
+    # Read the meta sheet from the spreadsheet
+    meta_df = read_excel(xls, 'meta', na_filter=False)
+    meta_dict = dict(zip(meta_df.Element, meta_df.Value))
+    meta = namedtuple("Meta", meta_dict.keys())(*meta_dict.values())
 
-def generate_single(in_json_file, artifacts_folder):
-    print('....Generating CapabilityStatement Narrative for ' +  in_json_file + '.....')
+    # Create the CapabilityStatement
+    cs = create_capabilitystatement(
+        meta, canon, publisher, publisher_endpoint, xls)
+    rest = CS.CapabilityStatementRest(dict(
+        mode=meta.mode,
+        documentation=meta.documentation,
+        security=dict(
+            description=meta.security
+        ) if meta.security else None,
+        interaction=get_rest_ints(xls) if restinteraction else None,
+        operation=get_sys_op(xls)
+    ))
+    cs.rest = [rest]
 
-    with open(in_json_file, 'r', encoding="utf-8") as h:
-        pjs = json.load(h)
-    capStatement = CS.CapabilityStatement(pjs)
-    #print(dumps(capStatement.as_json(), indent=3))    # %% [markdown]
+    df_profiles = read_excel(xls, 'profiles', na_filter=False)
+    df_profiles = df_profiles[df_profiles.Profile.str[0] != '!']
 
-    # CapabilityStatement loaded
+    resources_df = read_excel(xls, 'resources', na_filter=False)
+    resources_df = resources_df[resources_df.type.str[0] != '!']
+
+    df_i = read_excel(xls, 'interactions', na_filter=False)
+    df_sp = read_excel(xls, 'sps', na_filter=False)
+    df_combos = read_excel(xls, 'sp_combos', na_filter=False)
+    df_op = read_excel(xls, 'ops', na_filter=False)
+
+    rest.resource = []
+    for r in resources_df.itertuples(index=True):
+        supported_profile = [p.Profile for p in df_profiles.itertuples(
+            index=True) if p.Type == r.type]
+        res = CS.CapabilityStatementRestResource(
+            dict(
+                type=r.type,
+                documentation=r.documentation if r.documentation not in none_list else None,
+                versioning=r.versioning if r.versioning not in none_list else None,
+                readHistory=r.readHistory if r.readHistory not in none_list else None,
+                updateCreate=r.updateCreate if r.updateCreate not in none_list else None,
+                conditionalCreate=r.conditionalCreate if r.conditionalCreate not in none_list else None,
+                conditionalRead=r.conditionalRead if r.conditionalRead not in none_list else None,
+                conditionalUpdate=r.conditionalUpdate if r.conditionalUpdate not in none_list else None,
+                conditionalDelete=r.conditionalDelete if r.conditionalDelete not in none_list else None,
+                referencePolicy=[re.sub('\s+','',x) for x in r.referencePolicy.split(",") if x],
+                searchInclude=[re.sub('\s+','',x) for x in r.shall_include.split(
+                    ",") + r.should_include.split(",") if x],
+                searchRevInclude=[re.sub('\s+','',x) for x in r.shall_revinclude.split(
+                    ",") + r.should_revinclude.split(",") if x],
+                interaction=get_i(r.type, df_i),
+                searchParam=get_sp(r.type, df_sp, pre, canon),
+                operation=get_op(r.type, df_op),
+                supportedProfile=supported_profile
+            )
+        )
+        res.extension = get_conf(r.conformance)
+        combos = {(i.combo, i.combo_conf)
+                  for i in df_combos.itertuples(index=True) if i.base == r.type}
+        # convert list to  lst of combo extension
+        res.extension = res.extension + get_combo_ext(r.type, combos)
+        rest.resource.append(res)
+
+    rest.resource = sorted(
+        rest.resource, key=lambda x: x.type)  # sort resources
+    cs.rest = [rest]
+
+    # add in conformance expectations for primitives
+    # convert to dict since model can't handle primitive extensions
+    resttype_dict = res.as_json()
+
+    for i in ['Include', 'RevInclude']:
+        element = f'_search{i}' 
+        resttype_dict[element] = []
+        for expectation in ['should', 'shall']:  # list all should includes first
+            sp_attr = f'{expectation}_{i.lower()}'
+            includes = getattr(r, sp_attr).split(',')
+
+            for include in includes:
+                if include not in none_list:
+                    conf = get_conf(expectation.upper(), as_dict=True)
+                    resttype_dict[element].append(conf)
+
+        if not resttype_dict[element]:
+            del(resttype_dict[element])
+
+    print(resttype_dict)
+
+    print(dumps(cs.as_json(), indent=3))    # %% [markdown]
+
+    print('.............validating..............')
+    r = validate(cs)
+    if (r.status_code != 200):
+        print("Error: Unable to validate - status code {}".format(r.status_code))
+    path = Path.cwd() / 'validation.html'
+    path.write_text(
+        f'<h1>Validation output</h1><h3>Status Code = {r.status_code}</h3> {r.json()["text"]["div"]}')
+    print(f"HTML webpage of validation saved to:\n\t {path}")
+
+    # get from package (json) file in local .fhir directory
+    si = get_si2(definitions_file)
+    path_map = si['paths']
+    path_map
+
     in_path = ''
     in_file = 'R4capabilitystatement-server.j2'
-    #'/Users/cspears/dev/tools/CapStatement/R4capabilitystatement-server.j2'
 
     env = Environment(
         loader=FileSystemLoader(searchpath=os.path.abspath(os.path.dirname(os.path.realpath(__file__)))),
@@ -136,152 +212,50 @@ def generate_single(in_json_file, artifacts_folder):
 
 
     template = env.get_template(in_file)
-    #parent=os.path.abspath(os.path.dirname(os.path.realpath(__file__))))
 
-    pname_map = {}
-    igname_map = {}
-    csname_map = {}
-    path_map = {}
-    # Load name maps
-    if artifacts_folder != "":
-        print('....Retrieving Artifact Names .....')
-        artifacts_folder = os.path.abspath(artifacts_folder)
-        struct_def_files = glob.glob(artifacts_folder + "/StructureDefinition-*.json")
-        imp_guide_files = glob.glob(artifacts_folder + "/ImplementationGuide-*.json")
-        cap_stmt_files = glob.glob(artifacts_folder + "/CapabilityStatement-*.json")
-        spec_path_files = glob.glob(artifacts_folder + "/spec.internals")
-        
-        pname_map = get_pname_map(struct_def_files)
-        igname_map = get_igname_map(imp_guide_files)
-        csname_map = get_csname_map(cap_stmt_files)
-        # If spec.internals file is found
-        if(len(spec_path_files) == 1):
-            spec_internals_paths = get_si2(spec_path_files[0])
-            #print(spec_internals_paths)
-            path_map = spec_internals_paths['paths']
-            print(path_map)
-        #sys.exit()
-
-    # Check access to hl7.org/fhir
-    r = get (fhir_base_url)
-    if r.status_code == 200:
-        print('....Retrieving Online Artifact Names .....')
-        # Loop through all references in the CapabilityStatement and attempt to retried the artifacts to load the names into the map
-        
-
-        # Instantiates
-        if capStatement.instantiates:
-            for url in capStatement.instantiates:
-                if url not in csname_map:
-                    csname_map[url] = get_url_title(url, "instantiates CapabilityStatement")
-
-        # Imports
-        if capStatement.imports:
-            for url in capStatement.imports:
-                if url not in csname_map:
-                    csname_map[url] = get_url_title(url, "imports CapabilityStatement")
-
-        # Implementation Guides
-        if capStatement.implementationGuide:
-            for url in capStatement.implementationGuide:
-                if url not in igname_map:
-                    igname_map[url] = get_url_title(url, "ImplementationGuide")
-
-        # Iterate through rest resources
-        if capStatement.rest:
-            for rest in capStatement.rest:
-                if rest.resource:
-                    for resource in rest.resource:
-                        if resource.profile:
-                            url = resource.profile
-                            if url not in pname_map:
-                                pname_map[url] = get_url_title(url, resource.type + " profile")
-                                
-                        if resource.supportedProfile:
-                            for url in resource.supportedProfile:
-                                if url not in pname_map:
-                                    pname_map[url] = get_url_title(url, resource.type + " supported profile")
-
-    else:
-        print("Unable to connect to " + fhir_base_url + ". Will not attempt to load online artifacts to retrieve artifact names.")
-
-
-
-
-    rendered = template.render(cs=capStatement, path_map=path_map, pname_map=pname_map, purl_map={}, sp_map={}, 
-                            csname_map=csname_map, csurl_map={}, sp_url_map={}, igname_map=igname_map, igurl_map={})
+    sp_map = {sp.code: sp.type for sp in df_sp.itertuples(index=True)}
+    sp_url_map  = {sp.code: sp.rel_url for sp in df_sp.itertuples(index=True)}
+    pname_map = {p.Profile: p.Name for p in df_profiles.itertuples(index=True)}
     
-    #template.render(cs=cs, path_map=path_map, pname_map=pname_map, purl_map=purl_map, sp_map=sp_map, 
-    #                       csname_map=csname_map, csurl_map=csurl_map, igname_map=igname_map, igurl_map=igurl_map)
+    purl_map = {p.Profile:p.url if hasattr(p.Profile , 'url') and p.url not in none_list else p.Profile for p in df_profiles.itertuples(index=True)}
+        
+    print(pname_map)
 
-    tempPath = Path.cwd() / "test.html"
-    tempPath.write_text(rendered)
-    #print(rendered)
-    
+    rendered = template.render(cs=cs, path_map=path_map,
+                            pname_map=pname_map, sp_map=sp_map, sp_url_map=sp_url_map, igurl_map={}, igname_map={}, purl_map=purl_map)
+
+    # print(HTML(rendered))
+
 
     parser = etree.XMLParser(remove_blank_text=True)
     root = etree.fromstring(rendered, parser=parser)
 
     div = (etree.tostring(root[1][0], encoding='unicode', method='html'))
-    #div = div.replace("\\n", "")
-    #div = div.replace("\\t", "")
-    
+    # Untested, removing \r and \n. If there is an error generating, please try again after removing the following two lines.
+    div = div.replace("\\n", "")
+    div = div.replace("\\t", "")
 
-    print("\n####################################################\n")
-    #print(etree.tostring(root[1][0], encoding='unicode', method='html'))
-    print("\n####################################################\n")
     narr = N.Narrative()
     narr.status = 'generated'
-
-
-    #div = re.sub('https://paciowg.github.io/advance-directives-ig/StructureDefinition-', 'SSSSSSSSSSSSSSSSS', div)
-    # replace all of the supported profile urls in link text with just the profile name from inside the cononical url
-    #######div = re.sub('">\(https?://.*/StructureDefinition-(.*)\.html\)</a>', '">\\1</a>', div)
-    #div = re.sub('">\(https://paciowg.github.io/advance-directives-ig/StructureDefinition-PADI-(PersonalGoal.html)</a>', '\\1', div)
-    # For some reason <br /> is being replaced with <br></br>, which is wrong. Convert it back.
-    #div = div.replace("<br></br>", "<br />")
-    #print(div)
     narr.div = div
+    cs.text = narr
+    # save to file
+    print('...........saving to file............')
+    # path = Path.cwd() / f'capabilitystatement-{cs.id.lower()}.json'
+    path = Path.cwd() / f'capabilitystatement-{meta.title.lower()}.json'
 
-    #print(dumps(narr.div, indent=3))    # %% [markdown]
-    capStatement.text = narr
-    outfile = 'Narrative-' + os.path.basename(in_json_file)
-    path = Path.cwd() / outfile
-    tempOut = dumps(capStatement.as_json(), indent=4)
+
+    tempOut = dumps(cs.as_json(), indent=4)
     tempOut = tempOut.replace("<sup>+</sup>", "<sup>&#8224;</sup>")
     
     #tempOut = tempOut.replace(“<sup>t</sup>”, “<sup>&#8224;</sup>”)
     
     tempOut = tempOut.replace("\\n", "")
     tempOut = tempOut.replace("\\t", "")
-    tempOut = tempOut.replace("<br></br>", "<br/>")
-    tempOut = tempOut.replace("\\u2666", "&#x2666;")
-    tempOut = tempOut.replace("\\u22c4", "&#x22C4;")
-    tempOut = tempOut.replace("\\u25bf", "&#x25BF;")
     path.write_text(tempOut)
 
-    div = div.replace("\\\"", "\"")
-    div = "<html><body>" + div + "</body></html>"
-    # testing output
-    #path = Path.cwd() / 'temper.html'
-    #path.write_text(div)
-
-    print('.............validating..............')
-    r = validate(capStatement)
-    if (r.status_code != 200):
-        print("Error: Unable to validate - status code {}".format(r.status_code))
-    path = Path.cwd() / 'validation.html'
-    path.write_text(
-        f'<h1>Validation output</h1><h3>Status Code = {r.status_code}</h3> {r.json()["text"]["div"]}')
-    print(f"HTML webpage of validation saved to:\n\t {path}")
-
-    # get from package (json) file in local .fhir directory
-    # save to file
-    print('...........done............')
-    # path = Path.cwd() / f'capabilitystatement-{cs.id.lower()}.json'
-    #path = Path.cwd() / f'capabilitystatement-{meta.title.lower()}.json'
     #path.write_text(dumps(cs.as_json(), indent=4))
-    #print(f"CapabilityStatement saved to:\n\t {path}")
+    print(f"CapabilityStatement saved to:\n\t {path}")
 
 
 def get_conf(conf='MAY', as_dict=False):
@@ -428,9 +402,9 @@ def get_sp(r_type, df_sp, pre, canon):
                  sp.definition = f'{canon}SearchParameter/{i.base.lower()}-{i.code.split("_")[-1]}'
             else:  # use base definition
                 # Check to see if URL is relative or absolute.
-                if(validators.url(i.sp_url)):
+                if(hasattr(i, 'sp_url') and validators.url(i.sp_url)):
                     sp.definition = f'{i.sp_url}'
-                elif (len(i.base_id) > 0): #base id provided
+                elif (hasattr(i, 'base_id') and len(i.base_id) > 0): #base id provided
                     sp.definition = f'{fhir_base_url}SearchParameter/{i.base_id}'
                 else: #otherwise attempt to create the base canonical url - Should use a mapping to determine proper name
                     if (i.code == "_text"): # if a Resource or DomainResource search parameter
@@ -445,6 +419,9 @@ def get_sp(r_type, df_sp, pre, canon):
                         #sp.definition = f'{fhir_base_url}SearchParameter/Resource-{i.code.split("_")[-1]}'
                         sp.definition = f'{fhir_base_url}SearchParameter/{i.base}-{i.code.split("_")[-1]}'
 
+            if(validators.url(i.rel_url)):
+                sp.documentation = f'{i.rel_url}'
+            # sp.documentation = f'{i.rel_url}'
             sp.type = i.type
             sp.extension = get_conf(i.base_conf)
             sp_list.append(sp.as_json())
@@ -489,64 +466,9 @@ def get_op(r_type, df_op):
 
     return op_list
 
-def get_pname_map(file_names):
-    
-    pname_map = {}
-    for file_name in file_names:
-        print("Searching: " + file_name + "\n")
-        with open(file_name, 'r', encoding="utf-8") as file_h:
-            sd = SD.StructureDefinition(json.load(file_h))
-            if sd.title != None:
-                pname_map[sd.url] = sd.title
-                print("Found title: " + sd.title + " from URL:" + sd.url + "\n")
-        file_h.close()
-    
-    return pname_map
-
-def get_igname_map(file_names):
-    igname_map = {}
-    for file_name in file_names:
-        with open(file_name, 'r', encoding="utf-8") as file_h:
-            ig = IG.ImplementationGuide(json.load(file_h))
-            igname_map[ig.url] = ig.title
-        file_h.close()
-    
-    return igname_map
-
-def get_csname_map(file_names):
-    csname_map = {}
-    for file_name in file_names:
-        with open(file_name, 'r', encoding="utf-8") as file_h:
-            cap_stmt = CS.CapabilityStatement(json.load(file_h))
-            csname_map[cap_stmt.url] = cap_stmt.title
-        file_h.close()
-    
-    return csname_map
-
-def get_url_title(url, msg_context):
-    print("Retrieving " + msg_context + " at: " + url)
-    try:
-        r = get(url, headers={"Accept":"application/json"})
-        if r.status_code == 200:
-            try:
-                json_data = json.loads(r.content)
-                #Retrieving this as json data instead of from fhirclient objects in case there is a validation error
-                if('title' in json_data):
-                    return json_data['title']
-                else:
-                    print(bcolors.BOLD + bcolors.FAIL + "Warning: Unable to retrieve title from online " + msg_context + " artifact (" + url + ") - Title will not show up in rendered narrative." + bcolors.ENDC)
-            except ValueError:
-                print(bcolors.BOLD + bcolors.FAIL + "Warning: Unable to decode online " + msg_context + " artifact (" + url + ") - Title will not show up in rendered narrative." + bcolors.ENDC)
-        else:
-            print(bcolors.BOLD + bcolors.FAIL + "Warning: unable to retrieve online " + msg_context + " artifact (" + url + "). Failed with status code: " + str(r.status_code) + " - Title will not show up in rendered narrative." + bcolors.ENDC)
-    except ValueError:
-        print(bcolors.BOLD + bcolors.FAIL + "Warning: Unable to retrieve " + msg_context + " artifact (" + url + ")." + bcolors.ENDC)
-
-
 
 def markdown(text, *args, **kwargs):
-    if text:
-        return commonmark(text, *args, **kwargs)
+    return commonmark(text, *args, **kwargs)
 
 def get_si(path):
     with tarfile.open(f'{path}/package.tgz', mode='r') as tf:

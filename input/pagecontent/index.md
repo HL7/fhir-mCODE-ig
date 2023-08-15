@@ -17,25 +17,14 @@ mCODE consists of approximately 30 FHIR profiles organized into six thematic gro
 
 The overall scope of mCODE and the relationships between mCODE profiles is shown in the following diagram (not all details are shown). Click on items to see their underlying definitions. When viewing the diagram, please note:
 
-* mCODE does not define a specific set of information that must be collected for each cancer patient. Instead, mCODE presents a set of patterns or templates, including controlled terminologies, to be used when certain data in the above groups are shared. 
+1. mCODE does not define a specific set of information that must be collected for each cancer patient. Instead, mCODE presents a set of patterns or templates, including controlled terminologies, to be used when certain data in the above groups are shared. ***Example:** mCODE includes a FHIR profile for ECOG performance status, but clearly not every cancer patient undergoes such an evaluation. However, if a patient does have an ECOG performance evaluation, that information must be shared in a manner conforming to mCODE's ECOG profile.*
 
-  ***Example:** mCODE includes a FHIR profile for ECOG performance status, but clearly not every cancer patient undergoes such an evaluation. However, if a patient does have an ECOG performance evaluation, that information must be shared in a manner conforming to mCODE's ECOG profile.*
-
-* The need to conform to mCODE profiles when sharing information may influence the way data is collected at the source and recorded in an EHR, for example, by tailoring the values included in a pick-list.
-
-  ***Example:** mCODE provides a specific set of values for [procedure intent][ProcedureIntentVS]. The need for terminology mapping can be minimized or eliminated if the EHR aligns with these choices.*
-
-* The lack of an mCODE profile only means that mCODE does not impose any specific requirements on that type of information (above and beyond the base FHIR specifications or US Core). In other words, if mCODE does not have a profile for some type of data, it still can be included with mCODE data using an appropriate resource or profile.
-
-  ***Example:** mCODE does not include a profile for care teams. However, users can share care team information using [FHIR's CareTeam resource](https://hl7.org/fhir/R4B/careteam.html), using a profile such as [US Core CareTeam](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-careteam.html).*
+2. If mCODE does not have a profile for some type of data, that data still can be included with mCODE data using an appropriate resource or profile. The lack of an mCODE profile only means that mCODE does not impose any additional requirements on that type of information above and beyond the base FHIR specifications or US Core. ***Example:** mCODE does not include a profile for care teams. However, users can share care team information using [FHIR's CareTeam resource](https://hl7.org/fhir/R4B/careteam.html), using a profile such as [US Core CareTeam](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-careteam.html).*
   
-* Additional profiles can be derived from mCODE. It is expected that mCODE will serve as the basis for future implementation guides dealing with new use cases, particular types of cancer, or specific demographic groups.
-
-  ***Example:** Radiation oncologists and vendors collaborated on a [radiation therapy implementation guide](http://hl7.org/fhir/us/codex-radiation-therapy/STU1/) that extends mCODE and facilitates structured data sharing between Radiation Oncology Information Systems and other health information systems.*
+3. Additional profiles can be derived from mCODE. It is expected that mCODE will serve as the basis for future implementation guides dealing with new use cases, particular types of cancer, or specific demographic groups ***Example:** Radiation oncologists and vendors collaborated on a [radiation therapy implementation guide](http://hl7.org/fhir/us/codex-radiation-therapy/STU1/) that extends mCODE and facilitates structured data sharing between Radiation Oncology Information Systems and other health information systems.*
 
 <object data="mCodeDiagram.svg" type="image/svg+xml"></object>
 <br/>
-
 
 ### Data Dictionary
 
@@ -92,7 +81,7 @@ In the event there are differences between the page renderings in this IG and th
 
 ### Credits
 
-The authors gratefully acknowledge the leadership of Dr. Monica Bertagnolli, former ASCO President (currently NCI Director) and Dr. Jay Schnitzer, MITRE Chief Technology and Chief Medical Officer. The ASCO/CancerLinQ team was led by Dr. Robert Miller. Dr. Travis Osterman of Vanderbilt University leads the CodeX Executive Committee. Dr. Sanjay Aneja leads the mCODE Technical Review Group. Dr. Charles Mayo of University of Michigan, Randi Kudner of ASTRO, and Martin von Siebenthal of Varian made significant contributions to the much improved radiotherapy portion of this IG. Wendy J. Blumenthal and Wendy Sharber of CDC provided essential input helping align mCODE with cancer registry reporting requirements.
+The authors gratefully acknowledge the leadership of Dr. Monica Bertagnolli, former ASCO President (currently NCI Director) and Dr. Jay Schnitzer, MITRE's Chief Technology and Chief Medical Officer. The ASCO/CancerLinQ team was led by Dr. Robert Miller. Dr. Travis Osterman of Vanderbilt University leads the CodeX Executive Committee. Dr. Sanjay Aneja leads the mCODE Technical Review Group. Dr. Charles Mayo of University of Michigan, Randi Kudner of ASTRO, and Martin von Siebenthal of Varian made significant contributions to the much improved radiotherapy portion of this IG. Wendy J. Blumenthal and Wendy Sharber of CDC provided essential input helping align mCODE with cancer registry reporting requirements.
 
 The authors recognize HL7 sponsorship and input from [Clinical Interoperability Council](http://www.hl7.org/Special/committees/cic/index.cfm), with special thanks to Laura Heermann Langford, Russell Leftwich, and James McClay. The [HL7 Clinical Genomics Work Group](https://confluence.hl7.org/display/CGW) has been a consistent and constructive partner during this project. Lloyd McKenzie and Grahame Grieve contributed to mCODE in countless ways with their outstanding energy and dedication.
 

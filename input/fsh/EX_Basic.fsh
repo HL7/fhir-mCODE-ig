@@ -328,17 +328,13 @@ Description: "Example of CancerRelatedMedicationRequest - Chemo Infusion"
 * status = MedReqStatus#stopped
 * statusReason = SCT#407563006 "Treatment not tolerated (situation)"
 * intent = MedReqIntent#order
-* authoredOn = "2019-04-01"
+* authoredOn = "2019-05-15"
 * medicationCodeableConcept = RXN#309311 "CISplatin 50 MG per 50 ML Injectable Solution"
 * reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
 * requester = Reference(us-core-practitioner-kyle-anydoc)
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* dosageInstruction.text = "calculate absolute dose on day of administration."
-* dosageInstruction.route = SCT#47625008 "Intravenous use"
-* dosageInstruction.doseAndRate.doseQuantity = 75 'mg/m2' "mg/m2"
-* dosageInstruction.timing.event = "2019-06-15"
-* dosageInstruction.timing.repeat.count = 1  // frequency is one-time on day 1 of first cycle so there should be no repeat."
-* note.text = "Day 1 of NSCLC regimen: Cisplatin 75 mg/m2 day 1; docetaxel 75 mg/m2 day 1 every 21 days for 4 cycles."
+* priorPrescription = Reference(cancer-related-medication-request-cisplatin)
+* note.text = "Stopped due to blood in urine, possible kidney damage."
 
 Instance: lab-result-observation-hemoglobin
 InstanceOf: USCoreObservationLab

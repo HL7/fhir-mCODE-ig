@@ -64,7 +64,6 @@ Description: "Codes that identify the kind of stage reported in an Observation, 
 * NCIT#C141099 "ENSAT Stage"
 * NCIT#C186618 "FIGO 2009 Stage"
 * NCIT#C186617 "FIGO 2018 Stage"
-* NCIT#C125738 "FIGO Stage"
 * NCIT#C157232 "FIGO/TNM Stage"
 * NCIT#C28067 "Hepatoblastoma Stage"
 * NCIT#C139007 "International Staging System Stage"

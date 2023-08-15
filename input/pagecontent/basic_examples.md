@@ -11,6 +11,7 @@
 ### [Cancer Related Medication Request](StructureDefinition-mcode-cancer-related-medication-request.html)
 
 * [CisPlatin - ChemoInfusion](MedicationRequest-cancer-related-medication-request-cisplatin.html)
+* [CisPlatin - ChemoInfusion - Stopped](MedicationRequest-cancer-related-medication-request-cisplatin-stopped.html)
 * [GeFitinib - Oral Tablet](MedicationRequest-cancer-related-medication-request-gefitinib.html)
 
 ### [Cancer Related Surgical Procedure][CancerRelatedSurgicalProcedure]
@@ -52,6 +53,11 @@
 ### [Genomics Report][GenomicsReport]
 
 * [Genomic Diagnostic Report - John Anyperson](DiagnosticReport-genomics-report-john-anyperson.html)
+
+### [History of Metastatic Cancer][HistoryOfMetastaticCancer]
+
+* [History of Cancer Metastatic to Liver](Observation-history-of-cancer-metastatic-to-liver.html)
+* [No History of Metastatic Cancer (explicit assertion)](Observation-no-history-of-metastatic-cancer.html)
 
 ### [Human Specimen][HumanSpecimen]
 

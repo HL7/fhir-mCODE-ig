@@ -9,6 +9,6 @@ To represent a negative answer to a question regarding history of metastatic dis
 
 ### Conformance
 
-Observation resources associated with an [in-scope patient] with a Observation.code in the value set [HistoryMetastaticMalignantNeoplasmVS] SHALL conform to this profile. Any resource intended to conform to this profile SHOULD populate `meta.profile` accordingly.
+Observation resources associated with an [in-scope patient] with a Observation.code in the value set [HistoryOfMetastaticMalignantNeoplasmVS] SHALL conform to this profile. Any resource intended to conform to this profile SHOULD populate `meta.profile` accordingly.
 
 {% include markdown-link-references.md %}

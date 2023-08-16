@@ -1,11 +1,12 @@
 {
     "package-id" : "hl7.fhir.us.mcode",
-    "version" : "3.0.0-STU3 Release",
+    "version" : "3.0.0",
     "path" : "http://hl7.org/fhir/us/mcode/3.0.0",
     "status" : "draft",
     "sequence" : "STU 3",
     "milestone":false,
     "desc" : "STU3 Release",
     "descmd" : "STU3 Release",
-    "changes" : "change_log.html"
+    "changes" : "change_log.html",
+    "mode" : "milestone"
   }

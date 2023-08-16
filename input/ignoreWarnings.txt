@@ -5,6 +5,7 @@
 
 # PARSING ERROR DURING TERMINOLOGY EXPANSION
 Error from server: Error parsing HGVS response: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
+Error reading Http Response: Error parsing JSON source: Unexpected char '<' in json stream at Line 1 (path=[null])
 
 # SUPPRESS US CORE COMPLIANCE WARNINGS.  For STU2, exceptions to US Core parent profiles was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard: 28-0-1. See https://jira.hl7.org/browse/FHIR-30707. For STU3, exceptions to US Core parent profiles was approved by the Cross-Group Projects Work Group on 2/9/2023 Saul Kravitz/Floyd Eisenberg: 23-0-2. See https://jira.hl7.org/browse/FHIR-40383.  A variance for an additional Observation added in STU3 was approved by the Cross-Group Projects Work Group on 8/10/23.  See https://jira.hl7.org/browse/FHIR-41710.
 US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
@@ -54,3 +55,6 @@ Details for Observation/genomic-variant-jenny-m matching against profile http://
 Details for Observation/gx-genomic-variant-somatic-polrmt matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 Details for Observation/gx-genomic-variant-somatic-pof1b matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 Details for Observation/gx-genomic-variant-somatic-bap1-indel matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+
+# IG Publisher Bug 
+This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended

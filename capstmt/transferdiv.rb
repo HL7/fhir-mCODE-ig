@@ -14,6 +14,8 @@ file = File.read(ARGV[0])
 data_hash = JSON.parse(file)
 
 newtext = data_hash["text"]["div"]
+# special case.  Script doesn't substitute correct path for locally defined versions of built in search parameters.  We need to substitute _id.
+newtext.gsub!("fhir/R4/search.html#id","fhir/us/core/STU5.0.1/SearchParameter-us-core-patient-id.html#id")
 output = File.open(ARGV[2], 'w')
 
 File.foreach(ARGV[1]).with_index do |line, line_num|

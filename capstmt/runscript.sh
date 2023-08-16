@@ -8,7 +8,7 @@ do
     id=${capname#"$prefix"}
     echo "Processing $cap file ==> $narrcap file;   id = $id"
     cp ${cap} ./${narrcap}
-    python3 R4CapStatement_NarrativeMaker.py ${narrcap}
+    python3.11 R4CapStatement_NarrativeMaker.py ${narrcap}
     narrcap="Narrative-${narrcap}"
     ruby transferdiv.rb ${narrcap} ../input/fsh/DEF_Cap_${id}.fsh DEF_Cap_${id}.fsh
 done

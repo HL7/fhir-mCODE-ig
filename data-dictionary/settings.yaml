@@ -1,5 +1,5 @@
 title: mCODE Data Dictionary
-filename: mCODEDataDictionary-STU2
+filename: mCODEDataDictionary-STU3
 informationTabContent:
   General notes: |-
     **Profiles not shown in data dictionary:** Profiles that are used by mCODE but defined externally to mCODE, such as vital signs (defined by FHIR or US Core), are not included in the Data Dictionary.

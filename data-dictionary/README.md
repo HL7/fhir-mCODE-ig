@@ -1,19 +1,32 @@
 # mCODE Data Dictionary and Diff
 
-The following files are generated via an automated process:
+The following files are generated via an automated tool called `ig-summary`:
 
-1. `input/images/data-dictionary/mCODEDataDictionary-STU2.xlsx`
-    This is a tabular version of the profiles, elements, value sets, and code systems generated from the FHIR resources defined in this IG.
+1. `input/images/data-dictionary/mCODEDataDictionary-STU3.xlsx`
+   This is a tabular version of the STU3 profiles, elements, value sets, and code systems generated from the FHIR resources defined in this IG.
 
-2. `input/images/data-dictionary/mCODEDataDictionary-STU2-vs-STU1.xlsx`
-    This is a comparison of two different versions of #1: the first is generated based on the STU1 version of the IG, and the second based on STU2.
+   To generate this, run:
 
-A script is used to generate the above files. This script is currently not public, but is in the process of being released as open source software. For more information, please [contact us](https://chat.fhir.org/#narrow/pm-with/322501).
+   ```bash
+   cd path/to/fhir-mCODE-ig
+   ./_genonce.sh # Or run the equivalent _genonce.bat on Windows
+   ig-summary create --input . --output input/images/data-dictionary/ --settings data-dictionary/settings.yaml
+   ```
 
-## Command arguments
+   This will generate two files:
 
-These command arguments are used to generate the files described above:
+   - `input/images/data-dictionary/data_dictionary_hl7.fhir.us.mcode.xlsx`; manually rename this to `mCODEDataDictionary-STU3.xlsx`
+   - `input/images/data-dictionary/data_dictionary_hl7.fhir.us.mcode.json`; manually rename this to `mCODEDataDictionary-STU3.json`
 
-1. `--mode ms --settings data-dictionary/settings.yaml . input/images/data-dictionary`
+2. `input/images/data-dictionary/mCODEDataDictionary-STU3-vs-STU2.xlsx`
+   This is a comparison of two different versions of #1: the first is generated based on the STU2 version of the IG, and the second based on STU3.
 
-2. `-a "input/images/data-dictionary/stu1_data_dictionary_all_elements.json" -b /input/images/data-dictionary/data_dictionary_all_elements.json -o input/images/data-dictionary/ --settings data-dictionary/diff_settings.yaml`
+   To generate this, first generate `mCODEDataDictionary-STU3.xlsx`. This will produce `input/images/data-dictionary/`.
+
+   Then, download the STU2 `.json` file from <https://hl7.org/implement/standards/fhir/us/mcode/STU2/data-dictionary/data_dictionary.json> and rename it to `stu2.json` to avoid confusion.
+
+   ```bash
+   ig-summary diff --a ~/Downloads/stu2.json --b input/images/data-dictionary/mCODEDataDictionary-STU3.json --settings data-dictionary/diff_settings.yaml --output input/images/data-dictionary/
+   ```
+
+We anticipate the `ig-summary` tool will be released under an open source license in 2023. Until then, this tool is currently not public. For more information, please [contact us](https://chat.fhir.org/#narrow/pm-with/322501).

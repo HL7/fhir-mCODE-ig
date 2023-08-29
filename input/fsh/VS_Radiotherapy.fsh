@@ -116,7 +116,7 @@ Description: "Codes describing the techniques of brachytherapy (internal or surf
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 3
 * include codes from valueset BrachytherapyPermanentSeedsTechniqueVS
-* include codes from valueset BrachytherapyLowDoseRateTemporaryTechniqueVSs
+* include codes from valueset BrachytherapyLowDoseRateTemporaryTechniqueVS
 * include codes from valueset BrachytherapyPulsedDoseRateTechniqueVS
 * include codes from valueset BrachytherapyHighDoseRateTechniqueVS
 * include codes from valueset BrachytherapyHighDoseRateElectronicTechniqueVS
@@ -138,7 +138,7 @@ Description: "Allowed techniques for brachytherapy modality internal radiotherap
 * ^extension[FMM].valueInteger = 3
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
 
-ValueSet: BrachytherapyLowDoseRateTemporaryTechniqueVSs
+ValueSet: BrachytherapyLowDoseRateTemporaryTechniqueVS
 Id: mcode-brachytherapy-low-dose-rate-temporary-technique-vs
 Title: "Brachytherapy Low Dose Rate Temporary Radation Technique Value Set"
 Description: "Allowed techniques for brachytherapy modality Low Dose Rate using temporary radiation source"

@@ -3462,7 +3462,7 @@
       "Group": "Default",
       "Profile Title": "Radiotherapy Course Summary Profile",
       "Data Element Name": "Dose Delivered to Volume > Total Dose Delivered",
-      "Definition": "The total amount of radiation delivered to this volume within the scope of this dose delivery, i.e., dose delivered from the Procedure in which this extension is used.",
+      "Definition": "The total amount of physical radiation delivered to this volume within the scope of this dose delivery, i.e., dose delivered from the Procedure in which this extension is used.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
       "Data Type": "Quantity",
@@ -5259,7 +5259,7 @@
       "Value set name": "Benign Neoplasm of Brain and CNS Disorder Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs",
       "Code system": "SNOMED CT",
-      "Logical definition": "concept is 93468003 AND concept is 109913001 AND concept is 92030004 AND concept is 92048008 AND concept is 92296004 AND concept is 92294001 AND concept is 94963005 AND concept is 94767002 AND concept is 95002008 AND concept is 95004009"
+      "Logical definition": "concept is 93468003 OR concept is 109913001 OR concept is 92030004 OR concept is 92048008 OR concept is 92296004 OR concept is 92294001 OR concept is 94963005 OR concept is 94767002 OR concept is 95002008 OR concept is 95004009"
     },
     {
       "Value set name": "Binet Stage Value Set",
@@ -5293,7 +5293,7 @@
       "Value set name": "Body Location and Laterality Qualifier Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-body-location-and-laterality-qualifier-vs",
       "Code system": "SNOMED CT",
-      "Logical definition": "concept is a descendent of 106233006 AND concept is a descendent of 272424004"
+      "Logical definition": "concept is a descendent of 106233006 OR concept is a descendent of 272424004"
     },
     {
       "Value set name": "Body Location Qualifier Value Set",
@@ -5556,7 +5556,7 @@
       "Value set name": "Cancer Disease Status Evidence Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-disease-status-evidence-type-vs",
       "Code system": "SNOMED CT",
-      "Logical definition": "concept is 714797009 AND concept is 116147009 AND concept is 108257001 AND concept is 386344002 AND concept is 5880005 AND concept is 363679005 AND concept is 250724005"
+      "Logical definition": "concept is 714797009 OR concept is 116147009 OR concept is 108257001 OR concept is 386344002 OR concept is 5880005 OR concept is 363679005 OR concept is 250724005"
     },
     {
       "Value set name": "Cancer Disorder Value Set",
@@ -5999,7 +5999,7 @@
       "Value set name": "Cancer Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Code system": "SNOMED CT",
-      "Logical definition": "concept is a descendent of 1222585009 AND concept is a descendent of 1222587001 AND concept is a descendent of 1222588006 AND concept is a descendent of 1222589003 AND concept is a descendent of 1222590007 AND concept is a descendent of 1222591006 AND concept is a descendent of 1222592004 AND concept is a descendent of 1222593009 AND concept is a descendent of 1222594003 AND concept is a descendent of 1222595002 AND concept is a descendent of 1222596001 AND concept is a descendent of 1222598000 AND concept is a descendent of 1222599008 AND concept is a descendent of 1222600006 AND concept is a descendent of 1222601005 AND concept is a descendent of 258318002 AND concept is a descendent of 258309004 AND concept is a descendent of 258233007 AND concept is a descendent of 258271004 AND concept is a descendent of 106242004"
+      "Logical definition": "concept is a descendent of 1222585009 OR concept is a descendent of 1222587001 OR concept is a descendent of 1222588006 OR concept is a descendent of 1222589003 OR concept is a descendent of 1222590007 OR concept is a descendent of 1222591006 OR concept is a descendent of 1222592004 OR concept is a descendent of 1222593009 OR concept is a descendent of 1222594003 OR concept is a descendent of 1222595002 OR concept is a descendent of 1222596001 OR concept is a descendent of 1222598000 OR concept is a descendent of 1222599008 OR concept is a descendent of 1222600006 OR concept is a descendent of 1222601005 OR concept is a descendent of 258318002 OR concept is a descendent of 258309004 OR concept is a descendent of 258233007 OR concept is a descendent of 258271004 OR concept is a descendent of 106242004"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
@@ -7371,7 +7371,7 @@
       "Value set name": "Histology Morphology Behavior Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-histology-morphology-behavior-vs",
       "Code system": "SNOMED CT",
-      "Logical definition": "concept is 367651003 AND concept is 399919001 AND concept is 399983006"
+      "Logical definition": "concept is 367651003 OR concept is 399919001 OR concept is 399983006"
     },
     {
       "Value set name": "History of Metastatic Malignant Neoplasm Value Set",
@@ -19127,7 +19127,7 @@
       "Value set name": "TNM Distant Metastases Category Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-distant-metastases-category-vs",
       "Code system": "SNOMED CT",
-      "Logical definition": "concept is a descendent of 1222587001 AND concept is a descendent of 1222591006"
+      "Logical definition": "concept is a descendent of 1222587001 OR concept is a descendent of 1222591006"
     },
     {
       "Value set name": "TNM Distant Metastases Staging Type Maximum Value Set",
@@ -19187,7 +19187,7 @@
       "Value set name": "TNM Primary Tumor Category Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-primary-tumor-category-vs",
       "Code system": "SNOMED CT",
-      "Logical definition": "concept is a descendent of 1222585009 AND concept is a descendent of 1222589003 AND concept is a descendent of 1222595002"
+      "Logical definition": "concept is a descendent of 1222585009 OR concept is a descendent of 1222589003 OR concept is a descendent of 1222595002"
     },
     {
       "Value set name": "TNM Primary Tumor Staging Type Maximum Value Set",
@@ -19247,7 +19247,7 @@
       "Value set name": "TNM Regional Nodes Category Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-regional-nodes-category-vs",
       "Code system": "SNOMED CT",
-      "Logical definition": "concept is a descendent of 1222588006 AND concept is a descendent of 1222590007 AND concept is a descendent of 1222596001"
+      "Logical definition": "concept is a descendent of 1222588006 OR concept is a descendent of 1222590007 OR concept is a descendent of 1222596001"
     },
     {
       "Value set name": "TNM Regional Nodes Staging Type Maximum Value Set",
@@ -19355,7 +19355,7 @@
       "Value set name": "TNM Stage Group Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-vs",
       "Code system": "SNOMED CT",
-      "Logical definition": "concept is a descendent of 1222592004 AND concept is a descendent of 1222593009 AND concept is a descendent of 1222594003"
+      "Logical definition": "concept is a descendent of 1222592004 OR concept is a descendent of 1222593009 OR concept is a descendent of 1222594003"
     },
     {
       "Value set name": "TNM Staging Method Value Set",

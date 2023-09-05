@@ -22,4 +22,4 @@ The DDD is provided for convenience in understanding the changes between STU 3 a
 
 Download link:
 
-* [mCODE Data Dictionary Differential STU3 versus STU2 (Excel download)](data-dictionary/mCODEDataDictionary-STU3-vs-STU2.xlsx)
+* [mCODE Data Dictionary Differential STU3 versus STU2 (Excel download)](data-dictionary/mCODEDataDictionary-STU3-vs-STU2.1.xlsx)

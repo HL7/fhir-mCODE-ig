@@ -25,7 +25,7 @@ The following files are generated via an automated tool called `ig-summary`:
    mv -f input/images/data-dictionary/data_dictionary_hl7.fhir.us.mcode.json input/images/data-dictionary/mCODEDataDictionary-STU3.json
    ```
 
-2. `input/images/data-dictionary/mCODEDataDictionary-STU3-vs-STU2.xlsx`
+2. `input/images/data-dictionary/mCODEDataDictionary-STU3-vs-STU2.1.xlsx`
    This is a comparison of two different versions of #1: the first is generated based on the STU2 version of the IG, and the second based on STU3.
 
    To generate this, first generate `mCODEDataDictionary-STU3.xlsx`. This will produce `input/images/data-dictionary/`.

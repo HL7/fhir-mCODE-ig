@@ -1,3 +1,72 @@
 leftName: mCODE STU2.1
 rightName: mCODE STU3
 filename: mCODEDataDictionary-STU3-vs-STU2.1
+
+valueSets:
+  renamed:
+    - old: http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs
+      new: http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-vs
+    - old: http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-distant-metastases-vs
+      new: http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-distant-metastases-staging-type-vs
+    - old: http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-primary-tumor-vs
+      new: http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-primary-tumor-staging-type-vs
+    - old: http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-regional-nodes-vs
+      new: http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-regional-nodes-staging-type-vs
+    - old: http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-stage-group-vs
+      new: http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-staging-type-vs
+    - old: http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs
+      new: http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs
+
+ignoreColumnsWhenComparing:
+  - Group
+
+
+# If there are rows that should never be displayed in the diff, specify them here:
+suppressRows:
+  # These rows are related to a change in extensions. See issue #9.
+  - FHIR Element (R4): Condition.extension:relatedPrimaryCancerCondition.url
+    Source Profile URI: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+    Element StructureDefinition URI: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+
+  - FHIR Element (R4): Condition.extension:relatedPrimaryCancerCondition.value[x]
+    Source Profile URI: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+    Element StructureDefinition URI: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+
+  - FHIR Element (R4): Extension.url
+    Source Profile URI: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+    Element StructureDefinition URI: http://hl7.org/fhir/StructureDefinition/condition-related
+
+  - FHIR Element (R4): Extension.value[x]
+    Source Profile URI: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+    Element StructureDefinition URI: http://hl7.org/fhir/StructureDefinition/condition-related
+
+  - FHIR Element (R4): Condition.extension:relatedPrimaryCancerCondition.id
+    Source Profile URI: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+    Element StructureDefinition URI: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+
+  - FHIR Element (R4): Condition.extension:relatedPrimaryCancerCondition.extension
+    Source Profile URI: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+    Element StructureDefinition URI: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+
+  # Profiles renamed
+  #  Cancer Stage Group > Cancer Stage
+  - column: Source Profile URI
+    old: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group
+    new: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage
+  - column: Element StructureDefinition URI
+    old: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group
+    new: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage
+  - column: Profile Title
+    old: Cancer Stage Group Profile
+    new: Cancer Stage Profile
+
+  #  Genomic Specimen > Human Specimen
+  - column: Source Profile URI
+    old: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen
+    new: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-human-specimen
+  - column: Element StructureDefinition URI
+    old: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen
+    new: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-human-specimen
+  - column: Profile Title
+    old: Genomic Specimen Profile
+    new: Human Specimen Profile

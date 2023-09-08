@@ -50,6 +50,7 @@ suppressRows:
 
   # Profiles renamed
   #  Cancer Stage Group > Cancer Stage
+remapValues:
   - column: Source Profile URI
     old: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group
     new: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage

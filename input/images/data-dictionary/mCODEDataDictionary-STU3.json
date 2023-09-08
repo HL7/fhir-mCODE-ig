@@ -28,7 +28,7 @@
       "group": "Default",
       "title": "Cancer Stage Profile",
       "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage",
-      "description": "Parent profile for observations regarding cancer stage, grade, classification, or risk group. The stage is an assessment of the extent of the cancer in the body, according to a given cancer staging classification system. Profiles for different staging systems (e.g., TNM stage group, Rai stage, FIGO stage, etc.) must derive from this profile.\n\nDespite its name, the CancerStage profile can also be used as a parent for cancer grade, classification, and risk grouping. This is because the structure of the profiles are the same or very similar. The key elements are the code, method, value, and optionally, prognostic factors referenced in the hasMember element."
+      "description": "Parent profile for observations regarding cancer stage, grade, classification, or risk group. The stage is an assessment of the extent of the cancer in the body, according to a given cancer staging classification system. Profiles for different staging systems (e.g., TNM stage group, Rai stage, FIGO stage, etc.) must derive from this profile.\r\n\r\nDespite its name, the CancerStage profile can also be used as a parent for cancer grade, classification, and risk grouping. This is because the structure of the profiles are the same or very similar. The key elements are the code, method, value, and optionally, prognostic factors referenced in the hasMember element."
     },
     {
       "group": "Default",
@@ -3364,7 +3364,7 @@
       "Group": "Default",
       "Profile Title": "Radiotherapy Course Summary Profile",
       "Data Element Name": "Termination Reason",
-      "Definition": "A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study.\nThis extension is deprecated since it is redundant with the statusReason field.",
+      "Definition": "A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study.\r\nThis extension is deprecated since it is redundant with the statusReason field.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
@@ -5264,21 +5264,21 @@
     {
       "Value set name": "Binet Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-binet-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C80134",
       "Code description": "Binet Stage A"
     },
     {
       "Value set name": "Binet Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-binet-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C80135",
       "Code description": "Binet Stage B"
     },
     {
       "Value set name": "Binet Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-binet-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C80136",
       "Code description": "Binet Stage C"
     },
@@ -5585,189 +5585,189 @@
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C115134",
       "Code description": "BCLC Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C132248",
       "Code description": "AJCC v8 Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C134969",
       "Code description": "AIDS-Related Kaposi Sarcoma Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C139006",
       "Code description": "Durie/Salmon Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C139007",
       "Code description": "International Staging System Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C139445",
       "Code description": "Breast Cancer Anatomic Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C139446",
       "Code description": "Breast Cancer Prognostic Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C141099",
       "Code description": "ENSAT Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C141138",
       "Code description": "Ann Arbor Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C141147",
       "Code description": "Lugano Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C141212",
       "Code description": "Binet Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C141461",
       "Code description": "Occult Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C143151",
       "Code description": "Masaoka-Koga Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C146847",
       "Code description": "Mediastinal Malignant Germ Cell Tumor Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C157232",
       "Code description": "FIGO/TNM Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C16899",
       "Code description": "Neoplasm Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C174125",
       "Code description": "Neoplastic Disease Extent Indicator"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C177555",
       "Code description": "AJCC v8 Clinical Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C177556",
       "Code description": "AJCC v8 Pathologic Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C177558",
       "Code description": "Ann Arbor Clinical Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C177559",
       "Code description": "Ann Arbor Pathologic Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C180901",
       "Code description": "AJCC v9 Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C186617",
       "Code description": "FIGO 2018 Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C186618",
       "Code description": "FIGO 2009 Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C28067",
       "Code description": "Hepatoblastoma Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C90529",
       "Code description": "AJCC v6 Stage"
     },
     {
       "Value set name": "Cancer Stage Type Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C90530",
       "Code description": "AJCC v7 Stage"
     },
@@ -6004,147 +6004,147 @@
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C111073",
       "Code description": "International Germ Cell Consensus Risk Classification"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C112006",
       "Code description": "Thymoma by Masaoka-Koga Stage"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C115132",
       "Code description": "Hepatocellular Carcinoma by BCLC Stage"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C123333",
       "Code description": "Reese-Ellsworth Staging System"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C128932",
       "Code description": "Derkay Staging System"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C140258",
       "Code description": "Enneking Staging System"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C141168",
       "Code description": "Lugano Classification Hodgkin Lymphoma by AJCC v8 Stage"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C141206",
       "Code description": "Chronic Lymphocytic Leukemia- Modified Rai Staging System"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C141685",
       "Code description": "Veterans Administration Lung Study Group Clinical Classification"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C177308",
       "Code description": "Non-Seminomatous Germ Cell Tumor International Germ Cell Consensus Risk Classification"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C177309",
       "Code description": "Seminoma International Germ Cell Tumor Consensus Risk Classification"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C18008",
       "Code description": "TNM Ovary Neoplasm Staging"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C18214",
       "Code description": "Whitmore-Jewett Staging System"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C186520",
       "Code description": "Medulloblastoma Staging System"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C186527",
       "Code description": "Atypical Teratoid/Rhabdoid Tumor Staging System"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C186536",
       "Code description": "Embryonal Tumor with Multilayered Rosettes Staging System"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C186567",
       "Code description": "Pineoblastoma Staging System"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C198826",
       "Code description": "Modified Chang Staging System for Medulloblastoma"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C62575",
       "Code description": "Collaborative Staging"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C85407",
       "Code description": "Evans Staging System"
     },
     {
       "Value set name": "Cancer Staging Method Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C99408",
       "Code description": "FIGO Staging System and Modified World Health Organization [WHO] Prognostic Scoring System for Gestational Trophoblastic Neoplasms"
     },
@@ -7120,224 +7120,224 @@
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C128099",
       "Code description": "FIGO Stage IC1"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C128100",
       "Code description": "FIGO Stage IC2"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C128101",
       "Code description": "FIGO Stage IC3"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C128102",
       "Code description": "FIGO Stage IIIA1"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C128103",
       "Code description": "FIGO Stage IIA1(i)"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C128104",
       "Code description": "FIGO Stage IIA1(ii)"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C128105",
       "Code description": "FIGO Stage IIIA2"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C162222",
       "Code description": "FIGO Stage IB3"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C162223",
       "Code description": "FIGO Stage IIA1"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C162224",
       "Code description": "FIGO Stage IIA2"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C188300",
       "Code description": "FIGO Stage IIC1"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96243",
       "Code description": "FIGO Stage 0"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96244",
       "Code description": "FIGO Stage I"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96245",
       "Code description": "FIGO Stage IA"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96246",
       "Code description": "FIGO Stage IA1"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96247",
       "Code description": "FIGO Stage IA2"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96248",
       "Code description": "FIGO Stage IB"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96249",
       "Code description": "FIGO Stage IB1"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96250",
       "Code description": "FIGO Stage IB2"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96251",
       "Code description": "FIGO Stage IC"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96252",
       "Code description": "FIGO Stage II"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96253",
       "Code description": "FIGO Stage IIA"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96254",
       "Code description": "FIGO Stage IIB"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96255",
       "Code description": "FIGO Stage III"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96256",
       "Code description": "FIGO Stage IIIA"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96257",
       "Code description": "FIGO Stage IIIB"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96258",
       "Code description": "FIGO Stage IIIC"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96259",
       "Code description": "FIGO Stage IIIC1"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96260",
       "Code description": "FIGO Stage IIIC2"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96261",
       "Code description": "FIGO Stage IV"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96262",
       "Code description": "FIGO Stage IVA"
     },
     {
       "Value set name": "FIGO Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C96263",
       "Code description": "FIGO Stage IVB"
     },
@@ -7724,7 +7724,7 @@
     {
       "Value set name": "Lymphoma Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-lymphoma-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C171157",
       "Code description": "Ann Arbor Stage IIX (Bulky)"
     },
@@ -7737,21 +7737,21 @@
     {
       "Value set name": "Lymphoma Staging System Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-lymphoma-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C141158",
       "Code description": "Lugano Classification Adult Non-Hodgkin Lymphoma by AJCC v8 Stage"
     },
     {
       "Value set name": "Lymphoma Staging System Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-lymphoma-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C141178",
       "Code description": "Lugano Classification Childhood Hodgkin Lymphoma by AJCC v8 Stage"
     },
     {
       "Value set name": "Lymphoma Staging System Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-lymphoma-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C141189",
       "Code description": "Lugano Classification Adult Hodgkin Lymphoma by AJCC v8 Stage"
     },
@@ -8016,42 +8016,42 @@
     {
       "Value set name": "International Staging System (ISS) for Myeloma Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-myeloma-iss-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C70658",
       "Code description": "ISS Stage I Plasma Cell Myeloma"
     },
     {
       "Value set name": "International Staging System (ISS) for Myeloma Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-myeloma-iss-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C70659",
       "Code description": "ISS Stage II Plasma Cell Myeloma"
     },
     {
       "Value set name": "International Staging System (ISS) for Myeloma Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-myeloma-iss-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C70660",
       "Code description": "ISS Stage III Plasma Cell Myeloma"
     },
     {
       "Value set name": "Revised International Staging System (ISS) for Multiple Myeloma Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-myeloma-riss-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C141394",
       "Code description": "RISS Stage I Plasma Cell Myeloma"
     },
     {
       "Value set name": "Revised International Staging System (ISS) for Multiple Myeloma Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-myeloma-riss-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C141395",
       "Code description": "RISS Stage II Plasma Cell Myeloma"
     },
     {
       "Value set name": "Revised International Staging System (ISS) for Multiple Myeloma Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-myeloma-riss-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C141396",
       "Code description": "RISS Stage III Plasma Cell Myeloma"
     },
@@ -18391,42 +18391,42 @@
     {
       "Value set name": "Rai Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-rai-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C7847",
       "Code description": "Stage 0 Chronic Lymphocytic Leukemia"
     },
     {
       "Value set name": "Rai Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-rai-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C7874",
       "Code description": "Stage I Chronic Lymphocytic Leukemia"
     },
     {
       "Value set name": "Rai Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-rai-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C7875",
       "Code description": "Stage II Chronic Lymphocytic Leukemia"
     },
     {
       "Value set name": "Rai Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-rai-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C7876",
       "Code description": "Stage III Chronic Lymphocytic Leukemia"
     },
     {
       "Value set name": "Rai Stage Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-rai-stage-value-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C8646",
       "Code description": "Stage IV Chronic Lymphocytic Leukemia"
     },
     {
       "Value set name": "Rai Staging System Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-rai-staging-method-vs",
-      "Code system": "NCI",
+      "Code system": "NCIT",
       "Code": "C141206",
       "Code description": "Chronic Lymphocytic Leukemia- Modified Rai Staging System"
     },
@@ -23133,14 +23133,14 @@
     {
       "Value set name": "Tumor Size Units Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-size-units-vs",
-      "Code system": "Unified Code for Units of Measure",
+      "Code system": "UCUM",
       "Code": "cm",
       "Code description": "Centimeter"
     },
     {
       "Value set name": "Tumor Size Units Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-size-units-vs",
-      "Code system": "Unified Code for Units of Measure",
+      "Code system": "UCUM",
       "Code": "mm",
       "Code description": "Millimeter"
     }
@@ -23209,7 +23209,7 @@
     {
       "title": "Treatment Termination Reason Extension (deprecated)",
       "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-termination-reason",
-      "description": "A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study.\nThis extension is deprecated since it is redundant with the statusReason field."
+      "description": "A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study.\r\nThis extension is deprecated since it is redundant with the statusReason field."
     }
   ],
   "codeSystems": [

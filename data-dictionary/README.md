@@ -30,10 +30,13 @@ The following files are generated via an automated tool called `ig-summary`:
 
    To generate this, first generate `mCODEDataDictionary-STU3.xlsx`. This will produce `input/images/data-dictionary/`.
 
-   Then, download the STU2 `.json` file from <https://hl7.org/implement/standards/fhir/us/mcode/STU2.1/data-dictionary/data_dictionary.json> and rename it to `stu2.1.json` to avoid confusion.
+   Then, download the STU2.1 `.json` file from <https://hl7.org/implement/standards/fhir/us/mcode/STU2.1/data-dictionary/data_dictionary.json> and rename it to `stu2.1.json` to avoid confusion.
 
    ```bash
    ig-summary diff --a ~/Downloads/stu2.1.json --b input/images/data-dictionary/mCODEDataDictionary-STU3.json --settings data-dictionary/diff_settings.yaml --output input/images/data-dictionary/
    ```
+
+ig-summary diff --a input/images/data-dictionary/mCODEDataDictionary-STU2.1.json --b input/images/data-dictionary/mCODEDataDictionary-STU3.json --settings data-dictionary/diff_settings.yaml --output input/images/data-dictionary
+
 
 We anticipate the `ig-summary` tool will be released under an open source license in 2023. Until then, this tool is currently not public. For more information, please [contact us](https://chat.fhir.org/#narrow/pm-with/322501).

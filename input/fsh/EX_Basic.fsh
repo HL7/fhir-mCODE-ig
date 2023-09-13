@@ -5,7 +5,7 @@ Description: "Example of Primary Cancer Condition"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item
 * code = SCT#254637007 "Non-small cell lung cancer (disorder)"
-* extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#35917007 "Adenocarcinoma"
+* extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#1187332001 "Adenocarcinoma (morphologic abnormality)"
 * bodySite = SCT#39607008 "Lung structure (body structure)"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
 * subject = Reference(cancer-patient-john-anyperson)

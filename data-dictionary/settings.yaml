@@ -1,5 +1,5 @@
 title: mCODE Data Dictionary
-filename: mCODEDataDictionary-STU2
+filename: mCODEDataDictionary-STU3
 informationTabContent:
   General notes: |-
     **Profiles not shown in data dictionary:** Profiles that are used by mCODE but defined externally to mCODE, such as vital signs (defined by FHIR or US Core), are not included in the Data Dictionary.
@@ -103,13 +103,17 @@ informationTabContent:
 codeSystems:
   'http://snomed.info/sct': SNOMED CT
   'http://hl7.org/fhir/sid/icd-10-cm': ICD-10 CM
-  'http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs': 'mCODE: other, specify'
   'http://loinc.org': LOINC
-  'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl': NCI
+  'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl': NCIT
   'http://terminology.hl7.org/CodeSystem/umls': UMLS
   'http://www.sequenceontology.org/': Sequence Ontology
   'http://terminology.hl7.org/CodeSystem/v2-0487': SpecimenType (HL7)
-  'http://unitsofmeasure.org': Unified Code for Units of Measure
+  'http://unitsofmeasure.org': UCUM
+  'http://cancerstaging.org': AJCC
+  'http://www.ncbi.nlm.nih.gov/clinvar': CLINVAR
+  'http://www.genenames.org': HGNC
+  'http://varnomen.hgvs.org': HGVS
+
 
 touchUpHumanizedElementNames:
   Aids: AIDS

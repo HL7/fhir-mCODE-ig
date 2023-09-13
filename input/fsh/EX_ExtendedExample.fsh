@@ -68,6 +68,7 @@ Description: "Extended example: example showing smoking status"
 * issued = "2018-03-16T00:00:00Z"
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = SCT#449868002 "Smokes tobacco daily (finding)"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: observation-smoking-pack-years-jenny-m
 InstanceOf: Observation
@@ -78,6 +79,7 @@ Description: "Extended example: example showing smoking history"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-16"
 * valueQuantity = 20 '{PackYears}' "Pack-Years"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: us-core-condition-anxiety-jenny-m
 InstanceOf: USCoreCondition
@@ -88,6 +90,7 @@ Description: "Extended example: example showing comorbid condition (anxiety)"
 * code = SCT#48694002 "Anxiety (finding)"
 * subject = Reference(cancer-patient-jenny-m)
 * onsetDateTime = "2005-01-01"
+* asserter = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: us-core-condition-depression-jenny-m
 InstanceOf: USCoreCondition
@@ -202,6 +205,7 @@ Description: "Extended example: example of body weight vital sign"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-06"
 * valueQuantity = 155.0 '[lb_av]' "lb"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: bodyheight-jenny-m-2018-03-06
 InstanceOf: http://hl7.org/fhir/StructureDefinition/bodyheight
@@ -210,13 +214,14 @@ Description: "Extended example: example of body height vital sign"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-16"
 * valueQuantity = 65 '[in_i]' "in"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 // Diagnosis and Clinical Staging 3/16/2018
 
 Instance: primary-cancer-condition-jenny-m
 InstanceOf: PrimaryCancerCondition
 Description: "Extended example: example showing primary cancer condition"
-* extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#413448000 "Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality)"
+* extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#30546008 "Clear cell adenocarcinoma (morphologic abnormality)" 
 * clinicalStatus = ClinStatus#remission
 * verificationStatus = VerStatus#confirmed
 * category = CondCat#problem-list-item
@@ -242,6 +247,7 @@ Description: "Extended example: example showing TNM staging (stage group)"
 * hasMember[0] = Reference(tnm-pathologic-primary-tumor-category-jenny-m)
 * hasMember[1] = Reference(tnm-pathologic-regional-nodes-category-jenny-m)
 * hasMember[2] = Reference(tnm-pathologic-distant-metastases-category-jenny-m)
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: tnm-clinical-primary-tumor-category-jenny-m
 InstanceOf: TNMPrimaryTumorCategory
@@ -253,6 +259,7 @@ Description: "Extended example: example showing TNM staging (T)"
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = SCT#1228938002 "American Joint Committee on Cancer cT3 (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: tnm-clinical-regional-nodes-category-jenny-m
 InstanceOf: TNMRegionalNodesCategory
@@ -264,6 +271,7 @@ Description: "Extended example: example showing TNM staging (N)"
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = SCT#1229967007 "American Joint Committee on Cancer cN0 (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: tnm-clinical-distant-metastases-category-jenny-m
 InstanceOf: TNMDistantMetastasesCategory
@@ -275,6 +283,7 @@ Description: "Extended example: example showing TNM staging (M)"
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = SCT#1229901006 "American Joint Committee on Cancer cM0 (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 // Tumor marker test results 3-16-2018
 
@@ -321,6 +330,7 @@ Description: "Extended example: example of gene panel report"
 * specimen = Reference(human-specimen-left-breast-jenny-m)
 * result[0] = Reference(genomic-variant-jenny-m)
 * result[1] = Reference(genomic-region-studied-jenny-m)
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: genomic-region-studied-jenny-m
 InstanceOf: GenomicRegionStudied
@@ -328,6 +338,7 @@ Description: "Extended example: example showing which regions were included in t
 * status = #final "final"
 * code = LNC#53041-0 "DNA region of interest panel"
 * subject = Reference(cancer-patient-jenny-m)
+* performer = Reference(us-core-practitioner-owen-oncologist)
 * effectiveDateTime = "2018-03-15"
 * issued = "2018-03-15T00:00:01+00:00"
 * component.code = LNC#48018-6 "Gene studied [ID]"
@@ -345,6 +356,7 @@ Description: "Extended example: example showing genomic variant found by breast 
 * status = #final "final"
 * code = LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(cancer-patient-jenny-m)
+* performer = Reference(us-core-practitioner-owen-oncologist)
 * effectiveDateTime = "2018-03-15"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * method = LNC#LA26398-0 "Sequencing"
@@ -405,6 +417,7 @@ Description: "Extended example: example of pathology findings represented as a D
 * result[8] = Reference(us-core-observation-lab-tumor-grade-jenny-m)
 * performer = Reference(us-core-organization-physician-services-inc)
 * resultsInterpreter = Reference(us-core-practitioner-peter-pathologist)
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: us-core-observation-lab-tumor-invasion-jenny-m
 InstanceOf: USCoreObservationLab
@@ -415,6 +428,7 @@ Description: "Extended example: example showing negative invasion for the remove
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * valueCodeableConcept = SCT#260385009 "Negative (qualifier value)"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: us-core-observation-lab-tumor-margins-jenny-m
 InstanceOf:  USCoreObservationLab
@@ -425,6 +439,7 @@ Description: "Extended example: example showing negative margins for the removed
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * valueCodeableConcept = LNC#LA27151-2 "Uninvolved by invasive carcinoma"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: us-core-observation-lab-sentinel-nodes-jenny-m
 InstanceOf:  USCoreObservationLab
@@ -436,6 +451,7 @@ Description: "Extended example: example showing 3 sentinel lymph nodes were exam
 * component.code = LNC#92833-3 "Lymph nodes examined [#] in Cancer specimen by Light microscopy"
 * component.valueQuantity = 3 '{Count}' "Count"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: tumor-size-jenny-m
 InstanceOf:  TumorSize
@@ -448,6 +464,7 @@ Description: "Extended example: example showing tumor size"
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * component[tumorLongestDimension].valueQuantity = 2.5 'cm' "centimeters"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: us-core-observation-lab-tumor-dcis-jenny-m
 InstanceOf:  USCoreObservationLab
@@ -458,6 +475,7 @@ Description: "Extended example: example showing DCIS diagnosis"
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * valueCodeableConcept = LNC#LA27261-9 "DCIS present with extensive intraductal component (EIC)"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: us-core-observation-lab-tumor-grade-jenny-m
 InstanceOf:  USCoreObservationLab
@@ -468,6 +486,7 @@ Description: "Extended example: example showing DCIS diagnosis"
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * valueCodeableConcept = LNC#LA27824-4 "Nottingham grade 2"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: tnm-pathologic-stage-group-jenny-m
 InstanceOf: TNMStageGroup
@@ -483,6 +502,7 @@ Description: "Extended example: example showing TNM staging (stage group)"
 * hasMember[0] = Reference(tnm-pathologic-primary-tumor-category-jenny-m)
 * hasMember[1] = Reference(tnm-pathologic-regional-nodes-category-jenny-m)
 * hasMember[2] = Reference(tnm-pathologic-distant-metastases-category-jenny-m)
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: tnm-pathologic-primary-tumor-category-jenny-m
 InstanceOf: TNMPrimaryTumorCategory
@@ -494,6 +514,7 @@ Description: "Extended example: example showing TNM staging (T)"
 * effectiveDateTime = "2018-04-01"
 * valueCodeableConcept = SCT#1229859000 "American Joint Committee on Cancer pT3 (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: tnm-pathologic-regional-nodes-category-jenny-m
 InstanceOf: TNMRegionalNodesCategory
@@ -505,6 +526,7 @@ Description: "Extended example: example showing TNM staging (N)"
 * effectiveDateTime = "2018-04-01"
 * valueCodeableConcept = SCT#1229947003 "American Joint Committee on Cancer pN0 (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: tnm-pathologic-distant-metastases-category-jenny-m
 InstanceOf: TNMDistantMetastasesCategory
@@ -516,6 +538,7 @@ Description: "Extended example: example showing TNM staging (M)"
 * effectiveDateTime = "2018-04-01"
 * valueCodeableConcept = AbsentReason#not-applicable "Not Applicable"   // cancer is not metastatic, pM0 is not valid
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 // 21-Gene Assay
 
@@ -603,6 +626,7 @@ Description: "Extended example: body weight vital sign at the time of chemothera
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-22"
 * valueQuantity = 150.0 '[lb_av]' "lb"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 // Based on the relative dose, height, and current weight, we calculate the absolute dose to be 105.96 mg of doxorubicin.
 // Chemotherapy preparation details (e.g.: number of vials used for the absolute dose, IV mixing solution, etc.)
@@ -907,6 +931,7 @@ Description: "Extended example: neutrophils lab test"
 * referenceRange.low = 2500 '10*3/uL' "10*3/uL"
 * referenceRange.high = 5000 '10*3/uL' "10*3/uL"
 * referenceRange.appliesTo = RefMeaning#normal "Normal Range"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 // Following first line of therapy
 
@@ -921,7 +946,6 @@ Description: "Extended example: example showing disease status (patient's condit
 * performer = Reference(us-core-practitioner-owen-oncologist)
 * focus = Reference(primary-cancer-condition-jenny-m)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
-
 
 // Actors
 

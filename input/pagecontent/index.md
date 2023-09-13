@@ -95,7 +95,7 @@ If you have questions or comments about this guide, you can join the conversatio
 | Topic | Who | Role | Email |
 |----|---|---|------|
 | Implementation and Use Cases | Dr. Su Chen | CodeX Accelerator Program Manager | suchen@mitre.org |
-| CodeX Leadership | Dr. Travis Osterman | Chair, CodeX Executive Committee | travis.osterman@vumc.org |
+| CodeX Leadership | Dr. Travis Osterman | Chair, mCODE Executive Committee | travis.osterman@vumc.org |
 | Oncology Domain Content | Dr. Sanjay Aneja | Chair, mCODE Technical Review Group | sanjay.aneja@yale.edu |
 | Modeling and FHIR IG | Mark Kramer | Modeling Lead | mkramer@mitre.org |
 {: .grid }

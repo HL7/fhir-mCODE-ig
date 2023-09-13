@@ -86,7 +86,6 @@ menu:
     Identifying mCODE Patients: conformance-patients.html
     Profile Conformance: conformance-profiles.html
     Terminology: terminology.html
-    Data Dictionary: dictionary.html
   FHIR Artifacts:
     Profiles: profiles.html
     Extensions: extensions.html
@@ -101,6 +100,7 @@ menu:
     Genomics Examples: examples_genomics.html
   Release Notes: change_log.html
   More:
+    Data Dictionary: dictionary.html
     Radiotherapy Glossary:  glossary.html
     Download Specification: downloads.html
     Other Versions: http://hl7.org/fhir/us/mcode/history.html

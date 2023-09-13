@@ -243,6 +243,7 @@ Description: "Example of TNM Clinical Stage Group"
 * subject = Reference(cancer-patient-john-anyperson)
 * focus = Reference(primary-cancer-condition-nsclc)  // added requirement STU3
 * effectiveDateTime = "2019-04-01"
+* performer = Reference(us-core-practitioner-kyle-anydoc)
 * hasMember[0] = Reference(tnm-clinical-primary-tumor-category-cT3)
 * hasMember[1] = Reference(tnm-clinical-regional-nodes-category-cN3)
 * hasMember[2] = Reference(tnm-clinical-distant-metastases-category-cM0)
@@ -255,6 +256,7 @@ Description: "Example of TNM Clinical Distant Metastases Category"
 * status = #final "final"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * subject = Reference(cancer-patient-john-anyperson)
+* performer = Reference(us-core-practitioner-kyle-anydoc)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = SCT#1229901006 "American Joint Committee on Cancer cM0 (qualifier value)"
 
@@ -267,6 +269,7 @@ Description: "Example of TNM Clinical Primary Tumor Category"
 * status = #final "final"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * subject = Reference(cancer-patient-john-anyperson)
+* performer = Reference(us-core-practitioner-kyle-anydoc)
 * effectiveDateTime = "2019-04-01"
 
 Instance: tnm-clinical-regional-nodes-category-cN3
@@ -278,6 +281,7 @@ Description: "Example of TNM Clinical Regional Nodes Category"
 * status = #final "final"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * subject = Reference(cancer-patient-john-anyperson)
+* performer = Reference(us-core-practitioner-kyle-anydoc)
 * effectiveDateTime = "2019-04-01"
 
 Instance: cancer-related-medication-request-gefitinib

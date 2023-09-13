@@ -95,7 +95,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - BAP1"
 // value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
 // * interpretation = SCT#10828004 "Positive (qualifier value)"
 * subject = Reference(gx-cancer-patient-adam-anyperson)
-// * effectiveDateTime = "2019-04-01"
+* effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:950 "BAP1"
 * component[gene-studied].valueCodeableConcept.coding[1] = ENTREZ#3815 "BAP1"
@@ -106,6 +106,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - BAP1"
 * component[sample-allelic-frequency].valueQuantity = 57.4 '%' "%"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001587 "stop_gained"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-diagnostic-implication-bap1
 InstanceOf: DiagnosticImplication
@@ -115,6 +116,7 @@ Description: "GenomeX mCODE Example for functional effect (loss of function) - B
 * effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx-genomic-variant-somatic-bap1-indel)
 * component[functional-effect].valueCodeableConcept = SO#SO:0002054 "loss of function variant"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-variant-somatic-cdkn2a-cnv
 InstanceOf: GenomicVariant
@@ -129,6 +131,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - CDKN2A"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-variant-somatic-cdkn2b-cnv
 InstanceOf: GenomicVariant
@@ -143,6 +146,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - CDKN2B"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-variant-somatic-kdm5d
 InstanceOf: GenomicVariant
@@ -157,6 +161,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - KDM5D"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-variant-somatic-mtap
 InstanceOf: GenomicVariant
@@ -171,6 +176,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - MTAP"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-variant-somatic-mycn
 InstanceOf: GenomicVariant
@@ -185,6 +191,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - MYCN"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001742 "copy_number_gain"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 // MLT: All pertinent negative genes for a single report were combined into one variant "absent" resource.
 
@@ -199,6 +206,7 @@ Description: "GenomeX mCODE Example for the absence of a notable variant - KIT a
 * component[gene-studied][0].valueCodeableConcept = HGNC#HGNC:6342 "NRAS" 
 * component[gene-studied][1].valueCodeableConcept = HGNC#HGNC:7989 "KIT"
 * component[gene-studied][+].valueCodeableConcept = HGNC#HGNC:1097 "BRAF" 
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 /* genomic-variant-fusion is an example of the
  * GenomicVariant to represent a gene fusion event.
@@ -218,6 +226,7 @@ Description: "mCODE Example for Genomic Variant gene fusion event"
 * component[gene-studied][1].valueCodeableConcept.coding[1] = ENTREZ#238 "ALK"
 * component[coding-change-type].valueCodeableConcept = SO#SO:0002062 "complex chromosomal rearrangement"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 // ******** Variants of Unknown Significance (VUS) **********
 
@@ -239,6 +248,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - POF1B"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[sample-allelic-frequency].valueQuantity = 78.6 '%' "%"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-diagnostic-implication-pof1b
 InstanceOf: DiagnosticImplication
@@ -248,6 +258,7 @@ Description: "GenomeX mCODE Example for Clinical Significance of VUS - POF1B"
 * effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx-genomic-variant-somatic-pof1b)
 * component[clinical-significance].valueCodeableConcept = LNC#LA26333-7 "Uncertain significance"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-variant-somatic-polrmt
 InstanceOf: GenomicVariant
@@ -267,6 +278,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - POLRMT"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[sample-allelic-frequency].valueQuantity = 75.6 '%' "%"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-diagnostic-implication-polrmt
 InstanceOf: DiagnosticImplication
@@ -276,24 +288,29 @@ Description: "GenomeX mCODE Example for Clinical Significance of VUS - POLRMT"
 * effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx-genomic-variant-somatic-polrmt)
 * component[clinical-significance].valueCodeableConcept = LNC#LA26333-7 "Uncertain significance"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 // ******* Tumor Mutation Burden *********
 Instance: gx-genomic-tmb
 InstanceOf: TMB
 Description: "Example for Tumor Mutation Burden"
 * status = #final "final"
+* effectiveDateTime = "2019-04-01"
 * category[labCategory] = ObsCat#laboratory
 * subject = Reference(gx-cancer-patient-adam-anyperson)
 * valueQuantity.value = 57.1
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 // ******* Microsatellite Instability *********
 Instance: gx-genomic-msi
 InstanceOf: MSI
 Description: "Example for Microsatellite Instability"
 * status = #final "final"
+* effectiveDateTime = "2019-04-01"
 * category[labCategory] = ObsCat#laboratory
 * subject = Reference(gx-cancer-patient-adam-anyperson)
 * valueCodeableConcept = LNC#LA26203-2 "MSI-H"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 // ******** Therapeutic Implications *********
 
@@ -301,47 +318,61 @@ Instance: gx-genomic-therapeutic-implication-alectinib
 InstanceOf: CGTherapeuticImplication
 Description: "Example of how Genomics Reporting IG Therapeutic Implications fits with mCODE"
 * status = #final "Final"
+* subject = Reference(gx-cancer-patient-adam-anyperson)
+* effectiveDateTime = "2019-04-01"
 * category[labCategory] = ObsCat#laboratory
 * derivedFrom = Reference(gx-genomic-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1727455 "alectinib"
 * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-therapeutic-implication-brigatinib
 InstanceOf: CGTherapeuticImplication
 Description: "Example of how Genomics Reporting IG Therapeutic Implications fits with mCODE"
 * status = #final "Final"
+* subject = Reference(gx-cancer-patient-adam-anyperson)
+* effectiveDateTime = "2019-04-01"
 * category[labCategory] = ObsCat#laboratory
 * derivedFrom = Reference(gx-genomic-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1921217 "brigatinib"
 * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-therapeutic-implication-ceritinib
 InstanceOf: CGTherapeuticImplication
 Description: "Example of how Genomics Reporting IG Therapeutic Implications fits with mCODE"
 * status = #final "Final"
 * category[labCategory] = ObsCat#laboratory
+* subject = Reference(gx-cancer-patient-adam-anyperson)
+* effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx-genomic-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1535457 "ceritinib"
 * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-therapeutic-implication-crizotinib
 InstanceOf: CGTherapeuticImplication
 Description: "Example of how Genomics Reporting IG Therapeutic Implications fits with mCODE"
 * status = #final "Final"
+* subject = Reference(gx-cancer-patient-adam-anyperson)
+* effectiveDateTime = "2019-04-01"
 * category[labCategory] = ObsCat#laboratory
 * derivedFrom = Reference(gx-genomic-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1148495 "crizotinib"
 * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-therapeutic-implication-lorlatinib
 InstanceOf: CGTherapeuticImplication
 Description: "Example of how Genomics Reporting IG Therapeutic Implications fits with mCODE"
 * status = #final "Final"
+* subject = Reference(gx-cancer-patient-adam-anyperson)
+* effectiveDateTime = "2019-04-01"
 * category[labCategory] = ObsCat#laboratory
 * derivedFrom = Reference(gx-genomic-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#2103164 "lorlatinib"
 * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
-
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 // ********** Genomics Report ***********
 Instance: gx-genomics-report-adam-anyperson

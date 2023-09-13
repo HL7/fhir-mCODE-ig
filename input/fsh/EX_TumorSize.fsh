@@ -25,6 +25,7 @@ Description: "Example of a resource conforming to the tumor size profile."
 * component[tumorOtherDimension].valueQuantity = 1.0 'cm' "cm"
 * component[tumorOtherDimension].valueQuantity = 0.5 'cm' "cm"
 * effectiveDateTime = "2019-05-01"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: tumor-lobular-carcinoma-left-breast
 InstanceOf: Tumor

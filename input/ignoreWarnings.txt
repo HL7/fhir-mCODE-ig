@@ -33,6 +33,10 @@ The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' do
 The definition for the Code System with URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' doesnt provide any codes so the code cannot be validated
 The definition for the Code System with URI 'http://www.ncbi.nlm.nih.gov/clinvar' doesnt provide any codes so the code cannot be validated
 
+# TG263 is a  proprietary codesystems used in Radiotherapy.  The whole point of these conceptmaps is to make it easy to transition to the ValueSets used in this IG. The codesystem identifers TRX, IJE and MRE are not proper codesystem URIs.  Work is underway to define proper URIs that will be included in future versions of this IG. 
+of this concept map.
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].source: The Source Code System TG263 is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed
+
 # UNABLE TO RESOLVE LOINC LIST ANSWER CODES
 The valueSet reference http://loinc.org/vs/LL529-9 on element Observation.interpretation could not be resolved
 The valueSet reference http://loinc.org/vs/LL5323-2 on element Observation.component.value[x] could not be resolved

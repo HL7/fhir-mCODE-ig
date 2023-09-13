@@ -71,7 +71,8 @@ Description:  "Identifies a tumor that has not been removed from the body. Whene
 * identifier[bodyStructureIdentifier] only BodyStructureIdentifier
 * identifier[bodyStructureIdentifier] ^short = "A persistent identifier of this tumor."
 * identifier[bodyStructureIdentifier] ^definition = "A persistent identifier used to identify and track the tumor over time. The identifier must be unique in the context of the patient."
-* morphology = SCT#367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
+// * morphology = SCT#367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
+* morphology = SCT#1240414004 "Malignant neoplasm (morphologic abnormality"
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
 * location from CancerBodyLocationVS (extensible)
 * location 1..1 // Tumor is meaningless without a location; parent profile is 0..1

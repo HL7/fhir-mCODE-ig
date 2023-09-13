@@ -2,7 +2,7 @@ Instance: TG263CM
 InstanceOf: ConceptMap
 Usage: #definition
 * experimental = false
-* insert ConceptMapIntro(TG263, RadiotherapyTreatmentLocationQualifierVS)
+* insert ConceptMapIntro(TG263, RadiotherapyTreatmentLocationVS)
 * insert AddGroup("TG263",SCT)
 * insert MapConcept(#A_Aorta, "Aorta", #15825003, "Aortic structure (body structure\)")
 * insert MapConcept(#A_Aorta_Asc, "Ascending Aorta", #54247002, "Ascending aorta structure (body Structure\)")

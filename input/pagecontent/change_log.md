@@ -3,9 +3,9 @@
 ### Replacing Inactive SNOMEDCT Codes
 Several valid but inactive SNOMEDCT codes were identified and replaced:
 
-* [Tumor] profile morphology is bound to 367651003 (Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)) which is inactive.   This code has been replaced by 1240414004 (Malignant neoplasm (morphologic abnormality)).
-* [mcode-patient-bundle-jenny-m] Histology-Morphology-Behavior Extension: Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality) (SNOMED CT[Intl rel. null 0000]#413448000) has been replaced by XXXXX.
-* [primary-cancer-condition-nsclc] Histology-Morphology-Behavior Extension: Adenocarcinoma (SNOMED CT[Intl rel. null 0000]#35917007) has been replaced by YYYY.
+* [Tumor] profile morphology is bound to 367651003 (Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)) which is inactive.   This code has been replaced by 1240414004 (Malignant neoplasm (morphologic abnormality)).  The old code remains conformant for backwards compatiblity.
+* [mcode-patient-bundle-jenny-m] Histology-Morphology-Behavior Extension: The inactive code 413448000 Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality) has been replaced by 30546008 Clear cell adenocarcinoma (morphologic abnormality)
+* [primary-cancer-condition-nsclc] Histology-Morphology-Behavior Extension: The inactive code 35917007 Adenocarcinoma has been replaced by 1187332001 Adenocarcinoma (morphologic abnormality) 
 
 ### Addition of non-TNM Staging Profiles ([FHIR-41163](https://jira.hl7.org/browse/FHIR-41163), [FHIR-41003](https://jira.hl7.org/browse/FHIR-41003))
 

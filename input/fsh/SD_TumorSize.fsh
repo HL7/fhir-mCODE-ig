@@ -50,6 +50,27 @@ Expression: "(focus.exists() or specimen.exists()) and (focus.exists() and speci
 Severity: #error
 
 
+// Valuesets to help maintain compatibility between STU3 and STU3 Tumor across changes in SNOMEDCT codes
+
+ValueSet: TumorMorphologyCodeVS
+Id: mcode-tumor-morphology-code-vs
+Title: "Tumor Morphology Code Value Set"
+Description: "Contains the preferred preferred (active) code for tumor morphology."
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 4
+* SCT#1240414004 "Malignant neoplasm (morphologic abnormality)"
+
+ValueSet: TumorMorphologyCodeMaxVS
+Id: mcode-tumor-morphology-code-max-vs
+Title: "Tumor Morphology Code Max Value Set"
+Description: "Contains the preferred code for tumor morphology and the inactive code used in STU2. For backwards compatibility"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 4
+* include codes from valueset TumorMorphologyCodeVS
+* SCT#367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
+
+
+
 // OPEN QUESTION: How do we indicate that a tracked tumor has been surgically removed? Some sort of status? Specimen.active is the only possibility in BodyStructure, but the definition doesn't lend itself to this purpose.
 Profile: Tumor
 Parent:  BodyStructure
@@ -71,8 +92,8 @@ Description:  "Identifies a tumor that has not been removed from the body. Whene
 * identifier[bodyStructureIdentifier] only BodyStructureIdentifier
 * identifier[bodyStructureIdentifier] ^short = "A persistent identifier of this tumor."
 * identifier[bodyStructureIdentifier] ^definition = "A persistent identifier used to identify and track the tumor over time. The identifier must be unique in the context of the patient."
-// * morphology = SCT#367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
-* morphology = SCT#1240414004 "Malignant neoplasm (morphologic abnormality)"
+* morphology from TumorMorphologyCodeVS (required) 
+* morphology ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TumorMorphologyCodeMaxVS)
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
 * location from CancerBodyLocationVS (extensible)
 * location 1..1 // Tumor is meaningless without a location; parent profile is 0..1

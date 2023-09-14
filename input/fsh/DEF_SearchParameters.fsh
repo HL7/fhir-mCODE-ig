@@ -18,6 +18,7 @@
 Instance: Condition-code
 InstanceOf: SearchParameter
 Title: "Search by code:in in Conditions"
+Usage: #definition
 * url = "http://hl7.org/fhir/us/mcode/SearchParameter/Condition-code"
 * name = "ConditionCodeSearchParameter"
 * status = #draft

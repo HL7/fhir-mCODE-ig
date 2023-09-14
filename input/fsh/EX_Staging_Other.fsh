@@ -13,6 +13,7 @@ RuleSet: StagingInstanceRuleSet
 * status = #final "final"
 * focus = Reference(primary-cancer-condition-nonspecific)
 * subject = Reference(cancer-patient-john-anyperson)
+* performer = Reference(us-core-practitioner-kyle-anydoc)
 * effectiveDateTime = "2021-04-01"
 
 //-------------------------------------------------

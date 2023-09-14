@@ -16,6 +16,7 @@ Description: "mCODE Example for Genomic Variant"
 * component[variation-code].valueCodeableConcept = CLINVAR#611264 "NM_000455.5(STK11):c.725G>A (p.Gly242Glu)"
 * component[genomic-hgvs].valueCodeableConcept = HGVS#NM_000455.5:c.725G>A
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 /* genomic-variant-germline-deletion is an example of the GenomicVariant to represent a single mutation test.
  * This example demonstrates a test for a single germline mutation, BRCA1 gene.c.185delAG, equivalent to the LOINC test https://loinc.org/21637-4/.
@@ -33,6 +34,7 @@ Description: "mCODE Example for Genomic Variant"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:1100 "BRCA1" // NOTE: HGNC and HGVS codes have special characters in them so SUSHI needs to handle this.
 * component[genomic-hgvs].valueCodeableConcept = HGVS#NG_005905.2:g.126148_126152del "NG_005905.2:g.126148_126152del"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6683-2 "Germline"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 /* genomic-variant-fusion is an example of the
  * GenomicVariant to represent a gene fusion event.
@@ -52,6 +54,7 @@ Description: "mCODE Example for Genomic Variant gene fusion event"
 //* component[molecularConsequence].valueCodeableConcept = SO#SO:001565 "gene_fusion"
 * component[genomic-hgvs].valueCodeableConcept = HGVS#NM_005157.6(ABL1):c.1076T>G "NM_005157.6(ABL1):c.1076T>G"   // "NM_005157.6(ABL1):c.1076T>G (p.Phe359Cys)"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: genomics-report-john-anyperson
 InstanceOf: mcode-genomics-report
@@ -73,6 +76,7 @@ Description: "mCODE Example for Genomic Region Studied"
 * effectiveDateTime = "2019-04-01"
 * issued = "2019-04-01T11:45:33+11:00"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:11389 "STK11"
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: tumor-marker-test-egf
 InstanceOf: TumorMarkerTest

@@ -1,5 +1,12 @@
 **The following changes occurred between the [STU 3 ballot (March 2023)] and publication of STU 3, in response to ballot comments.**
 
+### Replacing Inactive SNOMEDCT Codes
+Several valid but inactive SNOMEDCT codes were identified and replaced:
+
+* [Tumor] profile morphology is bound to 367651003 (Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)) which is inactive.   This code has been replaced by 1240414004 (Malignant neoplasm (morphologic abnormality)).
+* [mcode-patient-bundle-jenny-m] Histology-Morphology-Behavior Extension: Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality) (SNOMED CT[Intl rel. null 0000]#413448000) has been replaced by XXXXX.
+* [primary-cancer-condition-nsclc] Histology-Morphology-Behavior Extension: Adenocarcinoma (SNOMED CT[Intl rel. null 0000]#35917007) has been replaced by YYYY.
+
 ### Addition of non-TNM Staging Profiles ([FHIR-41163](https://jira.hl7.org/browse/FHIR-41163), [FHIR-41003](https://jira.hl7.org/browse/FHIR-41003))
 
 mCODE 2.1 and 3.0.0-ballot did not include any profiles for non-TNM staging, so there was no indication on how to use mCODE to represent staging for lymphoma and leukemia, for example. To address this issue, several non-TNM staging profiles were added. Given the numerous non-TNM staging systems, a set of profiles were added for illustrative purposes:

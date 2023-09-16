@@ -17,12 +17,4 @@ Id: mcode-history-of-metastatic-malignant-neoplasm-vs
 Title: "History of Metastatic Malignant Neoplasm Value Set"
 Description: "Values defining history of metastatic cancer."
 * insert SNOMEDCopyrightForVS
-// WHen code is issued, this VS should include the new code AND its children
-// * include codes from system SCT where concept is-a #1287652008 "History of metastatic malignant neoplasm (situation)"
-* SCT_TBD#1287652008 "History of metastatic malignant neoplasm (situation)"
-* SCT#1098961000119105 "History of cancer metastatic to lung (situation)"
-* SCT#1099291000119102 "History of cancer metastatic to bone (situation)"
-* SCT#1098941000119106 "History of cancer metastatic to skin (situation)"
-* SCT#1098951000119108 "History of cancer metastatic to liver (situation)"
-* SCT#1098971000119104 "History of cancer metastatic to brain (situation)"
-* SCT#1098931000119102 "History of cancer metastatic to lymph nodes (situation)"
+* include codes from system SCT where concept is-a #1287652008 "History of metastatic malignant neoplasm (situation)"

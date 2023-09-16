@@ -363,7 +363,7 @@ Instance: no-history-of-metastatic-cancer
 InstanceOf: HistoryOfMetastaticCancer
 Description: "Example showing no history of metastatic cancer"
 * status = #final 
-* code = SCT_TBD#1287652008 "History of metastatic malignant neoplasm (situation)"
+* code = SCT#1287652008 "History of metastatic malignant neoplasm (situation)"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2018-11-16"
 * performer = Reference(us-core-practitioner-owen-oncologist)

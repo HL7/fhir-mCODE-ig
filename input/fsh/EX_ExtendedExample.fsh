@@ -78,7 +78,7 @@ Description: "Extended example: example showing smoking history"
 * code = SCT#401201003 "Cigarette pack-years (observable entity)" // No LOINC available
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-16"
-* valueQuantity = 20 '{PackYears}' "Pack-Years"
+* valueQuantity = 20 '1' "Pack-Years"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: us-core-condition-anxiety-jenny-m
@@ -449,7 +449,7 @@ Description: "Extended example: example showing 3 sentinel lymph nodes were exam
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * component.code = LNC#92833-3 "Lymph nodes examined [#] in Cancer specimen by Light microscopy"
-* component.valueQuantity = 3 '{Count}' "Count"
+* component.valueQuantity = 3 '1' "Count"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
@@ -551,7 +551,7 @@ Description: "Extended example: example showing Oncotype DX breast recurrence sc
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-12"
 * performer = Reference(us-core-organization-bedrock-medicine)
-* valueQuantity = 47 '{ScoreOf}' "Recurrence score"
+* valueQuantity = 47 '1' "Recurrence score"
 * interpretation = ObsInt#H "High"
 
 // Initial Chemotherapy

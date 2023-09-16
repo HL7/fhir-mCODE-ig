@@ -58,17 +58,16 @@ Title: "Tumor Morphology Code Value Set"
 Description: "Contains the preferred preferred (active) code for tumor morphology."
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
-* SCT#1240414004 "Malignant neoplasm (morphologic abnormality)"
+* include codes from system SCT where concept is-a #1240414004 "Malignant neoplasm (morphologic abnormality)"
 
 ValueSet: TumorMorphologyCodeMaxVS
 Id: mcode-tumor-morphology-code-max-vs
 Title: "Tumor Morphology Code Max Value Set"
-Description: "Contains the preferred code for tumor morphology and the inactive code used in STU2. For backwards compatibility"
+Description: "Contains the preferred codes for tumor morphology and the old, inactive code used in STU2, for backwards compatibility."
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
 * include codes from valueset TumorMorphologyCodeVS
 * SCT#367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
-
 
 
 // OPEN QUESTION: How do we indicate that a tracked tumor has been surgically removed? Some sort of status? Specimen.active is the only possibility in BodyStructure, but the definition doesn't lend itself to this purpose.
@@ -77,7 +76,6 @@ Parent:  BodyStructure
 Id: mcode-tumor
 Title: "Tumor Profile"
 Description:  "Identifies a tumor that has not been removed from the body. Whenever possible, a single resource conforming to this profile will be used to track a tumor over time (as opposed to creating new Tumor-conforming BodyStructure resources each time that tumor is measured). Use HumanSpecimen to represent the tumor after removal from the body. 
-
 Note that the required code for morphology used in STU2 is now inactive.  A new code has been specified and SHOULD be used, but the old code remains conformant."
 * ^extension[FMM].valueInteger = 3
 * patient only Reference(CancerPatient)
@@ -94,7 +92,7 @@ Note that the required code for morphology used in STU2 is now inactive.  A new 
 * identifier[bodyStructureIdentifier] only BodyStructureIdentifier
 * identifier[bodyStructureIdentifier] ^short = "A persistent identifier of this tumor."
 * identifier[bodyStructureIdentifier] ^definition = "A persistent identifier used to identify and track the tumor over time. The identifier must be unique in the context of the patient."
-* morphology from TumorMorphologyCodeVS (required) 
+* morphology from TumorMorphologyCodeVS (extensible)
 * morphology ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TumorMorphologyCodeMaxVS)
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
 * location from CancerBodyLocationVS (extensible)

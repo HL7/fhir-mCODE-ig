@@ -1,11 +1,11 @@
 **The following changes occurred between the [STU 3 ballot (March 2023)] and publication of STU 3, in response to ballot comments.**
 
-### Replacing Inactive SNOMEDCT Codes
-Several valid but inactive SNOMEDCT codes were identified and replaced:
+### Inactive SNOMED CT Codes Replaced
+SNOMED CT can declare concepts inactive if they are duplicate, ambiguous, erroneous, or outdated. Several SNOMED CT codes used in mCODE STU 2 became inactive and had to be replaced for STU 3:
 
-* [Tumor] profile morphology is bound to 367651003 (Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)) which is inactive.   This code has been replaced by 1240414004 (Malignant neoplasm (morphologic abnormality)).  The old code remains conformant for backwards compatiblity.
-* [mcode-patient-bundle-jenny-m] Histology-Morphology-Behavior Extension: The inactive code 413448000 Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality) has been replaced by 30546008 Clear cell adenocarcinoma (morphologic abnormality)
-* [primary-cancer-condition-nsclc] Histology-Morphology-Behavior Extension: The inactive code 35917007 Adenocarcinoma has been replaced by 1187332001 Adenocarcinoma (morphologic abnormality)  
+* [Tumor] profile morphology was bound to 367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)" which is now inactive. This code has been replaced by 1240414004 "Malignant neoplasm (morphologic abnormality)". The old code remains conformant for backwards compatiblity, but implementers should migrate to the new, replacement code. 
+* [mcode-patient-bundle-jenny-m] Histology-Morphology-Behavior Extension: In this example instance, the inactive code 413448000 "Adenocarcinoma, no subtype, intermediate grade" has been replaced by 30546008 "Clear cell adenocarcinoma".
+* [primary-cancer-condition-nsclc] Histology-Morphology-Behavior Extension: In this example, the inactive code 35917007 "Adenocarcinoma, no subtype (morphologic abnormality)" has been replaced by 1187332001 "Adenocarcinoma (morphologic abnormality)"  
 
 ### Addition of non-TNM Staging Profiles ([FHIR-41163](https://jira.hl7.org/browse/FHIR-41163), [FHIR-41003](https://jira.hl7.org/browse/FHIR-41003))
 

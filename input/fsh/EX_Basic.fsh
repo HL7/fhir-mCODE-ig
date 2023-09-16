@@ -71,6 +71,7 @@ Description: "Example of comorbid condition (congestive heart failure) present"
 * category = CondCat#problem-list-item "Problem List Item"
 * code = ICD10CM#I50.32 "Chronic diastolic (congestive) heart failure"
 * verificationStatus = VerStatus#confirmed
+* clinicalStatus = ClinStatus#active "Active"
 * extension[condition-assertedDate].valueDateTime = "2019-04-01"
 
 Instance: cancer-patient-john-anyperson

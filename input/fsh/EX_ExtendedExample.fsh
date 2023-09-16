@@ -221,7 +221,7 @@ Description: "Extended example: example of body height vital sign"
 Instance: primary-cancer-condition-jenny-m
 InstanceOf: PrimaryCancerCondition
 Description: "Extended example: example showing primary cancer condition"
-* extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#30546008 "Clear cell adenocarcinoma (morphologic abnormality)" 
+* extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#82711006 "Infiltrating duct carcinoma (morphologic abnormality)"
 * clinicalStatus = ClinStatus#remission
 * verificationStatus = VerStatus#confirmed
 * category = CondCat#problem-list-item

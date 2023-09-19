@@ -3,10 +3,6 @@
 # NOTE TO SELF: ONLY WARNINGS AND INFORMATION MESSAGES CAN BE SUPPRESSED, NOT ERRORS
 # ONLY THE WARNING MESSAGE ITSELF NEEDS TO BE INCLUDED IN THIS FILE, NOT THE ENTIRE CONTEXT
 
-# PARSING ERROR DURING TERMINOLOGY EXPANSION
-Error from server: Error parsing HGVS response: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
-Error reading Http Response: Error parsing JSON source: Unexpected char '<' in json stream at Line 1 (path=[null])
-
 # SUPPRESS US CORE COMPLIANCE WARNINGS.  For STU2, exceptions to US Core parent profiles was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard: 28-0-1. See https://jira.hl7.org/browse/FHIR-30707. For STU3, exceptions to US Core parent profiles was approved by the Cross-Group Projects Work Group on 2/9/2023 Saul Kravitz/Floyd Eisenberg: 23-0-2. See https://jira.hl7.org/browse/FHIR-40383.  A variance for an additional Observation added in STU3 was approved by the Cross-Group Projects Work Group on 8/10/23.  See https://jira.hl7.org/browse/FHIR-41710.
 US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 US FHIR Usage rules require that all profiles on Specimen derive from the core US profile
@@ -17,14 +13,13 @@ Error from server: Unable to provide support for code system http://ncicb.nci.ni
 Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3
 Error from server: Unable to provide support for code system http://cancerstaging.org
 Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
+Error from server: Unable to provide support for code system http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs
+Error from server: HGVS is not supported at this time
 Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
-Unknown System 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated)
-Unknown System 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' specified, so Concepts and Filters can't be checked (Details: The CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl is unknown (from Tx-Server))
 Code System URI 'http://www.ncbi.nlm.nih.gov/gtr' is unknown so the code cannot be validated
 Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
 Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
 Code System URI 'https://www.gensop.com' is unknown so the code cannot be validated
-Unknown Source Code System TG263, so the source codes cannot be checked
 Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs|3.0.0
 The definition for the Code System with URI 'http://terminology.hl7.org/CodeSystem/icd-o-3' doesnt provide any codes so the code cannot be validated
 The definition for the Code System with URI 'http://www.genenames.org' doesnt provide any codes so the code cannot be validated
@@ -32,6 +27,9 @@ The definition for the Code System with URI 'http://www.ncbi.nlm.nih.gov/refseq'
 The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesnt provide any codes so the code cannot be validated
 The definition for the Code System with URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' doesnt provide any codes so the code cannot be validated
 The definition for the Code System with URI 'http://www.ncbi.nlm.nih.gov/clinvar' doesnt provide any codes so the code cannot be validated
+Unknown System 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' specified, so Concepts and Filters can't be checked (Details: Resolved system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl (v3.0.0), but the definition is not complete)
+Unable to check whether the code is in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs|3.0.0
+Observation.code: Unable to check whether the code is in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs|3.0.0
 
 # TG263 is a  proprietary codesystem used in Radiotherapy.  The whole point of conceptmaps is to make it easy to transition to the ValueSets used in this IG. The codesystem identifers TRX, IJE and MRE are not proper codesystem URIs.  Work is underway to define proper URIs that will be included in future versions of this IG.
 WARNING: ConceptMap/TG263CM: ConceptMap.group[0].source: The Source Code System TG263 is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed
@@ -59,5 +57,19 @@ Details for Observation/gx-genomic-variant-somatic-polrmt matching against profi
 Details for Observation/gx-genomic-variant-somatic-pof1b matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 Details for Observation/gx-genomic-variant-somatic-bap1-indel matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 
-# IG Publisher Bug 
+# IG Publisher Bugs 
 This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended
+Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+
+# UCUM Best Practice warning is inherited from Genomics Reporting IG
+UCUM Codes that contain human readable annotations like {Base} can be misleading. Best Practice is not to use annotations in the UCUM code, and rather to make sure that Quantity.unit is correctly human readable
+
+# Reference to deprecated extension included for backwards compatibility
+The extension http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-termination-reason|3.0.0 is retired
+StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-termination-reason'): The Implementation Guide contains no examples for this extension
+
+# Reference to condition-category code system is inherited from US Core
+Reference to draft item http://terminology.hl7.org/CodeSystem/condition-category|0.5.0
+
+# Big Value Set
+The value set include has too many codes to validate (1,045)

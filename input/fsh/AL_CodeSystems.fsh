@@ -5,7 +5,7 @@
 Alias:   LNC = http://loinc.org
 //Alias:   SCT = http://snomed.info/sct
 //Alias:   SCT = http://snomed.info/sct|http://snomed.info/sct/731000124108   // latest US edition (see exp-params.json)
-Alias:   SCT = http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230731   // Latest international edition
+Alias:   SCT = http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901   // Sept 2023 international edition
 Alias:   SCT_TBD = http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs
 Alias:   UCUM = http://unitsofmeasure.org
 Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm

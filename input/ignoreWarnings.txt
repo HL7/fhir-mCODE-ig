@@ -89,7 +89,6 @@ Details for Observation/gx-genomic-variant-somatic-pof1b matching against profil
 Details for Observation/gx-genomic-variant-somatic-bap1-indel matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 
 # IG Publisher Bugs 
-This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended
 WARNING: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (Best Practice Recommendation)
 WARNING: DiagnosticReport/gx-genomics-report-adam-anyperson: DiagnosticReport: Rule dom-6: 'A resource should have narrative for robust management' Failed (Best Practice Recommendation)
 

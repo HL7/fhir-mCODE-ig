@@ -97,3 +97,6 @@ UCUM Codes that contain human readable annotations like {Base} can be misleading
 
 # IG Publisher Spurious Messages
 VALUESET_CONCEPT_DISPLAY_SCT_TAG_MIXED
+
+# Reference to work group extension value set containing "CIC" code
+Reference to draft item http://hl7.org/fhir/hl7-work-group|5.1.0-cibuild

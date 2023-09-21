@@ -88,18 +88,19 @@ Details for Observation/gx-genomic-variant-somatic-polrmt matching against profi
 Details for Observation/gx-genomic-variant-somatic-pof1b matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 Details for Observation/gx-genomic-variant-somatic-bap1-indel matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 
-# IG Publisher Bugs 
+# Suspected Bugs in IG Publisher
 WARNING: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (Best Practice Recommendation)
 WARNING: DiagnosticReport/gx-genomics-report-adam-anyperson: DiagnosticReport: Rule dom-6: 'A resource should have narrative for robust management' Failed (Best Practice Recommendation)
 
-# UCUM Best Practice warning is inherited from Genomics Reporting IG
+# UCUM Best Practice warning is inherited from Genomics Reporting IG and we can't change that
 UCUM Codes that contain human readable annotations like {Base} can be misleading. Best Practice is not to use annotations in the UCUM code, and rather to make sure that Quantity.unit is correctly human readable
 
-# Reference to deprecated extension included for backwards compatibility. The extension http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-termination-reason|3.0.0 is retired
+# Reference to deprecated extension included for backwards compatibility. 
+INFORMATION: StructureDefinition/mcode-radiotherapy-course-summary: Procedure.extension: The extension http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-termination-reason|3.0.0 is retired
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-termination-reason'): The Implementation Guide contains no examples for this extension
 
-# Reference to condition-category code system is inherited from US Core
+# Reference to condition-category code system is inherited from US Core and we can't change that
 Reference to draft item http://terminology.hl7.org/CodeSystem/condition-category|0.5.0
 
-# Big Value Set
+# Too Big Value Set
 The value set include has too many codes to validate (1,045)

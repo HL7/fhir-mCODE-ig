@@ -291,7 +291,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 3
 * SCT#15825003 "Aortic structure (body structure)" // Aorta
-* SCT#54247002 "Ascending aorta structure (body Structure)" // Ascending Aorta
+* SCT#54247002 "Ascending aorta structure (body structure)" // Ascending Aorta
 * SCT#425444002 "Branch of brachiocephalic artery (body structure)" // Brachiocephalic Artery
 * SCT#69105007 "Carotid artery structure (body structure)" // Common Carotid Artery
 * SCT#57850000 "Structure of celiac artery (body structure)" // Celiac Artery

@@ -9,6 +9,9 @@ US FHIR Usage rules require that all profiles on Specimen derive from the core U
 US FHIR Usage rules require that all profiles on DiagnosticReport derive from one of the base US profiles
 
 # UNSUPPORTED TERMINOLOGY
+HGVS is not supported at this time
+Error from http://tx.fhir.org/r4: HGVS is not supported at this time
+Error from server: HGVS is not supported at this time
 Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
 Code System URI 'http://www.ncbi.nlm.nih.gov/gtr' is unknown so the code cannot be validated
 Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
@@ -28,24 +31,6 @@ Error from server: Unable to provide support for code system http://ncicb.nci.ni
 Unable to expand imported value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-cancer-disorder-vs: Unable to expand imported value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-malignant-neoplasm-disorder-vs: The value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-malignant-neoplasm-disorder-vs has too many codes to display (>1000) (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3)
 Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
 Error from server: Unable to provide support for code system http://cancerstaging.org
-WARNING: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[12].resource/*Observation/gx-genomic-variant-somatic-pof1b*/.component[4].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-WARNING: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[12].resource/*Observation/gx-genomic-variant-somatic-pof1b*/.component[5].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-WARNING: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[13].resource/*Observation/gx-genomic-variant-somatic-polrmt*/.component[4].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-WARNING: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[13].resource/*Observation/gx-genomic-variant-somatic-polrmt*/.component[5].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-WARNING: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[6].resource/*Observation/gx-genomic-variant-somatic-bap1-indel*/.component[2].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-WARNING: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[6].resource/*Observation/gx-genomic-variant-somatic-bap1-indel*/.component[3].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource/*Observation/genomic-variant-jenny-m*/.component[2].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-WARNING: Observation/genomic-variant-fusion: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-WARNING: Observation/genomic-variant-germline-deletion: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-WARNING: Observation/genomic-variant-jenny-m: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-WARNING: Observation/genomic-variant-somatic-single-nucleotide: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-WARNING: Observation/gx-genomic-variant-somatic-bap1-indel: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-WARNING: Observation/gx-genomic-variant-somatic-bap1-indel: Observation.component[3].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-WARNING: Observation/gx-genomic-variant-somatic-pof1b: Observation.component[4].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-WARNING: Observation/gx-genomic-variant-somatic-pof1b: Observation.component[5].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-WARNING: Observation/gx-genomic-variant-somatic-polrmt: Observation.component[4].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-WARNING: Observation/gx-genomic-variant-somatic-polrmt: Observation.component[5].value.ofType(CodeableConcept).coding[0]: Error from server: HGVS is not supported at this time
-
 
 # TG263 is a  proprietary codesystem used in Radiotherapy.  The whole point of conceptmaps is to make it easy to transition to the ValueSets used in this IG. The codesystem identifers TRX, IJE and MRE are not proper codesystem URIs.  Work is underway to define proper URIs that will be included in future versions of this IG.
 WARNING: ConceptMap/TG263CM: ConceptMap.group[0].source: The Source Code System TG263 is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed

@@ -5,7 +5,7 @@ Usage: #definition
 * insert ConceptMapIntro(TG263, RadiotherapyTreatmentLocationVS)
 * insert AddGroup("TG263",SCT)
 * insert MapConcept(#A_Aorta, "Aorta", #15825003, "Aortic structure (body structure\)")
-* insert MapConcept(#A_Aorta_Asc, "Ascending Aorta", #54247002, "Ascending aorta structure (body Structure\)")
+* insert MapConcept(#A_Aorta_Asc, "Ascending Aorta", #54247002, "Ascending aorta structure (body structure\)")
 * insert MapConcept(#A_Brachiocephls, "Brachiocephalic Artery", #425444002, "Branch of brachiocephalic artery (body structure\)")
 * insert MapConcept(#A_Carotid, "Common Carotid Artery", #69105007, "Carotid artery structure (body structure\)")
 * insert MapConceptLateralityQualifier(#A_Carotid_L, "Carotid Artery", #69105007, "Carotid artery structure (body structure\)", #7771000, "left (qualifier value\)", SCT)

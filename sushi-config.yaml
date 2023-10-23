@@ -5,7 +5,7 @@ name: MinimalCommonOncologyDataElements
 title: "minimal Common Oncology Data Elements (mCODE) Implementation Guide"
 status: draft
 publisher:
-  name: HL7 International Clinical Interoperability Council
+  name: HL7 International / Clinical Interoperability Council
   url: http://www.hl7.org/Special/committees/cic
   email: ciclist@lists.HL7.org
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
@@ -15,11 +15,17 @@ fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.us.core: 5.0.1
   hl7.fhir.uv.genomics-reporting: 2.0.0
+  hl7.fhir.uv.extensions: current
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: cic
 parameters:
   show-inherited-invariants: false
   version-comparison: n/a
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
   path-binary: input/attachments
+  apply-wg: true
+  default-version: true
 copyrightYear: 2019+
 releaseLabel: STU3 Release
 pages:

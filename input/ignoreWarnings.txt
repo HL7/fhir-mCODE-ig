@@ -90,3 +90,7 @@ VALUESET_CONCEPT_DISPLAY_SCT_TAG_MIXED
 # Reference to work group extension value set containing "CIC" code
 Reference to draft item http://hl7.org/fhir/hl7-work-group|5.1.0-cibuild
 Reference to draft item http://hl7.org/fhir/standards-status|5.1.0-cibuild
+
+# This is a publisher induced issue.   The extension in question is introduced by the publisher, not sushi.   See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/New.20ConceptMap.20Warning.20--.20induced.20by.20IG.20Publisher 
+The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version {3} is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
+

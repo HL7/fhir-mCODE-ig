@@ -2,7 +2,7 @@
     "package-id" : "hl7.fhir.us.mcode",
     "version" : "3.0.0",
     "path" : "http://hl7.org/fhir/us/mcode/STU3",
-    "status" : "draft",
+    "status" : "trial-use",
     "sequence" : "STU 3",
     "milestone": true,
     "desc" : "STU3 Release",

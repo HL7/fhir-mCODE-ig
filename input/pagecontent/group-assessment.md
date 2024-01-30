@@ -6,7 +6,7 @@ Comorbidities are important in the prognosis and treatment of cancer. Any existi
 
 ### Performance Assessments
 
-mCODE supports the [Eastern Cooperative Oncology Group (ECOG) Performance Status](https://ecog-acrin.org/resources/ecog-performance-status) and [Karnofsky Performance Status (KPS)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3722041/). Because performance assessments may be performed more than once over a period of time, multiple instances may exist for a single patient.
+mCODE supports the [Eastern Cooperative Oncology Group (ECOG) Performance Status](https://ecog-acrin.org/resources/ecog-performance-status), [Karnofsky Performance Status (KPS)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3722041/), [Lansky Play Performance Status](https://pubmed.ncbi.nlm.nih.gov/4027922/), and [Deauville Assessment](https://www.ncbi.nlm.nih.gov/books/NBK65726/table/CDR0000062933__831/). Because performance assessments may be performed more than once over a period of time, multiple instances may exist for a single patient.
 
 ### Laboratory Tests
 
@@ -20,7 +20,7 @@ Beyond the requirements of US Core, under [Clinical Laboratory Improvement Amend
 
 ### Vital Signs
 
-Vital signs are measurements of the most essential, or "vital" body functions. For mCODE, blood pressure, body height, and body weight are believed to be most critical to assessment and treatment. Instead of defining its own profiles, mCODE uses the [FHIR R4 vital sign profile](http://hl7.org/fhir/R4/observation-vitalsigns.html), which is incorporated into [US Core](http://hl7.org/fhir/us/core/index.html). As of Version 3.2, US Core defines its own set of vital signs profiles. These profiles are derived from the same FHIR base vital sign profile. mCODE accepts vital sign data conforming to either FHIR or US Core profiles. Examples of height, weight, and blood pressure are given in both sources.
+Vital signs are measurements of the most essential, or "vital" body functions. For mCODE, blood pressure, body height, body weight, and body surface area are believed to be most critical to assessment and treatment. Instead of defining its own profiles, mCODE mostly uses the [FHIR R4 vital sign profile](http://hl7.org/fhir/R4/observation-vitalsigns.html), which is incorporated into [US Core](http://hl7.org/fhir/us/core/index.html). However, mCODE does define its own profile for [BodySurfaceArea]. As of Version 3.2, US Core defines its own set of vital signs profiles. These profiles are derived from the same FHIR base vital sign profile. mCODE accepts vital sign data conforming to either FHIR or US Core profiles. Examples of height, weight, and blood pressure are given in both sources.
 
 ### History of Metastatic Disease
 
@@ -28,11 +28,14 @@ Recurrences and unrelated cancers sometimes occur years after previous metastati
 
 ### Profiles
 
+* [BodySurfaceArea]
 * [Comorbidities]
+* [DeauvilleScale]
 * [ECOGPerformanceStatus]
 * [FHIR Vital Signs](https://www.hl7.org/fhir/observation-vitalsigns.html)
 * [HistoryOfMetastaticCancer]
 * [KarnofskyPerformanceStatus]
+* [LanskyPlayPerformanceStatus]
 * [US Core Vital Signs](https://hl7.org/fhir/us/core/4.0.0/StructureDefinition-us-core-vital-signs.html) (version 4.0 and higher)
 * [US Core DiagnosticReport Profile for Laboratory Results Reporting](http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html)
 * [US Core Laboratory Result Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html)
@@ -42,5 +45,6 @@ Recurrences and unrelated cancers sometimes occur years after previous metastati
 * [ECOG performance status] (external)
 * [HistoryOfMetastaticMalignantNeoplasmVS]
 * [Karnofsky performance status] (external)
+* [LanskyPlayPerformanceStatusVS]
 
 {% include markdown-link-references.md %}

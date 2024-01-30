@@ -34,3 +34,47 @@ Description:    "The Eastern Cooperative Oncology Group (ECOG) Performance Statu
 * code = LNC#89247-1 //"ECOG Performance Status score"
 * value[x] only integer
 * interpretation from http://loinc.org/vs/LL529-9 (required)
+
+
+Profile: LanskyPlayPerformanceStatus
+Parent:  USCoreClinicalTest
+Id: mcode-lansky-play-performance-status
+Title:  "Lansky Play Performance Status Profile"
+Description:  "The Lansky Play-Performance Status for children is a parent-rated instrument which records usual play activity as the index of performance. It is similar to the Karnofsky Performance Scale for adults (Definition from: [NCI Thesaurus](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&code=C38144&ns=ncit))."
+* insert PerformanceStatusCommonRules
+* code = NCIT#C38144 // Lansky Play-Performance Status
+* value[x] only integer 
+* interpretation from LanskyPlayPerformanceStatusVS (required)
+
+
+Profile: DeauvilleScale
+Id: mcode-deauville-scale
+Parent: USCoreObservationImaging
+Title: "Deauville Scale Profile"
+Description: "Profile for Deauville Scale. A 5 point scale devised to assess the response to treatment of Hodgkin and aggressive Non-Hodgkin lymphoma."
+* code = SCT#708895006 "Deauville five point scale (assessment scale)"
+* basedOn only Reference(CarePlan or MedicationRequest or ServiceRequest)
+* partOf only Reference(MedicationAdministration or MedicationDispense or MedicationStatement or Procedure or ImagingStudy)
+* performer only Reference(Practitioner or PractitionerRole or Organization or CareTeam)
+* subject only Reference(CancerPatient)
+* subject ^definition = "The patient associated with the Deauville Score."
+* value[x] only integer 
+* focus only Reference(PrimaryCancerCondition)
+* focus ^short = "The cancer condition associated with the Deauville Score"
+* focus ^definition = "Deauville Score is associated with a particular primary cancer condition. Observation.focus is used to point back to that condition."
+* status and code and subject and effective[x] and value[x] and focus and interpretation MS
+* insert NotUsed (specimen)
+* interpretation from DeauvilleScaleVS (required)
+
+Profile: BodySurfaceArea
+Parent: USCoreVitalSignsProfile
+Id: mcode-body-surface-area
+Title: "Body Surface Area"
+Description: "Entire body surface area, either measured or calculated."
+* code = LNC#8277-6 // Body Surface Area
+* value[x] only Quantity
+//* valueQuantity = UCUM#m2 <-- THIS LINE IS CAUSING THE PUBLISHER TO CRASH 6/30/2023 VERSION 1.3.20
+
+
+
+

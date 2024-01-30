@@ -647,6 +647,8 @@ Description: "Extended example: example showing chemotherapy medication"
 * note.text = "doxorubicin (60 mg/m² IV), 105.96 mg in 50 ml 0.9% normal saline administered by continuous infusion. Patient tolerated infusion without side effects."
 * dosage.dose = 105.96 'mg' "mg"
 * dosage.route = SCT#47625008 "Intravenous route (qualifier value)"
+* extension[normalizationBasis].valueCodeableConcept = SCT#363804004 "Body weight characteristic (observable entity)"
+
 
 Instance: cancer-related-medication-admin-cyclophosphamide-jenny-m
 InstanceOf: CancerRelatedMedicationAdministration

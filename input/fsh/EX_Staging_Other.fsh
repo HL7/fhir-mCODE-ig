@@ -59,6 +59,9 @@ Description: "Example of staging using Cotswold staging of Hodgkin's disease."
 * code = SCT#385388004 "Lymphoma stage (observable entity)"
 * method = SCT#254375000 "Cotswolds Hodgkin's disease tumor staging system (tumor staging)"
 * valueCodeableConcept = SCT#44255004 "Lymphoma stage IIIe (finding)"
+* component[stage-modifier].valueCodeableConcept = SCT#282436004 "E - Extralymphatic organ involvement marker"
+* component[clin-or-path-modifier].valueCodeableConcept = SCT#261023001 "Pathological staging (qualifier value)"
+* component[bulky-modifier].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
 
 Instance: melanoma-breslow-depth-stage
 InstanceOf: MelanomaBreslowDepthStage
@@ -89,4 +92,27 @@ Description: "Example of Revised International Staging System (RISS) for myeloma
 * code = NCIT#C141392 "Revised International Staging System Stage"
 * valueCodeableConcept = NCIT#C141395 "RISS Stage II Plasma Cell Myeloma"
 
+Instance: neuroblastoma-inss-stage-III
+InstanceOf: NeuroblastomaINSStage
+Description: "Example of International Neuroblastoma Staging System (INSS) for neuroblastoma staging."
+* insert StagingInstanceRuleSet
+* valueCodeableConcept = SCT#409725009 "International neuroblastoma staging system stage 3 (finding)"
 
+Instance: neuroblastoma-inrgss-stage-M
+InstanceOf: NeuroblastomaINRGSSRiskAssessment
+Description: "Example of International Neuroblastoma Risk Group Staging System (INSS) for neuroblastoma staging."
+* insert StagingInstanceRuleSet
+* valueCodeableConcept = NCIT#C133431 "INRG Stage MS"
+
+Instance: wilms-tumor-stage-III
+InstanceOf: WilmsTumorStage
+Description: "Example of National Wilms Tumor Study Group stage for Wilms Tumor staging."
+* insert StagingInstanceRuleSet
+* valueCodeableConcept = SCT#405973001 "National Wilms Tumor Study Group Stage III (finding)"
+* bodySite = SCT#18639004 "Left kidney structure (body structure)"
+
+Instance: rhabdomyosarcoma-clinical-group-stage-II
+InstanceOf: RhabdomyosarcomaClinicalGroupStage
+Description: "Example of Rhabdomyosarcoma Clinical Group Stage for rhabdomyosarcoma staging."
+* insert StagingInstanceRuleSet
+* valueCodeableConcept = NCIT#C148015 "Intergroup Rhabdomyosarcoma Group II"

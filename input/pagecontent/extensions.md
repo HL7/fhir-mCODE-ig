@@ -13,5 +13,7 @@ The following Extensions are defined as part of mCODE:
 * [RelatedCondition]
 * [RelatedConditionAbsent]
 * [TreatmentTerminationReason]
+* [ReasonOffStudy]
+* [NormalizationBasis]
 
 {% include markdown-link-references.md %}

@@ -35,7 +35,10 @@ For definition of key terms in radiotherapy, see the [Radiotherapy Glossary](glo
   * [LateralityQualifier]
   * [ProcedureIntent]
   * [TreatmentTerminationReason]
-* **Radiotherapy**
+  * [NormalizationBasis]
+* **Medication**
+  * [NormalizationBasis]
+**Radiotherapy**
   * [RadiotherapyDoseDeliveredToVolume]
   * [RadiotherapyModality]
   * [RadiotherapyModalityAndTechnique]
@@ -50,6 +53,7 @@ For definition of key terms in radiotherapy, see the [Radiotherapy Glossary](glo
   * [TreatmentTerminationReasonVS]
 * **Medication**
   * [Medication Clinical Drug (RxNorm)] (external)
+  * [NormalizationBasisVS]
 * **Surgery**
   * [CancerRelatedSurgicalProcedureVS]
 * **Radiotherapy**

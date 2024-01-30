@@ -18,10 +18,12 @@ Description:  "How patient's given disease, condition, or ability is trending."
 * SCT#359746009 "Patient's condition stable (finding)"
 * SCT#271299001 "Patient's condition worsened (finding)"
 * SCT#709137006 "Patient condition undetermined (finding)"
-* SCT#103338009 "In full remission (qualifier value)"
-* SCT#103337004 "In partial remission (qualifier value)"
+
+//only include the following in the Max VS
+//* SCT#103338009 "In full remission (qualifier value)"
+//* SCT#103337004 "In partial remission (qualifier value)"
 /* Added based on FHIR-40811 */
-* SCT#399409002 "Distant metastasis present (finding)"
+//* SCT#399409002 "Distant metastasis present (finding)" 
 
 ValueSet:   ConditionStatusTrendMaxVS
 Id: mcode-condition-status-trend-max-vs
@@ -176,3 +178,83 @@ Description:     "Code for methods of measuring tumor size, including physical e
 * SCT#363680008 "Radiographic imaging procedure (procedure)"
 // Other Imaging.  If one of the above doesn't cut it.
 * SCT#363679005 "Imaging (procedure)"
+
+ValueSet: ReasonOffStudyVS
+Id: mcode-reason-off-study-vs
+Title: "Reason Off Study Value Set"
+Description: "Value set for reasons why a patient left a clinical study for cancer."
+* insert SNOMEDCopyrightForVS
+* ^experimental = true
+* include codes from valueset TreatmentTerminationReasonVS 
+* NCIT#C178071 "Follow-Up Completed"
+* NCIT#C48250 "Physician Decision"
+* NCIT#C48271 "Withdrawal of Consent"
+* SCT#271299001 "Patient's condition worsened (finding)"
+* SCT#58184002 "Recurrent disease (disorder)"
+* SCT#263855007 "Relapse phase (qualifier value)"
+* SCT#281647001 "Adverse reaction (disorder)"
+* SCT#399409002 "Distant metastasis present (finding)"
+* NCIT#C142444 "Study Subject Discontinuation"
+* NCIT#C178072 "Failure to Attain Remission"
+* NCIT#C70757 "Study Terminated"
+
+ValueSet: HistologicBehaviorAndTypeVS
+Id: mcode-histologic-behavior-and-type-vs
+Title: "Histologic Behavior and Type Value Set"
+Description:  "A description of a tumor based on how abnormal the cancer cells and tissue look under a microscope and how quickly the cancer cells are likely to grow and spread."
+* include codes from system ICDO3  // should exclude topology codes, but no practical way to do this?
+
+ValueSet: HistologicGradeVS
+Id: mcode-histologic-grade-vs
+Title: "Histologic Grade Value Set"
+Description:  "A description of a tumor based on how abnormal the cancer cells and tissue look under a microscope."
+* insert SNOMEDCopyrightForVS
+* SCT#1155708003 "Low histologic grade (qualifier value)"
+* SCT#1286893008 "Intermediate histologic grade (qualifier value)"
+* SCT#1155707008 "High histologic grade (qualifier value)"
+
+ValueSet: HistologicGradingSystemVS
+Id: mcode-histologic-grading-system-vs
+Title: "Histologic Grading System Value Set"
+Description:  "A description of a tumor based on how abnormal the cancer cells and tissue look under a microscope and how quickly the cancer cells are likely to grow and spread."
+* insert SNOMEDCopyrightForVS
+* include codes from system SCT where concept is-a #277457005 "Histological grading systems (staging scale)"
+
+ValueSet: NormalizationBasisVS
+Id: mcode-normalization-basis-vs
+Title: "Normalization Basis Value Set"
+Description: "Normalization basis values."
+* ^experimental = false
+* insert SNOMEDCopyrightForVS
+* SCT#363804004 "Body weight characteristic (observable entity)"
+* SCT#301898006 "Body surface area (observable entity)"
+* SCT#1157245009 "Fixed dose (qualifier value)"
+
+
+ValueSet: LanskyPlayPerformanceStatusVS
+Id: mcode-lansky-play-performance-vs
+Title: "Lansky Play Performance Status VS"
+Description: "Value set for Lansky Play-Performance performance status."
+* NCIT#C70538 "Lansky Performance Status 0"
+* NCIT#C70539 "Lansky Performance Status 10"
+* NCIT#C70540 "Lansky Performance Status 20"
+* NCIT#C70541 "Lansky Performance Status 30"
+* NCIT#C70542 "Lansky Performance Status 40"
+* NCIT#C69421 "Lansky Performance Status 50"
+* NCIT#C69422 "Lansky Performance Status 60"
+* NCIT#C69423 "Lansky Performance Status 70"
+* NCIT#C69424 "Lansky Performance Status 80"
+* NCIT#C69425 "Lansky Performance Status 90"
+* NCIT#C69426 "Lansky Performance Status 100" 
+
+ValueSet: DeauvilleScaleVS
+Id: mcode-deauville-scale-vs
+Title: "Deauville Scale Value Set"
+Description: "Codes indicating the value of the Deauville assessment."
+* ^experimental = false
+* NCIT#C99728 "London Deauville Criteria Point Scale 1"
+* NCIT#C99747 "London Deauville Criteria Point Scale 2"
+* NCIT#C99748 "London Deauville Criteria Point Scale 3"
+* NCIT#C99749 "London Deauville Criteria Point Scale 4"
+* NCIT#C99750 "London Deauville Criteria Point Scale 5"
+* NCIT#C136879 "London Deauville Criteria Point Scale X"

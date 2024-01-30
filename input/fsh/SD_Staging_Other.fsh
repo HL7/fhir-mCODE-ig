@@ -45,11 +45,19 @@ Description: "Staging of lymphoma (both Hodgkins and Non-Hodgkins) by Ann Arbor,
 * method from LymphomaStagingMethodVS
 * value[x] from LymphomaStageValueVS (required)
 * insert ObservationComponentSlicingRules
-* component contains stage-modifier 0..* and clin-or-path-modifier 0..1
+* component contains stage-modifier 0..* and clin-or-path-modifier 0..1 and bulky-modifier 0..1
 * component[stage-modifier].value[x] only CodeableConcept
 * component[stage-modifier].value[x] from LymphomaStageValueModifierVS
+* component[stage-modifier].code = SCT#106252000 "Staging classification for lymphoma (tumor staging)"
+
 * component[clin-or-path-modifier].value[x] only CodeableConcept
 * component[clin-or-path-modifier].value[x] from ClinOrPathModifierVS
+* component[clin-or-path-modifier].code = SCT#277366005 "Nature of staging values (qualifier value)"
+
+* component[bulky-modifier].value[x] only CodeableConcept
+* component[bulky-modifier].value[x] from LymphomaStageBulkyModifierVS
+* component[bulky-modifier].code = SCT#260873006 "Bulky disease status (attribute)"
+
 
 // Melanoma
 
@@ -107,3 +115,48 @@ Description: "Gleason Grade Group for prostatic cancer"
 * ^extension[FMM].valueInteger = 0
 * code = SCT#385377005 // Gleason grade finding for prostatic cancer (finding)
 * value[x] from GleasonGradeGroupValueVS (required)
+
+
+//Neuroblastoma//
+
+Profile: NeuroblastomaINSStage
+Id: mcode-neuroblastoma-inss-stage
+Parent: CancerStage
+Title: "Neuroblastoma INSS Stage Profile"
+Description: "The International Neuroblastoma Staging System (INSS) stage for neuroblastoma."
+* ^extension[FMM].valueInteger = 0
+* code = SCT#409720004  // International neuroblastoma staging system stage (observable entity)
+* value[x] from NeuroblastomaINSSValueVS (required)
+
+
+Profile: NeuroblastomaINRGSSRiskAssessment 
+Id: mcode-neuroblastoma-inrgss-stage
+Parent: CancerStage
+Title: "Neuroblastoma INRGSS Stage Profile"
+Description: "International Neuroblastoma Risk Group Staging System (INRGSS) for neuroblastoma."
+* ^extension[FMM].valueInteger = 0
+* code = NCIT#C133427 // International Neuroblastoma Risk Group Staging System
+* value[x] from NeuroblastomaINRGSSValueVS (required)
+
+//WilmsTumor//
+
+Profile: WilmsTumorStage
+Id: mcode-wilms-tumor-stage
+Parent: CancerStage
+Title: "Wilms Tumor Stage Profile"
+Description: "Wilms Tumors (nephroblastoma) Stage by the National Wilms Tumor Study Group."
+* ^extension[FMM].valueInteger = 0
+* code = SCT#405931009 // National Wilms Tumor Study Group Stage (observable entity)
+* value[x] from WilmsTumorStageValueVS (required)
+* bodySite from WilmsTumorBodySiteVS (extensible)
+
+//Rhabdomyosarcoma//
+
+Profile: RhabdomyosarcomaClinicalGroupStage
+Id: mcode-rhabdomyosarcoma-clinical-group-stage
+Parent: CancerStage
+Title: "Rhabdomyocaroma Clinical Group Stage Profile"
+Description: "Clinical stage group for rhabdomyocaroma."
+* ^extension[FMM].valueInteger = 0
+* code = SCT#405916000 // Intergroup rhabdomyosarcoma study post-surgical clinical group (observable entity)
+* value[x] from RhabdomyosarcomaClinicalGroupValueVS (required)

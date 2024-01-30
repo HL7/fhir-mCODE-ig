@@ -153,6 +153,59 @@ Description: "Codes in the Rai staging system representing Chronic Lymphocytic L
 * NCIT#C7876 "Stage III Chronic Lymphocytic Leukemia"
 * NCIT#C8646 "Stage IV Chronic Lymphocytic Leukemia"
 
+ValueSet: NeuroblastomaINSSValueVS
+Id: mcode-neuroblastoma-inss-value-vs
+Title: "International Neuroblastoma Staging System (INSS) for Neuroblastoma Stage Value Set"
+Description: "Codes in INSS staging system representing neuroblastoma stage."
+* insert SNOMEDCopyrightForVS
+* include codes from system SCT where concept descendant-of #409721000 "International neuroblastoma staging system stage finding (finding)"
+
+ValueSet: NeuroblastomaINRGSSValueVS
+Id: mcode-neuroblastoma-INRGSS-value-vs
+Title: "International Neuroblastoma Risk Group Staging System (INRGSS) for Neuroblastoma Risk Assessment Value Set"
+Description: "Codes in the INRGSS system representing neuroblastoma stage."
+* NCIT#C133428 "INRG Stage L1"
+* NCIT#C133429 "INRG Stage L2"
+* NCIT#C133430 "INRG Stage M"
+* NCIT#C133431 "INRG Stage MS"
+
+ValueSet: WilmsTumorStageValueVS
+Id: mcode-wilms-tumor-stage-value-vs
+Title: "Wilms Tumor Stage Value Set"
+Description: "Codes in the National Wilms Tumor Study Group representing Wilms Tumor stage."
+* insert SNOMEDCopyrightForVS
+* include codes from system SCT where concept descendant-of #405971004 "National Wilms Tumor Study Group Stage finding (finding)"
+
+ValueSet: WilmsTumorBodySiteVS
+Id: mcode-wilms-tumor-body-site-vsCOG
+Title: "Wilms Tumor Body Site Value Set"
+Description: "Codes indicating the location of the Wilms Tumor."
+* insert SNOMEDCopyrightForVS
+* SCT#18639004 "Left kidney structure (body structure)"
+* SCT#9846003 "Right kidney structure (body structure)"
+
+ValueSet: LymphomaStageBulkyModifierVS
+Id: mcode-lymphoma-stage-bulky-modifier-vs
+Title: "Lymphoma Stage Bulky Modifier Value Set"
+Description: "Bulky modifier indicating if the lymphoma has the presence of bulky disease."
+* ^experimental = false
+* insert SNOMEDCopyrightForVS
+* SCT#2667000 "Absent (qualifier value)"
+* SCT#52101004 "Present (qualifier value)"
+//there is no "bulky disease absent" value, so I just included positive and negative...thoughts?
+
+ValueSet: RhabdomyosarcomaClinicalGroupValueVS
+Id: mcode-rhabdomyosarcoma-clinical-group-value-vs
+Title: "Rhabdomyosarcoma Clinical Group Value"
+Description: "Intergroup code indicating whether the rhabdomyosarcoma is confined to its primary location or has extended beyond the site of origin."
+* insert SNOMEDCopyrightForVS
+* include codes from system SCT where concept descendant-of #405917009 "Intergroup rhabdomyosarcoma study post-surgical clinical group finding (finding)"
+* NCIT#C148012 "Intergroup Rhabdomyosarcoma Group I"
+* NCIT#C148015 "Intergroup Rhabdomyosarcoma Group II"
+* NCIT#C148019 "Intergroup Rhabdomyosarcoma Group III"
+
+
+
 /* not used
 ValueSet: LymphomaStageTypeVS
 Id: mcode-lymphoma-stage-type-vs
@@ -171,3 +224,4 @@ Description: "Stage Types for International Federation of Gynecology and Obstetr
 * insert SNOMEDCopyrightForVS
 * include codes from system SCT where concept is-a #385361009 "International Federation of Gynecology and Obstetrics stage for gynecological malignancy (observable entity)"
 */
+

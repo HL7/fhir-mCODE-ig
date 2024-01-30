@@ -6,25 +6,48 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 
 | Profile | Based on US Core?  | Immediate Parent Profile |
 |---------|--------------------|--------------------------|
+| [ALL Risk Assessment][ALLRiskAssessment] | no | CancerRiskAssessment |
 | [Body Structure Identifier][BodyStructureIdentifier] | no | Identifier |
+| [Body Surface Area][BodySurfaceArea] | yes | US Core Vital Signs |
 | [Cancer Disease Status][CancerDiseaseStatus] | no | Observation |
 | [Cancer Patient][CancerPatient] | yes | US Core Patient |
 | [Cancer-Related Medication Administration][CancerRelatedMedicationAdministration] | no | Medication Administration |
 | [Cancer-Related Medication Request][CancerRelatedMedicationRequest] | yes | US Core Medication Request |
 | [Cancer-Related Surgical Procedure][CancerRelatedSurgicalProcedure] | yes | US Core Procedure |
+| [Cancer Research Subject][CancerResearchSubject] | no | Research Subject |
+| [Cancer Risk Assessment][CancerRiskAssessment] | no | Observation |
 | [Cancer Stage][CancerStage] | no | Observation |
-| [Comorbidities] | no | Observation |
+| [CLL Binet Stage Profile][CLLBinetStage] | no | CancerStage |
+| [CLL Rai Stage Profile][CLLRaiStage] | no | CancerStage |
+| [Comorbidities][Comorbidities] | no | Observation |
+| [Deauville Scale][DeauvilleScale] | yes | US Core Observation Imaging Result |
 | [ECOG Performance Status][ECOGPerformanceStatus] | yes | US Core Observation Clinical Test Result |
 | [Genomic Region Studied][GenomicRegionStudied] | no | Genomics Reporting IG RegionStudied |
 | [Genomics Report][GenomicsReport] | no | Genomics Reporting IG GenomicsReport |
 | [Genomic Variant][GenomicVariant] | no | Genomics Reporting IG Variant |
+| [Gynecologic Tumor FIGO Stage][GynecologicTumorFigoStage] | no | CancerStage |
+| [Histologic Behavior and Type][HistologicBehaviorAndType] | yes | US Core Laboratory Result Observation |
+| [Histologic Grade][HistologicGrade] | yes | US Core Laboratory Result Observation |
+| [History of Metastatic Cancer][HistoryofMetastaticCancer] | no | Observation
+| [Human Specimen][HumanSpecimen] | no | Specimen |
 | [Karnofsky Performance Status][KarnofskyPerformanceStatus] | yes | US Core Observation Clinical Test Result |
+| [Lansky Play Performance Scale][LanskyPlayPerformanceScale] | yes | US Core Observation Clinical Test Result |
+| [Lymphoma Stage Profile][Lymphoma Stage Profile] | no | CancerStage |
 | [mCODE Patient Bundle][MCODEPatientBundle] | no | Bundle  |
 | [mCODE Patient Group][MCODEPatientGroup] | no | Group  |
-| [Human Specimen][HumanSpecimen] | no | Specimen |
+| [Medical History][MedicalHistory] | no | Observation |
+| [Melanoma Breslow Depth Stage][MelanomaBreslowDepthStage] | no | CancerStage |
+| [Melanoma Clark Level][MelanomaClarkLevel] | no | CancerStage |
+| [Myeloma ISS Stage][MyelomaISSStage] | no | CancerStage |
+| [Myeloma RISS Stage][MyelomaRISSStage] | no | CancerStage |
+| [Neuroblastoma INRGSS Stage][NeuroblastomaINRGSSStage] | no | CancerStage |
+| [Neuroblastoma INSS Stage][NeuroblastomaINSSStage] | no | CancerStage |
 | [Primary Cancer Condition][PrimaryCancerCondition] | yes | US Core Condition Problems Health Concerns |
+| [Prostate Gleason Grade Group][ProstateGleasonGradeGroup] | no | CancerStage
 | [Radiotherapy Course Summary][RadiotherapyCourseSummary] | yes | US Core Procedure |
 | [Radiotherapy Volume][RadiotherapyVolume] | no | BodyStructure |
+| [Rhabdomyosarcoma Clinical Group][RhabdomyosarcomaClinicalGroup] | no | CancerStage
+| [Rhabdomyosarcoma Risk Assessment][RhabdomyosarcomaRiskAssessment] | no | CancerRiskAssessment
 | [Secondary Cancer Condition][SecondaryCancerCondition] | yes | US Core Condition Problems Health Concerns |
 | [TNM Distant Metastases Category][TNMDistantMetastasesCategory] | no | Observation |
 | [TNM Primary Tumor Category][TNMPrimaryTumorCategory] | no | Observation |
@@ -32,7 +55,9 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [TNM Stage Group TNM][TNMStageGroup] | no | CancerStage |
 | [Tumor][Tumor] | no | BodyStructure |
 | [Tumor Marker Test][TumorMarkerTest] | yes | US Core Laboratory Result Observation |
+| [Tumor Morphology][TumorMorphology] | yes | US Core Diagnostic Report Profile Laboratory Reporting |
 | [Tumor Size][TumorSize] | no | Observation |
+| [Wilms Tumor Stage][WilmsTumorStage] | no | CancerStage |
 {: .grid }
 
 ### Profile-Level Conformance Expectations

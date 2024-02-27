@@ -179,29 +179,11 @@ Description:     "Code for methods of measuring tumor size, including physical e
 // Other Imaging.  If one of the above doesn't cut it.
 * SCT#363679005 "Imaging (procedure)"
 
-ValueSet: ReasonOffStudyVS
-Id: mcode-reason-off-study-vs
-Title: "Reason Off Study Value Set"
-Description: "Value set for reasons why a patient left a clinical study for cancer."
-* insert SNOMEDCopyrightForVS
-* ^experimental = true
-* include codes from valueset TreatmentTerminationReasonVS 
-* NCIT#C178071 "Follow-Up Completed"
-* NCIT#C48250 "Physician Decision"
-* NCIT#C48271 "Withdrawal of Consent"
-* SCT#271299001 "Patient's condition worsened (finding)"
-* SCT#58184002 "Recurrent disease (disorder)"
-* SCT#263855007 "Relapse phase (qualifier value)"
-* SCT#281647001 "Adverse reaction (disorder)"
-* SCT#399409002 "Distant metastasis present (finding)"
-* NCIT#C142444 "Study Subject Discontinuation"
-* NCIT#C178072 "Failure to Attain Remission"
-* NCIT#C70757 "Study Terminated"
-
 ValueSet: HistologicBehaviorAndTypeVS
 Id: mcode-histologic-behavior-and-type-vs
 Title: "Histologic Behavior and Type Value Set"
 Description:  "A description of a tumor based on how abnormal the cancer cells and tissue look under a microscope and how quickly the cancer cells are likely to grow and spread."
+* ^experimental = false
 * include codes from system ICDO3  // should exclude topology codes, but no practical way to do this?
 
 ValueSet: HistologicGradeVS
@@ -235,6 +217,7 @@ ValueSet: LanskyPlayPerformanceStatusVS
 Id: mcode-lansky-play-performance-vs
 Title: "Lansky Play Performance Status VS"
 Description: "Value set for Lansky Play-Performance performance status."
+* ^experimental = false
 * NCIT#C70538 "Lansky Performance Status 0"
 * NCIT#C70539 "Lansky Performance Status 10"
 * NCIT#C70540 "Lansky Performance Status 20"

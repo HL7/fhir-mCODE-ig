@@ -1,6 +1,6 @@
-Profile: TumorMorphologyReport
+Profile: TumorMorphology
 Parent: USCoreDiagnosticReportProfileLaboratoryReporting
-Id: mcode-tumor-morphology-report
+Id: mcode-tumor-morphology
 Title: "Tumor Morphology Report"
 Description: "ICD-O-3 morphology determined from examination of tumor sample, composed of three parts: histologic type, the malignant potential of the tumor (behavior) and the tumor grade (degree of differentiation)."
 * ^extension[FMM].valueInteger = 4
@@ -34,7 +34,7 @@ Description: "Histologic behavior and type determined from examination of tumor 
 * code = LNC#31206-6 // Behavior ICD-O-3 Cancer
 * value[x] only CodeableConcept
 * value[x] 1..1
-* value[x] from HistologicBehaviorAndTypeVS
+* value[x] from HistologicBehaviorAndTypeVS (extensible)
 * subject only Reference(CancerPatient)
 * subject ^definition = "Patient whose test result is recorded."
 * subject 1..1

@@ -164,6 +164,7 @@ ValueSet: NeuroblastomaINRGSSValueVS
 Id: mcode-neuroblastoma-INRGSS-value-vs
 Title: "International Neuroblastoma Risk Group Staging System (INRGSS) for Neuroblastoma Risk Assessment Value Set"
 Description: "Codes in the INRGSS system representing neuroblastoma stage."
+* ^experimental = false
 * NCIT#C133428 "INRG Stage L1"
 * NCIT#C133429 "INRG Stage L2"
 * NCIT#C133430 "INRG Stage M"

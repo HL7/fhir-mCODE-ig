@@ -31,7 +31,7 @@
 
 ### [CancerStage - non-TNM][CancerStage]
 
-* [Binet staging for chronic lymphocytic leukemia](Observation-binet-stage-group-A.html)
+* [Binet staging for chronic lymphocytic leukemia](Observation-binet-stage-group-B.html)
 * [Rai staging for chronic lymphocytic leukemia](Observation-rai-stage-II.html)
 * [Cotswold staging of Hodgkin's disease](Observation-hodgkins-lymphoma-stage-IIIe.html)
 * [Gynecologic tumor staged by FIGO (International Federation of Gynecology and Obstetrics)](Observation-figo-stage-IIIA.html)
@@ -40,9 +40,9 @@
 * [Myeloma stage by International Staging System (ISS)](Observation-multiple-myeloma-iss-stage-II.html)
 * [Myeloma stage by Revised International Staging System (RISS)](Observation-multiple-myeloma-riss-stage-II.html)
 * [Neuroblastoma INSS Stage III](Observation-neuroblastoma-inss-stage-III.html)
-* [Neuroblastoma INRGSS Stage M](Observation-neuroblastoma-inrgss-stage-M.html)
+* [Neuroblastoma INRGSS Stage M](Observation-neuroblastoma-inrgss-stage-MS.html)
 * [Prostate cancer graded by Gleason Grade Group](Observation-gleason-grade-group-4.html)
-* [Rhabdomyosarcoma Clinical Group Stage II](Observation-rhabdomyosarcoma-clinical-group-stage-II.html)
+* [Rhabdomyosarcoma Clinical Group Stage IA](Observation-rhabdomyosarcoma-clinical-group-stage-IA.html)
 * [Wilms Tumor Stage III](Observation-wilms-tumor-stage-III.html)
 
 ### [Comorbidities]
@@ -50,9 +50,6 @@
 * [Cancer Related Comorbidities - John Anyperson](Observation-cancer-related-comorbidities-john-anyperson.html)
 * [Congestive Heart Failure Condition](Condition-john-anyperson-chf.html)
 
-### [Cancer Research Subject][CancerResearechSubject]
-
-* [Cancer Research Subject - Study Terminated](ResearchSubject-cancer-research-subject-study-terminatede.html)
 
 ### [Deauville Scale - Five][DeauvilleScale]
 
@@ -100,11 +97,7 @@
 
 ### [Lansky Play Performance Status][LanskyPlayPerformanceStatus]
 
-* [Lansky Play Performance Status - 20](Observation-lansky-play-performance-status-20.html)
-
-### [Medical History][MedicalHistory]
-
-* [Medical History - Cardiovascular Disease](Observation-cancer-related-medical-history-john-anyperson.html)
+* [Lansky Play Performance Status - 20](Observation-lansky-play-performance-status-twenty.html)
 
 ### [mCODE Patient Group][MCODEPatientGroup]
 
@@ -127,7 +120,7 @@
 ### [Risk Assessments][CancerRiskAssessment]
 
 * [Rhabdomyosarcoma - Low Risk](Observation-rhabdomyosarcoma-risk-assessment-low.html)
-* [All Risk Assessment - Standard Risk](Observation-all-risk-assessment-standard.html)
+* [All Risk Assessment - High Risk](Observation-all-risk-assessment-high.html)
 
 ### [Secondary Cancer Condition][SecondaryCancerCondition]
 
@@ -141,7 +134,7 @@
 
 * [Tumor Marker Test - Epidermal Growth Factor](Observation-tumor-marker-test-egf.html)
 
-### [Tumor Morphology Report][TumorMorphologyReport]
+### [Tumor Morphology][TumorMorphology]
 
 * [Tumor Morphology Report - Non-Small Cell Carcinoma, Malignant, Primary Site, Intermediate Grade](DiagnosticReport-tumor-morphology-report-non-small-cell-intermediate-grade.html)
 

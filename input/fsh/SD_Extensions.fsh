@@ -100,14 +100,6 @@ Description: "The purpose of a treatment, medication, or procedure."
 * value[x] from ProcedureIntentVS (extensible)
 * value[x] 1..1
 
-Extension: ReasonOffStudy
-Id: mcode-reason-off-study
-Title:  "Reason Off Therapy or Study"
-Description: "This variable indicates the reason a patient left a clinical study."
-* value[x] only CodeableConcept
-* value[x] from ReasonOffStudyVS (required)
-* value[x] 0..1 MS
-
 Extension: NormalizationBasis
 Id: mcode-normalization-basis
 Title:  "Normalization Basis Extension"

@@ -25,7 +25,7 @@ Because the use of these code systems vary in different institutions, mCODE supp
 
 Implementers should reference the [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles for further details on the use of these terminologies and associated value sets.
 
-Histologic behavior, type, and grade can also be reported in the [HistologicBehaviorAndType] and [HistologicGrade] profiles. The[TumorMorphologyReport] profile references those profiles in a report.
+Histologic behavior, type, and grade can also be reported in the [HistologicBehaviorAndType] and [HistologicGrade] profiles. The[TumorMorphology] profile references those profiles in a report.
 
 #### Clinical Status
 
@@ -90,7 +90,7 @@ Several widely-used terminologies in the cancer domain, including ICD-O-3 and AJ
 
 Profiles for several non-TNM staging systems and risk assessments are included in mCODE. Not all cancer types are staged or assessed with a TNM-based staging system, including hematologic cancers like leukemias, multiple myeloma, lymphomas, and some solid tumors, for example, gynecologic tumors are staged using the FIGO (International Federation of Gynecology and Obstetrics) staging system. Staging systems or risk assessments not explicitly covered in mCODE should follow the patterns in the provided profiles. 
 
-Prognostic factors related to the cancer stage group or risk assessment can be specified with the `Observation.derivedFrom` element. For example, a hemoglobin lab result which was evaluated in the  staging of chronic lymphocytic leukemia (CLL) using the Binet staging system can be referenced under `Observation.derivedFrom` element. [This example of Binet staging](Observation-binet-stage-group-A.html) illustrates how this could be represented.
+Prognostic factors related to the cancer stage group or risk assessment can be specified with the `Observation.derivedFrom` element. For example, a hemoglobin lab result which was evaluated in the  staging of chronic lymphocytic leukemia (CLL) using the Binet staging system can be referenced under `Observation.derivedFrom` element. [This example of Binet staging](Observation-binet-stage-group-B.html) illustrates how this could be represented.
 
 **Terminology.** SNOMED CT does not offer codes for every staging system. When SNOMED codes are unavailable, mCODE falls back on codes from the NCI Thesaurus (NCIT). From an implementation perspective, managing two code systems is difficult when there is no consistency of which code system is used for what purpose. We are actively working with SNOMED International to create more consistent semantic approach to coding stages, by adding concepts required by non-TNM staging systems. The current approach of mixing SNOMED and NCIT depending on the cancer type should be regarded as temporary.
 
@@ -123,7 +123,7 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [TumorMarkerTest]
   * [HistologicBehaviorAndType]
   * [HistologicGrade]
-  * [TumorMorphologyReport]
+  * [TumorMorphology]
 * Staging and Risk Assessment, General
   * [CancerStage]
   * [CancerRiskAssessment]
@@ -226,9 +226,6 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
     * [LymphomaStageValueVS]
     * [LymphomaStageValueModifierVS]
     * [LymphomaStageBulkyModifierVS]
-    * [LymphomaStageSymptomsModifierVS]
-    * [LymphomaStageExtranodalModifierVS]
-    * [LymphomaStageSpleenModifierVS]
     * [RaiStagingMethodVS]
     * [RaiStageValueVS]
     * [NeuroblastomaINSSValueVS]

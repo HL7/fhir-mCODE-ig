@@ -932,7 +932,7 @@ Description: "Extended example: neutrophils lab test"
 * valueQuantity = 3000 '10*3/uL' "10*3/uL"
 * referenceRange.low = 2500 '10*3/uL' "10*3/uL"
 * referenceRange.high = 5000 '10*3/uL' "10*3/uL"
-* referenceRange.appliesTo = RefMeaning#normal "Normal Range"
+* referenceRange.type = RefMeaning#normal "Normal Range"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
 // Following first line of therapy

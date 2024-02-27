@@ -8,7 +8,7 @@ Description: "Binet stage for chronic lymphocytic leukemia (CLL)"
 * ^extension[FMM].valueInteger = 0
 * code = NCIT#C141212 // Binet Stage -- request a SNOMED code?
 //* method = SCT#1149099005 // "Binet staging classification for chronic lymphocytic leukemia (tumor staging)"
-* value[x] from BinetStageValueVS (required)
+* value[x] from BinetStageValueVS (extensible)
 
 Profile: CLLRaiStage
 Id: mcode-cll-rai-stage
@@ -18,7 +18,7 @@ Description: "Rai stage for chronic lymphocytic leukemia (CLL)"
 * ^extension[FMM].valueInteger = 0
 * code = NCIT#C141207 // Rai Stage -- request a SNOMED code?
 * method from RaiStagingMethodVS
-* value[x] from RaiStageValueVS (required)
+* value[x] from RaiStageValueVS (extensible)
 
 // Gynecologic Tumors
 
@@ -91,7 +91,7 @@ Description: "Myeloma Stage by International Staging System (ISS)"
 * code = NCIT#C139007  // "International Staging System Stage"
 // How do I say "method is not required, but if you include it, it must be this code"?
 //* method = SCT#1149162008 // International Staging System for multiple myeloma (staging scale)
-* value[x] from MyelomaISSValueVS (required)
+* value[x] from MyelomaISSValueVS (extensible)
 
 Profile: MyelomaRISSStage
 Id: mcode-myeloma-riss-stage
@@ -103,7 +103,7 @@ Description: "Myeloma Stage by Revised International Staging System (RISS)"
 * code = NCIT#C141392 // "Revised International Staging System Stage"
 // How do I say "method is not required, but if you include it, it must be this code"?
 //* method = SCT#1149163003 // Revised International Staging System for multiple myeloma (staging scale)
-* value[x] from MyelomaRISSValueVS (required)
+* value[x] from MyelomaRISSValueVS (extensible)
 
 // Prostate Cancer
 
@@ -129,14 +129,14 @@ Description: "The International Neuroblastoma Staging System (INSS) stage for ne
 * value[x] from NeuroblastomaINSSValueVS (required)
 
 
-Profile: NeuroblastomaINRGSSRiskAssessment 
+Profile: NeuroblastomaINRGSSStage
 Id: mcode-neuroblastoma-inrgss-stage
 Parent: CancerStage
 Title: "Neuroblastoma INRGSS Stage Profile"
 Description: "International Neuroblastoma Risk Group Staging System (INRGSS) for neuroblastoma."
 * ^extension[FMM].valueInteger = 0
 * code = NCIT#C133427 // International Neuroblastoma Risk Group Staging System
-* value[x] from NeuroblastomaINRGSSValueVS (required)
+* value[x] from NeuroblastomaINRGSSValueVS (extensible)
 
 //WilmsTumor//
 

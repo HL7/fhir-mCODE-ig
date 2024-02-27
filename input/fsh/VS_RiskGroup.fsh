@@ -5,8 +5,7 @@ Id: mcode-risk-assessment-type-vs
 Title: "Risk Assessment Type Value Set"
 Description: "Codes that identify the kind of risk assessment reported in an Observation, necessary to correctly interpret the value associated with a risk assessment Observation. In terms of the SNOMED CT hierarchy, these codes represent observable entities. If the staging system used to determine the stage is not implicit in this code, the staging system must be separately recorded in Observation.method. More specific risk assessment profiles, if available, should be consulted before determining the correct code."
 * ^experimental = false
-* insert SNOMEDCopyrightForVS
-* NCIT#148010 "Intergroup Rhabdomyosarcoma Study Group Clinical Staging and Grouping System"
+* NCIT#C148010 "Intergroup Rhabdomyosarcoma Study Group Clinical Staging and Grouping System"
 * NCIT#C167435 "Leukemia Finding" 
 
 /*
@@ -57,7 +56,7 @@ ValueSet: ALLRiskAssessmentVS
 Id: mcode-all-risk-assessment-value-vs
 Title: "Acute Lymphoblastic Leukemia (ALL) Risk Assessment Value Set"
 Description: "Codes in the ALL risk assessment system."
-* insert SNOMEDCopyrightForVS
+* ^experimental = false
 * NCIT#C122457 "Standard Risk Acute Leukemia"
 * NCIT#C122458 "High Risk Acute Leukemia"
 

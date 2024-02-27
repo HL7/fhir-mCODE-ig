@@ -55,7 +55,7 @@ Title: "ALL Risk Assessment Profile"
 Description: "Risk assessment for acute lymphoblastic leukemia (ALL)."
 * ^extension[FMM].valueInteger = 0
 * code = NCIT#C167435 // "Leukemia Finding" 
-* value[x] from ALLRiskAssessmentVS (required)
+* value[x] from ALLRiskAssessmentVS (extensible)
 
 
 

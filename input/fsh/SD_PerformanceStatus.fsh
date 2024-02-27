@@ -44,7 +44,7 @@ Description:  "The Lansky Play-Performance Status for children is a parent-rated
 * insert PerformanceStatusCommonRules
 * code = NCIT#C38144 // Lansky Play-Performance Status
 * value[x] only integer 
-* interpretation from LanskyPlayPerformanceStatusVS (required)
+* interpretation from LanskyPlayPerformanceStatusVS (extensible)
 
 
 Profile: DeauvilleScale
@@ -64,7 +64,7 @@ Description: "Profile for Deauville Scale. A 5 point scale devised to assess the
 * focus ^definition = "Deauville Score is associated with a particular primary cancer condition. Observation.focus is used to point back to that condition."
 * status and code and subject and effective[x] and value[x] and focus and interpretation MS
 * insert NotUsed (specimen)
-* interpretation from DeauvilleScaleVS (required)
+* interpretation from DeauvilleScaleVS (extensible)
 
 Profile: BodySurfaceArea
 Parent: USCoreVitalSignsProfile

@@ -24,8 +24,8 @@ Description: "Example of Primary Cancer Condition - hematologic cancer"
 * subject = Reference(cancer-patient-adam-everyman)
 * onsetDateTime = "2020-05-12"
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
-* stage.summary = NCIT#C80134 "Binet Stage A"
-* stage.assessment = Reference(binet-stage-group-A)
+* stage.summary = NCIT#C80135 "Binet Stage B"
+* stage.assessment = Reference(binet-stage-group-B)
 
 Instance: secondary-cancer-condition-brain-mets
 InstanceOf: SecondaryCancerCondition
@@ -377,9 +377,10 @@ Description: "Example of non-small cell lung cancer."
 * extension[relatedCondition].valueReference = Reference(primary-cancer-condition-nsclc)
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = ICDO3#80463/3
+* valueCodeableConcept = ICDO3#"C34.9 80463/3" "non small cell"
 * specimen = Reference(human-specimen-lung)
 * status = #final "final"
+* performer = Reference(us-core-practitioner-kyle-anydoc)
 
 Instance: histologic-grade-intermediate
 InstanceOf: HistologicGrade
@@ -391,17 +392,20 @@ Description: "Example of intermediate histologic grade."
 * method = SCT#1149430001 "World Health Organization classification of tumors histologic grading system fifth edition"
 * specimen = Reference(human-specimen-lung)
 * status = #final "final"
+* performer = Reference(us-core-practitioner-kyle-anydoc)
+
 
 Instance: tumor-morphology-report-non-small-cell-intermediate-grade
-InstanceOf: TumorMorphologyReport
+InstanceOf: TumorMorphology
 Description: "Example of a tumor morphology report showing non-small cell cancer with an intermediate histologic grade."
 * extension[relatedCondition].valueReference = Reference(primary-cancer-condition-nsclc)
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * specimen = Reference(human-specimen-lung)
 * result[0] = Reference(histologic-grade-intermediate)
-* result[2] = Reference(histologic-behavior-and-type-non-small-cell)
+* result[1] = Reference(histologic-behavior-and-type-non-small-cell)
 * status = #final "final"
+* issued = "2019-04-15T13:28:17.239+02:00"
 
 Instance: rhabdomyosarcoma-risk-assessment-low
 InstanceOf: RhabdomyosarcomaRiskAssessment
@@ -411,31 +415,18 @@ Description: "Example of rhabdomyosarcoma with a low risk assessment."
 * subject = Reference(cancer-patient-john-anyperson)
 * focus = Reference(primary-cancer-condition-nonspecific)
 * effectiveDateTime = "2021-04-01"
+* performer = Reference(us-core-practitioner-kyle-anydoc)
 
-Instance: all-risk-assessment-standard
+
+Instance: all-risk-assessment-high
 InstanceOf: ALLRiskAssessment
 Description: "Example of leukemia with a standard risk assessment."
-* valueCodeableConcept = NCIT#C122457 "Standard Risk Acute Leukemia"
+* valueCodeableConcept = NCIT#C122458 "High Risk Acute Leukemia"
 * status = #final "final"
 * subject = Reference(cancer-patient-john-anyperson)
 * focus = Reference(primary-cancer-condition-nonspecific)
 * effectiveDateTime = "2021-04-01"
-
-Instance: cancer-research-subject-study-terminated
-InstanceOf: CancerResearchSubject
-Description: "Example of cancer patient who left a clinical study because it was terminated."
-* extension[reasonOffStudy].valueCodeableConcept = NCIT#C70757 "Study Terminated"
-* status = #off-study "off-study"
-* study = Reference(cancer-research-study-A)
-* individual = Reference(cancer-patient-john-anyperson)
-
-Instance: cancer-research-study-A
-InstanceOf: ResearchStudy
-Description: "Example of a cancer research study."
-* title = "Cancer Research Study A"
-* status = #withdrawn "withdrawn"
-* primaryPurposeType = #treatment "treatment"
-
+* performer = Reference(us-core-practitioner-kyle-anydoc)
 
 Instance: john-anyperson-hd
 InstanceOf: USCoreCondition
@@ -447,19 +438,6 @@ Description: "Example of past heart disease"
 * verificationStatus = VerStatus#confirmed
 * clinicalStatus = ClinStatus#resolved "Resolved"
 * extension[condition-assertedDate].valueDateTime = "2000-04-01"
-
-Instance: cancer-related-medical-history-john-anyperson
-InstanceOf: MedicalHistory
-Description: "Example of significant medical history prior to cancer."
-* subject = Reference(cancer-patient-john-anyperson)
-* performer = Reference(us-core-practitioner-kyle-anydoc)
-* focus = Reference(primary-cancer-condition-nonspecific)
-* status = #final "final"
-* effectiveDateTime = "2019-04-01"
-// present
-* extension[pastMedicalConditionPresent].valueReference = Reference(john-anyperson-hd)
-//* extension[relatedCondition].valueReference = Reference(john-anyperson-hd)
-//* extension[pastMedicalConditionPresent].valueReference = Reference(john-anyperson-chf)
 
 Instance: cancer-patient-lucy-child
 InstanceOf: CancerPatient
@@ -514,6 +492,8 @@ Description: "Example of body surface area."
 * status = #final "final"
 * subject = Reference(cancer-patient-lucy-child)
 * effectiveDateTime = "2023-04-01"
+* performer = Reference(us-core-practitioner-kyle-anydoc)
+
 
 
 

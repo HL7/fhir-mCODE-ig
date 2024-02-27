@@ -14,7 +14,6 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Cancer-Related Medication Administration][CancerRelatedMedicationAdministration] | no | Medication Administration |
 | [Cancer-Related Medication Request][CancerRelatedMedicationRequest] | yes | US Core Medication Request |
 | [Cancer-Related Surgical Procedure][CancerRelatedSurgicalProcedure] | yes | US Core Procedure |
-| [Cancer Research Subject][CancerResearchSubject] | no | Research Subject |
 | [Cancer Risk Assessment][CancerRiskAssessment] | no | Observation |
 | [Cancer Stage][CancerStage] | no | Observation |
 | [CLL Binet Stage Profile][CLLBinetStage] | no | CancerStage |
@@ -35,7 +34,6 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Lymphoma Stage Profile][Lymphoma Stage Profile] | no | CancerStage |
 | [mCODE Patient Bundle][MCODEPatientBundle] | no | Bundle  |
 | [mCODE Patient Group][MCODEPatientGroup] | no | Group  |
-| [Medical History][MedicalHistory] | no | Observation |
 | [Melanoma Breslow Depth Stage][MelanomaBreslowDepthStage] | no | CancerStage |
 | [Melanoma Clark Level][MelanomaClarkLevel] | no | CancerStage |
 | [Myeloma ISS Stage][MyelomaISSStage] | no | CancerStage |

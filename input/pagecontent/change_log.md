@@ -4,14 +4,14 @@
 
 mCODE 4.0.0-ballot includes additional non-TNM staging profiles. These staging profiles are especially important for pediatric oncology.
 
-* [NeuroblastomaINSSStage]
+* [NeuroblastomaINSStage]
 * [NeuroblastomaINRGSSRiskAssessment]
 * [WilmsTumorStage]
 * [RhabdomyosarcomaClinicalGroupStage]
 
 ### Modification of Lymphoma Stage Profile
 
-Lymphoma staging can include many modifiers, such as bulky status, extranodal involvement, splenic involvement, and symptom indicators. As a result, components for these modifiers were added to the profile to better describe the lymphoma stage.
+Lymphoma staging can include many modifiers, such as bulky status, extranodal involvement, splenic involvement, and symptom indicators. As a result, components for these modifiers were added to the [LymphomaStage] profile to better describe the lymphoma stage.
 
 ### Addition of Risk Assessment Profiles
 
@@ -23,40 +23,32 @@ mCODE STU3 did not include any profiles for risk assessments, so there was no in
 
 ### Addition of Histology Profiles
 
-mCODE 4.0.0-ballot includes three new profiles for histologic reporting. HistologicBehaviorAndType reports the morphology and type of the tumor using ICD-O-3 codes and the proper suffix, while HistologicGrade reports the grade of the tumor. Both profiles are referenced in a summary with the TumorMorphologyReport profile.
+mCODE 4.0.0-ballot includes three new profiles for histologic reporting. [HistologicBehaviorAndType] reports the morphology and type of the tumor using ICD-O-3 codes and the proper suffix, while [HistologicGrade] reports the grade of the tumor. Both profiles are referenced in a summary with the [TumorMorphology] profile.
 
 * [HistologicBehaviorAndType]
 * [HistologicGrade]
-* [TumorMorphologyReport]
+* [TumorMorphology]
 
 ### Modification of Medication Profiles
 
-The normalization basis for medication dosage is important, especially for pediatric oncology. As a result, the CancerRelatedMedicationAdministration and CancerRelatedMedicationRequest profiles were modified to include an extension for the normalization basis used.
-
-### New Cancer Research Subject Profile
-
-The reason a patient left a clinical study can be very important in determining the next path of treatment for a patient. As a result, a CancerResearchSubject profile was added to mCODE, with an extension that describes reasons as to why the patient left the clinical study.
-
-### New Medical History Profile
-
-The presence of a significant past medical condition can have an impact on which treatments the patient receives. Although mCODE contains a profile for the presence of co-morbid condiitons or past metastatic disease, it did not include a profile for past medical history. As a result, mCODE 4.0.0-ballot includes a new profile for medical history.
+The normalization basis for medication dosage is important, especially for pediatric oncology. As a result, the [CancerRelatedMedicationAdministration] and [CancerRelatedMedicationRequest] profiles were modified to include an extension for the normalization basis used.
 
 ### Addition of Lansky Play Performance Profile
 
-Although mCODE 3.0.0 contained two performance status profiles (ECOG Performance Status and Karnofsky Performance Status), it did not include the performance status most commonly used for children. As a result, the Lansky Play Performance Status profile was added.
+Although mCODE 3.0.0 contained two performance status profiles ([ECOGPerformanceStatus] and [KarnofskyPerformanceStatus]), it did not include the performance status most commonly used for children. As a result, the [LanskyPlayPerformanceStatus] profile was added.
 
 ### Addition of Deauville Scale Profile
 
-Deauville Scale is a common assessment performed for lymphoma cancer patients, and as a result, a Deauville Scale profile was added to mCODE.
+Deauville Scale is a common assessment performed for lymphoma cancer patients, and as a result, a [DeauvilleScale] profile was added to mCODE.
 
 
 ### Addition of Body Surface Area Profile
 
-Body surface area is measured/calculated commonly for pediatric patients and used to determine medication dosage. As a result, a body surface profile was added ot mCODE.
+Body surface area is measured/calculated commonly for pediatric patients and used to determine medication dosage. As a result, a [BodySurfaceArea] profile was added to mCODE.
 
 ### Clarified Codes for Cancer Disease Status
 
-Adjusted the ConditionStatusTrendVS to avoid confusion. In mCODE STU3, some of the values can be true at the same time (example: a patient’s condition could have improved AND be in full remission). However, value[x] is 0.1. As a result, the codes for in full remission, partial remission, and distant metastasis present were moved into a maximum value set to assure backward compatbility with this change.
+Adjusted the [ConditionStatusTrendVS] to avoid confusion. In mCODE STU3, some of the values can be true at the same time (example: a patient’s condition could have improved AND be in full remission). However, value[x] is 0.1. As a result, the codes for in full remission, partial remission, and distant metastasis present were moved into a maximum value set to assure backward compatbility with this change.
 
 
 <br/>
@@ -98,7 +90,7 @@ Additional stage type identifiers and staging methods were added to [CancerStage
 
 ### Clarification of Observation.code and Observation.method in CancerStage ([FHIR-41163](https://jira.hl7.org/browse/FHIR-41163))
 
-An explanation of how Observation.code differs from (and sometimes subsumes) Observation.method in CancerStage and its descendants [was added](group-disease.html#how-to-report-staging-information).
+An explanation of how Observation.code differs from (and sometimes subsumes) Observation.method in CancerStage and its descendants [was added](group-disease.html).
 
 ### Birth Sex Added as Must Support ([FHIR-40587](https://jira.hl7.org/browse/FHIR-40587))
 

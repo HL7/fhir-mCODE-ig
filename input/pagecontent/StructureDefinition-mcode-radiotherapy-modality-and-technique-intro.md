@@ -27,6 +27,7 @@ Technique Acronyms:
 
 | **Acronym** |  **Meaning** |
 | ---------------|------------ |
+| IMB | Intensity Modulated Brachytherapy |
 | IMRT | Intensity Modulated Radiation Therapy |
 | VMAT | Volumetric Modulated Arc Therapy|
 | 3D | Three Dimensional Planning  |

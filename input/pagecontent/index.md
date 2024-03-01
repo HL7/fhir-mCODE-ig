@@ -1,3 +1,8 @@
+<div markdown="1" class="note-to-balloters">
+Voters familiar with mCODE can focus their attention on the changes since STU 3, listed in the [Release Notes](change_log.html).
+</div>
+
+
 ### Background
 
 Cancer is among the leading causes of death worldwide. According to the National Cancer Institute, in the United States, 39.5 percent of men and women will be diagnosed with cancer at some point during their lifetimes. In 2020, an estimated 1,806,590 new cases of cancer will be diagnosed in the United States and 606,520 people will die from the disease. While these numbers are staggering, the silver lining in the wide prevalence of cancer is the potential to learn from treatment of millions of patients. If we had research-quality data from all cancer patients, it would enable better health outcomes. Today, we lack the data models, technologies, and methods to capture that data.
@@ -46,7 +51,7 @@ In late 2018, [American Society of Clinical Oncology (ASCO®)](https://www.asco.
 * **Use Case 1**: [Comparative Effectiveness Analysis and Cooperative Decision Making](mCODE-UseCase-RCC.docx)
 * **Use Case 2**: [Comparative Effectiveness Analysis with Next Generation Sequencing (NGS)](mCODE-UseCase-NGS.docx)
 
-After the initial analysis, an open survey was conducted to validate and prioritize the data elements from these use cases. Down-scoping was conducted based on the likelihood the data elements would be found in current EHRs, and if collecting the data would place undue burden on clinicians. In 2019, mCODE was balloted and approved as an HL7 Standard for Trial Use (STU 1). In the ensuing period, mCODE was piloted at a number of clinical sites, facilitated by the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home). Use cases are tracked [here](https://confluence.hl7.org/display/COD/CodeX+Use+Cases). Incorporating that experience, the second trial use publication (STU 2) was balloted in May 2021, and published in January 2022. A non-balloted update containing terminology updates, version 2.1, was published in March 2023. STU 3 was balloted in April-May 2023.
+After the initial analysis, an open survey was conducted to validate and prioritize the data elements from these use cases. Down-scoping was conducted based on the likelihood the data elements would be found in current EHRs, and if collecting the data would place undue burden on clinicians. In 2019, mCODE was balloted and approved as an HL7 Standard for Trial Use (STU 1). In the ensuing period, mCODE was piloted at a number of clinical sites, facilitated by the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home). Use cases are tracked [here](https://confluence.hl7.org/display/COD/CodeX+Use+Cases). Incorporating that experience, the second trial use publication (STU 2) was balloted in May 2021, and published in January 2022. A non-balloted update containing terminology updates, version 2.1, was published in March 2023. STU 3 was balloted in April-May 2023. In [February 2023](https://www.whitehouse.gov/briefing-room/statements-releases/2023/02/02/fact-sheet-on-one-year-anniversary-of-reignited-cancer-moonshot-biden-harris-administration-announces-new-actions-to-end-cancer-as-we-know-it/), the National Cancer Institute launched the Childhood Cancer – Data Integration for Research, Education, Care, and Clinical Trials (CC-DIRECT) project to support children and Adolescents and Young Adults (AYAs) with cancer throughout their cancer journey; provide patient navigation support to families seeking information and optimal care; facilitate research participation; and establish a portable, shareable, standardized cancer health record. CC-DIRECT launched a Standards Task Team that identified high-priority information for pediatric and AYA oncology, which was incorporated in STU 4 and balloted in April – May 2024.
 
 ### Sources
 
@@ -59,6 +64,7 @@ In addition to information obtained from subject matter experts, several existin
 * [American Joint Committee on Cancer (AJCC): Staging Manual (8th Edition)](https://www.facs.org/quality-programs/cancer-programs/american-joint-committee-on-cancer/)
 * [Clinical Data Interchange Standards Consortium (CDISC): Therapeutic Area User Guides (TAUG)](https://www.cdisc.org/standards/therapeutic-areas/disease-area)
 * [College of American Pathologists (CAP): Cancer Protocols](https://www.cap.org/protocols-and-guidelines)
+* [Data for the Common Good, Pediatric Cancer Data Commons](https://commons.cri.uchicago.edu/pcdc/)
 * [The DICOM Standard](https://www.dicomstandard.org/)
 * [HL7 CDA R2 IG: Reporting to Public Health Cancer Registries from Ambulatory Healthcare Providers](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=383)
 * [HL7 FHIR Genomics Reporting Implementation Guidance (STU1)](http://hl7.org/fhir/uv/genomics-reporting/index.html)
@@ -69,6 +75,7 @@ In addition to information obtained from subject matter experts, several existin
 * [North American Association of Central Cancer Registries (NAACCR): 2018 Site-Specific Data Items Manual](https://www.naaccr.org/SSDI/SSDI-Manual.pdf?v=1531675132)
 * [North American Association of Central Cancer Registries (NAACCR): Standards for Cancer Registries](https://www.naaccr.org/data-standards-data-dictionary/)
 * [RECIST Guidelines v1.1](https://project.eortc.org/recist/wp-content/uploads/sites/4/2015/03/RECISTGuidelines.pdf)
+* [SJCARES Hospital-Based Cancer Registry](https://www.stjude.org/content/dam/en_US/shared/www/clinical/no-index/sjcares-data-dictionary.pdf)
 
 In addition, material was drawn from the [US Core Implementation Guide](http://hl7.org/fhir/us/core/) and the [Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/).
 
@@ -82,11 +89,11 @@ In the event there are differences between the page renderings in this IG and th
 
 ### Credits
 
-The authors gratefully acknowledge the leadership of Dr. Monica Bertagnolli, former ASCO President (currently NCI Director) and Dr. Jay Schnitzer, MITRE's Chief Technology and Chief Medical Officer. The ASCO/CancerLinQ team was led by Dr. Robert Miller. Dr. Travis Osterman of Vanderbilt University leads the CodeX Executive Committee. Dr. Sanjay Aneja leads the mCODE Technical Review Group. Dr. Charles Mayo of University of Michigan, Randi Kudner of ASTRO, and Martin von Siebenthal of Varian made significant contributions to the much improved radiotherapy portion of this IG. Wendy J. Blumenthal and Wendy Sharber of CDC provided essential input helping align mCODE with cancer registry reporting requirements.
+The authors gratefully acknowledge the leadership of Dr. Monica Bertagnolli, former ASCO President and NCI Director (currently NIH Director) and Dr. Jay Schnitzer, MITRE's Chief Medical Officer and Corporate Chief Engineer. The ASCO/CancerLinQ team was led by Dr. Robert Miller. Dr. Travis Osterman of Vanderbilt University leads the CodeX Executive Committee. Dr. Sanjay Aneja leads the mCODE Technical Review Group. Dr. Charles Mayo of University of Michigan, Randi Kudner of ASTRO, and Martin von Siebenthal of Varian made significant contributions to the much improved radiotherapy portion of this IG. Wendy J. Blumenthal and Wendy Sharber of CDC provided essential input helping align mCODE with cancer registry reporting requirements.
 
 The authors recognize HL7 sponsorship and input from [Clinical Interoperability Council](http://www.hl7.org/Special/committees/cic/index.cfm), with special thanks to Laura Heermann Langford, Russell Leftwich, and James McClay. The [HL7 Clinical Genomics Work Group](https://confluence.hl7.org/display/CGW) has been a consistent and constructive partner during this project. Lloyd McKenzie and Grahame Grieve contributed to mCODE in countless ways with their outstanding energy and dedication.
 
-Andre Quina and Nichole Ng guide the overall mCODE effort at MITRE. Key MITRE contributors include Mark Kramer, May Terry, Max Masnick, Saul Kravitz, Su Chen, Rute Martins, Chris Moesel, Caroline Potteiger, Anthony DiDonato, and Sharon Sebastian. Su Chen leads the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home), a member-driven community accelerating implementation around mCODE standard. Capability statements were rendered with tools developed by Eric Haas and modified by Corey Spears. Max Masnick wrote the [Data Dictionary generator](https://github.com/HL7/fhir-mCODE-ig/tree/master/data-dictionary) (now known as the IG Summary Tool)
+Andre Quina and Nicole Ng guide the overall mCODE effort at MITRE. Key MITRE contributors include Su Chen, Anthony DiDonato, Dave Hill, Mark Kramer, Saul Kravitz, Rute Martins, Max Masnick, Chris Moesel, Caroline Potteiger, Sharon Sebastian, and May Terry. Saneel Vasram leads the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home), a member-driven community accelerating implementation around mCODE standard. Capability statements were rendered with tools developed by Eric Haas and modified by Corey Spears. Max Masnick wrote the [Data Dictionary generator](https://github.com/HL7/fhir-mCODE-ig/tree/master/data-dictionary) (now known as the IG Summary Tool).
 
 ### Contact Information
 
@@ -94,10 +101,9 @@ If you have questions or comments about this guide, you can join the conversatio
 
 | Topic | Who | Role | Email |
 |----|---|---|------|
-| Implementation and Use Cases | Dr. Su Chen | CodeX Accelerator Program Manager | suchen@mitre.org |
-| CodeX Leadership | Dr. Travis Osterman | Chair, mCODE Executive Committee | travis.osterman@vumc.org |
+| CodeX Leadership | Saneel Vasram | CodeX Accelerator Program Manager | codex@hl7.org |
+| mCODE Leadership | Dr. Travis Osterman | Chair, mCODE Executive Committee | travis.osterman@vumc.org |
 | Oncology Domain Content | Dr. Sanjay Aneja | Chair, mCODE Technical Review Group | sanjay.aneja@yale.edu |
-| Modeling and FHIR IG | Mark Kramer | Modeling Lead | mkramer@mitre.org |
 {: .grid }
 
 mCODE is an open source project and welcomes all contributors. The source code for this IG is maintained in the [HL7 Github](https://github.com/HL7/fhir-mCODE-ig). All of the profiling work is done using [FHIR Shorthand](http://hl7.org/fhir/uv/shorthand/) and [SUSHI](https://fshschool.org).

@@ -100,7 +100,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - BAP1"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:950 "BAP1"
 * component[gene-studied].valueCodeableConcept.coding[1] = ENTREZ#3815 "BAP1"
 * component[transcript-ref-seq].valueCodeableConcept = NCBI#NM_004656 "NM_004656.4"
-* component[coding-hgvs].valueCodeableConcept = HGVS#NM_004656.4:c.1768C>T "NC_000003.11(NM_004656.4):c.1768C>T"
+* component[coding-hgvs].valueCodeableConcept = HGVS#NM_004656.4:c.1768C>T "NM_004656.4:c.1768C>T"
 * component[protein-hgvs].valueCodeableConcept = HGVS#NP_004647.1:p.(Gln590Ter) "NP_004647.1:p.(Gln590Ter)"  // Mutalizer normalized HGVS string for HGVS#p.Q590* "p.Q590*".
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[sample-allelic-frequency].valueQuantity = 57.4 '%' "%"

@@ -11,8 +11,15 @@ The mCODE **Patient Information** group contains the following information about
 * [MCODEPatientBundle]
 * [MCODEPatientGroup]
 
+### Extensions
+
+* [ReasonOffStudy]
+* [RelatedCondition]
+* [RelatedConditionAbsent]
+
 ### Value Sets
 
 * [HumanSpecimenTypeVS]
+* [HistologyMorphologyBehaviorVS]
 
 {% include markdown-link-references.md %}

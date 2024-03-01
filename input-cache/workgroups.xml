@@ -61,4 +61,7 @@
   <workgroup key="us-realm" webcode="usrealm" name="US Realm Task Force" deprecated="true"/>
   <workgroup key="vocab" webcode="vocab" name="Terminology Infrastructure" listserv="ti@lists.HL7.org/"/>
   <workgroup key="v2mg" webcode="v2management" name="V2 Mgmt Group" listserv="v2mgmtgrp@lists.HL7.org/"/>
+  <workgroup key="eu" webcode="eu" name="HL7 Europe" listserv="europe@lists.hl7.org/"/>  
+  <workgroup key="au-v2" webcode="au-v2" name="HL7 Australia V2" listserv="hl7v2wgballot@hl7.com.au"/>
+  <workgroup key="au-fhir" webcode="au-fhir" name="HL7 Australia FHIR" listserv="fhirwgballot@hl7.com.au"/>
 </workgroups>

@@ -1,0 +1,893 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <!-- TODO 
+    Jurisdiction 
+    Prohibited extension - http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited
+    expectation symbol legend
+  -->
+  <h2 id="title">{{title}}</h2>
+  <ul>
+    {% if title %}<li><b>Title:</b>{{title}}</li>{% endif %}
+    <li><b>Implementation Guide Version:</b> {{version}}</li>
+    <li><b>FHIR Version:</b> {{fhirVersion}}</li>
+    <li><b>Intended Use:</b> {{kind}}</li>
+    <li><b>Supported Formats: </b> 
+
+    {% for frm in format %}
+      {% if forloop.first = false %}, {% endif %}
+      {% if frm.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+        <strong>{{frm.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong> support 
+      {% endif %}
+      {{frm}};
+    {% endfor %}
+
+    </li>
+    {% if patchFormat.exists() %}
+      <li><b>Supported Patch Formats:</b>
+      {% for frm in patchFormat %}
+        {% if forloop.first = false %}, {% endif %}
+        {% if frm.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+          <strong>{{frm.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong> support 
+        {% endif %}
+        {{frm}};
+      {% endfor %}
+      </li>
+    {% endif %}
+    <li><b>Published:</b> {{date}}</li>
+  
+    <li><b>Published by:</b> {{publisher}}</li>
+    <li><b>Status:</b> {{status}}{% if experimental %} (experimental){%endif%}</li>
+    {%if copyright%}<li><b>Copyright:</b> {{copyright}}</li>{%endif%}
+  </ul>
+  <br/>
+
+
+
+  {% if description.exists() %}
+    <strong>Description:</strong> <div>{{description}}</div>
+  {% endif %}
+  <br/>
+  {% if purpose.exists() %}
+    <strong>Purpose:</strong> <div>{{purpose}}</div>
+  {% endif %}
+  
+
+
+  {% if instantiates.exists() or imports.exists() or implementationGuide.exists() %}
+    <h3>Support and Requirements for Other Artifacts</h3>
+    {% if instantiates.exists() %}
+      <tr>
+        <th>Instantiates other capabilities:</th>
+        <td>
+          <ul>
+            {% for cs in instantiates %}
+              <li>
+                {% if cs.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                  <strong>{{cs.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong> support 
+                {% endif %}
+                {{cs}}
+              </li>
+            {% endfor %}
+          </ul>
+        </td>
+      </tr>
+    {% endif %}
+    {% if imports.exists() %}
+      <tr>
+        <th>Imports other capabilities:</th>
+        <td>
+          <ul>
+            {% for cs in imports %}
+              <li>
+                {% if cs.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                  <strong>{{cs.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong> support 
+                {% endif %}
+                {{cs}}
+              </li>
+            {% endfor %}
+          </ul>
+        </td>
+      </tr>
+    {% endif %}
+    {% if implementationGuide.exists() %}
+      <tr>
+        <th>Supports other guides:</th>
+        <td>
+          <ul>
+            {% for ig in implementationGuide %}
+              <li>
+                {% if ig.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                  <strong>{{ig.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong> support 
+                {% endif %}
+                {{ig}}
+              </li>
+            {% endfor %}
+          </ul>
+        </td>
+      </tr>
+    {% endif %}
+  {% endif %}
+
+  <br/>
+  <!-- TODO - Make this a summary of capabilities, including system wide and each paradigm -->
+  <p>
+    <b>Jump to:</b>
+  </p>
+  <ul>
+    {% for Arest in rest %}
+      <li><a href="#{{Arest.mode}}">REST {{Arest.mode}}</a></li>
+    {% endfor %}
+    {% if messaging %}
+      <li><a href="#messaging">Messaging</a></li>
+    {% endif %}
+    {% if documents %}
+      <li><a href="#documents">Documents</a></li>
+    {% endif %}
+  </ul>
+
+
+
+  <!--  REST Capabilities -->
+  {% for Arest in rest %}
+    <br/>
+    <a name="{{Arest.mode}}"> </a>
+    <h3 id="behavior">FHIR {{Arest.mode}} RESTful Capabilities</h3>
+    {% if Arest.documentation.exists() %}
+      <div>{{Arest.documentation}}</div>
+    {% endif %}
+
+    <!-- REST Security -->
+    {% if Arest.security.exists() %}
+      <br/>
+      <p id="security"><strong>Security:</strong></p>
+      {% if Arest.security.description.exists() %}
+        <div>{{Arest.security.description}}</div>
+      {% endif %}
+      {% if Arest.security.service.coding.code.exists() %}
+        <ul>
+          {% for Asecurity in Arest.security.service.coding.code %}
+            <li>{{Asecurity}}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endif %}
+
+    <!-- REST System wide Capabilities -->
+    {% if Arest.interaction.exists() or imports.exists() or implementationGuide.exists() %}
+      <h3>System-wide {{Arest.mode}} Capabilities</h3>
+    
+      <!-- REST System wide interactions -->
+      {% if Arest.interaction.exists() %}
+        <h4>Interactions</h4>
+
+        <ul>
+          {% for rest_cap in Arest.interaction %}
+            <li>
+              {% if rest_cap.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                <strong>{{rest_cap.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong> support the 
+              {% endif %}
+              <code>{{rest_cap.code}}</code>{% if rest_cap.documentation.exists() %}<sup>+</sup>{% endif %} interaction.</li>
+          {% endfor %}
+        </ul>
+        {% for rest_cap in rest.interaction %}
+          {% if rest_cap.documentation.exists() %}
+            <blockquote>
+              <sup>+</sup>{{rest_cap.code}}{{rest_cap.documentation}}
+            </blockquote>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      <!-- REST System wide operations -->
+      {% if Arest.operation.exists() %}
+        <h4>Operations</h4>
+
+        <ul>
+          {% for rest_cap in Arest.operation %}
+            <li>
+              {% if rest_cap.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                <strong>{{rest_cap.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong> support the 
+              {% endif %}
+              <code>{{rest_cap.name}}</code>{% if rest_cap.documentation.exists() %}<sup>+</sup>{% endif %} operation.</li>
+          {% endfor %}
+        </ul>
+        {% for rest_cap in rest.operation %}
+          {% if rest_cap.documentation.exists() %}
+            <blockquote>
+              <sup>+</sup>{{rest_cap.name}}{{rest_cap.documentation}}
+            </blockquote>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+
+      <!-- REST System wide search parameters -->
+      {% if Arest.searchParam.exists() %}
+        <h4>Search Parameters</h4>
+
+        <ul>
+          {% for rest_cap in Arest.searchParam %}
+            <li>
+              {% if rest_cap.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                <strong>{{rest_cap.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong> support the 
+              {% endif %}
+              <code>{{rest_cap.name}}</code>{% if rest_cap.documentation.exists() %}<sup>+</sup>{% endif %} search parameter.</li>
+          {% endfor %}
+        </ul>
+        {% for rest_cap in rest.searchParam %}
+          {% if rest_cap.documentation.exists() %}
+            <blockquote>
+              <sup>+</sup>{{rest_cap.name}}{{rest_cap.documentation}}
+            </blockquote>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endif %}
+
+
+
+    <!-- Resource Capabilities -->
+    {% if rest.resource %}
+      <h3 class="no_toc" id="resource-details">RESTful Capabilities by Resource/Profile:</h3>
+
+      <h4>Summary of Resource/Profile Capabilities</h4>
+      <!-- TODO need include conformance verb legend  -->
+      {% include expectation_handler.html action='legend' %}
+      <table class="grid">
+        <thead>
+          <tr>
+            <th>Resource Type</th>
+            <th>Supported Interactions</th>
+            <th>Supported Profiles</th>
+            <th>Supported Searches</th>
+            <th>Supported <code>_includes</code></th>
+            <th>Supported <code>_revincludes</code></th>
+            <th>Supported Operations</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for r in Arest.resource %}
+          <tr>
+            <td>
+              <a href="#{{r.type}}"><span style="white-space: nowrap;">{{r.type}}{% include expectation_handler.html action='symbol' expectation=r.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value %}</span></a>
+            </td>
+
+            <!-- Supported Interactions -->
+            <td>
+              {% if r.interaction %}
+                {% for i in r.interaction %}
+                <span style="white-space: nowrap;">{{i.code}}{% include expectation_handler.html action='symbol' expectation=i.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value %}</span>,
+                {% endfor %}
+              {% endif %}
+            </td>
+
+            <!-- Supported Profiles -->
+            <td>
+              {% if r.supportedProfile %}{% for supportedProfile in r.supportedProfile %}
+                {{supportedProfile}}{% include expectation_handler.html action='symbol' expectation=r.supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value %},
+                
+                {% endfor %}
+              {% endif %}
+            </td>
+
+            <!-- Supported Searches will need to do some sort of mapping instead of join to get the expectations printed out -->
+            <td>
+              {% if r.searchParam %}
+                {% for searchParam in r.searchParam %}
+                  <span style="white-space: nowrap;">{{searchParam.name}}{% include expectation_handler.html action='symbol' expectation=searchParam.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value %}</span>, 
+                  
+                {% endfor %}
+                {% if r.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination').exists() %}
+                  {% for sp in r.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination') %}
+                    <!-- Each set of optional and required combo search parameters -->
+                    {% for item in sp.extension('required') %}<span style="white-space: nowrap;">{{item.value}}</span>+{% endfor %}{% for item in sp.extension('optional') %}<span style="white-space: nowrap;"><i>{{item.value}}</i></span>+{% endfor %}{% include expectation_handler.html expectation=sp.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value %}, 
+                  {% endfor %}
+                {% endif %}
+              {% endif %}
+            </td>
+
+            <!-- Supported _includes -->
+            <td>
+              {% if r.searchInclude %}
+                {% for si in r.searchInclude %}
+                <span style="white-space: nowrap;">{{si}}{% include expectation_handler.html action='symbol' expectation=si.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value %}</span>,
+                
+                {% endfor %}
+              {% endif %}
+            </td>
+
+            <!-- Supported _revincludes -->
+            <td>
+              {% if r.searchRevInclude %}
+                {% for si in r.searchRevInclude %}
+                <span style="white-space: nowrap;">{{si}}{% include expectation_handler.html action='symbol' expectation=si.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value %}</span>,
+                
+                {% endfor %}
+              {% endif %}
+            </td>
+
+            <!-- Supported Operations -->
+            <td>
+              {% if r.operation %}
+                {% for operation in r.operation %}
+                  <span style="white-space: nowrap;">${{operation.name}}{% include expectation_handler.html action='symbol' expectation=operation.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value %}</span>
+                  
+                {% endfor %}
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <br/>
+
+      <!-- Each REST Resource Detail -->
+      {% for resource in rest.resource %}
+        <h4 class="no_toc" id="{{resource.type}}">{{resource.type}}</h4>
+
+          <p>Conformance Expectation:	<strong>{{resource.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong></p>
+
+          {% if resource.documentation %}<p>Resource Specific Documentation:</p>
+            <blockquote>{{ resource.documentation}}</blockquote>{% endif %}
+
+          {% if resource.profile %}<p>Base Profile: <a href="{{resource.profile}}">{{resource.profile}}</p>{% endif %}
+
+          {% if resource.supportedProfile %}<p>Supported Profiles:</p>
+            <ul>
+              {% for supportedProfile in resource.supportedProfile %}
+                <li>{% if supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}<strong>{{supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong> support {% endif %}
+                {{supportedProfile}}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+      
+
+
+        <p>
+          {% if resource.referencePolicy %}Reference Policy: {% for rf in resource.referencePolicy %}<code>{{rf}}</code>,{% endfor %}{% endif %}
+
+          {% if resource.versioning %}Versioning Policy: <code>{{resource.versioning}}</code>{% endif %}
+
+          {% if resource.readHistory %}Server returns past versions as part of the vRead operation.{% endif %}
+
+          {% if resource.updateCreate %}Server allows the client to create new identities on the server{% endif %}
+        </p>
+
+
+
+
+
+
+        <!-- Resource Interactions -->
+        {% if r.operation.exists() %}<p>{{resource.type}} Interaction Summary:</p>
+          <ul>
+            {% if resource.interaction.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL').exists() %}
+              <li><strong>SHALL</strong> support{%for i in resource.interaction.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL')) %} {{ i.code }}{% if i.documentation.exists() %}<sup>+</sup>{% endif %}, {% endfor %}</li>
+            {% endif %}
+            {% if resource.interaction.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL-NOT').exists() %}
+              <li><strong>SHALL NOT</strong> support{%for i in resource.interaction.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL-NOT')) %} {{ i.code }}{% if i.documentation.exists() %}<sup>+</sup>{% endif %}, {% endfor %}</li>
+            {% endif %}
+            {% if resource.interaction.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHOULD').exists() %}
+              <li><strong>SHOULD</strong> support{%for i in resource.interaction.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHOULD')) %} {{ i.code }}{% if i.documentation.exists() %}<sup>+</sup>{% endif %}, {% endfor %}</li>
+            {% endif %}
+            {% if resource.interaction.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'MAY').exists() %}
+              <li><strong>MAY</strong> support{%for i in resource.interaction.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'MAY')) %} {{ i.code }}{% if i.documentation.exists() %}<sup>+</sup>{% endif %}, {% endfor %}</li>
+            {% endif %}
+            {% if resource.interaction.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() = false) %}
+              <li>{%for i in resource.interaction.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() = false) %} {{ i.code }}{% if i.documentation.exists() %}<sup>+</sup>{% endif %}, {% endfor %}</li>
+            {% endif %}
+          </ul>
+
+          {% for i in resource.interaction %}
+            {% if i.documentation.exists() %}
+              <blockquote>
+                <p>{{i.code}}<sup>+</sup></p>{{i.documentation}}
+              </blockquote>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+        <!-- Resource Operations -->
+        {% if r.operation.exists() %}<p>{{resource.type}} Operation Summary:</p>
+          <ul>
+            {% if resource.operation.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL').exists() %}
+              <li><strong>SHALL</strong> support{%for o in resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL')) %} {{ o.name }}{% if o.documentation.exists() %}<sup>+</sup>{% endif %}, {% endfor %}</li>
+            {% endif %}
+            {% if resource.operation.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL-NOT').exists() %}
+              <li><strong>SHALL NOT</strong> support{%for o in resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL-NOT')) %} {{ o.name }}{% if o.documentation.exists() %}<sup>+</sup>{% endif %}, {% endfor %}</li>
+            {% endif %}
+            {% if resource.operation.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHOULD').exists() %}
+              <li><strong>SHOULD</strong> support{%for o in resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHOULD')) %} {{ o.name }}{% if o.documentation.exists() %}<sup>+</sup>{% endif %}, {% endfor %}</li>
+            {% endif %}
+            {% if resource.operation.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'MAY').exists() %}
+              <li><strong>MAY</strong> support{%for o in resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'MAY')) %} {{ o.name }}{% if o.documentation.exists() %}<sup>+</sup>{% endif %}, {% endfor %}</li>
+            {% endif %}
+            {% if resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() = false)  %}
+              <li>{%for i in resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() = false) %} {{ o.name }}{% if o.documentation.exists() %}<sup>+</sup>{% endif %}, {% endfor %}</li>
+            {% endif %}
+          </ul>
+
+          {% for o in resource.operation %}
+            {% if o.documentation.exists() %}
+              <blockquote>
+                <p>{{o.name}}<sup>+</sup></p>{{o.documentation}}
+              </blockquote>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+
+
+        <!-- TODO Nexted ul items do not appear with a subbullet style -->
+        {% if resource.interaction.where(code='create' or code='update' or code='delete' or code='patch') %}
+          <br/>
+          <p>Modify Criteria:</p> 
+          <ul>
+            {%for i in resource.interaction %}
+              {% if i.code = 'create' %}
+                <li>
+                  A {{ rest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of a <code>create</code> interaction {% if rest.mode = 'server' %}creating{% else %}posting{% endif %} a {{resource.type}} resource using:
+                  <code class="highlighter-rouge">POST [base]/{{resource.type}}/[id]{?_format=[mime-type]}</code>
+                  {% if resource.conditionalCreate %}
+                    <ul>
+                      <li>
+                        A {{ rest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.conditionalCreate.extension %}</strong> be capable of the conditional create of a {{resource.type}} resource using header:
+                        <code class="highlighter-rouge">If-None-Exist: [search parameters]</code>
+                      </li>
+                    </ul>
+                  {% endif %}
+                </li>
+              {% endif %}
+
+              {% if i.code = 'update' %}
+                <li>
+                  <!-- TODO change note if server allows putting of a new one (with a specified ID) -->
+                  A {{ rest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of {% if rest.mode = 'server' %}updating{% else %}putting{% endif %} a existing {{resource.type}} resource using:
+                  <code class="highlighter-rouge">PUT [base]/{{resource.type}}/[id]{?_format=[mime-type]}</code>
+                  {% if resource.conditionalCreate %}
+                    <ul>
+                      <li>
+                        A {{ rest.mode }} <strong>{% include expectation_handler.html action='verb' extension=resource.conditionalUpdate.extension %}</strong> be capable of the conditional update of a {{resource.type}} resource using:
+                        <code class="highlighter-rouge">PUT [base]/[{{resource.type}}]?[search parameters]</code>
+                      </li>
+                    </ul>
+                  {% endif %}
+                </li>
+              {% endif %}
+
+              {% if i.code = 'delete' %}
+                <li>
+                  A {{ rest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of {% if rest.mode = 'server' %}deleting{% else %}deleting{% endif %} a {{resource.type}} resource using:
+                  <code class="highlighter-rouge">DELETE [base]/{{r.type}}/[id]</code>
+                  {% if resource.conditionalDelete %}
+                    <ul>
+                      <li>
+                        {% if resource.conditionalDelete = 'not-supported' %}
+                          A {{ rest.mode }} <strong>{% if resource.conditionalDelete.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}{% include expectation_handler.html extension=resource.conditionalDelete.extension %} NOT{% else %}DOES NOT{% endif %}</strong> support conditional delete of {{resource.type}} resources.
+                        {% else %}
+                          A {{ rest.mode }} <strong>{% include expectation_handler.html action='verb' extension=resource.conditionalDelete.extension %}</strong> be capable of the conditional create of a {{resource.type}} resource using header:
+                          <code class="highlighter-rouge">If-None-Exist: [search parameters]</code>
+                        {% endif %}
+                      </li>
+                    </ul>
+                  {% endif %}
+                </li>
+              {% endif %}
+
+
+              {% if i.code = 'patch' %}
+                <li>
+                  A {{ rest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of {% if rest.mode = 'server' %}patching{% else %}patching{% endif %} an existing {{resource.type}} resource using:
+                  <code class="highlighter-rouge">PATCH [base]/{{resource.type}}/[id]{?_format=[mime-type]}</code>
+                </li>
+              {% endif %}
+
+            {%endfor %}
+          </ul>
+        {% endif %}
+
+
+        {% if resource.interaction.where(code='read' or code='vread' or code='search-type' or code='history-instance' or code='history-type') %}
+          <br/>
+          <p>Fetch and Search Criteria:</p>
+          <ul>
+            {%for i in resource.interaction %}
+              {% if i.code = 'read' %}
+                <li>
+                  A {{ rest.mode}} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of a <code>read</code> interaction {% if rest.mode = 'server' %}returning{% else %}fetching{% endif %} a {{resource.type}} resource using:
+                  <code class="highlighter-rouge">GET [base]/{{resource.type}}/[id]</code>
+                  {% if resource.conditionalRead.exists() %}
+                    <ul>
+                      <li>
+                        {% if resource.conditionalRead = 'not-supported' %}
+                          A {{ rest.mode }} <strong>{% if resource.conditionalRead.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}{% include expectation_handler.html extension=resource.conditionalRead.extension %} NOT{% else %}DOES NOT{% endif %}</strong> support conditional read of {{resource.type}} resources.
+                        {% elsif resource.conditionalRead = 'modified-since' %}
+                          A {{ rest.mode }} <strong>{% include expectation_handler.html action='verb' extension=resource.conditionalRead.extension %}</strong> support conditional read of {{resource.type}} resources only with the If-Modified-Since HTTP Header.
+                        {% elsif resource.conditionalRead = 'not-match' %}
+                          A {{ rest.mode }} <strong>{% include expectation_handler.html action='verb' extension=resource.conditionalRead.extension %}</strong> support conditional read of {{resource.type}} resources only with the If-None-Match HTTP Header.
+                        {% elsif resource.conditionalRead = 'full-support' %}
+                          A {{ rest.mode }} <strong>{% include expectation_handler.html action='verb' extension=resource.conditionalRead.extension %}</strong> support conditional read of {{resource.type}} resources with both If-Modified-Since and If-None-Match HTTP Headers.
+                        {% endif %}
+                      </li>
+                    </ul>
+                  {% endif %}
+                </li>
+              {% endif %}
+              {% if i.code = 'vread' %}
+                <li>
+                  A {{ rest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of a <code>vread</code> interaction {% if rest.mode = 'server' %}returning{% else %}fetching{% endif %} a {{resource.type}} resource using:
+                  <code class="highlighter-rouge">GET [base]/{{resource.type}}/[id]/_history/vid</code>
+                </li>
+              {% endif %}
+              {% if i.code = 'search-type' %}
+                <li>
+                  A {{ rest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of a <code>search-type</code> interaction {% if rest.mode = 'server' %}returning{% else %}fetching{% endif %} {{resource.type}} resources matching a search query using:
+                  <code class="highlighter-rouge">GET [base]/{{resource.type}}/[id]{?[parameters]{&amp;_format=[mime-type]}}</code>
+                </li>
+              {% endif %}
+              {% if i.code = 'history-instance' %}
+                <li>
+                  A {{ rest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of a <code>history-instance</code> interaction {% if rest.mode = 'server' %}returning{% else %}fetching{% endif %} a history of a {{resource.type}} using:
+                  <code class="highlighter-rouge">GET [base]/{{resource.type}}/[id]/_history{?[parameters]&amp;_format=[mime-type]}</code>
+                </li>
+              {% endif %}
+              {% if i.code = 'history-type' %}
+                <li>
+                  A {{ rest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of a <code>history-type</code> interaction {% if rest.mode = 'server' %}returning{% else %}fetching{% endif %} the history of {{resource.type}} resources using:
+                  <code class="highlighter-rouge">GET [base]/{{resource.type}}/_history{?[parameters]&amp;_format=[mime-type]}</code>
+                </li>
+              {% endif %}
+            {% endfor %}
+
+            {% if resource.searchInclude.exists() %}
+              {% if resource.searchInclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL').exists() %}
+                <li>A {{ rest.mode }} <strong>SHALL</strong> be capable of supporting the following _includes:
+                  <ul>
+                    {% for sinclude in resource.searchInclude %}
+                      {% if sinclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL').exists() %}
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endif %}
+              {% if resource.searchInclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL-NOT').exists() %}
+                <li>A {{ rest.mode }} <strong>SHALL NOT</strong> be capable of supporting the following _includes:
+                  <ul>
+                    {% for sinclude in resource.searchInclude %}
+                      {% if sinclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL-NOT').exists() %}
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endif %}
+              {% if resource.searchInclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHOULD').exists() %}
+                <li>A {{ rest.mode }} <strong>SHOULD</strong> be capable of supporting the following _includes:
+                  <ul>
+                    {% for sinclude in resource.searchInclude %}
+                      {% if sinclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHOULD').exists() %}
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endif %}
+              {% if resource.searchInclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'MAY').exists() %}
+                <li>A {{ rest.mode }} <strong>MAY</strong> be capable of supporting the following _includes:
+                  <ul>
+                    {% for sinclude in resource.searchInclude %}
+                      {% if sinclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'MAY').exists() %}
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endif %}
+              {% if resource.searchInclude.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() = false) %}
+                <li>A {{ rest.mode }} <strong>SHALL</strong> be capable of supporting the following _includes:
+                  <ul>
+                    {% for sinclude in resource.searchInclude %}
+                      {% if resource.searchInclude.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() = false) %}
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endif %}
+            {% endif %}
+
+            {% if resource.searchRevInclude.exists() %}
+              {% if resource.searchRevInclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL').exists() %}
+                <li>A {{ rest.mode }} <strong>SHALL</strong> be capable of supporting the following _includes:
+                  <ul>
+                    {% for sinclude in resource.searchRevInclude %}
+                      {% if sinclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL').exists() %}
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endif %}
+              {% if resource.searchRevInclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL-NOT').exists() %}
+                <li>A {{ rest.mode }} <strong>SHALL NOT</strong> be capable of supporting the following _includes:
+                  <ul>
+                    {% for sinclude in resource.searchRevInclude %}
+                      {% if sinclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL-NOT').exists() %}
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endif %}
+              {% if resource.searchRevInclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHOULD').exists() %}
+                <li>A {{ rest.mode }} <strong>SHOULD</strong> be capable of supporting the following _includes:
+                  <ul>
+                    {% for sinclude in resource.searchRevInclude %}
+                      {% if sinclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHOULD').exists() %}
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endif %}
+              {% if resource.searchRevInclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'MAY').exists() %}
+                <li>A {{ rest.mode }} <strong>MAY</strong> be capable of supporting the following _includes:
+                  <ul>
+                    {% for sinclude in resource.searchRevInclude %}
+                      {% if sinclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'MAY').exists() %}
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endif %}
+              {% if resource.searchRevInclude.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() = false) %}
+                <li>A {{ rest.mode }} <strong>SHALL</strong> be capable of supporting the following _includes:
+                  <ul>
+                    {% for sinclude in resource.searchRevInclude %}
+                      {% if resource.searchRevInclude.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() = false) %}
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endif %}
+            {% endif %}
+
+          </ul>
+        {% endif %}
+
+        {% if resource.searchParam.exists() %}
+          <br/>
+          <p>Search Parameter Summary:</p>
+          <table class="grid">
+            <thead>
+              <tr>
+                <th style="white-space: nowrap;">Conformance</th>
+                <th>Parameter</th>
+                <th>Type</th>
+                <th>Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- TODO, should the search paramaters be limited to only SHALL and SHOULD -->
+              {% for s in resource.searchParam%}
+              <tr>
+                <td>
+                  <strong>{% include expectation_handler.html action='verb' extension=s.extension %}</strong>
+                </td>
+                <td>
+                  <a href="{{s.definition.value}}">{{s.name}}</a>
+                </td>
+                <td>
+                  {{s.type}}
+                </td>
+                <td>
+                  <code class="highlighter-rouge">GET [base]/{{resource.type}}?{{s.name}}{% if s.name = '_id' %}=[id]
+                    {% elsif s.name = '_lastUpdated' %}=[dateTime]
+                    {% elsif s.name = '_tag' %}=[system]|[code]
+                    {% elsif s.name = '_profile' %}=[type]
+                    {% elsif s.name = '_security' %}=[system]|[code]
+                    {% elsif s.name = '_text' %}=[string]
+                    {% elsif s.name = '_content' %}=[string]
+                    {% elsif s.name = '_list' %}=[id]
+                    {% elsif s.name = '_has' %}=[string]
+                    {% elsif s.name = '_type' %}=[uri]
+                    {% elsif s.name = '_sort' %}=[string]
+                    {% elsif s.name = '_count' %}=[number]
+                    {% elsif s.name = '_include' %}=[string]
+                    {% elsif s.name = '_revinclude' %}=[string]
+                    {% elsif s.name = '_summary' %}=[code]
+                    {% elsif s.name = '_total' %}=[code]
+                    {% elsif s.name = '_elements' %}=[names]
+                    {% elsif s.name = '_contained' %}=[code]
+                    {% elsif s.name = '_containedType' %}=[code]
+                    {% elsif s.name = '_filter' %}=[filter]
+                    {% elsif s.name = '_query' %}=[name]&amp;[parameters]
+                    {% elsif s.name = '_format' %}=[mime-type]
+                    {% elsif s.name = '_pretty' %}=[true|false]
+                    <!-- % elif s.name in ['us-core-includeprovenance'] % -->
+                    {% elsif s.type = 'reference' %}=[type]/[id]
+                    {% elsif s.type = 'status' %}=[status]
+                    {% elsif s.type = 'composite' %}=[code]&amp;[value]
+                    {% elsif s.type = 'uri' %}=[uri]
+                    {% elsif s.type = 'string' %}=[{{s.name}}]
+                    {% elsif s.type = 'date' %}=[dateTime]
+                    {% elsif s.type = 'token' %}=[system]|[code]
+                    {% else %}=[{{s.name}}]
+                    {% endif %}</code>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+        {% endif %}
+
+        <!-- Search Combination -->
+        
+        {% if resource.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination').exists() %}
+          <br/>
+          <p>Search Parameter Combination Summary:</p>
+          <table class="grid">
+            <thead>
+              <tr>
+                <th style="white-space: nowrap;">Conformance</th>
+                <th>Parameter Combination</th>
+                <th>Types</th>
+                <th>Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for s in resource.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination') %}
+                <tr>
+                  <td>
+                    <strong>{% include expectation_handler.html action='verb' extension=s.extension %}</strong>
+                  </td>
+                  <td>
+                    {% for item in s.extension.where(url='required' or url='optional') %}{% for single_param in resource.searchParam %}{% if single_param.name = item.value %}{% if item.url = 'required' %}<span title="required"><a href="{{single_param.definition.value}}">{{item.value}}</a></span>+{% endif %}{% if item.url = 'optional' %}<span title="optional"><i><a href="{{single_param.definition.value}}">{{item.value}}</a></i></span>+{% endif %}{% endif %}{% endfor %}{% endfor %}
+                  </td>
+                  <td>
+                    {% for item in s.extension.where(url='required' or url='optional') %}{% for single_param in resource.searchParam %}{% if single_param.name = item.value %}{{single_param.type}}+{% endif %}{% endfor %}{% endfor %}
+                  </td>
+                  <td>
+                    <code class="highlighter-rouge">GET [base]/{{resource.type}}?{% for item in s.extension.where(url='required' or url='optional') %}{% for single_param in resource.searchParam %}{% if single_param.name = item.value %}{{item.value}}{% if item.value = '_id' %}=[id]{% elsif item.value = '_lastUpdated' %}=[dateTime]{% elsif item.value = '_tag' %}=[system]|[code]{% elsif item.value = '_profile' %}=[type]{% elsif item.value = '_security' %}=[system]|[code]{% elsif item.value = '_text' %}=[string]{% elsif item.value = '_content' %}=[string]{% elsif item.value = '_list' %}=[id]{% elsif item.value = '_has' %}=[string]{% elsif item.value = '_type' %}=[uri]{% elsif item.value = '_sort' %}=[string]{% elsif item.value = '_count' %}=[number]{% elsif item.value = '_include' %}=[string]{% elsif item.value = '_revinclude' %}=[string]{% elsif item.value = '_summary' %}=[code]{% elsif item.value = '_total' %}=[code]{% elsif item.value = '_elements' %}=[names]{% elsif item.value = '_contained' %}=[code]{% elsif item.value = '_containedType' %}=[code]{% elsif item.value = '_filter' %}=[filter]{% elsif item.value = '_query' %}=[name]&amp;[parameters]{% elsif item.value = '_format' %}=[mime-type]{% elsif item.value = '_pretty' %}=[true|false]{% elsif single_param.type = 'reference' %}=[type]/[id]{% elsif single_param.type = 'status' %}=[status]{% elsif single_param.type = 'composite' %}=[code]&amp;[value]{% elsif single_param.type = 'uri' %}=[uri]{% elsif single_param.type = 'string' %}=[{{item.value}}]{% elsif single_param.type = 'token' %}=[system]|[code]{% elsif single_param.type = 'date' %}=[dateTime]{% else %}=[{{item.value}}]{% endif %}&amp;{% endif %}{% endfor %}{% endfor %}</code>
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        {% endif %}
+        {% if resource.searchParam.documentation.exists() %}
+          <div>
+            <p>Search Parameter Requirements (When Used Alone or in Combination):</p>
+            <ul>
+              {% for s in resource.searchParam.where(documentation.exists()) %}
+                <li><a href="{{s.definition.value}}">{{s.name}}</a> ({{s.type}}):{{s.documentation}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+
+      {% endfor %}
+
+    {% endif %}
+  {% endfor %}
+
+
+
+
+
+
+
+
+
+  <!-- Messaging Capabilities -->
+  {% for Amsg in messaging %}
+    <br/>
+    <br/>
+    <a name="messaging"></a>
+    <h2>Messaging</h2>
+    {% if Amsg.endpoint.exists() %}
+      <p>
+        <b>End point(s): </b>
+      </p>
+      <div class="table-wrapper">
+        <table cellpadding="grid">
+          <tbody>
+            <tr>
+              <th>Address</th>
+              <th>Protocol(s)</th>
+            </tr>
+            {% for Aendpoint in Amsg.endpoint %}
+              <tr>
+                <td>{{Aendpoint.address}}</td>
+                <td>
+                  {% for Aprotocol in Aendpoint.protocol %}
+                    {% if forloop.first = false %}, {% endif %}
+                    {% if Aprotocol.display.exists() %}
+                      {{Aprotocol.display}}
+                    {% else %}
+                      {{Aprotocol.code}}
+                    {% endif %}
+                  {% endfor %}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    {% endif %}
+    {{Amsg.documentation}}
+    <div class="table-wrapper">
+      <table class="grid">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Category</th>
+            <th>Mode</th>
+            <th>Focus</th>
+            <th>Request</th>
+            <th>Response</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for Aevent in Amsg.event %}
+            <tr>
+              <td>{{Aevent.code}}</td>
+              <td>{{Aevent.category}}</td>
+              <td>{{Aevent.mode}}</td>
+              <td>{{Aevent.focus}}</td>
+              <td>
+                {%for Aref in Aevent.request.reference %}
+                  <a href="{{Aref.value}}.html">{{Aref}}</a>
+                {% endfor %}
+              </td>
+              <td>
+                {%for Aref in Aevent.response.reference %}
+                  <a href="{{Aref.value}}.html">{{Aref}}</a>
+                {% endfor %}
+              </td>
+              <td>{{Aevent.documentation}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% endfor %}
+
+  <!-- Document Capabilities -->
+  {% if document.exists() %}
+    <br/>
+    <br/>
+    <a name="documents"> </a>
+    <h2>Documents</h2>
+    <div class="table-wrapper">
+      <table class="grid">
+        <thead>
+          <tr>
+            <th>Mode</th>
+            <th>Profile</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for Adoc in document %}
+            <tr>
+              <td>{{Adoc.mode}}</td>
+              <td>
+                {% for Aprofile in Adoc.profile %}
+                  {{Aprofile}}
+                {% endfor %}
+              </td>
+              <td>{{Adoc.documentation}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% endif %}
+
+</div>

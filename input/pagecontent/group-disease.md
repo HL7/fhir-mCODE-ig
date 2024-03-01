@@ -1,7 +1,7 @@
 The mCODE **Disease Characterization** group includes data elements specific to the diagnosis and staging of cancer. This includes:
 
 * **Cancer Diagnosis** - the date and location (body site/position and laterality) of the cancer diagnosis.
-* **Tumor Characteristics** - histological classification, morphology, and behavior of the tumor cell, compared to that of a normal cell.
+* **Tumor Characteristics** - histological classification, grade, morphology, and behavior of the tumor cell, compared to that of a normal cell.
 * **CancerStage** - describes the severity of an individual's cancer based on the magnitude of the original (primary) tumor as well as on the extent cancer has spread in the body. Understanding the stage of the cancer helps doctors to develop a prognosis and design a treatment plan for individual patients. Staging calculations leverage results from the previous two categories, along with prognostic factors relevant to the cancer type, in order to assess an overall cancer stage group (source: [AJCC](https://cancerstaging.org/references-tools/Pages/What-is-Cancer-Staging.aspx)).
 
 ### Representing the Cancer Diagnosis
@@ -25,6 +25,8 @@ Because the use of these code systems vary in different institutions, mCODE supp
 
 Implementers should reference the [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles for further details on the use of these terminologies and associated value sets.
 
+Histologic behavior, type, and grade can also be reported in the [HistologicBehaviorAndType] and [HistologicGrade] profiles. The[TumorMorphology] profile references those profiles in a report.
+
 #### Clinical Status
 
 On initial diagnosis, the `Condition.clinicalStatus` element will be `active`. Subsequent changes to the disease status should be recorded by updating the `clinicalStatus` element. The permitted values are active, recurrence, relapse, inactive, remission, resolved. Recurrence and relapse are often used interchangeably in the context of cancer. The resource's history can be accessed to see the history of the status value. 
@@ -37,15 +39,15 @@ Body locations in FHIR are typically represented using a single code. However, a
 
 mCODE has adopted an approach that allows the user to add additional code or codes to further define the body site, without the need to create an independent resource. This takes the form of the [LateralityQualifier] and [BodyLocationQualifier] extensions. These extensions can be used to specify laterality, directionality, and plane.
 
-### Staging
+### Staging and Risk Assessments
 
-In mCODE, staging information has three components:
+In mCODE, staging and risk assessment information has three components:
 
-1. The type of stage reported (e.g., a clinical T category) 
-2. The staging system, method, or protocol used to perform the staging (e.g., AJCC 7th Edition)
-3. The actual stage value (e.g., cT3)
+1. The type of stage or risk assessment reported (e.g., a clinical T category) 
+2. The staging or risk assessment system, method, or protocol used to perform the staging or risk assessment (e.g., AJCC 7th Edition)
+3. The actual stage or risk assessment value (e.g., cT3)
 
-The stage value (3) always reported. To interpret the meaning of the stage value, the staging system or staging method must be known. Depending on the code used, the stage type (1) can identify the staging system, the kind of stage reported, and factors such as the timing (e.g., at diagnosis or posttherapy) and the type of evidence (e.g., clincal or pathologic). If the stage type does not imply the staging system, the staging system is reported separately (2). 
+The stage or risk assessment value (3) is always reported. To interpret the meaning of the stage or risk assessment value, the staging or risk assessment system or staging or risk assessment method must be known. Depending on the code used, the stage or risk assessment type (1) can identify the staging or risk assessment system, the kind of stage or risk assessment reported, and factors such as the timing (e.g., at diagnosis or posttherapy) and the type of evidence (e.g., clincal or pathologic). If the stage or risk assessment type does not imply the staging or risk assessment system, the staging or risk assessment system is reported separately (2). 
 
 A degree of redundancy may exist between these three elements. For example:
 
@@ -54,19 +56,19 @@ A degree of redundancy may exist between these three elements. For example:
 
 The data sender must assure that the values in these three fields are self-consistent.
 
-#### How to Report Staging Information
+#### How to Report Staging or Risk Assessment Information
 
-Staging information should be provided as Observation resource(s) conforming to the [CancerStage] profile or a constrained version of that profile. CancerStage is a parent profile that should be used only if a more specific profile corresponding to a particular staging system is unavailable. If a patient has been staged more than once, there will be multiple CancerStage observations. 
+Staging or risk assessment information should be provided as Observation resource(s) conforming to the [CancerStage] or [CancerRiskAssessment] profile or a constrained version of those profiles. CancerStage and CancerRiskAssessment are parent profiles that should be used only if a more specific profile corresponding to a particular staging system or risk assessment is unavailable. If a patient has been staged or assessed more than once, there will be multiple CancerStage or RiskAssessment observations. 
 
-In the CancerStage profile and its descendants, the following elements are used to describe a stage or classification:
+In the CancerStage and CancerRiskAssessment profile and its descendants, the following elements are used to describe a stage or classification:
 
-| Stage Information | FHIR Element | Description |
+| Stage/Risk Assessment Information | FHIR Element | Description |
 |-------------------|--------------|-------------|
-| Stage Type        | `Observation.code` |  LOINC or SNOMED term that describes the specific type of stage being reported, for example, a TNM stage group or International Federation of Gynecology and Obstetrics (FIGO) ovarian tumor stage. In terms of the SNOMED CT hierarchy, these are terms of type **Observable Entity**.  |
-| Staging System    | `Observation.method` |  The staging system, method, or protocol used to perform the staging, for example, AJCC Version 8 or the International Neuroblastoma Staging System. In the SNOMED CT hierarchy, these are terms in the **Staging and Scales** hierarchy, specifically, terms descending from **Tumor Staging** that represent staging systems. `Observation.method` is not required if the staging system is implicit in `Observation.code`. |
-| Stage Value | `Observation.valueCodeableConcept` | Contains the actual stage or category determined for the cancer. In terms of SNOMED CT, these are terms from the **Qualifier Value** and **Finding** hierarchies (some staging values appear, perhaps erroneously, in the Tumor Staging hierarchy). |
-| Cancer Staged | `Observation.focus` | A reference to the cancer condition being staged. |
-| Prognostic Factors | `Observation.derivedFrom` | A reference to Observations contributing to the stage. |
+| Type        | `Observation.code` |  LOINC or SNOMED term that describes the specific type of stage or risk assessment being reported, for example, a TNM stage group or International Federation of Gynecology and Obstetrics (FIGO) ovarian tumor stage. In terms of the SNOMED CT hierarchy, these are terms of type **Observable Entity**.  |
+| System    | `Observation.method` |  The staging or risk assessment system, method, or protocol used, for example, AJCC Version 8 or the International Neuroblastoma Staging System. In the SNOMED CT hierarchy, these are terms in the **Staging and Scales** hierarchy, specifically, terms descending from **Tumor Staging** that represent staging systems. `Observation.method` is not required if the staging system is implicit in `Observation.code`. |
+| Value | `Observation.valueCodeableConcept` | Contains the actual stage or category determined for the cancer. In terms of SNOMED CT, these are terms from the **Qualifier Value** and **Finding** hierarchies (some staging values appear, perhaps erroneously, in the Tumor Staging hierarchy). |
+| Cancer | `Observation.focus` | A reference to the cancer condition being staged or assessed. |
+| Prognostic Factors | `Observation.derivedFrom` | A reference to Observations contributing to the stage or risk assessment. |
 {: .grid }
 
 A reference to the CancerStage observation should be given in the PrimaryCancerCondition's `Condition.stage.assessment` element. If staging has been repeated for a patient, the reference in PrimaryCancerCondition should point to the most recent staging information.
@@ -84,11 +86,11 @@ mCODE strongly recommends that the implementers align with AJCC's convention of 
 
 Several widely-used terminologies in the cancer domain, including ICD-O-3 and AJCC staging, are proprietary and cannot be reproduced in this guide. SNOMED-CT has reached an agreement with AJCC to create SNOMED codes that correspond to AJCC stages. mCODE uses these SNOMED codes where applicable, but licensed sites may continue to use AJCC codes and still be in conformance with mCODE. Under the [Fair Use doctrine](https://www.copyright.gov/fair-use/more-info.html), examples illustrating mCODE's representation of cancer diagnoses may use the more familiar AJCC staging values for the purposes of implementation guidance to FHIR developers.
 
-#### Non-TNM Staging
+#### Non-TNM Staging and Risk Assessments
 
-Profiles for several non-TNM staging systems are included in mCODE. Not all cancer types are staged with a TNM-based staging system, including hematologic cancers like leukemias, multiple myeloma, lymphomas, and some solid tumors, for example, gynecologic tumors staged using the FIGO (International Federation of Gynecology and Obstetrics) staging system. Staging systems not explicitly covered in mCODE should follow the patterns in the provided profiles. 
+Profiles for several non-TNM staging systems and risk assessments are included in mCODE. Not all cancer types are staged or assessed with a TNM-based staging system, including hematologic cancers like leukemias, multiple myeloma, lymphomas, and some solid tumors, for example, gynecologic tumors are staged using the FIGO (International Federation of Gynecology and Obstetrics) staging system. Staging systems or risk assessments not explicitly covered in mCODE should follow the patterns in the provided profiles. 
 
-Prognostic factors related to the cancer stage group can be specified with the `Observation.derivedFrom` element. For example, a hemoglobin lab result which was evaluated in the  staging of chronic lymphocytic leukemia (CLL)using the Binet staging system can be referenced under `Observation.derivedFrom` element. [This example of Binet staging](Observation-binet-stage-group-A.html) illustrates how this could be represented.
+Prognostic factors related to the cancer stage group or risk assessment can be specified with the `Observation.derivedFrom` element. For example, a hemoglobin lab result which was evaluated in the  staging of chronic lymphocytic leukemia (CLL) using the Binet staging system can be referenced under `Observation.derivedFrom` element. [This example of Binet staging](Observation-binet-stage-group-B.html) illustrates how this could be represented.
 
 **Terminology.** SNOMED CT does not offer codes for every staging system. When SNOMED codes are unavailable, mCODE falls back on codes from the NCI Thesaurus (NCIT). From an implementation perspective, managing two code systems is difficult when there is no consistency of which code system is used for what purpose. We are actively working with SNOMED International to create more consistent semantic approach to coding stages, by adding concepts required by non-TNM staging systems. The current approach of mixing SNOMED and NCIT depending on the cancer type should be regarded as temporary.
 
@@ -119,8 +121,12 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [SecondaryCancerCondition]
 * Characterization
   * [TumorMarkerTest]
-* Staging, General
+  * [HistologicBehaviorAndType]
+  * [HistologicGrade]
+  * [TumorMorphology]
+* Staging and Risk Assessment, General
   * [CancerStage]
+  * [CancerRiskAssessment]
 * Staging, AJCC TNM
   * [TNMStageGroup]
   * [TNMPrimaryTumorCategory]All
@@ -136,12 +142,20 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [MyelomaISSStage]
   * [MyelomaRISSStage]
   * [ProstateGleasonGradeGroup]
+  * [NeuroblastomaINSStage]
+  * [NeuroblastomaINRGSSRiskAssessment]
+  * [WilmsTumorStage]
+  * [RhabdomyosarcomaClinicalGroupStage]
+* Risk Assessment
+  * [RhabdomyosarcomaRiskAssessment]
+  * [ALLRiskAssessment]
 
 ### Extensions
 
 * [BodyLocationQualifier]
 * [HistologyMorphologyBehavior]
 * [LateralityQualifier]
+* [RelatedCondition]
 
 ### Value Sets
 
@@ -159,16 +173,21 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [CytologicEvidenceOfMalignancyVS]
   * [HistologyMorphologyBehaviorVS]
   * [TumorMarkerTestVS]
+  * [HistologicBehaviorAndTypeVS]
+  * [HistologicGradeVS]
+  * [HistologicGradingSystemVS]
   
 * Location
   * [BodyLocationQualifierVS]
   * [CancerBodyLocationVS]
   * [LateralityQualifierVS]
 
-* Staging, General
+* Staging and Risk Assessment, General
   * [CancerStagingMethodVS]
   * [CancerStageTypeVS]
   * [CancerStageValueVS]
+  * [CancerRiskAssessmentTypeVS]
+  * [RiskAssessmentValueVS]
 
 * Staging, TNM
   * [TNMStagingMethodVS]
@@ -206,8 +225,18 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
     * [LymphomaStagingMethodVS]
     * [LymphomaStageValueVS]
     * [LymphomaStageValueModifierVS]
+    * [LymphomaStageBulkyModifierVS]
     * [RaiStagingMethodVS]
     * [RaiStageValueVS]
+    * [NeuroblastomaINSSValueVS]
+    * [NeuroblastomaINRGSSValueVS]
+    * [WilmsTumorStageValueVS]
+    * [WilmsTumorBodySiteVS]
+    * [RhabdomyosarcomaClinicalGroupValueVS]
+
+* Risk Assessment
+  * [RhabdomyosarcomaAssessmentValueVS]
+  * [ALLRiskAssessmentVS]
 
 ### Code Systems
 

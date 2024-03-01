@@ -8,7 +8,7 @@ Description: "Binet stage for chronic lymphocytic leukemia (CLL)"
 * ^extension[FMM].valueInteger = 0
 * code = NCIT#C141212 // Binet Stage -- request a SNOMED code?
 //* method = SCT#1149099005 // "Binet staging classification for chronic lymphocytic leukemia (tumor staging)"
-* value[x] from BinetStageValueVS (required)
+* value[x] from BinetStageValueVS (extensible)
 
 Profile: CLLRaiStage
 Id: mcode-cll-rai-stage
@@ -18,7 +18,7 @@ Description: "Rai stage for chronic lymphocytic leukemia (CLL)"
 * ^extension[FMM].valueInteger = 0
 * code = NCIT#C141207 // Rai Stage -- request a SNOMED code?
 * method from RaiStagingMethodVS
-* value[x] from RaiStageValueVS (required)
+* value[x] from RaiStageValueVS (extensible)
 
 // Gynecologic Tumors
 
@@ -45,11 +45,19 @@ Description: "Staging of lymphoma (both Hodgkins and Non-Hodgkins) by Ann Arbor,
 * method from LymphomaStagingMethodVS
 * value[x] from LymphomaStageValueVS (required)
 * insert ObservationComponentSlicingRules
-* component contains stage-modifier 0..* and clin-or-path-modifier 0..1
+* component contains stage-modifier 0..* and clin-or-path-modifier 0..1 and bulky-modifier 0..1
 * component[stage-modifier].value[x] only CodeableConcept
 * component[stage-modifier].value[x] from LymphomaStageValueModifierVS
+* component[stage-modifier].code = SCT#106252000 "Staging classification for lymphoma (tumor staging)"
+
 * component[clin-or-path-modifier].value[x] only CodeableConcept
 * component[clin-or-path-modifier].value[x] from ClinOrPathModifierVS
+* component[clin-or-path-modifier].code = SCT#277366005 "Nature of staging values (qualifier value)"
+
+* component[bulky-modifier].value[x] only CodeableConcept
+* component[bulky-modifier].value[x] from LymphomaStageBulkyModifierVS
+* component[bulky-modifier].code = SCT#260873006 "Bulky disease status (attribute)"
+
 
 // Melanoma
 
@@ -83,7 +91,7 @@ Description: "Myeloma Stage by International Staging System (ISS)"
 * code = NCIT#C139007  // "International Staging System Stage"
 // How do I say "method is not required, but if you include it, it must be this code"?
 //* method = SCT#1149162008 // International Staging System for multiple myeloma (staging scale)
-* value[x] from MyelomaISSValueVS (required)
+* value[x] from MyelomaISSValueVS (extensible)
 
 Profile: MyelomaRISSStage
 Id: mcode-myeloma-riss-stage
@@ -95,7 +103,7 @@ Description: "Myeloma Stage by Revised International Staging System (RISS)"
 * code = NCIT#C141392 // "Revised International Staging System Stage"
 // How do I say "method is not required, but if you include it, it must be this code"?
 //* method = SCT#1149163003 // Revised International Staging System for multiple myeloma (staging scale)
-* value[x] from MyelomaRISSValueVS (required)
+* value[x] from MyelomaRISSValueVS (extensible)
 
 // Prostate Cancer
 
@@ -107,3 +115,48 @@ Description: "Gleason Grade Group for prostatic cancer"
 * ^extension[FMM].valueInteger = 0
 * code = SCT#385377005 // Gleason grade finding for prostatic cancer (finding)
 * value[x] from GleasonGradeGroupValueVS (required)
+
+
+//Neuroblastoma//
+
+Profile: NeuroblastomaINSStage
+Id: mcode-neuroblastoma-inss-stage
+Parent: CancerStage
+Title: "Neuroblastoma INSS Stage Profile"
+Description: "The International Neuroblastoma Staging System (INSS) stage for neuroblastoma."
+* ^extension[FMM].valueInteger = 0
+* code = SCT#409720004  // International neuroblastoma staging system stage (observable entity)
+* value[x] from NeuroblastomaINSSValueVS (required)
+
+
+Profile: NeuroblastomaINRGSSStage
+Id: mcode-neuroblastoma-inrgss-stage
+Parent: CancerStage
+Title: "Neuroblastoma INRGSS Stage Profile"
+Description: "International Neuroblastoma Risk Group Staging System (INRGSS) for neuroblastoma."
+* ^extension[FMM].valueInteger = 0
+* code = NCIT#C133427 // International Neuroblastoma Risk Group Staging System
+* value[x] from NeuroblastomaINRGSSValueVS (extensible)
+
+//WilmsTumor//
+
+Profile: WilmsTumorStage
+Id: mcode-wilms-tumor-stage
+Parent: CancerStage
+Title: "Wilms Tumor Stage Profile"
+Description: "Wilms Tumors (nephroblastoma) Stage by the National Wilms Tumor Study Group."
+* ^extension[FMM].valueInteger = 0
+* code = SCT#405931009 // National Wilms Tumor Study Group Stage (observable entity)
+* value[x] from WilmsTumorStageValueVS (required)
+* bodySite from WilmsTumorBodySiteVS (extensible)
+
+//Rhabdomyosarcoma//
+
+Profile: RhabdomyosarcomaClinicalGroupStage
+Id: mcode-rhabdomyosarcoma-clinical-group-stage
+Parent: CancerStage
+Title: "Rhabdomyocaroma Clinical Group Stage Profile"
+Description: "Clinical stage group for rhabdomyocaroma."
+* ^extension[FMM].valueInteger = 0
+* code = SCT#405916000 // Intergroup rhabdomyosarcoma study post-surgical clinical group (observable entity)
+* value[x] from RhabdomyosarcomaClinicalGroupValueVS (required)

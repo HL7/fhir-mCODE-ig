@@ -1,12 +1,12 @@
 {
     "package-id" : "hl7.fhir.us.mcode",
-    "version" : "3.0.0",
-    "path" : "http://hl7.org/fhir/us/mcode/STU3",
+    "version" : "4.0.0-ballot",
+    "path" : "http://hl7.org/fhir/us/mcode/STU4-ballot",
     "status" : "trial-use",
-    "sequence" : "STU 3",
-    "milestone": true,
-    "desc" : "STU3 Release",
-    "descmd" : "STU3 Release",
+    "sequence" : "STU 4",
+    "milestone": false,
+    "desc" : "Ballot version for STU4",
+    "descmd" : "Ballot version for STU4",
     "changes" : "change_log.html",
     "mode" : "milestone"
   }

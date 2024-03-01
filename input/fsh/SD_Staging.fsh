@@ -2,9 +2,9 @@ Profile: CancerStage  // introduced 8/30/2020 to handle non-TNM staging more cle
 Id: mcode-cancer-stage
 Parent: Observation
 Title: "Cancer Stage Profile"
-Description: "Parent profile for observations regarding cancer stage, grade, classification, or risk group. The stage is an assessment of the extent of the cancer in the body, according to a given cancer staging classification system. Profiles for different staging systems (e.g., TNM stage group, Rai stage, FIGO stage, etc.) must derive from this profile.
+Description: "Parent profile for observations regarding cancer stage, grade, or classification. The stage is an assessment of the extent of the cancer in the body, according to a given cancer staging classification system. Profiles for different staging systems (e.g., TNM stage group, Rai stage, FIGO stage, etc.) must derive from this profile.
 
-Despite its name, the CancerStage profile can also be used as a parent for cancer grade, classification, and risk grouping. This is because the structure of the profiles are the same or very similar. The key elements are the code, method, value, and optionally, prognostic factors referenced in the hasMember element."
+Despite its name, the CancerStage profile can also be used as a parent for cancer grade or classification. This is because the structure of the profiles are the same or very similar. The key elements are the code, method, value, and optionally, prognostic factors referenced in the hasMember element."
 * ^abstract = true
 * code from CancerStageTypeVS (preferred)
 * code ^short = "The type of stage information reported."

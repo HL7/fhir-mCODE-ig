@@ -5,6 +5,7 @@ Title:    "Cancer-Related Medication Request Profile"
 Description:  "A record of a medication prescription or consumption associated with cancer treatment. The medication may reported by the prescriber, prescribing organization, or patient. It does not have to be directly observed."
 * insert MedicationResourcesRS
 * requester only Reference(USCorePractitioner or USCoreOrganization or CancerPatient)
+* extension contains NormalizationBasis named normalizationBasis 0..1
 
 
 Profile:  CancerRelatedMedicationAdministration
@@ -16,6 +17,7 @@ Description:    "An episode of medication administration for a patient whose con
 * medication[x] from http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4 (extensible) // as per USCore 4.0.0
 // Model the Must Supports on US Core MedicationRequest
 * status and medication[x] and subject and effective[x] MS
+* extension contains NormalizationBasis named normalizationBasis 0..1
 
 
 RuleSet: MedicationResourcesRS

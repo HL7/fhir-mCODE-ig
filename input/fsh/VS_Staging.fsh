@@ -44,6 +44,9 @@ Description: "Codes that identify the kind of stage reported in an Observation, 
 * SCT#385357003 "Dukes stage (observable entity)"
 * SCT#17964000 "Residual tumor stage (observable entity)"
 * SCT#371495009 "Stage of tumor involvement of non-regional lymph nodes (observable entity)"
+* SCT#409720004 "International neuroblastoma staging system stage (observable entity)"
+* SCT#405931009 "National Wilms Tumor Study Group Stage (observable entity)"
+* SCT#405916000 "Intergroup rhabdomyosarcoma study post-surgical clinical group (observable entity)"
 // unapproved attribute, do not include! * include codes from system SCT where concept is-a #260760003 "Staging of disease (attribute)"
 // NCI Thesaurus terms
 * NCIT#C134969 "AIDS-Related Kaposi Sarcoma Stage"
@@ -73,6 +76,7 @@ Description: "Codes that identify the kind of stage reported in an Observation, 
 * NCIT#C16899 "Neoplasm Stage"
 * NCIT#C174125 "Neoplastic Disease Extent Indicator"
 * NCIT#C141461 "Occult Stage"
+* NCIT#C133427 "International Neuroblastoma Risk Group Staging System"
 
 // Observation.method
 ValueSet: CancerStagingMethodVS
@@ -170,3 +174,14 @@ Description: "A non-exhaustive value set containing codes that result from cance
 * include codes from system SCT where concept descendant-of #258233007 "Generic tumor staging descriptor (tumor staging)"
 * include codes from system SCT where concept descendant-of #258271004 "Specific tumor staging descriptor (tumor staging)"
 * include codes from system SCT where concept descendant-of #106242004 "Walter Reed staging of prostatic cancer (tumor staging)"
+* include codes from system SCT where concept descendant-of #409721000 "International neuroblastoma staging system stage finding (finding)"
+* include codes from system SCT where concept descendant-of #405971004 "National Wilms Tumor Study Group Stage finding (finding)"
+
+//NCIT//
+* NCIT#C133428 "INRG Stage L1"
+* NCIT#C133429 "INRG Stage L2"
+* NCIT#C133430 "INRG Stage M"
+* NCIT#C133431 "INRG Stage MS"
+* NCIT#C148012 "Intergroup Rhabdomyosarcoma Group I"
+* NCIT#C148015 "Intergroup Rhabdomyosarcoma Group II"
+* NCIT#C148019 "Intergroup Rhabdomyosarcoma Group III"

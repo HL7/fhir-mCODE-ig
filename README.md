@@ -8,7 +8,7 @@ This repository contains the **mCODE Implementation Guide (IG)**. An IG is "a se
 
 For more information, see:
 
-- [mcodeinitiative.org](https://mcodeinitiative.org), the project homepage
+- [mcodeinitiative.org](https://confluence.hl7.org/display/COD/mCODE), the project homepage
 - [Published version of this IG](http://hl7.org/fhir/us/mcode/)
 - Continuous integration build of this repository: [main branch](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/) or [all branches](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/)
 - [The mCODE Knowledge Base](https://confluence.hl7.org/display/COD/Knowledge+Base+-+mCODE)

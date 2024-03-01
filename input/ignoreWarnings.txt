@@ -4,36 +4,104 @@
 # ONLY THE WARNING MESSAGE ITSELF NEEDS TO BE INCLUDED IN THIS FILE, NOT THE ENTIRE CONTEXT
 
 # SUPPRESS US CORE COMPLIANCE WARNINGS.  For STU2, exceptions to US Core parent profiles was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard: 28-0-1. See https://jira.hl7.org/browse/FHIR-30707. For STU3, exceptions to US Core parent profiles was approved by the Cross-Group Projects Work Group on 2/9/2023 Saul Kravitz/Floyd Eisenberg: 23-0-2. See https://jira.hl7.org/browse/FHIR-40383.  A variance for an additional Observation added in STU3 was approved by the Cross-Group Projects Work Group on 8/10/23.  See https://jira.hl7.org/browse/FHIR-41710.
-US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-US FHIR Usage rules require that all profiles on Specimen derive from the core US profile
-US FHIR Usage rules require that all profiles on DiagnosticReport derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ALL-risk-assessment').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-risk-assessment').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cll-binet-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cll-rai-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-deauville-scale').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report').baseDefinition: US FHIR Usage rules require that all profiles on DiagnosticReport derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-gynecologic-tumor-figo-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-history-of-metastatic-cancer').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-human-specimen').baseDefinition: US FHIR Usage rules require that all profiles on Specimen derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-lansky-play-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-lymphoma-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-melanoma-breslow-depth-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-melanoma-clark-level').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-myeloma-iss-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-myeloma-riss-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-neuroblastoma-inrgss-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-neuroblastoma-inss-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-prostate-gleason-grade-group').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-rhabdomyosarcoma-clinical-group-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-rhabdomyosarcoma-risk-assessment').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-wilms-tumor-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+
 
 # UNSUPPORTED TERMINOLOGY
-HGVS is not supported at this time
-Error from http://tx.fhir.org/r4: HGVS is not supported at this time
-Error from server: HGVS is not supported at this time
-Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
-Code System URI 'http://www.ncbi.nlm.nih.gov/gtr' is unknown so the code cannot be validated
-Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
-Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
-Code System URI 'https://www.gensop.com' is unknown so the code cannot be validated
-Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs|3.0.0
-The definition for the Code System with URI 'http://terminology.hl7.org/CodeSystem/icd-o-3' doesnt provide any codes so the code cannot be validated
-The definition for the Code System with URI 'http://www.genenames.org' doesnt provide any codes so the code cannot be validated
-The definition for the Code System with URI 'http://www.ncbi.nlm.nih.gov/refseq' doesnt provide any codes so the code cannot be validated
+A definition for CodeSystem 'http://www.ncbi.nlm.nih.gov/gtr' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://www.sequenceontology.org/' could not be found, so the code cannot be validated
+A definition for CodeSystem 'https://www.ncbi.nlm.nih.gov/gene' could not be found, so the code cannot be validated
+A definition for CodeSystem 'https://www.gensop.com' could not be found, so the code cannot be validated 
+A definition for CodeSystem 'http://www.genenames.org' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://www.ncbi.nlm.nih.gov/refseq' could not be found, so the code cannot be validated
 The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesnt provide any codes so the code cannot be validated
-The definition for the Code System with URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' doesnt provide any codes so the code cannot be validated
-The definition for the Code System with URI 'http://www.ncbi.nlm.nih.gov/clinvar' doesnt provide any codes so the code cannot be validated
-Unknown System 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' specified, so Concepts and Filters can't be checked (Details: Resolved system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl (v3.0.0), but the definition is not complete)
-Unable to check whether the code is in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs|3.0.0
-Error from server: Unable to provide support for code system http://cancerstaging.org
-Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3
-Error from server: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
+A definition for CodeSystem 'urn:oid:2.16.840.1.113883.6.238' version '1.2' could not be found, so the code cannot be validated. Valid versions: []
+A definition for CodeSystem 'urn:oid:2.16.840.1.113883.6.238' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://www.ncbi.nlm.nih.gov/clinvar' could not be found, so the code cannot be validated
 Error from http://tx.fhir.org/r4: Unable to provide support for code system http://cancerstaging.org
-Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3
-Error from http://tx.fhir.org/r4: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
-Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
-Unable to expand imported value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-cancer-disorder-vs: Unable to expand imported value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-malignant-neoplasm-disorder-vs: The value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-malignant-neoplasm-disorder-vs has too many codes to display (>1000) (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3)
+Error from http://tx.fhir.org/r4: Error parsing HGVS response: HTTP/1.1 500 Internal Server Error
+Error from http://tx.fhir.org/r4: Error parsing HGVS response: HTTP/1.1 503 Service Unavailable
+
+# NCIT Codes Not Included in NCIT fragment CodeSystem resource
+Unknown Code 'C148010' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C148012' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C102402' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C141206' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C7847' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C133428' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C141394' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C70658' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C141189' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C171157' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C70538' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C96243' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C99728' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C186527' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C134969' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C80134' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C122457' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C19700' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C133427' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C141392' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C139007' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C38144' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C141207' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C141212' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C167435' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C7875' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C133431' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C141395' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C70659' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C70540' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C96256' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C99750' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C80135' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C122458' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: Observation/rai-stage-II: Observation.code.coding[0].display: Wrong Display Name 'Rai Stage' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C141207. Valid display is  (for the language(s) '--')
+WARNING: Observation/rai-stage-II: Observation.value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'Stage II Chronic Lymphocytic Leukemia' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C7875. Valid display is  (for the language(s) '--')
+WARNING: Observation/neuroblastoma-inrgss-stage-MS: Observation.value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'INRG Stage MS' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133431. Valid display is  (for the language(s) '--')
+WARNING: Observation/multiple-myeloma-iss-stage-II: Observation.code.coding[0].display: Wrong Display Name 'International Staging System Stage' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C139007. Valid display is  (for the language(s) '--')
+WARNING: Observation/lansky-play-performance-status-twenty: Observation.interpretation[0].coding[0].display: Wrong Display Name 'Lansky Performance Status 20' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C70540. Valid display is  (for the language(s) '--')
+WARNING: Observation/figo-stage-IIIA: Observation.value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'FIGO Stage IIIA' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C96256. Valid display is  (for the language(s) '--')
+WARNING: Observation/deauville-scale-five: Observation.interpretation[0].coding[0].display: Wrong Display Name 'London Deauville Criteria Point Scale 5' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C99750. Valid display is  (for the language(s) '--')
+WARNING: Condition/primary-cancer-condition-cll: Condition.stage[0].summary.coding[0].display: Wrong Display Name 'Binet Stage B' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80135. Valid display is  (for the language(s) '--')
+WARNING: Observation/binet-stage-group-B: Observation.code.coding[0].display: Wrong Display Name 'Binet Stage' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C141212. Valid display is  (for the language(s) '--')
+WARNING: Observation/all-risk-assessment-high: Observation.value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'High Risk Acute Leukemia' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C122458. Valid display is  (for the language(s) '--')
+WARNING: Group/group-mcode-patients: Group.code.coding[0].display: Wrong Display Name 'Cancer Patient' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C19700. Valid display is  (for the language(s) '--')
+WARNING: Condition/primary-cancer-condition-cll: Condition.stage[0].summary.coding[0].display: Wrong Display Name 'Binet Stage B' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80135. Valid display is  (for the language(s) '--')
 
 
 # TG263 is a  proprietary codesystem used in Radiotherapy.  The whole point of conceptmaps is to make it easy to transition to the ValueSets used in this IG. The codesystem identifers TRX, IJE and MRE are not proper codesystem URIs.  Work is underway to define proper URIs that will be included in future versions of this IG.
@@ -41,44 +109,31 @@ WARNING: ConceptMap/TG263CM: ConceptMap.group[0].source: The Source Code System 
 INFORMATION: ConceptMap/TG263CM: ConceptMap: The concept map has too many codes to validate (673)
 
 # SUPPRESS INFORMATION MESSAGES "DOES NOT MATCH ANY KNOWN SLICE" DUE TO TERMINOLOGY LIMITATIONS
-INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/.result[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|3.0.0
-INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/.result[6]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|3.0.0
-INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/.result[7]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|3.0.0
-INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/.result[13]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|3.0.0
-INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/.result[14]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|3.0.0
-INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[14].resource/*Observation/gx-genomic-diagnostic-implication-bap1*/.derivedFrom[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|2.0.0
-INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[15].resource/*Observation/gx-genomic-diagnostic-implication-pof1b*/.derivedFrom[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|2.0.0
-INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[16].resource/*Observation/gx-genomic-diagnostic-implication-polrmt*/.derivedFrom[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|2.0.0
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[27]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|3.0.0
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[30]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|3.0.0
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[38]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|3.0.0
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[39]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|3.0.0
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource/*DiagnosticReport/genomics-report-jenny-m*/.result[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|3.0.0
-INFORMATION: DiagnosticReport/genomics-report-jenny-m: DiagnosticReport.result[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|3.0.0
-INFORMATION: DiagnosticReport/genomics-report-john-anyperson: DiagnosticReport.result[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|3.0.0
-INFORMATION: DiagnosticReport/gx-genomics-report-adam-anyperson: DiagnosticReport.result[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|3.0.0
-INFORMATION: DiagnosticReport/gx-genomics-report-adam-anyperson: DiagnosticReport.result[6]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|3.0.0
-INFORMATION: DiagnosticReport/gx-genomics-report-adam-anyperson: DiagnosticReport.result[7]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|3.0.0
-INFORMATION: DiagnosticReport/gx-genomics-report-adam-anyperson: DiagnosticReport.result[13]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|3.0.0
-INFORMATION: DiagnosticReport/gx-genomics-report-adam-anyperson: DiagnosticReport.result[14]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|3.0.0
-INFORMATION: Observation/gx-genomic-diagnostic-implication-bap1: Observation.derivedFrom[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|2.0.0
-INFORMATION: Observation/gx-genomic-diagnostic-implication-pof1b: Observation.derivedFrom[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|2.0.0
-INFORMATION: Observation/gx-genomic-diagnostic-implication-polrmt: Observation.derivedFrom[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|2.0.0
+INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/.result[13]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/.result[14]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[27]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[30]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[38]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[39]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource/*DiagnosticReport/genomics-report-jenny-m*/.result[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource/*DiagnosticReport/genomics-report-jenny-m*/.result[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: DiagnosticReport/gx-genomics-report-adam-anyperson: DiagnosticReport.result[13]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: DiagnosticReport/gx-genomics-report-adam-anyperson: DiagnosticReport.result[14]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # DETAILS MESSAGES (THEY APPEAR TO BE FOR GROUPING PURPOSES ONLY)
 Details for Observation/genomic-variant-jenny-m matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
-Details for Observation/gx-genomic-variant-somatic-polrmt matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
-Details for Observation/gx-genomic-variant-somatic-pof1b matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
-Details for Observation/gx-genomic-variant-somatic-bap1-indel matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 
-# Reference to deprecated extension included for backwards compatibility. 
-INFORMATION: StructureDefinition/mcode-radiotherapy-course-summary: Procedure.extension: The extension http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-termination-reason|3.0.0 is retired
+# Reference to deprecated extension included for backwards compatibility.
+The extension http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-termination-reason|4.0.0-ballot is retired
 
-# Reference to condition-category code system is inherited from US Core and we can't change that
-Reference to draft item http://terminology.hl7.org/CodeSystem/condition-category|0.5.0
+# Reference to condition-category, observation-category, medicationrequest-category code system is inherited from US Core and we can't change that
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationrequest-category|0.1.0
 
 # Value Set Too Large to Validate
 The value set include has too many codes to validate (1,045)
+The value set expansion is incomplete
 
 # Use of UCUM inherited from Genomics IG (nothing we can do about it)
 WARNING: Observation/gx-genomic-tmb: Observation.value.ofType(Quantity): UCUM Codes that contain human readable annotations like {Base} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked, and the Quantity.unit SHOULD contain the annotation
@@ -86,10 +141,6 @@ UCUM Codes that contain human readable annotations like {Base} can be misleading
 
 # IG Publisher Spurious Messages
 VALUESET_CONCEPT_DISPLAY_SCT_TAG_MIXED
-
-# Reference to work group extension value set containing "CIC" code
-Reference to draft item http://hl7.org/fhir/hl7-work-group|5.1.0-cibuild
-Reference to draft item http://hl7.org/fhir/standards-status|5.1.0-cibuild
 
 # This is a publisher induced issue.   The extension in question is introduced by the publisher, not sushi.   See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/New.20ConceptMap.20Warning.20--.20induced.20by.20IG.20Publisher 
 The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version {3} is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)

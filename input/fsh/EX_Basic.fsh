@@ -24,8 +24,8 @@ Description: "Example of Primary Cancer Condition - hematologic cancer"
 * subject = Reference(cancer-patient-adam-everyman)
 * onsetDateTime = "2020-05-12"
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
-* stage.summary = NCIT#C80134 "Binet Stage A"
-* stage.assessment = Reference(binet-stage-group-A)
+* stage.summary = NCIT#C80135 "Binet Stage B"
+* stage.assessment = Reference(binet-stage-group-B)
 
 Instance: secondary-cancer-condition-brain-mets
 InstanceOf: SecondaryCancerCondition
@@ -296,6 +296,7 @@ Description: "Example of CancerRelatedMedicationRequest"
 * reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
 * requester = Reference(us-core-practitioner-kyle-anydoc)
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* extension[normalizationBasis].valueCodeableConcept = SCT#301898006 "Body surface area (observable entity)"
 * dosageInstruction.text = "250mg orally once daily with or without food"
 * dosageInstruction.route = SCT#26643006 "Oral use"
 * dosageInstruction.doseAndRate.doseQuantity = 250.0 'mg' "mg"
@@ -369,3 +370,132 @@ Description: "Example showing no history of metastatic cancer"
 * effectiveDateTime = "2018-11-16"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 * valueBoolean = false
+
+Instance: histologic-behavior-and-type-non-small-cell
+InstanceOf: HistologicBehaviorAndType
+Description: "Example of non-small cell lung cancer."
+* extension[relatedCondition].valueReference = Reference(primary-cancer-condition-nsclc)
+* subject = Reference(cancer-patient-john-anyperson)
+* effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = ICDO3#"C34.9 80463/3" "non small cell"
+* specimen = Reference(human-specimen-lung)
+* status = #final "final"
+* performer = Reference(us-core-practitioner-kyle-anydoc)
+
+Instance: histologic-grade-intermediate
+InstanceOf: HistologicGrade
+Description: "Example of intermediate histologic grade."
+* extension[relatedCondition].valueReference = Reference(primary-cancer-condition-nsclc)
+* subject = Reference(cancer-patient-john-anyperson)
+* effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = SCT#1286893008 "Intermediate histologic grade (qualifier value)"
+* method = SCT#1149430001 "World Health Organization classification of tumors histologic grading system fifth edition"
+* specimen = Reference(human-specimen-lung)
+* status = #final "final"
+* performer = Reference(us-core-practitioner-kyle-anydoc)
+
+
+Instance: tumor-morphology-report-non-small-cell-intermediate-grade
+InstanceOf: TumorMorphology
+Description: "Example of a tumor morphology report showing non-small cell cancer with an intermediate histologic grade."
+* extension[relatedCondition].valueReference = Reference(primary-cancer-condition-nsclc)
+* subject = Reference(cancer-patient-john-anyperson)
+* effectiveDateTime = "2019-04-01"
+* specimen = Reference(human-specimen-lung)
+* result[0] = Reference(histologic-grade-intermediate)
+* result[1] = Reference(histologic-behavior-and-type-non-small-cell)
+* status = #final "final"
+* issued = "2019-04-15T13:28:17.239+02:00"
+
+Instance: rhabdomyosarcoma-risk-assessment-low
+InstanceOf: RhabdomyosarcomaRiskAssessment
+Description: "Example of rhabdomyosarcoma with a low risk assessment."
+* valueCodeableConcept = SCT#723505004 "Low risk (qualifier value)"
+* status = #final "final"
+* subject = Reference(cancer-patient-john-anyperson)
+* focus = Reference(primary-cancer-condition-nonspecific)
+* effectiveDateTime = "2021-04-01"
+* performer = Reference(us-core-practitioner-kyle-anydoc)
+
+
+Instance: all-risk-assessment-high
+InstanceOf: ALLRiskAssessment
+Description: "Example of leukemia with a standard risk assessment."
+* valueCodeableConcept = NCIT#C122458 "High Risk Acute Leukemia"
+* status = #final "final"
+* subject = Reference(cancer-patient-john-anyperson)
+* focus = Reference(primary-cancer-condition-nonspecific)
+* effectiveDateTime = "2021-04-01"
+* performer = Reference(us-core-practitioner-kyle-anydoc)
+
+Instance: john-anyperson-hd
+InstanceOf: USCoreCondition
+Description: "Example of past heart disease"
+* subject = Reference(cancer-patient-john-anyperson)
+* asserter = Reference(us-core-practitioner-kyle-anydoc)
+* category = CondCat#problem-list-item "Problem List Item"
+* code = SCT#49601007 "Disorder of cardiovascular system (disorder)"
+* verificationStatus = VerStatus#confirmed
+* clinicalStatus = ClinStatus#resolved "Resolved"
+* extension[condition-assertedDate].valueDateTime = "2000-04-01"
+
+Instance: cancer-patient-lucy-child
+InstanceOf: CancerPatient
+Description: "Example of Patient"
+* identifier.use = #usual
+* identifier.type = IDTYPE#MR "Medical Record Number"
+* identifier.system = "http://hospital.example.org"
+* identifier.value = "m456"
+* name.family = "Child"
+* name.given[0] = "Lucy"
+* name.given[1] = "L."
+* gender = #female
+* birthDate = "2023-02-05"
+* address.line = "567 Anyway St"
+* address.city = "Anytown"
+* address.postalCode = "12345"
+* address.country = "US"
+* communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
+* communication.language.text = "English"
+* extension[USCoreRace].extension[ombCategory].valueCoding = OmbRaceCat#2106-3 "White"
+* extension[USCoreRace].extension[text].valueString = "White"
+* extension[USCoreEthnicity].extension[ombCategory].valueCoding = OmbRaceCat#2186-5 "Not Hispanic or Latino"
+* extension[USCoreEthnicity].extension[text].valueString = "Not Hispanic or Latino"
+* extension[USCoreBirthSex].valueCode = #F
+
+Instance: lansky-play-performance-status-twenty
+InstanceOf: LanskyPlayPerformanceStatus
+Description: "Example of Lansky Play Performance Status."
+* status = #final "final"
+* method = SCT#5880005 "Clinical examination"
+* subject = Reference(cancer-patient-lucy-child)
+* effectiveDateTime = "2019-04-01"
+* performer = Reference(us-core-practitioner-kyle-anydoc)
+* valueInteger = 20
+* interpretation = NCIT#C70540 "Lansky Performance Status 20"
+
+Instance: deauville-scale-five
+InstanceOf: DeauvilleScale
+Description: "Example of Deauville Scale."
+* focus = Reference(primary-cancer-condition-nonspecific)
+* subject = Reference(cancer-patient-john-anyperson)
+* performer = Reference(us-core-practitioner-kyle-anydoc)
+* valueInteger = 5
+* interpretation = NCIT#C99750 "London Deauville Criteria Point Scale 5"
+* status = #final "final"
+* effectiveDateTime = "2019-04-01"
+
+Instance: body-surface-area-example
+InstanceOf: BodySurfaceArea
+Description: "Example of body surface area."
+* valueQuantity = 0.27 'm^2' "m^2"
+* status = #final "final"
+* subject = Reference(cancer-patient-lucy-child)
+* effectiveDateTime = "2023-04-01"
+* performer = Reference(us-core-practitioner-kyle-anydoc)
+
+
+
+
+
+

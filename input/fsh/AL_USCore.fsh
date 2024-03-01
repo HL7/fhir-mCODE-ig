@@ -8,7 +8,8 @@ Alias:   USCoreProcedure = http://hl7.org/fhir/us/core/StructureDefinition/us-co
 Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
 Alias:   USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 Alias:   USCoreClinicalTest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
-Alias:   USCoreVitalSigns = http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs 
+Alias:   USCoreVitalSigns = http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs
+Alias:   USCoreObservationImaging = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging
 
 // Extensions
 Alias:   USCoreBirthSex = http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex

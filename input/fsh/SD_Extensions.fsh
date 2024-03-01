@@ -100,3 +100,13 @@ Description: "The purpose of a treatment, medication, or procedure."
 * value[x] from ProcedureIntentVS (extensible)
 * value[x] 1..1
 
+Extension: NormalizationBasis
+Id: mcode-normalization-basis
+Title:  "Normalization Basis Extension"
+Description: "How the drug dosage was normalized."
+* insert ExtensionContext(DomainResource)
+* insert ExtensionContext(Extension)
+* ^extension[FMM].valueInteger = 4
+* value[x] only CodeableConcept
+* value[x] from NormalizationBasisVS (required)
+* value[x] 1..1

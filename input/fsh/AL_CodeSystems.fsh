@@ -15,6 +15,7 @@ Alias:   CPT = http://www.ama-assn.org/go/cpt
 Alias:   HGNC = http://www.genenames.org
 Alias:   HGVS = http://varnomen.hgvs.org
 Alias:   NULLFLAVOR = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+Alias:   DCM = http://dicom.nema.org/resources/ontology/DCM
 
 // Code systems lacking a recognized canonical at terminology.hl7.org
 Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr

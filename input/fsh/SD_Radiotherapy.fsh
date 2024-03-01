@@ -150,8 +150,7 @@ Description:  "Allowed Techniques for Pulsed Dose Rate"
 Invariant: TechniquesForHighDoseRate
 Description:  "Allowed Techniques for High Dose Rate"
 // Intracavitary, IMB, Interstitial, Intravascular, Intraluminal, IORT, Surface, UNC (.text required)
-* insert ModTechniqueConstraint([[394902000]], [[code = 'UNC' or code = '384692006' or code = '1156382005' or code = '113120007' or code = ' 1156383000' or code = '384691004' or
- code = '384691004' or code = '168524008' or code = '14473006']])
+* insert ModTechniqueConstraint([[394902000]], [[code = 'UNC' or code = '384692006' or code = '1156382005' or code = '113120007' or code = ' 1156383000' or code = '384691004' or code = '168524008' or code = '14473006']])
 
 Invariant: TechniquesForHighDoseRateElectronic
 Description:  "Allowed Techniques for High Dose Rate Electronic"

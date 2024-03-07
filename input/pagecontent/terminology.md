@@ -18,7 +18,7 @@ The following table presents the external code systems (and naming conventions) 
 | LOINC | Observation and laboratory codes, answer codes | Yes | <http://loinc.org> |
 | NCBI GTR | Genomic test codes | No | <https://www.ncbi.nlm.nih.gov/gtr/> |
 | NCBI ClinVar | Genomic variations | No | <http://www.ncbi.nlm.nih.gov/clinvar> |
-| NCIT | Cancer terminology | No | http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl |
+| NCIT | Cancer terminology | No | <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl> |
 | RxNorm | Medication codes | Yes | <http://www.nlm.nih.gov/research/umls/rxnorm> |
 | Sequence Ontology | DNA change types | No | <http://www.sequenceontology.org/> |
 | SNOMED CT | Disorders, body structures, findings, qualifiers | Yes | <http://snomed.info/sct> |

@@ -11,7 +11,7 @@ The DD intentionally omits certain elements in FHIR that are not expected to be 
 Downloads:
 
 * [STU 3 mCODE Data Dictionary (Excel download)](data-dictionary/mCODEDataDictionary-STU3.xlsx)
-* [STU 2.1 mCODE Data Dictionary (Excel download)](http://hl7.org/fhir/us/mcode/mCODEDataDictionary-STU2.1.xlsx)
+* [STU 2.1 mCODE Data Dictionary (Excel download)](https://hl7.org/fhir/us/mcode/mCODEDataDictionary-STU2.1.xlsx)
 
 
 ### Data Dictionary Differential

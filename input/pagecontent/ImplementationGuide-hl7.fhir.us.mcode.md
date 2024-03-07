@@ -8,8 +8,8 @@
 
 {{ site.data.ig.description }}
 
-- [XML](ImplementationGuide-{{site.data.ig.id}}.xml)
-- [JSON](ImplementationGuide-{{site.data.ig.id}}.json)
+- [XML](full-ig.xml.zip)
+- [JSON](full-ig.json.zip)
 
 ### Cross Version Analysis
 

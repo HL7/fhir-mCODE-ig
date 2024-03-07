@@ -3,6 +3,6 @@
   "id" : "exp-params",
   "parameter" : [{
     "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/202409301"
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240201"
   }]
 }

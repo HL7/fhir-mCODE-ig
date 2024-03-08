@@ -124,7 +124,7 @@ HL7 specifications use [RFC 2119](https://tools.ietf.org/html/rfc2119) keywords 
 ----
 <br/>
 
-**The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3 ballot (March 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).**
+**The following changes occurred between [STU 2 publication](https://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3 ballot (March 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).**
 
 ### Allowing the Use of AJCC-equivalent SNOMED Codes for Staging
 

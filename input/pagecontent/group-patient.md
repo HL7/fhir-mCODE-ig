@@ -13,7 +13,6 @@ The mCODE **Patient Information** group contains the following information about
 
 ### Extensions
 
-* [ReasonOffStudy]
 * [RelatedCondition]
 * [RelatedConditionAbsent]
 

@@ -88,7 +88,7 @@ Several widely-used terminologies in the cancer domain, including ICD-O-3 and AJ
 
 #### Non-TNM Staging and Risk Assessments
 
-Profiles for several non-TNM staging systems and risk assessments are included in mCODE. Not all cancer types are staged or assessed with a TNM-based staging system, including hematologic cancers like leukemias, multiple myeloma, lymphomas, and some solid tumors, for example, gynecologic tumors are staged using the FIGO (International Federation of Gynecology and Obstetrics) staging system. Staging systems or risk assessments not explicitly covered in mCODE should follow the patterns in the provided profiles. 
+Based on discussions with clinical experts, several common non-TNM staging systems and risk assessments were identified and added as profiles in mCODE. Not all cancer types are staged or assessed with a TNM-based staging system, including hematologic cancers like leukemias, multiple myeloma, lymphomas, and some solid tumors, for example, gynecologic tumors are staged using the FIGO (International Federation of Gynecology and Obstetrics) staging system.
 
 Prognostic factors related to the cancer stage group or risk assessment can be specified with the `Observation.derivedFrom` element. For example, a hemoglobin lab result which was evaluated in the  staging of chronic lymphocytic leukemia (CLL) using the Binet staging system can be referenced under `Observation.derivedFrom` element. [This example of Binet staging](Observation-binet-stage-group-B.html) illustrates how this could be represented.
 

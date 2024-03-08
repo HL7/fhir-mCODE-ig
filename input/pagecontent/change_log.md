@@ -1,4 +1,4 @@
-**The following changes occurred between [STU 3 publication](https://hl7.org/fhir/us/mcode/STU3/) (October 2023) and the STU 4 ballot (May 2024). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).**
+**The following changes occurred between [STU 3 publication](https://hl7.org/fhir/us/mcode/STU3/) (October 2023) and the STU 4 ballot (May 2024). For a history of previous changes, please see the prior change logs in the [appropriate versions](https://hl7.org/fhir/us/mcode/history.html).**
 
 ### Addition of non-TNM Staging Profiles
 
@@ -15,7 +15,8 @@ Lymphoma staging can include many modifiers, such as bulky status, extranodal in
 
 ### Addition of Risk Assessment Profiles
 
-mCODE STU3 did not include any profiles for risk assessments, so there was no indication on how to use mCODE to represent different risk assessments. To address this issue, an abstract, generic profile was created for risk assessment, and specific risk assessment profiles were added for illustrative purposes:
+Risk assessments have been identified as an essential piece of information to represent a cancer patient. To address this, an abstract, generic profile was created for risk assessment, and specific risk assessment profiles were added for illustrative purposes:
+
 
 * [CancerRiskAssessment]
 * [RhabdomyosarcomaRiskAssessment]
@@ -35,7 +36,7 @@ The normalization basis for medication dosage is important, especially for pedia
 
 ### Addition of Lansky Play Performance Profile
 
-Although mCODE 3.0.0 contained two performance status profiles ([ECOGPerformanceStatus] and [KarnofskyPerformanceStatus]), it did not include the performance status most commonly used for children. As a result, the [LanskyPlayPerformanceStatus] profile was added.
+The Lansky Play Performance assessment was identified as a key performance assessment used when treating pediatric cancer patients. As a result, the [LanskyPlayPerformanceStatus] profile was added.
 
 ### Addition of Deauville Scale Profile
 

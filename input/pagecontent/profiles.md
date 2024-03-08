@@ -48,7 +48,6 @@ The following draft (maturity level 0) profiles have been defined for this imple
 * [LanskyPlayPerformanceStatus]
 * [NeuroblastomaINRGSStage]
 * [NeuroblastomaINSStage]
-* [ProstateGleasonGradeGroup]
 * [RhabdomyosarcomaClinicalGroupStage]
 * [RhabdomyosarcomaRiskAssessment]
 * [TumorMorphology]

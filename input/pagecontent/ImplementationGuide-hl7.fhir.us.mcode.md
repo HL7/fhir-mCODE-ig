@@ -8,9 +8,6 @@
 
 {{ site.data.ig.description }}
 
-- [XML](full-ig.xml.zip)
-- [JSON](full-ig.json.zip)
-
 ### Cross Version Analysis
 
 {% capture cross-version-analysis %}{% include cross-version-analysis.xhtml %}{% endcapture %}{{ cross-version-analysis | remove: '<p>' | remove: '</p>'}}

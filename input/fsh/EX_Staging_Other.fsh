@@ -50,7 +50,7 @@ InstanceOf: ProstateGleasonGradeGroup
 Description: "Example of Gleason Grade Group for prostatic cancer, with Gleason score 3 + 5 = 8."
 * insert StagingInstanceRuleSet
 * code = SCT#385377005 "Gleason grade finding for prostatic cancer (finding)"
-* valueCodeableConcept = SCT#1279718003 "International Society of Pathology grade group 4 (Gleason score 3 + 5 = 8) (qualifier value)"
+* valueCodeableConcept = SCT#1279718003 "International Society of Urological Pathology grade group 4 (Gleason score 3 + 5 = 8) (qualifier value)"
 
 Instance: hodgkins-lymphoma-stage-IIIe
 InstanceOf: LymphomaStage

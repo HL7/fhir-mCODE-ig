@@ -48,12 +48,9 @@ A definition for CodeSystem 'https://www.gensop.com' could not be found, so the 
 A definition for CodeSystem 'http://www.genenames.org' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://www.ncbi.nlm.nih.gov/refseq' could not be found, so the code cannot be validated
 The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesnt provide any codes so the code cannot be validated
-A definition for CodeSystem 'urn:oid:2.16.840.1.113883.6.238' version '1.2' could not be found, so the code cannot be validated. Valid versions: []
-A definition for CodeSystem 'urn:oid:2.16.840.1.113883.6.238' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://www.ncbi.nlm.nih.gov/clinvar' could not be found, so the code cannot be validated
 Error from http://tx.fhir.org/r4: Unable to provide support for code system http://cancerstaging.org
 Error from http://tx.fhir.org/r4: Error parsing HGVS response: HTTP/1.1 500 Internal Server Error
-Error from http://tx.fhir.org/r4: Error parsing HGVS response: HTTP/1.1 503 Service Unavailable
 
 # NCIT Codes Not Included in NCIT fragment CodeSystem resource
 Unknown Code 'C148010' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
@@ -90,19 +87,8 @@ Unknown Code 'C96256' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesau
 Unknown Code 'C99750' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 Unknown Code 'C80135' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 Unknown Code 'C122458' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
-WARNING: Observation/rai-stage-II: Observation.code.coding[0].display: Wrong Display Name 'Rai Stage' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C141207. Valid display is  (for the language(s) '--')
-WARNING: Observation/rai-stage-II: Observation.value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'Stage II Chronic Lymphocytic Leukemia' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C7875. Valid display is  (for the language(s) '--')
-WARNING: Observation/neuroblastoma-inrgss-stage-MS: Observation.value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'INRG Stage MS' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133431. Valid display is  (for the language(s) '--')
-WARNING: Observation/multiple-myeloma-iss-stage-II: Observation.code.coding[0].display: Wrong Display Name 'International Staging System Stage' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C139007. Valid display is  (for the language(s) '--')
-WARNING: Observation/lansky-play-performance-status-twenty: Observation.interpretation[0].coding[0].display: Wrong Display Name 'Lansky Performance Status 20' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C70540. Valid display is  (for the language(s) '--')
-WARNING: Observation/figo-stage-IIIA: Observation.value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'FIGO Stage IIIA' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C96256. Valid display is  (for the language(s) '--')
-WARNING: Observation/deauville-scale-five: Observation.interpretation[0].coding[0].display: Wrong Display Name 'London Deauville Criteria Point Scale 5' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C99750. Valid display is  (for the language(s) '--')
-WARNING: Condition/primary-cancer-condition-cll: Condition.stage[0].summary.coding[0].display: Wrong Display Name 'Binet Stage B' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80135. Valid display is  (for the language(s) '--')
-WARNING: Observation/binet-stage-group-B: Observation.code.coding[0].display: Wrong Display Name 'Binet Stage' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C141212. Valid display is  (for the language(s) '--')
-WARNING: Observation/all-risk-assessment-high: Observation.value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'High Risk Acute Leukemia' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C122458. Valid display is  (for the language(s) '--')
-WARNING: Group/group-mcode-patients: Group.code.coding[0].display: Wrong Display Name 'Cancer Patient' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C19700. Valid display is  (for the language(s) '--')
-WARNING: Condition/primary-cancer-condition-cll: Condition.stage[0].summary.coding[0].display: Wrong Display Name 'Binet Stage B' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80135. Valid display is  (for the language(s) '--')
-
+Unknown Code 'C34.9 8140/3' in the system 'http://terminology.hl7.org/CodeSystem/icd-o-3' version '2000' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C34.9 80463/3' in the system 'http://terminology.hl7.org/CodeSystem/icd-o-3' version '2000' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
 # TG263 is a  proprietary codesystem used in Radiotherapy.  The whole point of conceptmaps is to make it easy to transition to the ValueSets used in this IG. The codesystem identifers TRX, IJE and MRE are not proper codesystem URIs.  Work is underway to define proper URIs that will be included in future versions of this IG.
 WARNING: ConceptMap/TG263CM: ConceptMap.group[0].source: The Source Code System TG263 is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed
@@ -115,13 +101,10 @@ INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[27]: This element
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[30]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[38]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[39]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource/*DiagnosticReport/genomics-report-jenny-m*/.result[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource/*DiagnosticReport/genomics-report-jenny-m*/.result[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: DiagnosticReport/gx-genomics-report-adam-anyperson: DiagnosticReport.result[13]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: DiagnosticReport/gx-genomics-report-adam-anyperson: DiagnosticReport.result[14]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # DETAILS MESSAGES (THEY APPEAR TO BE FOR GROUPING PURPOSES ONLY)
-Details for Observation/genomic-variant-jenny-m matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 
 # Reference to deprecated extension included for backwards compatibility.
 The extension http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-termination-reason|4.0.0-ballot is retired
@@ -131,9 +114,14 @@ Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-ca
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationrequest-category|0.1.0
 
+# Reference to draft codesystem is the codesystem US Core uses as an example in their profiles
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|0.1.0
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/v2-0360|2.7|0360
+
 # Value Set Too Large to Validate
-The value set include has too many codes to validate (1,045)
-The value set expansion is incomplete
+The value set expansion is too large, and only a subset has been displayed
+The value set include has too many codes to validate (1,045), so each individual code has not been checked
+Target Code System http://snomed.info/sct doesn't have all content (content = not-present), so the target codes cannot be checked
 
 # Use of UCUM inherited from Genomics IG (nothing we can do about it)
 WARNING: Observation/gx-genomic-tmb: Observation.value.ofType(Quantity): UCUM Codes that contain human readable annotations like {Base} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked, and the Quantity.unit SHOULD contain the annotation
@@ -143,5 +131,4 @@ UCUM Codes that contain human readable annotations like {Base} can be misleading
 VALUESET_CONCEPT_DISPLAY_SCT_TAG_MIXED
 
 # This is a publisher induced issue.   The extension in question is introduced by the publisher, not sushi.   See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/New.20ConceptMap.20Warning.20--.20induced.20by.20IG.20Publisher 
-The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version {3} is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
-
+The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version 1.0 is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)

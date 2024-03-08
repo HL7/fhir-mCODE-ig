@@ -86,7 +86,7 @@ Id: mcode-gleason-grade-group-value-vs
 Title: "Gleason Grade Value Set"
 Description: "Gleason grade for prostatic cancer, with values that explicitly reference the Gleason score."
 * insert SNOMEDCopyrightForVS
-* include codes from system SCT where concept descendant-of #1515521000004104 "International Society of Pathology histologic grade group (qualifier value)"
+* include codes from system SCT where concept descendant-of #1515521000004104 "International Society of Urological Pathology histologic grade group (qualifier value)"
 
 ValueSet: LymphomaStagingMethodVS
 Id: mcode-lymphoma-staging-method-vs

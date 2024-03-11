@@ -1,11 +1,11 @@
-**The following changes occurred between [STU 3 publication](https://hl7.org/fhir/us/mcode/STU3/) (October 2023) and the STU 4 ballot (May 2024). For a history of previous changes, please see the prior change logs in the [appropriate versions](https://hl7.org/fhir/us/mcode/history.html).**
+**Sections 22.1 - 22.9 describe the changes between [STU 3 publication](https://hl7.org/fhir/us/mcode/STU3/) (October 2023) and the STU 4 ballot (May 2024). For a history of previous changes, please see the prior change logs in the [appropriate versions](https://hl7.org/fhir/us/mcode/history.html).**
 
 ### Addition of non-TNM Staging Profiles
 
 mCODE 4.0.0-ballot includes additional non-TNM staging profiles. These staging profiles are especially important for pediatric oncology.
 
-* [NeuroblastomaINSStage]
-* [NeuroblastomaINRGSSRiskAssessment]
+* [NeuroblastomaINSSStage]
+* [NeuroblastomaINRGSSStage]
 * [WilmsTumorStage]
 * [RhabdomyosarcomaClinicalGroupStage]
 

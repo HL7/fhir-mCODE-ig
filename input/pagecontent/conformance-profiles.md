@@ -30,8 +30,8 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [History of Metastatic Cancer][HistoryofMetastaticCancer] | no | Observation
 | [Human Specimen][HumanSpecimen] | no | Specimen |
 | [Karnofsky Performance Status][KarnofskyPerformanceStatus] | yes | US Core Observation Clinical Test Result |
-| [Lansky Play Performance Scale][LanskyPlayPerformanceScale] | yes | US Core Observation Clinical Test Result |
-| [Lymphoma Stage Profile][Lymphoma Stage Profile] | no | CancerStage |
+| [Lansky Play Performance Status][LanskyPlayPerformanceStatus] | yes | US Core Observation Clinical Test Result |
+| [Lymphoma Stage Profile][LymphomaStage] | no | CancerStage |
 | [mCODE Patient Bundle][MCODEPatientBundle] | no | Bundle  |
 | [mCODE Patient Group][MCODEPatientGroup] | no | Group  |
 | [Melanoma Breslow Depth Stage][MelanomaBreslowDepthStage] | no | CancerStage |
@@ -44,7 +44,7 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Prostate Gleason Grade Group][ProstateGleasonGradeGroup] | no | CancerStage
 | [Radiotherapy Course Summary][RadiotherapyCourseSummary] | yes | US Core Procedure |
 | [Radiotherapy Volume][RadiotherapyVolume] | no | BodyStructure |
-| [Rhabdomyosarcoma Clinical Group][RhabdomyosarcomaClinicalGroup] | no | CancerStage
+| [Rhabdomyosarcoma Clinical Group][RhabdomyosarcomaClinicalGroupStage] | no | CancerStage
 | [Rhabdomyosarcoma Risk Assessment][RhabdomyosarcomaRiskAssessment] | no | CancerRiskAssessment
 | [Secondary Cancer Condition][SecondaryCancerCondition] | yes | US Core Condition Problems Health Concerns |
 | [TNM Distant Metastases Category][TNMDistantMetastasesCategory] | no | Observation |

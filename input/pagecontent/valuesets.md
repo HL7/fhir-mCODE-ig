@@ -49,7 +49,6 @@ The following value sets are defined in this implementation guide:
 * [RadiotherapyVolumeTypeVS]
 * [RaiStagingMethodVS]
 * [RaiStageValueVS]
-* [ReasonOffStudyVS]
 * [SecondaryCancerDisorderVS]
 * [TeleradiotherapyCarbonIonBeamTechniqueVS]
 * [TeleradiotherapyElectronBeamTechniqueVS]
@@ -84,7 +83,7 @@ The following draft (maturity level 0) value sets are defined in this implementa
 
 * [ALLRiskAssessmentVS]
 * [CancerRiskAssessmentTypeVS]
-* [DeauvilleScoreVS]
+* [DeauvilleScaleVS]
 * [HistologicBehaviorAndTypeVS]
 * [HistologicGradeVS]
 * [HistologicGradingSystemVS]

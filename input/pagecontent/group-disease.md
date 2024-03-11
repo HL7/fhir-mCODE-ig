@@ -142,8 +142,8 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [MyelomaISSStage]
   * [MyelomaRISSStage]
   * [ProstateGleasonGradeGroup]
-  * [NeuroblastomaINSStage]
-  * [NeuroblastomaINRGSSRiskAssessment]
+  * [NeuroblastomaINSSStage]
+  * [NeuroblastomaINRGSSStage]
   * [WilmsTumorStage]
   * [RhabdomyosarcomaClinicalGroupStage]
 * Risk Assessment

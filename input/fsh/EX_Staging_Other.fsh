@@ -93,7 +93,7 @@ Description: "Example of Revised International Staging System (RISS) for myeloma
 * valueCodeableConcept = NCIT#C141395 "RISS Stage II Multiple Myeloma"
 
 Instance: neuroblastoma-inss-stage-III
-InstanceOf: NeuroblastomaINSStage
+InstanceOf: NeuroblastomaINSSStage
 Description: "Example of International Neuroblastoma Staging System (INSS) for neuroblastoma staging."
 * insert StagingInstanceRuleSet
 * valueCodeableConcept = SCT#409725009 "International neuroblastoma staging system stage 3 (finding)"

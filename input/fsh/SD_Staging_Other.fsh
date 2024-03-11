@@ -119,7 +119,7 @@ Description: "Gleason Grade Group for prostatic cancer"
 
 //Neuroblastoma//
 
-Profile: NeuroblastomaINSStage
+Profile: NeuroblastomaINSSStage
 Id: mcode-neuroblastoma-inss-stage
 Parent: CancerStage
 Title: "Neuroblastoma INSS Stage Profile"

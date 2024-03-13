@@ -63,7 +63,7 @@ Description: "Extended example as a mCODE Patient Bundle"
 // Other optional entries like vital signs, providers
 // Note: If named slices are used, then the first unnamed slice entry must be numbered
 * entry[+].resource = us-core-procedure-biopsy-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-procedure-biopsy-jenny-m"
+* entry[=].fullUrl = "http://example.org/fhir/Procedure/us-core-procedure-biopsy-jenny-m"
 * entry[+].resource = bodyweight-jenny-m-2018-03-16
 * entry[=].fullUrl = "http://example.org/fhir/Observation/bodyweight-jenny-m-2018-03-16"
 * entry[+].resource = us-core-observation-lab-neutrophils-jenny-m
@@ -73,10 +73,10 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[+].resource = us-core-smokingstatus-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-smokingstatus-jenny-m"
 * entry[+].resource = us-core-procedure-mammogram-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-procedure-mammogram-jenny-m"
+* entry[=].fullUrl = "http://example.org/fhir/Procedure/us-core-procedure-mammogram-jenny-m"
 * entry[+].resource = family-member-history-aunt-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/FamilyMemberHistory/family-member-history-aunt-jenny-m"
-* entry[+].resource = us-core-procedure-mammogram-jenny-m  // slice 31
+* entry[+].resource = family-member-history-uncle-jenny-m  // slice 31
 * entry[=].fullUrl = "http://example.org/fhir/FamilyMemberHistory/family-member-history-uncle-jenny-m"
 * entry[+].resource = us-core-diagnosticreport-lab-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/us-core-diagnosticreport-lab-jenny-m"

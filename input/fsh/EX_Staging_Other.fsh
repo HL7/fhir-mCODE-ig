@@ -50,7 +50,7 @@ InstanceOf: ProstateGleasonGradeGroup
 Description: "Example of Gleason Grade Group for prostatic cancer, with Gleason score 3 + 5 = 8."
 * insert StagingInstanceRuleSet
 * code = SCT#385377005 "Gleason grade finding for prostatic cancer (finding)"
-* valueCodeableConcept = SCT#1279718003 "International Society of Pathology grade group 4 (Gleason score 3 + 5 = 8) (qualifier value)"
+* valueCodeableConcept = SCT#1279718003 "International Society of Urological Pathology grade group 4 (Gleason score 3 + 5 = 8) (qualifier value)"
 
 Instance: hodgkins-lymphoma-stage-IIIe
 InstanceOf: LymphomaStage
@@ -93,7 +93,7 @@ Description: "Example of Revised International Staging System (RISS) for myeloma
 * valueCodeableConcept = NCIT#C141395 "RISS Stage II Multiple Myeloma"
 
 Instance: neuroblastoma-inss-stage-III
-InstanceOf: NeuroblastomaINSStage
+InstanceOf: NeuroblastomaINSSStage
 Description: "Example of International Neuroblastoma Staging System (INSS) for neuroblastoma staging."
 * insert StagingInstanceRuleSet
 * valueCodeableConcept = SCT#409725009 "International neuroblastoma staging system stage 3 (finding)"

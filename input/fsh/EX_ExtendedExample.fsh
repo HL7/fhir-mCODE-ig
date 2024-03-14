@@ -481,7 +481,7 @@ Instance: us-core-observation-lab-tumor-grade-jenny-m
 InstanceOf:  USCoreObservationLab
 Description: "Extended example: example showing DCIS diagnosis"
 * status = #final "final"
-* code = LNC#44648-4 "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham"
+* code = LNC#44648-4 "Histologic grade [Score] in Breast cancer specimen by Nottingham"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * valueCodeableConcept = LNC#LA27824-4 "Nottingham grade 2"
@@ -689,7 +689,7 @@ InstanceOf: RadiotherapyCourseSummary
 Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
 * status = #completed "completed"
 * code = SCT#1217123003 // "Radiotherapy course of treatment (regime/therapy)"
-* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
+//* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
 * bodySite = SCT#78904004 "Chest Wall Structure (body structure)"
 * reasonCode = ICD10CM#C50.811 "Malignant neoplasm of overlapping sites of right female breast"
 * extension[actualNumberOfSessions].valueUnsignedInt = 31

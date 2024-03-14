@@ -1,5 +1,7 @@
 <div markdown="1" class="note-to-balloters">
 Voters familiar with mCODE can focus their attention on the changes since STU 3, listed in the [Release Notes](change_log.html).
+
+The authors are asking for feedback on the design approach for representing specific systems (e.g., specific cancer staging systems and performance scales). For example, currently, there are two abstract profiles for Cancer Stage and Cancer Risk Assessment, with 8 additional profiles for specific staging systems and risk assessments that use the abstract profiles as the parent. The advantage of these tailored profiles help ensure more consistent communication of this data by providing detailed guidance on the FHIR representation of the data from these assessments. However, this specificity comes at the expense of the lack of scability of the appraoch, since a vast proliferation of profiles would be required to represent all cancer stage systems and risk assessments currently in use. An alternate option could be to keep the abstract Cancer Stage and Cancer Risk Assessment profiles, remove the specific stage system and risk assessment profiles, but add narrative and examples that explain how common staging systems and risk assessments should be represented using the abstract Cancer Stage and Cancer Risk Assessment profiles. We welcome your feedback.
 </div>
 
 
@@ -11,7 +13,7 @@ Cancer is among the leading causes of death worldwide. According to the National
 
 ### Overview
 
-mCODE consists of approximately 30 FHIR profiles organized into six thematic groups. Groups are introduced for pedagogical purposes only and have no other meaning or consequence:
+mCODE consists of approximately 40 FHIR profiles organized into six thematic groups. Groups are introduced for pedagogical purposes only and have no other meaning or consequence:
 
 * [Patient Information Group](group-patient.html)
 * [Disease Characterization Group](group-disease.html)
@@ -34,7 +36,7 @@ The overall scope of mCODE and the relationships between mCODE profiles is shown
 
 ### Data Dictionary
 
-Readers should take note of the [Data Dictionary](dictionary.html), a flattened list of data elements in mCODE in Microsoft Excel format. There is also a [Data Dictionary Differential](dictionary.html#data-dictionary-differential) that compares STU 3 with STU 2 on an element-by-element basis.
+Readers should take note of the [Data Dictionary](dictionary.html), a flattened list of data elements in mCODE in Microsoft Excel format. There is also a [Data Dictionary Differential](dictionary.html#data-dictionary-differential) that compares STU 4 with STU 3 on an element-by-element basis.
 
 The Data Dictionary comes with several caveats:
 

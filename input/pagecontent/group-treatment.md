@@ -38,7 +38,7 @@ For definition of key terms in radiotherapy, see the [Radiotherapy Glossary](glo
   * [NormalizationBasis]
 * **Medication**
   * [NormalizationBasis]
-**Radiotherapy**
+* **Radiotherapy**
   * [RadiotherapyDoseDeliveredToVolume]
   * [RadiotherapyModality]
   * [RadiotherapyModalityAndTechnique]

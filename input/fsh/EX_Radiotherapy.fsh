@@ -3,7 +3,7 @@ InstanceOf: RadiotherapyCourseSummary
 Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
 * status = #completed "completed"
 * code = SCT#1217123003 // "Radiotherapy course of treatment (regime/therapy)"
-* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
+//* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
 * bodySite = SCT#78904004 "Chest Wall Structure (body structure)"
 * reasonCode = ICD10CM#C50.811 "Malignant neoplasm of overlapping sites of right female breast"
 * extension[actualNumberOfSessions].valueUnsignedInt = 31

@@ -47,6 +47,7 @@ Description: "Codes that identify the kind of stage reported in an Observation, 
 * SCT#409720004 "International neuroblastoma staging system stage (observable entity)"
 * SCT#405931009 "National Wilms Tumor Study Group Stage (observable entity)"
 * SCT#405916000 "Intergroup rhabdomyosarcoma study post-surgical clinical group (observable entity)"
+* SCT#385377005 "Gleason grade finding for prostatic cancer (finding)"
 // unapproved attribute, do not include! * include codes from system SCT where concept is-a #260760003 "Staging of disease (attribute)"
 // NCI Thesaurus terms
 * NCIT#C134969 "AIDS-Related Kaposi Sarcoma Stage"

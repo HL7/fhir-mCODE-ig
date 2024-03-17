@@ -122,10 +122,11 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * SCT#1287648008 "Masaoka-Koga stage classification for thymic malignancies (tumor staging)"
 * SCT#1287643004 "International Neuroblastoma Risk Group staging system (tumor staging)"
 * SCT#1287646007 "International Germ Cell Consensus Classification (tumor staging)"
-* SCT_TBD#USCRS-34949 "Enneking surgical staging system (tumor staging)" // requested June 2023
+//* SCT_TBD#USCRS-34949 "Enneking surgical staging system (tumor staging)" // requested June 2023 //rejected //dropping bc there's an NCIT code
 * SCT_TBD#USCRS-34955 "UICC Classification of Malignant Tumours 8th Edition (tumor staging)" // requested June 2023
 * SCT_TBD#USCRS-34956 "UICC Classification of Malignant Tumours 7th Edition (tumor staging)"  // requested June 2023
-* SCT_TBD#USCRS-34947  "Surveillance Epidemiology and End Results Program Extent of Disease, 2018 edition (tumor staging)"    // requested 6/9/23
+//* SCT_TBD#USCRS-34947  "Surveillance Epidemiology and End Results Program Extent of Disease, 2018 edition (tumor staging)"    // requested 6/9/23 // code given for US edition only //
+* NCIT#C62610 "SEER Summary Staging Manual 2000"
 // NCIT Terms
 * NCIT#C186527 "Atypical Teratoid/Rhabdoid Tumor Staging System"
 * NCIT#C141206  "Chronic Lymphocytic Leukemia- Modified Rai Staging System"

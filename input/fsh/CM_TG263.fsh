@@ -3,7 +3,7 @@ InstanceOf: ConceptMap
 Usage: #definition
 * experimental = false
 * insert ConceptMapIntro(TG263, RadiotherapyTreatmentLocationVS)
-* insert AddGroup("TG263",SCT)
+* insert AddGroup("TG263", "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240201")
 * insert MapConcept(#A_Aorta, "Aorta", #15825003, "Aortic structure (body structure\)")
 * insert MapConcept(#A_Aorta_Asc, "Ascending Aorta", #54247002, "Ascending aorta structure (body structure\)")
 * insert MapConcept(#A_Brachiocephls, "Brachiocephalic Artery", #425444002, "Branch of brachiocephalic artery (body structure\)")

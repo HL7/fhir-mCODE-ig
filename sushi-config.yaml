@@ -70,7 +70,9 @@ pages:
   examples_genomics.md:
     title: Genomics Examples
   examples.md:
-    title: Extended Example
+    title: Extended Example - Adult
+  examples_pediatric.md:
+    title: Extended Example - Pediatric
   change_log.md:
     title: Release Notes
   glossary.md:
@@ -104,7 +106,8 @@ menu:
     Complete Listing: artifacts.html
   Examples:
     Basic Examples: basic_examples.html
-    Extended Example: examples.html
+    Extended Example - Adult: examples.html
+    Extended Example - Pediatric: examples_pediatric.html
     Genomics Examples: examples_genomics.html
   Release Notes: change_log.html
   More:

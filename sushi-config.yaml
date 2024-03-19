@@ -26,6 +26,7 @@ parameters:
   path-binary: input/attachments
   apply-wg: true
   default-version: true
+  version-comparison-master: true 
 copyrightYear: 2019+
 releaseLabel: STU4 Release
 pages:

@@ -26,6 +26,8 @@ parameters:
   path-binary: input/attachments
   apply-wg: true
   default-version: true
+  version-comparison-master: true 
+  auto-oid-root: 2.16.840.1.113883.4.642.40.15
 copyrightYear: 2019+
 releaseLabel: STU4 Release
 pages:

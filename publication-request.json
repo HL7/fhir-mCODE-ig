@@ -1,12 +1,12 @@
 {
     "package-id" : "hl7.fhir.us.mcode",
     "version" : "4.0.0-ballot",
-    "path" : "http://hl7.org/fhir/us/mcode/STU4-ballot",
-    "status" : "trial-use",
-    "sequence" : "STU 4",
+    "path" : "http://hl7.org/fhir/us/mcode/2024May-ballot",
+    "status" : "ballot",
+    "sequence" : "STU4-ballot",
     "milestone": false,
     "desc" : "Ballot version for STU4",
     "descmd" : "Ballot version for STU4",
     "changes" : "change_log.html",
-    "mode" : "milestone"
+    "mode" : "working"
   }

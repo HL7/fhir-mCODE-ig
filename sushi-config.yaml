@@ -29,7 +29,7 @@ parameters:
   version-comparison-master: true 
   auto-oid-root: 2.16.840.1.113883.4.642.40.15
 copyrightYear: 2019+
-releaseLabel: STU4 Release
+releaseLabel: ballot
 pages:
   index.md:
     title: Home

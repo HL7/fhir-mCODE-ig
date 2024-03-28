@@ -62,6 +62,8 @@ Description: "Extension capturing modality and technique of a given radiotherapy
 * ^extension[FMM].valueInteger = 3
 * insert ExtensionContext(DomainResource)
 * insert ExtensionContext(Extension)
+* insert ExtensionContext(Procedure)
+* insert ExtensionContext(ServiceRequest)
 * extension contains
     RadiotherapyModality named modality 1..1 MS and
     RadiotherapyTechnique named technique 0..* MS
@@ -164,9 +166,11 @@ Extension: RadiotherapyModality
 Id:        mcode-radiotherapy-modality
 Title:    "Radiotherapy Modality Extension"
 Description: "Extension capturing a modality of external beam or brachytherapy radiation procedures."
+// context removed as per FHIR-32243 for STU2 // re-added as part of STU4 because radiation therapy IG was created
 * insert ExtensionContext(DomainResource)
 * insert ExtensionContext(Extension)
-//* insert ExtensionContext(Procedure) - removed as per FHIR-32243
+* insert ExtensionContext(Procedure)
+* insert ExtensionContext(ServiceRequest)
 * ^extension[FMM].valueInteger = 3
 * value[x] only CodeableConcept
 * value[x] 1..1
@@ -175,9 +179,11 @@ Extension: RadiotherapyTechnique
 Id:        mcode-radiotherapy-technique
 Title:     "Radiotherapy Technique Extension"
 Description: "Extension capturing a technique of external beam or brachytherapy radiation procedures."
+// context removed as per FHIR-32243 for STU2 // re-added as part of STU4 because radiation therapy IG was created
 * insert ExtensionContext(DomainResource)
 * insert ExtensionContext(Extension)
-//* insert ExtensionContext(Procedure)  - removed as per FHIR-32243
+* insert ExtensionContext(Procedure)
+* insert ExtensionContext(ServiceRequest)
 * ^extension[FMM].valueInteger = 3
 * value[x] only CodeableConcept
 * value[x] 1..1
@@ -188,6 +194,7 @@ Title:     "Radiotherapy Number of Sessions Extension"
 Description: "The number of sessions in a course of radiotherapy."
 * insert ExtensionContext(DomainResource)
 * insert ExtensionContext(Extension)
+* insert ExtensionContext(Procedure)
 // * insert ExtensionContext(Procedure) - removed as per FHIR-32243
 * ^extension[FMM].valueInteger = 3
 * value[x] only unsignedInt
@@ -197,9 +204,10 @@ Extension: RadiotherapyDoseDeliveredToVolume
 Id: mcode-radiotherapy-dose-delivered-to-volume
 Title: "Radiotherapy Dose Delivered To Volume Extension"
 Description: "Dose delivered to a given radiotherapy volume."
+// context removed as per FHIR-32243 for STU2 // re-added as part of STU4 because radiation therapy IG was created
 * insert ExtensionContext(DomainResource)
 * insert ExtensionContext(Extension)
-// * insert ExtensionContext(Procedure) - removed as per FHIR-32243
+* insert ExtensionContext(Procedure)
 * ^extension[FMM].valueInteger = 3
 * extension contains
     volume 1..1 MS and

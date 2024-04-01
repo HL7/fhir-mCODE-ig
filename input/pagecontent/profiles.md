@@ -43,6 +43,7 @@ The following draft (maturity level 0) profiles have been defined for this imple
 * [ALLRiskAssessment]
 * [BodySurfaceArea]
 * [CancerRiskAssessment]
+* [DeauvilleScale]
 * [HistologicBehaviorAndType]
 * [HistologicGrade]
 * [LanskyPlayPerformanceStatus]

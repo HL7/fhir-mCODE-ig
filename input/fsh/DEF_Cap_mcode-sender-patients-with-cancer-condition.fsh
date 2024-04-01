@@ -14,7 +14,7 @@ Usage: #definition
 * rest[0].resource[0].interaction[1].documentation = "Identify Patient resources conforming to mCODE's CancerPatient profile via reverse chaining searching for conditions in a specific ValueSet."
 
 * rest[0].resource[0].searchParam[0].name = "_has:Condition:subject:code:in"
-* rest[0].resource[0].searchParam[0].type = #uri
+* rest[0].resource[0].searchParam[0].type = #token
 * rest[0].resource[0].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[0].searchParam[0].extension.valueCode = #SHALL
 

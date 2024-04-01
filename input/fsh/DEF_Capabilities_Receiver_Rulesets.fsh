@@ -54,7 +54,7 @@ RuleSet: mCODE_CapabilityStatement_Condition_Client_Common_Rules
 * rest[0].resource[1].interaction[0].documentation = "Identify Patient resources conforming to mCODE's CancerPatient profile via searching for conditions in a specific ValueSet."
 
 * rest[0].resource[1].searchParam[0].name = "code:in"
-* rest[0].resource[1].searchParam[0].type = #uri
+* rest[0].resource[1].searchParam[0].type = #token
 * rest[0].resource[1].searchParam[0].definition = "http://hl7.org/fhir/us/mcode/SearchParameter/Condition-code"
 * rest[0].resource[1].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[1].searchParam[0].extension.valueCode = #SHALL

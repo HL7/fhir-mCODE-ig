@@ -10,14 +10,14 @@ The DD intentionally omits certain elements in FHIR that are not expected to be 
 
 Downloads:
 
-* [STU 3 mCODE Data Dictionary (Excel download)](data-dictionary/mCODEDataDictionary-STU3.xlsx)
-* [STU 2.1 mCODE Data Dictionary (Excel download)](https://hl7.org/fhir/us/mcode/mCODEDataDictionary-STU2.1.xlsx)
+* [STU 4 mCODE Data Dictionary (Excel download)](data-dictionary/mCODEDataDictionary-STU4.xlsx)
+* [STU 3 mCODE Data Dictionary (Excel download)](https://hl7.org/fhir/us/mcode/mCODEDataDictionary-STU3.xlsx)
 
 
 ### Data Dictionary Differential
 
-The Data Dictionary Differential (DDD) provides a detailed comparison between mCODE STU 3 and mCODE STU 2.1. The DDD is provided for convenience in understanding the changes between STU 3 and STU 2.1, and is not a formal part of the specification.
+The Data Dictionary Differential (DDD) provides a detailed comparison between mCODE STU 4 and mCODE STU 3. The DDD is provided for convenience in understanding the changes between STU 4 and STU 3, and is not a formal part of the specification.
 
 Download link:
 
-* [mCODE Data Dictionary Differential STU3 versus STU2.1 (Excel download)](data-dictionary/mCODEDataDictionary-STU3-vs-STU2.1.xlsx)
+* [mCODE Data Dictionary Differential STU4 versus STU3 (Excel download)](data-dictionary/mCODEDataDictionary-STU4-vs-STU3.xlsx)

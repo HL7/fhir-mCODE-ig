@@ -51,10 +51,20 @@ The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' do
 A definition for CodeSystem 'http://www.ncbi.nlm.nih.gov/clinvar' could not be found, so the code cannot be validated
 Error from http://tx.fhir.org/r4: Unable to provide support for code system http://cancerstaging.org
 
-# Known HGVS validation error,  https://chat.fhir.org/#narrow/stream/179197-genomics/topic/Validation.20issue.20for.20HGVS.2FHGNC.20code 
+# Known HGVS validation error, https://chat.fhir.org/#narrow/stream/179197-genomics/topic/Validation.20issue.20for.20HGVS.2FHGNC.20code. These error messages sometimes show 0 use, but when I remove them here, they appear again.  
 ERROR: Observation/genomic-variant-fusion: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Error from http://tx.fhir.org/r4: Error parsing HGVS response: HTTP/1.1 500 Internal Server Error
 ERROR: Observation/genomic-variant-fusion: Observation.component[2].value.ofType(CodeableConcept): None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NM_005157.6(ABL1):c.1076T>G)
 ERROR: Observation/genomic-variant-germline-deletion: Observation.component[1].value.ofType(CodeableConcept): None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NG_005905.2:g.126148_126152del)
+ERROR: Observation/genomic-variant-germline-deletion: Observation.component[1].value.ofType(CodeableConcept): Error from http://tx.fhir.org/r4: Error parsing HGVS response: HTTP/1.1 503 Service Unavailable
+ERROR: Observation/genomic-variant-germline-deletion: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Error from http://tx.fhir.org/r4: Error parsing HGVS response: HTTP/1.1 500 Internal Server Error
+ERROR: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[13].resource/*Observation/gx-genomic-variant-somatic-polrmt*/.component[5].value.ofType(CodeableConcept).coding[0]: Error from http://tx.fhir.org/r4: Error parsing HGVS response: HTTP/1.1 503 Internal Server Error
+ERROR: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[13].resource/*Observation/gx-genomic-variant-somatic-polrmt*/.component[5].value.ofType(CodeableConcept).coding[0]: None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NP_005026.3:p.(Gly200Arg))
+ERROR: Observation/gx-genomic-variant-somatic-polrmt: Observation.component[5].value.ofType(CodeableConcept).coding[0]: Error from http://tx.fhir.org/r4: Error parsing HGVS response: HTTP/1.1 503 Service Unavailable
+ERROR: Observation/gx-genomic-variant-somatic-polrmt: Observation.component[5].value.ofType(CodeableConcept): None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NP_005026.3:p.(Gly200Arg))
+
+
+
+
 
 # NCIT Codes Not Included in NCIT fragment CodeSystem resource, created a PR to add them
 Unknown Code 'C148010' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
@@ -91,6 +101,7 @@ Unknown Code 'C96256' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesau
 Unknown Code 'C99750' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 Unknown Code 'C80135' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 Unknown Code 'C122458' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+Unknown Code 'C69424' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 Unknown Code 'C34.9 8140/3' in the system 'http://terminology.hl7.org/CodeSystem/icd-o-3' version '2000' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 Unknown Code 'C34.9 80463/3' in the system 'http://terminology.hl7.org/CodeSystem/icd-o-3' version '2000' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
@@ -110,7 +121,13 @@ INFORMATION: DiagnosticReport/gx-genomics-report-adam-anyperson: DiagnosticRepor
 INFORMATION: DiagnosticReport/gx-genomics-report-adam-anyperson: DiagnosticReport.result[14]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 
 
-# These are due to the fact that the HGVS terminology is not supported
+# These are due to the fact that the HGVS terminology is not supported. These information messages sometimes show 0 use, but when I remove them here, they appear again.
+INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/.result[7]: Details for Observation/gx-genomic-variant-somatic-polrmt matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/.result[7]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[16].resource/*Observation/gx-genomic-diagnostic-implication-polrmt*/.derivedFrom[0]: Details for Observation/gx-genomic-variant-somatic-polrmt matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[16].resource/*Observation/gx-genomic-diagnostic-implication-polrmt*/.derivedFrom[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: DiagnosticReport/gx-genomics-report-adam-anyperson: DiagnosticReport.result[7]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|4.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/gx-genomic-diagnostic-implication-polrmt: Observation.derivedFrom[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # Known OID error
 ERROR: ImplementationGuide/hl7.fhir.us.mcode: ImplementationGuide.definition.extension[9].extension[0].value.ofType(string): The value provided ('auto-oid-root') was not found in the value set 'ig-parameters Codes ValueSet' (http://hl7.org/fhir/tools/ValueSet/ig-parameters|0.1.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'auto-oid-root' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|0.1.0'; The provided code '#auto-oid-root' was not found in the value set 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|0.1.0')
@@ -138,9 +155,6 @@ Target Code System http://snomed.info/sct doesn't have all content (content = no
 WARNING: Observation/gx-genomic-tmb: Observation.value.ofType(Quantity): UCUM Codes that contain human readable annotations like {Base} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked, and the Quantity.unit SHOULD contain the annotation
 UCUM Codes that contain human readable annotations like {Base} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked, and the Quantity.unit SHOULD contain the annotation
 
-# IG Publisher Spurious Messages
-VALUESET_CONCEPT_DISPLAY_SCT_TAG_MIXED
-
 # This is a publisher induced issue.   The extension in question is introduced by the publisher, not sushi.   See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/New.20ConceptMap.20Warning.20--.20induced.20by.20IG.20Publisher 
 The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version 1.0 is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
 
@@ -149,3 +163,6 @@ There are multiple different potential matches for the url 'http://snomed.info/s
 
 # This is a temporary codesystem for codes not yet published in SNOMEDCT
 INFORMATION: CodeSystem/snomed-requested-cs: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+
+# This is a SNOMED limitation. These are the intended codes for this VS. Nothing we can change. 
+INFORMATION: ValueSet/mcode-radiotherapy-treatment-location-vs: ValueSet.compose.include[0]: This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended  (examples for FSN: [Aortic structure (body structure), Ascending aorta structure (body structure), Branch of brachiocephalic artery (body structure), Carotid artery structure (body structure), Structure of celiac artery (body structure)] and examples for no FSN: [Tumor bed (morphologic abnormality), Scar (morphologic abnormality), Vaginal cuff (morphologic abnormality)])

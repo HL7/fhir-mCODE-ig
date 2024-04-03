@@ -29,7 +29,7 @@ parameters:
   version-comparison-master: true 
   auto-oid-root: 2.16.840.1.113883.4.642.40.15
 copyrightYear: 2019+
-releaseLabel: 2024May
+releaseLabel: STU4 Ballot
 pages:
   index.md:
     title: Home
@@ -73,6 +73,8 @@ pages:
     title: Genomics Examples
   examples.md:
     title: Extended Example
+  examples_pediatric.md:
+    title: Extended Pediatric Example
   change_log.md:
     title: Release Notes
   glossary.md:
@@ -107,6 +109,7 @@ menu:
   Examples:
     Basic Examples: basic_examples.html
     Extended Example: examples.html
+    Extended Pediatric Example: examples_pediatric.html
     Genomics Examples: examples_genomics.html
   Release Notes: change_log.html
   More:

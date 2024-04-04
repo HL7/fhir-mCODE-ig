@@ -149,7 +149,9 @@ Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/v2-0360|2.7|
 # Value Set Too Large to Validate
 The value set expansion is too large, and only a subset has been displayed
 The value set include has too many codes to validate (1,045), so each individual code has not been checked
-Target Code System http://snomed.info/sct doesn't have all content (content = not-present), so the target codes cannot be checked
+
+# Noted. SNOMED is the target code system.
+Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
 
 # Use of UCUM inherited from Genomics IG (nothing we can do about it)
 WARNING: Observation/gx-genomic-tmb: Observation.value.ofType(Quantity): UCUM Codes that contain human readable annotations like {Base} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked, and the Quantity.unit SHOULD contain the annotation

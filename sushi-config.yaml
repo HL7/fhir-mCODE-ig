@@ -15,7 +15,7 @@ fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.us.core: 5.0.1
   hl7.fhir.uv.genomics-reporting: 2.0.0
-  hl7.fhir.uv.extensions: current
+  hl7.fhir.uv.extensions: 5.1.0-cibuild
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
     valueCode: cic

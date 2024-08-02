@@ -354,7 +354,7 @@ Description: "Hemoglobin lab result to support TNMStageGroup example"
 
 Instance: history-of-cancer-metastatic-to-liver
 InstanceOf: HistoryOfMetastaticCancer
-Description: "Example showing history of metastatic cancer in liver."
+Description: "Example showing history of metastatic cancer in the liver."
 * status = #final 
 * code = SCT#1098951000119108 "History of cancer metastatic to liver (situation)"
 * subject = Reference(cancer-patient-adam-everyman)

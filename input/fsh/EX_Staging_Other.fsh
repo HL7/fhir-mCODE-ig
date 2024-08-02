@@ -1,6 +1,6 @@
 Instance: primary-cancer-condition-nonspecific
 InstanceOf: PrimaryCancerCondition
-Description: "An unspecific Primary Cancer Condition (PCC) used in IG examples. Any real PCC would use a specific diagnostic code."
+Description: "An unspecified Primary Cancer Condition (PCC) used in IG examples. Any real PCC would use a specific diagnostic code."
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item
@@ -80,7 +80,7 @@ Description: "Example of Clark level staging for melanoma."
 
 Instance: multiple-myeloma-iss-stage-II
 InstanceOf: MyelomaISSStage
-Description: "Example of use of International Staging System (ISS) for myeloma staging."
+Description: "Example using the International Staging System (ISS) for myeloma staging."
 * insert StagingInstanceRuleSet
 * code = NCIT#C139007 "International Staging System Stage"
 * valueCodeableConcept = NCIT#C70659 "ISS Stage II Multiple Myeloma"

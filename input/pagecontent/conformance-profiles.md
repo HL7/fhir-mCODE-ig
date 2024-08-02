@@ -1,6 +1,6 @@
 ### Profile Base
 
-Most mCODE profiles are based on US Core profiles defined in the [US Core Implementation Guide (v4.0.1)](http://hl7.org/fhir/us/core/index.html). For example, [CancerPatient] is based on the [US Core Patient][USCorePatient] profile. Because of the way profiles work in FHIR, any resource that validates against an mCODE profile that is based a US Core profile will automatically be in compliance with the US Core profile.
+Most mCODE profiles are based on US Core profiles defined in the [US Core Implementation Guide (v4.0.1)](http://hl7.org/fhir/us/core/index.html). For example, [CancerPatient] is based on the [US Core Patient][USCorePatient] profile. Because of the way profiles work in FHIR, any resource that validates against an mCODE profile that is based on a US Core profile will automatically be in compliance with the US Core profile.
 
 Where US Core does not provide an appropriate base profile, mCODE profiles FHIR resources. An example is [CancerDiseaseStatus], based on Observation because US Core does not provide a profile for non-laboratory observations.
 
@@ -101,7 +101,7 @@ Outside of data elements that must be implemented, additional data elements MAY 
 
 The following rules determine which data elements must be implemented:
 
-1. Only data elements in implemented profiles (as declared in the Sender or Receiver's CapabilityStatement) can be Must-Implement (MI). In other words, if a profile is not implemented, then none of the elements of that profile must be implemented, regardless of MS flags[^3]. *This rule takes precedence over subsequent rules.*
+1. Only data elements in implemented profiles (as declared in the Sender or Receiver's CapabilityStatement) can be designated as Must-Implement (MI). In other words, if a profile is not implemented, then none of the elements of that profile must be implemented, regardless of MS flags[^3]. *This rule takes precedence over subsequent rules.*
 2. A top-level element with an MS flag SHALL be implemented.
 3. A nested element (at the second-level or below) with MS flag whose parents all are implemented SHALL be implemented. Note that this includes parent elements that have been implemented electively.
 4. An element whose cardinality is 0..0 does NOT need to be implemented, regardless of MS flag[^4].
@@ -115,7 +115,7 @@ More complex cases involving references, sliced arrays, and choice types are out
 An mCODE data element is **required** if any of the following criteria are met:
 
 * The element is a top-level element (a first-level property of the resource) and its minimum cardinality is > 0 in the profile.
-* The element not a top-level element (a second-level property or below), its minimum cardinality is > 0, and all elements directly containing that element have minimum cardinality > 0 in the profile.
+* The element is not a top-level element (a second-level property or below), its minimum cardinality is > 0, and all elements directly containing that element have minimum cardinality > 0 in the profile.
 
 In terms of instances, if profile P has an optional element A whose child element B has minimum cardinality > 0, then any instance where element A is present will only conform to P if element B is present.
 
@@ -134,7 +134,7 @@ The following table summarizes how Must-Implement (MI) requirements derive from 
 | 7 | Element is a [Reference() data type](https://www.hl7.org/fhir/references.html#2.3.0) with no MS flag on any referenced resource or profile | MI all resources or profiles in the reference that are in Sender's capability statement | MI all resources or profiles in the reference unless they are outside the scope of the Receiver's capability statement | [`Tumor.extension[mcode-related-condition].value[x]`][Tumor] |
 | 8 | Element is a [Reference() data type](https://www.hl7.org/fhir/references.html#2.3.0) with an MS flag on one or more of the referenced types | MI only on the resources or profiles in the reference that are explicitly MS-flagged, and only if they are in the Sender's capability statement | MI only on the resources or profiles in the reference that are explicitly MS-flagged, and only if they are in the Receiver's capability statement | [US Core DocumentReference Profile version 3.2](https://bit.ly/us-core-2021Jan-StructureDefinition-us-core-documentreference) `DocumentReference.author` |
 | 9 | Element is a [backbone data type](https://www.hl7.org/fhir/backboneelement.html#2.29.0) | No implementation requirement on sub-elements unless they are explicitly MS-flagged  | same | [`SDC QuestionnaireResponse.item`](https://hl7.org/fhir/uv/sdc/2019May/sdc-questionnaireresponse.html) (subelement `QuestionResponse.item.definition` is not MS)  |
-| 10 | Element is an [array that is sliced](https://www.hl7.org/fhir/profiling.html#slicing), with no MS flag on any slice | SHALL be able to populate the array, but [no implementation requirement any particular slice](https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-HowdoIinterpret'MustSupport'withrespecttoslicing?) | MI array and its contents, including any or all defined slices. |
+| 10 | Element is an [array that is sliced](https://www.hl7.org/fhir/profiling.html#slicing), with no MS flag on any slice | SHALL be able to populate the array, but [no implementation requirement any particular slice](https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-HowdoIinterpret'MustSupport'withrespecttoslicing?) | MI array and its contents, including any or all defined slices |
 | 11 | Element is an [array that is sliced](https://www.hl7.org/fhir/profiling.html#slicing), with MS flags on one or more slices | MI only on the slices that have MS flags | same | [`TNMStageGroup.hasMember`][TNMStageGroup] |
 | 12 | Element that has MS flag is a slice and the containing array does not have an MS flag | No implementation requirement on the slice | same | [US Core Patient Profile version 3.1.1](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html) `Patient.extension:us-core-race` (because `Patient.extension` is not MS) |
 {: .grid }
@@ -143,9 +143,9 @@ Footnotes:
 
 [^1]: Although not common practice, profiles can have MS flags at the very top level (see [CancerPatient] for example).
 
-[^2]: Typically, data would reasonably be expected to conform to an mCODE profile SHOULD conform to that profile. This rule is intended to discourage an mCODE Data Sender from creating different representation for data that *should* fall into the scope of mCODE. Compliance to this kind of condition is difficult to enforce, so it is expressed as a SHOULD.
+[^2]: Typically, data reasonably expected to conform to an mCODE profile SHOULD conform to that profile. This rule is intended to discourage an mCODE Data Sender from creating different representations for data that *should* fall into the scope of mCODE. Compliance to this kind of condition is difficult to enforce, so it is expressed as a SHOULD.
 
-[^3]: However, in FHIR, when exchanging ANY resources, systems SHOULD retain unknown extensions when they are capable of doing so, and they they SHOULD retain core elements when they are capable of doing so (see <https://www.hl7.org/fhir/extensibility.html#exchange>)
+[^3]: However, in FHIR, when exchanging ANY resources, systems SHOULD retain unknown extensions when they are capable of doing so, and they SHOULD retain core elements when they are capable of doing so (see <https://www.hl7.org/fhir/extensibility.html#exchange>)
 
 [^4]: When inheriting from another profile, it is possible to set the upper cardinality to zero on an element that was MS in the parent profile. For example, you could inherit from US Core Patient, but forbid the patient’s name for privacy reasons.  In this case, neither Sender nor Receiver are expected to populate or support the element – in fact, it would be an error if the element were present.
 

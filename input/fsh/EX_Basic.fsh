@@ -394,18 +394,17 @@ Description: "Example of intermediate histologic grade."
 * status = #final "final"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 
-
-Instance: tumor-morphology-report-non-small-cell-intermediate-grade
-InstanceOf: TumorMorphology
-Description: "Example of a tumor morphology report showing non-small cell cancer with an intermediate histologic grade."
-* extension[relatedCondition].valueReference = Reference(primary-cancer-condition-nsclc)
-* subject = Reference(cancer-patient-john-anyperson)
-* effectiveDateTime = "2019-04-01"
-* specimen = Reference(human-specimen-lung)
-* result[0] = Reference(histologic-grade-intermediate)
-* result[1] = Reference(histologic-behavior-and-type-non-small-cell)
-* status = #final "final"
-* issued = "2019-04-15T13:28:17.239+02:00"
+//Instance: tumor-morphology-report-non-small-cell-intermediate-grade
+//InstanceOf: TumorMorphology
+//Description: "Example of a tumor morphology report showing non-small cell cancer with an intermediate histologic grade."
+//* extension[relatedCondition].valueReference = Reference(primary-cancer-condition-nsclc)
+//* subject = Reference(cancer-patient-john-anyperson)
+//* effectiveDateTime = "2019-04-01"
+//* specimen = Reference(human-specimen-lung)
+//* result[0] = Reference(histologic-grade-intermediate)
+//* result[1] = Reference(histologic-behavior-and-type-non-small-cell)
+//* status = #final "final"
+//* issued = "2019-04-15T13:28:17.239+02:00"
 
 Instance: rhabdomyosarcoma-risk-assessment-low
 InstanceOf: RhabdomyosarcomaRiskAssessment

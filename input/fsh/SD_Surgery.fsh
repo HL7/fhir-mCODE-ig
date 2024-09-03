@@ -2,7 +2,7 @@ Profile:  CancerRelatedSurgicalProcedure
 Parent:   USCoreProcedure
 Id: mcode-cancer-related-surgical-procedure
 Title:    "Cancer-Related Surgical Procedure Profile"
-Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the reasonReference and reasonCode to cancer conditions, one of which is required."
+Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the reasonReference and reasonCode to cancer conditions, one of which is required. If a procedure occurs that is NOT a surgical procedure, use the US Core Procedure profile."
 * ^extension[FMM].valueInteger = 3
 * subject ^definition = "The patient on whom the procedure was performed"
 * obeys mcode-reason-required

@@ -25,7 +25,7 @@ Description: "Example of Primary Cancer Condition - hematologic cancer"
 * onsetDateTime = "2020-05-12"
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 * stage.summary = NCIT#C80135 "Binet Stage B"
-* stage.assessment = Reference(binet-stage-group-B)
+//* stage.assessment = Reference(binet-stage-group-B)
 
 Instance: secondary-cancer-condition-brain-mets
 InstanceOf: SecondaryCancerCondition
@@ -62,6 +62,7 @@ Description: "Example of Cancer-Related Comorbidities"
 // absent
 * extension[comorbidConditionAbsent][0].valueCodeableConcept = SCT#414916001 "Obesity (disorder)"
 * extension[comorbidConditionAbsent][1].valueCodeableConcept = SCT#19829001 "Disorder of lung (disorder)"
+* category = ObsCat#social-history "Social History"
 
 Instance: john-anyperson-chf
 InstanceOf: USCoreCondition
@@ -196,6 +197,7 @@ Description: "Example of ECOG Performance Status"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * valueInteger = 0
 * interpretation = LNC#LA9622-7 "Fully active, able to carry on all pre-disease performance without restriction"
+* category = ObsCat#survey "Survey"
 
 Instance: karnofsky-performance-status-normal-activity
 InstanceOf: KarnofskyPerformanceStatus
@@ -208,7 +210,7 @@ Description: "Example of Karnofsky Performance Status"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * valueInteger = 90
 * interpretation = LNC#LA29176-7 "Able to carry on normal activity; minor signs or symptoms of disease"
-
+* category = ObsCat#survey "Survey"
 
 Instance: cancer-related-surgical-procedure-lobectomy
 InstanceOf: CancerRelatedSurgicalProcedure
@@ -248,6 +250,7 @@ Description: "Example of TNM Clinical Stage Group"
 * hasMember[0] = Reference(tnm-clinical-primary-tumor-category-cT3)
 * hasMember[1] = Reference(tnm-clinical-regional-nodes-category-cN3)
 * hasMember[2] = Reference(tnm-clinical-distant-metastases-category-cM0)
+* category = ObsCat#imaging "Imaging"
 
 Instance: tnm-clinical-distant-metastases-category-cM0
 InstanceOf: TNMDistantMetastasesCategory
@@ -260,6 +263,7 @@ Description: "Example of TNM Clinical Distant Metastases Category"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = SCT#1229901006 "American Joint Committee on Cancer cM0 (qualifier value)"
+* category = ObsCat#imaging "Imaging"
 
 Instance: tnm-clinical-primary-tumor-category-cT3
 InstanceOf: TNMPrimaryTumorCategory
@@ -272,6 +276,7 @@ Description: "Example of TNM Clinical Primary Tumor Category"
 * subject = Reference(cancer-patient-john-anyperson)
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * effectiveDateTime = "2019-04-01"
+* category = ObsCat#imaging "Imaging"
 
 Instance: tnm-clinical-regional-nodes-category-cN3
 InstanceOf: TNMRegionalNodesCategory
@@ -284,6 +289,7 @@ Description: "Example of TNM Clinical Regional Nodes Category"
 * subject = Reference(cancer-patient-john-anyperson)
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * effectiveDateTime = "2019-04-01"
+* category = ObsCat#imaging "Imaging"
 
 Instance: cancer-related-medication-request-gefitinib
 InstanceOf: CancerRelatedMedicationRequest
@@ -351,6 +357,7 @@ Description: "Hemoglobin lab result to support TNMStageGroup example"
 * effectiveDateTime = "2020-03-06"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 * valueQuantity = 13.5 'g/dl' "g/dl"
+* category = ObsCat#laboratory "laboratory"
 
 Instance: history-of-cancer-metastatic-to-liver
 InstanceOf: HistoryOfMetastaticCancer
@@ -360,6 +367,7 @@ Description: "Example showing history of metastatic cancer in liver."
 * subject = Reference(cancer-patient-adam-everyman)
 * effectiveDateTime = "2018-11-16"
 * performer = Reference(us-core-practitioner-owen-oncologist)
+* category = ObsCat#social-history "Social History"
 
 Instance: no-history-of-metastatic-cancer 
 InstanceOf: HistoryOfMetastaticCancer
@@ -370,6 +378,7 @@ Description: "Example showing no history of metastatic cancer"
 * effectiveDateTime = "2018-11-16"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 * valueBoolean = false
+* category = ObsCat#social-history "Social History"
 
 Instance: histologic-behavior-and-type-non-small-cell
 InstanceOf: HistologicBehaviorAndType
@@ -406,6 +415,7 @@ Description: "Example of intermediate histologic grade."
 //* status = #final "final"
 //* issued = "2019-04-15T13:28:17.239+02:00"
 
+/*
 Instance: rhabdomyosarcoma-risk-assessment-low
 InstanceOf: RhabdomyosarcomaRiskAssessment
 Description: "Example of rhabdomyosarcoma with a low risk assessment."
@@ -416,7 +426,6 @@ Description: "Example of rhabdomyosarcoma with a low risk assessment."
 * effectiveDateTime = "2021-04-01"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 
-
 Instance: all-risk-assessment-high
 InstanceOf: ALLRiskAssessment
 Description: "Example of leukemia with a standard risk assessment."
@@ -426,6 +435,7 @@ Description: "Example of leukemia with a standard risk assessment."
 * focus = Reference(primary-cancer-condition-nonspecific)
 * effectiveDateTime = "2021-04-01"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
+*/
 
 Instance: john-anyperson-hd
 InstanceOf: USCoreCondition
@@ -462,6 +472,7 @@ Description: "Example of Patient"
 * extension[USCoreEthnicity].extension[text].valueString = "Not Hispanic or Latino"
 * extension[USCoreBirthSex].valueCode = #F
 
+/*
 Instance: lansky-play-performance-status-twenty
 InstanceOf: LanskyPlayPerformanceStatus
 Description: "Example of Lansky Play Performance Status."
@@ -483,6 +494,7 @@ Description: "Example of Deauville Scale."
 * interpretation = NCIT#C99750 "London Deauville Criteria Point Scale 5"
 * status = #final "final"
 * effectiveDateTime = "2019-04-01"
+*/
 
 Instance: body-surface-area-example
 InstanceOf: BodySurfaceArea

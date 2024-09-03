@@ -81,7 +81,7 @@ Description: "The result of a tumor marker test. Tumor marker tests are generall
 * extension[relatedCondition] ^definition = "Associates the tumor marker test with a condition, if one exists. Condition can be given by a reference or a code. In the case of a screening test such as prostate-specific antigen (PSA), there may be no existing condition to reference."
 
 Profile: HumanSpecimen
-Parent: Specimen
+Parent: USCoreSpecimen
 Id: mcode-human-specimen
 Title:  "Human Specimen Profile"
 Description:  "A specimen taken from a Patient for the purpose of oncology-related testing. The profile includes extensions to specify a more precise body site and an identifier of source body structure at that site (for example, a tumor identifier)."

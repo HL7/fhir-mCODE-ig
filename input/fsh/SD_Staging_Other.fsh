@@ -1,3 +1,4 @@
+/*
 //  Leukemia Stage
 
 Profile: CLLBinetStage
@@ -160,3 +161,4 @@ Description: "Clinical stage group for rhabdomyocaroma."
 * ^extension[FMM].valueInteger = 0
 * code = SCT#405916000 // Intergroup rhabdomyosarcoma study post-surgical clinical group (observable entity)
 * value[x] from RhabdomyosarcomaClinicalGroupValueVS (required)
+*/

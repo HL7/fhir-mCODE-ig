@@ -1,5 +1,5 @@
 Profile: TumorMorphology
-Parent: Observation
+Parent: USCoreObservationSimple
 Id: mcode-tumor-morphology
 Title: "Tumor Morphology Report"
 Description: "Tumor morphology can include information on the type of cell (type), the malignant potential of the tumor (behavior), and the degree of differentiation (grade). For some cancers, the type and behavior are described in the ICD-O-3 code."
@@ -42,7 +42,7 @@ Profile: HistologicGrade
 Parent: USCoreObservationLab
 Id: mcode-histologic-grade
 Title: "Histologic Grade"
-Description: "Histologic grade determined from examination of tumor sample."
+Description: "Histologic grade determined from examination of tumor sample. The grade system should be captured using the method data element."
 * ^extension[FMM].valueInteger = 4
 * specimen only Reference(HumanSpecimen)
 * specimen 0..1 MS  // is not MS in US Core 4.0.0 and 5.0.1 

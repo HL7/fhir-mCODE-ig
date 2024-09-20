@@ -12,6 +12,8 @@ In this example, the radiotherapy course encompasses three phases. The course su
 
 At the phase level, each phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same volume or volumes. Because of their spatial relationship or the technique used, all volumes do not necessarily receive the same total dose during a phase. Phases may occur in parallel, overlap, or in alternating temporal patterns.
 
+Course and Phase definitions follow the recommendations of the American Association of Physicists in Medicine (AAPM) Operational Ontology for Oncology ([O3](https://pubmed.ncbi.nlm.nih.gov/37244628/)).
+
 
 ### Conformance
 

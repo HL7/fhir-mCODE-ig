@@ -83,14 +83,14 @@ InstanceOf: MyelomaISSStage
 Description: "Example of use of International Staging System (ISS) for myeloma staging."
 * insert StagingInstanceRuleSet
 * code = NCIT#C139007 "International Staging System Stage"
-* valueCodeableConcept = NCIT#C70659 "ISS Stage II Multiple Myeloma"
+* valueCodeableConcept = NCIT#C70659 "ISS Stage II Plasma Cell Myeloma"
 
 Instance: multiple-myeloma-riss-stage-II
 InstanceOf: MyelomaRISSStage
 Description: "Example of Revised International Staging System (RISS) for myeloma staging."
 * insert StagingInstanceRuleSet
 * code = NCIT#C141392 "RISS Stage"
-* valueCodeableConcept = NCIT#C141395 "RISS Stage II Multiple Myeloma"
+* valueCodeableConcept = NCIT#C141395 "RISS Stage II Plasma Cell Myeloma"
 
 Instance: neuroblastoma-inss-stage-III
 InstanceOf: NeuroblastomaINSSStage

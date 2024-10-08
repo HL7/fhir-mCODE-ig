@@ -315,7 +315,7 @@ Description: "Example of CancerRelatedMedicationRequest - Chemo Infusion"
 * status = MedReqStatus#completed
 * intent = MedReqIntent#order
 * authoredOn = "2019-04-01"
-* medicationCodeableConcept = RXN#309311 "CISplatin 50 MG per 50 ML Injectable Solution"
+* medicationCodeableConcept = RXN#309311 "cisplatin 1 MG/ML Injectable Solution" 
 * reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
 * requester = Reference(us-core-practitioner-kyle-anydoc)
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
@@ -335,7 +335,7 @@ Description: "Example of CancerRelatedMedicationRequest - Chemo Infusion"
 * statusReason = SCT#407563006 "Treatment not tolerated (situation)"
 * intent = MedReqIntent#order
 * authoredOn = "2019-05-15"
-* medicationCodeableConcept = RXN#309311 "CISplatin 50 MG per 50 ML Injectable Solution"
+* medicationCodeableConcept = RXN#309311 "cisplatin 1 MG/ML Injectable Solution"
 * reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
 * requester = Reference(us-core-practitioner-kyle-anydoc)
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"

@@ -162,7 +162,7 @@ Description: "Allowed techniques for brachytherapy modality internal radiotherap
 
 ValueSet: BrachytherapyLowDoseRateTemporaryTechniqueVS
 Id: mcode-brachytherapy-low-dose-rate-temporary-technique-vs
-Title: "Brachytherapy Low Dose Rate Temporary Radation Technique Value Set"
+Title: "Brachytherapy Low Dose Rate Temporary Radiation Technique Value Set"
 Description: "Allowed techniques for brachytherapy modality Low Dose Rate using temporary radiation source"
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 3

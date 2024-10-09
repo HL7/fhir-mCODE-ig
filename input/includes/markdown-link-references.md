@@ -23,6 +23,7 @@
 [USCoreDiagnosticReport]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html
 [USCoreOrganization]:  http://hl7.org/fhir/us/core/StructureDefinition-us-core-organization.html
 
+
 <!-- R4 -->
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html
 [R4Observation]: http://hl7.org/fhir/R4/observation.html

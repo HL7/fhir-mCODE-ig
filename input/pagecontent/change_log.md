@@ -49,7 +49,7 @@ Body surface area is measured/calculated commonly for pediatric patients and use
 
 ### Clarified Codes for Cancer Disease Status
 
-Adjusted the [ConditionStatusTrendVS] to avoid confusion. In mCODE STU3, some of the values can be true at the same time (example: a patient’s condition could have improved AND be in full remission). However, value[x] is 0.1. As a result, the codes for in full remission, partial remission, and distant metastasis present were moved into a maximum value set to assure backward compatbility with this change.
+Adjusted the [ConditionStatusTrendVS] to avoid confusion. In mCODE STU3, some of the values can be true at the same time (example: a patient’s condition could have improved AND be in full remission). However, value[x] is 0.1. As a result, the codes for in full remission, partial remission, and distant metastasis present were moved into a maximum value set to ensure backward compatibility with this change.
 
 
 <br/>
@@ -63,7 +63,7 @@ Adjusted the [ConditionStatusTrendVS] to avoid confusion. In mCODE STU3, some of
 ### Inactive SNOMED CT Codes Replaced
 SNOMED CT can declare concepts inactive if they are duplicate, ambiguous, erroneous, or outdated. Several SNOMED CT codes used in mCODE STU 2 became inactive and had to be replaced for STU 3:
 
-* [Tumor] profile's morphology element was bound to 367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)" which is now inactive. This code has been replaced by an intensional value set, using code 1240414004 "Malignant neoplasm (morphologic abnormality)" and its descendants. This allows more detailed description of the tumor morphology. The old code remains conformant for backwards compatiblity, but implementers should migrate to the new, replacement value set.
+* [Tumor] profile's morphology element was bound to 367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)" which is now inactive. This code has been replaced by an intensional value set, using code 1240414004 "Malignant neoplasm (morphologic abnormality)" and its descendants. This allows for a more detailed description of the tumor morphology. The old code remains conformant for backwards compatibility, but implementers should migrate to the new, replacement value set.
 * [primary-cancer-condition-jenny-m] Histology-Morphology-Behavior Extension: In this example instance, the inactive code 413448000 "Adenocarcinoma, no subtype, intermediate grade" has been replaced by 82711006 "Infiltrating duct carcinoma (morphologic abnormality)"
 * [primary-cancer-condition-nsclc] Histology-Morphology-Behavior Extension: In this example, the inactive code 35917007 "Adenocarcinoma, no subtype (morphologic abnormality)" has been replaced by 1187332001 "Adenocarcinoma (morphologic abnormality)"  
 
@@ -87,7 +87,7 @@ Recurrences and unrelated cancers sometimes occur years after previous metastati
 
 ### Expanded Staging Type and Staging Method Value Sets ([FHIR-41162](https://jira.hl7.org/browse/FHIR-41162), [FHIR-41164](https://jira.hl7.org/browse/FHIR-41164), [FHIR-41032](https://jira.hl7.org/browse/FHIR-41032), [FHIR-41030](https://jira.hl7.org/browse/FHIR-41030))
 
-Additional stage type identifiers and staging methods were added to [CancerStageTypeVS] and [CancerStagingMethodVS]. These are values that could potentially be used in the future and inclusions or exclusions do not affect the immediately functionality of mCODE. Codes associated with pediatric cancers were moved out of mCODE in anticipation of an IG focused on pediatric cancer. Certain codes requested from SNOMED were added. Again, since the bindings of these values sets are extensible, inclusion or exclusion of particular values does not affect functionality.
+Additional stage type identifiers and staging methods were added to [CancerStageTypeVS] and [CancerStagingMethodVS]. These are values that could potentially be used in the future and inclusions or exclusions do not affect the immediate functionality of mCODE. Codes associated with pediatric cancers were moved out of mCODE in anticipation of an IG focused on pediatric cancer. Certain codes requested from SNOMED were added. Again, since the bindings of these value sets are extensible, inclusion or exclusion of particular values does not affect functionality.
 
 ### Clarification of Observation.code and Observation.method in CancerStage ([FHIR-41163](https://jira.hl7.org/browse/FHIR-41163))
 
@@ -152,7 +152,7 @@ The binding strength for these value sets remains "preferred", meaning that the 
 
 #### Common Parent Profile for TNM and non-TNM Staging
 
-Previously, the [CancerStage] profile contained optional elements specific to TNM staging. This was confusing because CancerStage was intended also for non-TNM staging. To avoid this ambiguity, [CancerStage] no longer contains the optional TNM-specific content. A separate child profile, [TNMStageGroup], has been added as a template for TNM-specific staging. This change is backward compatible, since any resource complying with the STU 2 version (named CancerStageGroup) will comply with STU 3 CancerStage, and every resource complying to TNMStageGroup automatically complies to CancerStage.
+Previously, the [CancerStage] profile contained optional elements specific to TNM staging. This was confusing because CancerStage was also intended for non-TNM staging. To avoid this ambiguity, [CancerStage] no longer contains the optional TNM-specific content. A separate child profile, [TNMStageGroup], has been added as a template for TNM-specific staging. This change is backward compatible, since any resource conformant with the STU 2 version (named CancerStageGroup) will conform with STU 3 CancerStage, and every resource conforming with TNMStageGroup automatically conforms to CancerStage.
 
 #### Value Set Renaming
 
@@ -167,7 +167,7 @@ To support the separation of [TNMStageGroup] from more generic [CancerStage] pro
 
 In addition, the following new value sets are now associated with the parent profile, [CancerStage]:
 
-* [CancerStageTypeVS] was introduced to populate the `Observation.code` element in the CancerStage profile. The value set contains LOINC, SNOMED, and NCI Thesaurus terms that represent staging observables, such as "clinical M stage" or "FIGO ovarian tumor stage". These values identify what is being reported in Observation's value element.
+* [CancerStageTypeVS] was introduced to populate the `Observation.code` element in the CancerStage profile. The value set contains LOINC, SNOMED, and NCI Thesaurus terms that represent staging observables, such as "clinical M stage" or "FIGO ovarian tumor stage". These values identify what is being reported in the Observation's value element.
 * [CancerStageValueVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStage profile. Because there are numerous possible staging values across all staging systems, this value set is only a brief sampling, presented as an example.
 
 #### Staging Value Set Expansion
@@ -204,7 +204,7 @@ Based on user feedback on the complexity of the STU 2 design, [comorbidities][Co
 
 ### Relaxing Required Bindings in Profiles and Extensions Related to Radiotherapy
 Based on user feedback that the required bindings on certain fields were a barrier to broader implementation the following changes were made:
-* [RadiotherapyModalityAndTechnique] Extension - [RadiotherapyModalityVS] and [RadiotherapyTechniqueVS] valuesets are bound with required strength, but they have been expanded with an the "un-encoded" value from the NULL Flavor codesystem.  If the "un-encoded" value is provided, and invariant requires that the .text field of the codeable concept be provided.  A coded value can also be provided in the same CodeableConcept.
+* [RadiotherapyModalityAndTechnique] Extension - [RadiotherapyModalityVS] and [RadiotherapyTechniqueVS] valuesets are bound with required strength, but they have been expanded with an the "un-encoded" value from the NULL Flavor codesystem.  If the "un-encoded" value is provided, and an invariant requires that the .text field of the codeable concept be provided.  A coded value can also be provided in the same CodeableConcept.
 * [TreatmentTerminationReason] Extension, [ProcedureIntent] Extension:  the valueset binding has been changed to extensible.
 * [RadiotherapyVolume] Profile, location field:  the valueset binding has been changed to extensible
 * [RadiotherapyCourseSummary] Profile, bodySite field:  the valueset binding has been changed to extensible

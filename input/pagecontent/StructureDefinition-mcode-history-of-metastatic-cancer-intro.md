@@ -7,8 +7,12 @@ To query for a history of metastatic cancer implementers should look for Observa
 
 To represent a negative answer to a question regarding history of metastatic disease, the value of the Observation should be set to `false`.
 
+To indicate the primary cancer in which the metastatic cancer was metastatic from, use the relatedCondition extension.
+
 ### Conformance
 
 Observation resources associated with an [in-scope patient] with a Observation.code in the value set [HistoryOfMetastaticMalignantNeoplasmVS] SHALL conform to this profile. Any resource intended to conform to this profile SHOULD populate `meta.profile` accordingly.
+
+When possible, specify the location of the metastatic site. If this is unknown, use the parent value (history of metastatic cancer) in the valueset.
 
 {% include markdown-link-references.md %}

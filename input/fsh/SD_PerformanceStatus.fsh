@@ -15,7 +15,7 @@ RuleSet: PerformanceStatusCommonRules
 * status and code and subject and effective[x] and value[x] and interpretation MS
 
 Profile:    KarnofskyPerformanceStatus
-Parent:     USCoreClinicalTest
+Parent:     USCoreClinicalResult
 Id: mcode-karnofsky-performance-status
 Title:      "Karnofsky Performance Status Profile"
 Description:    "The Karnofsky Performance Status (KPS) is a tool used to measure a patient's functional status. It can be used to compare the effectiveness of different therapies and to help assess the prognosis of certain patients, such as those with certain cancers. The KPS score ranges from 0 to 100 in intervals of 10. Higher scores are associated with better functional status, with 100 representing no symptoms or evidence of disease, and 0 representing death."
@@ -26,7 +26,7 @@ Description:    "The Karnofsky Performance Status (KPS) is a tool used to measur
 
 
 Profile:    ECOGPerformanceStatus
-Parent:     USCoreClinicalTest
+Parent:     USCoreClinicalResult
 Id: mcode-ecog-performance-status
 Title:      "ECOG Performance Status Profile"
 Description:    "The Eastern Cooperative Oncology Group (ECOG) Performance Status represents the patient's functional status and is used to determine their ability to tolerate therapies in serious illness, specifically for chemotherapy. (Definition from: [LOINC](https://loinc.org/89262-0/))"
@@ -37,7 +37,7 @@ Description:    "The Eastern Cooperative Oncology Group (ECOG) Performance Statu
 
 
 Profile: LanskyPlayPerformanceStatus
-Parent:  USCoreClinicalTest
+Parent:  USCoreClinicalResult
 Id: mcode-lansky-play-performance-status
 Title:  "Lansky Play Performance Status Profile"
 Description:  "The Lansky Play-Performance Status for children is a parent-rated instrument which records usual play activity as the index of performance. It is similar to the Karnofsky Performance Scale for adults (Definition from: [NCI Thesaurus](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&code=C38144&ns=ncit))."
@@ -49,7 +49,7 @@ Description:  "The Lansky Play-Performance Status for children is a parent-rated
 
 Profile: DeauvilleScale
 Id: mcode-deauville-scale
-Parent: USCoreObservationImaging
+Parent: USCoreClinicalResult
 Title: "Deauville Scale Profile"
 Description: "Profile for Deauville Scale. A 5 point scale devised to assess the response to treatment of Hodgkin and aggressive Non-Hodgkin lymphoma."
 * code = SCT#708895006 "Deauville five point scale (assessment scale)"

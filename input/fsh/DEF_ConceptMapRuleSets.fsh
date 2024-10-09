@@ -4,16 +4,13 @@ RuleSet: ConceptMapIntro(name, vsname)
 * status = #draft
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/fhir"
-* description = "A mapping between TG263 Concepts and FHIR {name} Value Set"
+* description = "A mapping between [TG263] Concepts and FHIR {name} Value Set"
 * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 * useContext.valueCodeableConcept.text = "For TG263 to SNOMEDCT alignment"
 * jurisdiction = urn:iso:std:iso:3166#US
-* purpose = "To help implementers map from TG263 Concepts to SNOMEDCT codes and qualifiers.
-
-Note: The codesystem identifer TG263 is not a proper codesystem URI.  
-Work is underway to define proper a URI that will be included in future versions
-of this concept map. "
+* purpose = "To help implementers map from TG263 Concepts to SNOMEDCT codes and qualifiers."
 * targetCanonical = Canonical({vsname})
+* sourceCanonical = Canonical(TG263VS)
 
 RuleSet: MapConcept(code, display, targetcode, targetdisplay)
 * group[=].element[+].code = {code}

@@ -113,7 +113,7 @@ Description: "The purpose of a treatment, medication, or procedure."
 Extension: NormalizationBasis
 Id: mcode-normalization-basis
 Title:  "Normalization Basis Extension"
-Description: "How the drug dosage was normalized."
+Description: "The method (e.g., body weight, body surface area, flat dose, age) used to normalize the medication dosage."
 * insert ExtensionContext(DomainResource)
 * insert ExtensionContext(Extension)
 * insert ExtensionContext(MedicationRequest)

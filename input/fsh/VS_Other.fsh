@@ -19,36 +19,24 @@ Description:  "How patient's given disease, condition, or ability is trending."
 * SCT#271299001 "Patient's condition worsened (finding)"
 * SCT#709137006 "Patient condition undetermined (finding)"
 
-//only include the following in the Max VS
-//* SCT#103338009 "In full remission (qualifier value)"
-//* SCT#103337004 "In partial remission (qualifier value)"
-/* Added based on FHIR-40811 */
-//* SCT#399409002 "Distant metastasis present (finding)" 
-
 ValueSet:   ConditionStatusTrendMaxVS
 Id: mcode-condition-status-trend-max-vs
 Title: "Condition Status Trend Maximum Value Set"
 Description:  "Like the ConditionStatusTrendVS, but includes two additional deprecated codes. Codes from the SNOMED CT disorder hierarchy were less than ideal because the value of an Observation should be either a finding or a qualifier (see https://confluence.ihtsdotools.org/display/FHIR/Observation+binding for details)."
 * include codes from valueset ConditionStatusTrendVS
 * SCT#550991000124107 "Malignant neoplasm in full remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in complete remission" is a synonym for the concept.
-* SCT#551001000124108 "Malignant neoplasm in partial remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in partial remission" is a synonym for the concept.
-
-* insert SNOMEDCopyrightForVS
-* ^extension[FMM].valueInteger = 3
+* SCT#551001000124108 "Malignant neoplasm in partial remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in partial remission" is a synonym for the concept. 
 // * SCT#281900007 "No abnormality detected (finding)" // better than SCT#260415000 "Not detected (qualifier)" - FHIR-32837
 * SCT#268910001 "Patient's condition improved (finding)"
 * SCT#359746009 "Patient's condition stable (finding)"
 * SCT#271299001 "Patient's condition worsened (finding)"
 * SCT#709137006 "Patient condition undetermined (finding)"
-/*
-   Retired these, replaced with qualifier values
-* SCT#550991000124107 "Malignant neoplasm in full remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in complete remission" is a synonym for the concept.
-* SCT#551001000124108 "Malignant neoplasm in partial remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in partial remission" is a synonym for the concept.
-*/
 * SCT#103338009 "In full remission (qualifier value)"
 * SCT#103337004 "In partial remission (qualifier value)"
-/* Added based on FHIR-40811 */
 * SCT#399409002 "Distant metastasis present (finding)"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
+
 
 ValueSet: CancerDiseaseStatusEvidenceTypeVS
 Id: mcode-cancer-disease-status-evidence-type-vs

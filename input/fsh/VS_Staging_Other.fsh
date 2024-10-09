@@ -205,6 +205,52 @@ Description: "Intergroup code indicating whether the rhabdomyosarcoma is confine
 * NCIT#C148015 "Intergroup Rhabdomyosarcoma Group II"
 * NCIT#C148019 "Intergroup Rhabdomyosarcoma Group III"
 
+ValueSet: CancerStagingPrognosticFactorTypeVS
+Id: mcode-cancer-staging-prognostic-factor-type-vs
+Title: "Cancer Staging Prognostic Factors Types"
+Description: "Types of prognostic factors used to determine cancer stage"
+* insert SNOMEDCopyrightForVS
+* SCT#106252000 "Staging classification for lymphoma (tumor staging)"
+* SCT#277366005 "Nature of staging values (qualifier value)"
+* SCT#260873006 "Bulky disease status (attribute)"
+
+ValueSet: CancerStagingPrognosticFactorValueVS
+Id: mcode-cancer-staging-prognostic-factor-value-vs
+Title: "Cancer Staging Prognostic Factors Value"
+Description: "Values of prognostic factors used to determine cancer stage"
+* insert SNOMEDCopyrightForVS
+* include codes from system SCT where concept descendant-of #106252000 "Staging classification for lymphoma (tumor staging)"
+* SCT#260998006 "Clinical staging (qualifier value)"
+* SCT#261023001 "Pathological staging (qualifier value)"
+* SCT#2667000 "Absent (qualifier value)"
+* SCT#52101004 "Present (qualifier value)"
+
+ValueSet: InternationalRetinoblastomaStageValueVS
+Id: mcode-international-retinoblastoma-stage-value-vs
+Title: "International Retinoblastoma Stage Value"
+Description: "Codes in the international retinoblastoma staging system representing retinoblastoma stage."
+* NCIT#C198180 "Stage 0 Childhood Retinoblastoma by Toronto Guidelines v2"
+* NCIT#C198181 "Stage I Childhood Retinoblastoma by Toronto Guidelines v2"
+* NCIT#C198182 "Stage II Childhood Retinoblastoma by Toronto Guidelines v2"
+* NCIT#C198183 "Stage III Childhood Retinoblastoma by Toronto Guidelines v2"
+* NCIT#CL1914012 "Stage IV Childhood Retinoblastoma by Toronto Guidelines v2"
+
+ValueSet: PRETEXTValueVS
+Id: mcode-pretext-stage-value-vs
+Title: "PRETEXT Stage Value"
+Description: "Codes in the PRETEXT staging system representing hepatoblastoma stage."
+* NCIT#C7139 "PRETEXT I Hepatoblastoma"
+* NCIT#C198011 "Localized PRETEX I Hepatoblastoma"
+* NCIT#C198015 "Metastatic PRETEX I Hepatoblastoma"
+* NCIT#C7140 "PRETEXT II Hepatoblastoma"
+* NCIT#C198012 "Localized PRETEX II Hepatoblastoma"
+* NCIT#C198016 "Metastatic PRETEX II Hepatoblastoma"
+* NCIT#C7141 "PRETEXT III Hepatoblastoma"
+* NCIT#C198013 "Localized PRETEX III Hepatoblastoma"
+* NCIT#C198017 "Metastatic PRETEX III Hepatoblastoma"
+* NCIT#C7142 "PRETEXT IV Hepatoblastoma"
+* NCIT#C198014 "Localized PRETEX IV Hepatoblastoma"
+* NCIT#C198018 "Metastatic PRETEX IV Hepatoblastoma"
 
 
 /* not used

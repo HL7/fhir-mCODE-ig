@@ -1,7 +1,7 @@
 //----------- AJCC TNM Staging Profiles--------------
 Profile: TNMCategory
 Id: mcode-tnm-category
-Parent: Observation
+Parent: USCoreObservationSimple
 Title: "Parent for T, N, and M Categories."
 Description: "Parent profile for T, N, and M category profiles."
 * ^abstract = true

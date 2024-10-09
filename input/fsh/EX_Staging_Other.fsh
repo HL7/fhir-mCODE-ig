@@ -18,6 +18,7 @@ RuleSet: StagingInstanceRuleSet
 
 //-------------------------------------------------
 
+/*
 Instance: binet-stage-group-B
 InstanceOf: CLLBinetStage
 Description: "Example of Binet staging for CLL."
@@ -116,3 +117,5 @@ InstanceOf: RhabdomyosarcomaClinicalGroupStage
 Description: "Example of Rhabdomyosarcoma Clinical Group Stage for rhabdomyosarcoma staging."
 * insert StagingInstanceRuleSet
 * valueCodeableConcept = SCT#405957007 "Intergroup rhabdomyosarcoma study post-surgical clinical group IA: localized tumor, confined to site of origin, completely resected (finding)"
+
+*/

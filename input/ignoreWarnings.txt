@@ -160,3 +160,4 @@ WARNING: StructureDefinition/mcode-myeloma-riss-stage: StructureDefinition.diffe
 WARNING: StructureDefinition/mcode-patient-group: StructureDefinition.snapshot.element[13].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'C19700' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 WARNING: StructureDefinition/mcode-patient-group: StructureDefinition.differential.element[1].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'C19700' in the system 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version '' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
+

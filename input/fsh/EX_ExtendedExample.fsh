@@ -160,6 +160,7 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 // absent -- These could also be references, but having a resource representing a non-condition would be unusual
 * extension[comorbidConditionAbsent][0].valueCodeableConcept = SCT#414916001 "Obesity (disorder)"
 * extension[comorbidConditionAbsent][1].valueCodeableConcept = SCT#19829001 "Disorder of lung (disorder)"
+* category = ObsCat#social-history "Social History"
 
 /* Not used -- model of comorbidities as Questionnaire
 Instance: cancer-related-comorbidity-response-jenny-m
@@ -195,6 +196,7 @@ Description: "Extended example: example showing ECOG performance status"
 * valueInteger = 0
 * interpretation = LNC#LA9622-7 "Fully active, able to carry on all pre-disease performance without restriction"
 * method = SCT#5880005 "Physical examination procedure (procedure)"
+* category = ObsCat#survey "Survey"
 
 // body weight and height added to calculate BSA needed to convert chemotherapy relative dose orders to absolute doses for CancerRelatedMedicationAdministration
 
@@ -248,6 +250,7 @@ Description: "Extended example: example showing TNM staging (stage group)"
 * hasMember[1] = Reference(tnm-pathologic-regional-nodes-category-jenny-m)
 * hasMember[2] = Reference(tnm-pathologic-distant-metastases-category-jenny-m)
 * performer = Reference(us-core-practitioner-owen-oncologist)
+* category = ObsCat#imaging "Imaging"
 
 Instance: tnm-clinical-primary-tumor-category-jenny-m
 InstanceOf: TNMPrimaryTumorCategory
@@ -260,6 +263,8 @@ Description: "Extended example: example showing TNM staging (T)"
 * valueCodeableConcept = SCT#1228938002 "American Joint Committee on Cancer cT3 (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * performer = Reference(us-core-practitioner-owen-oncologist)
+* category = ObsCat#imaging "Imaging"
+
 
 Instance: tnm-clinical-regional-nodes-category-jenny-m
 InstanceOf: TNMRegionalNodesCategory
@@ -272,6 +277,7 @@ Description: "Extended example: example showing TNM staging (N)"
 * valueCodeableConcept = SCT#1229967007 "American Joint Committee on Cancer cN0 (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * performer = Reference(us-core-practitioner-owen-oncologist)
+* category = ObsCat#imaging "Imaging"
 
 Instance: tnm-clinical-distant-metastases-category-jenny-m
 InstanceOf: TNMDistantMetastasesCategory
@@ -284,6 +290,7 @@ Description: "Extended example: example showing TNM staging (M)"
 * valueCodeableConcept = SCT#1229901006 "American Joint Committee on Cancer cM0 (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * performer = Reference(us-core-practitioner-owen-oncologist)
+* category = ObsCat#imaging "Imaging"
 
 // Tumor marker test results 3-16-2018
 
@@ -503,6 +510,7 @@ Description: "Extended example: example showing TNM staging (stage group)"
 * hasMember[1] = Reference(tnm-pathologic-regional-nodes-category-jenny-m)
 * hasMember[2] = Reference(tnm-pathologic-distant-metastases-category-jenny-m)
 * performer = Reference(us-core-practitioner-owen-oncologist)
+* category = ObsCat#imaging "Imaging"
 
 Instance: tnm-pathologic-primary-tumor-category-jenny-m
 InstanceOf: TNMPrimaryTumorCategory
@@ -515,6 +523,7 @@ Description: "Extended example: example showing TNM staging (T)"
 * valueCodeableConcept = SCT#1229859000 "American Joint Committee on Cancer pT3 (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * performer = Reference(us-core-practitioner-owen-oncologist)
+* category = ObsCat#imaging "Imaging"
 
 Instance: tnm-pathologic-regional-nodes-category-jenny-m
 InstanceOf: TNMRegionalNodesCategory
@@ -527,6 +536,7 @@ Description: "Extended example: example showing TNM staging (N)"
 * valueCodeableConcept = SCT#1229947003 "American Joint Committee on Cancer pN0 (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * performer = Reference(us-core-practitioner-owen-oncologist)
+* category = ObsCat#imaging "Imaging"
 
 Instance: tnm-pathologic-distant-metastases-category-jenny-m
 InstanceOf: TNMDistantMetastasesCategory
@@ -539,6 +549,7 @@ Description: "Extended example: example showing TNM staging (M)"
 * valueCodeableConcept = AbsentReason#not-applicable "Not Applicable"   // cancer is not metastatic, pM0 is not valid
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * performer = Reference(us-core-practitioner-owen-oncologist)
+* category = ObsCat#imaging "Imaging"
 
 // 21-Gene Assay
 

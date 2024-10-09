@@ -26,7 +26,7 @@ The overall scope of mCODE and the relationships between mCODE profiles is shown
 
 1. mCODE does not define a specific set of information that must be collected for each cancer patient. Instead, mCODE presents a set of patterns or templates, including controlled terminologies, to be used when certain data in the above groups are shared. ***Example:** mCODE includes a FHIR profile for ECOG performance status, but not every cancer patient undergoes such an evaluation. However, if a patient DOES have an ECOG performance evaluation, that information must conform to mCODE's ECOG profile when shared.*
 
-2. If mCODE does not have a profile for a certain type of data, that data still can be included with mCODE data using an appropriate resource or profile. The lack of an mCODE profile only means that mCODE does not impose requirements above and beyond the base FHIR specifications or US Core. ***Example:** mCODE does not include a profile for care teams. However, users can share care team information using [FHIR's CareTeam resource](https://hl7.org/fhir/R4B/careteam.html), using a profile such as [US Core CareTeam](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-careteam.html).*
+2. If mCODE does not have a profile for a certain type of data, that data still can be included with mCODE data using an appropriate resource or profile. The lack of an mCODE profile only means that mCODE does not impose requirements above and beyond the base FHIR specifications or US Core. ***Example:** mCODE does not include a profile for care teams. However, users can share care team information using [FHIR's CareTeam resource](https://hl7.org/fhir/R4B/careteam.html), using a profile such as [US Core CareTeam](http://hl7.org/fhir/us/core/STU6.1.0/StructureDefinition-us-core-careteam.html).*
   
 3. Additional profiles can be derived from mCODE profiles. It is expected that mCODE will serve as the basis for future implementation guides dealing with new use cases, particular types of cancer, or specific demographic groups using mCODE as a base. ***Example:** Radiation oncologists and vendors collaborated on a [radiation therapy implementation guide](http://hl7.org/fhir/us/codex-radiation-therapy/STU1/) that extends mCODE and facilitates structured data sharing between radiation oncology information systems and other health information systems.*
 
@@ -59,7 +59,7 @@ After the initial analysis, an open survey was conducted to validate and priorit
 
 In addition to information obtained from subject matter experts, several existing standards, nomenclatures, and guidelines were consulted during the development of this specification. These include:
 
-* [American Association of Physicists in Medicine (AAPM): Task Group 263 Final Report](https://www.aapm.org/pubs/reports/RPT_263.pdf)
+* [American Association of Physicists in Medicine (AAPM): Task Group 263 Final Report][TG263]
 * [American College of Surgeons (ACS): Standards for Registry Entry (STORE)](https://www.facs.org/-/media/files/quality-programs/cancer/ncdb/store_manual_2021.ashx)
 * [American Society for Radiation Oncology (ASTRO): Minimum Data Elements for Radiation Oncology](https://www.practicalradonc.org/article/S1879-8500(19)30232-2/fulltext)
 * [American Society for Radiation Oncology (ASTRO) Commission on Cancer Workgroup: A Multidisciplinary Consensus Recommendation on a Synoptic Radiation Treatment Summary](https://www.practicalradonc.org/article/S1879-8500(20)30002-3/fulltext)

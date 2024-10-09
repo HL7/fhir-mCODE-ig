@@ -1,11 +1,11 @@
 Profile: TumorMorphology
-Parent: USCoreDiagnosticReportProfileLaboratoryReporting
+Parent: USCoreObservationSimple
 Id: mcode-tumor-morphology
 Title: "Tumor Morphology Report"
-Description: "ICD-O-3 morphology determined from examination of tumor sample, composed of three parts: histologic type, the malignant potential of the tumor (behavior) and the tumor grade (degree of differentiation)."
+Description: "Tumor morphology can include information on the type of cell (type), the malignant potential of the tumor (behavior), and the degree of differentiation (grade). For some cancers, the type and behavior are described in the ICD-O-3 code."
 * ^extension[FMM].valueInteger = 4
 * specimen only Reference(HumanSpecimen)
-* specimen 0..1 MS
+* specimen MS
 * code = LNC#77753-2  // Tumor morphology panel Cancer
 * subject only Reference(CancerPatient)
 * subject ^definition = "Patient whose test result is recorded."
@@ -14,14 +14,8 @@ Description: "ICD-O-3 morphology determined from examination of tumor sample, co
 * extension contains RelatedCondition named relatedCondition 0..* MS 
 * extension[relatedCondition] ^short = "Condition associated with this test."
 * extension[relatedCondition] ^definition = "Associates the tumor marker test with a condition, if one exists. Condition can be given by a reference or a code. In the case of a screening test such as prostate-specific antigen (PSA), there may be no existing condition to reference."
-* insert SliceReferenceOnProfile(result)
-* result contains histologyBehaviorAndType 0..1 and grade 0..1
-* result[histologyBehaviorAndType] only Reference(HistologicBehaviorAndType)
-* result[histologyBehaviorAndType] ^short = "Histology Behavior Type being reported using ICD-O-3"
-* result[histologyBehaviorAndType] ^definition = "The ICD-O-3 4-digit histology code for the tumor, with the 5th digit behavior code for the tumor"
-* result[grade] only Reference(HistologicGrade)
-* result[grade] ^short = "Tumor grade code being reported using SNOMED"
-* result[grade] ^definition = "The histologic grade of the tumor"
+* hasMember only Reference(HistologicBehaviorAndType or HistologicGrade)
+
 
 Profile: HistologicBehaviorAndType
 Parent: USCoreObservationLab
@@ -48,11 +42,11 @@ Profile: HistologicGrade
 Parent: USCoreObservationLab
 Id: mcode-histologic-grade
 Title: "Histologic Grade"
-Description: "Histologic grade determined from examination of tumor sample."
+Description: "Histologic grade determined from examination of tumor sample. The grade system should be captured using the method data element."
 * ^extension[FMM].valueInteger = 4
 * specimen only Reference(HumanSpecimen)
 * specimen 0..1 MS  // is not MS in US Core 4.0.0 and 5.0.1 
-* code = LNC#33732-9 // Histology grade [Identifier] in Cancer specimen  (could be 21858-6 Grade Cancer)
+* code = NCIT#C18000 // Histologic Grade
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from HistologicGradeVS (extensible)
@@ -68,5 +62,6 @@ Description: "Histologic grade determined from examination of tumor sample."
 
 // Already MS in US Core Obs Lab: status, category, code, subject, effective[x], value[x], dataAbsentReason
 // RelatedCondition added 11/14/2022, see https://chat.fhir.org/#narrow/stream/229074-CodeX/topic/Reference.20between.20tumor.20characteristics.20and.20cancer.20diagnosis
+
 
 

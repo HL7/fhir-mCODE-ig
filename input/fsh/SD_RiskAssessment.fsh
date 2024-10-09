@@ -1,7 +1,7 @@
 //Parent//
 Profile: CancerRiskAssessment
 Id: mcode-cancer-risk-assessment
-Parent: Observation
+Parent: USCoreObservationSimple
 Title: "Cancer Risk Assessment Profile"
 Description: "Parent profile for observations regarding cancer risk assessment. Risk assessment is a process used to estimate the risk that a certain event will happen. In medicine, this may include a person’s risk of having a child with a certain condition or disease, such as cancer. It may also be used to estimate the risk of carrying a certain gene mutation (change), or of having an adverse event (unexpected medical problem) in response to certain types of drugs or other substances. A risk assessment may be done by collecting information about a person’s age, sex, personal and family medical history, ethnic background, lifestyle, and other factors and using statistics tools to calculate risk (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/risk-assessment)).
 

@@ -168,3 +168,10 @@ INFORMATION: CodeSystem/snomed-requested-cs: CodeSystem: Most code systems defin
 
 # This is a SNOMED limitation. These are the intended codes for this VS. Nothing we can change. 
 INFORMATION: ValueSet/mcode-radiotherapy-treatment-location-vs: ValueSet.compose.include[0]: This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended  (examples for FSN: [Aortic structure (body structure), Ascending aorta structure (body structure), Branch of brachiocephalic artery (body structure), Carotid artery structure (body structure), Structure of celiac artery (body structure)] and examples for no FSN: [Tumor bed (morphologic abnormality), Scar (morphologic abnormality), Vaginal cuff (morphologic abnormality)])
+
+# TG263 codesystem and valueset are placeholder only.   There is no terminology resource that will support validity checking 
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].source: Source Code System http://hl7.org/fhir/us/mcode/CodeSystem/tg263-cs doesn't have all content (content = not-present), so the source codes cannot be checked
+WARNING: ValueSet.where(id = 'tg263-vs'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://hl7.org/fhir/us/mcode/CodeSystem/tg263-cs
+
+# TG263 concept map is indeed large by intent 
+INFORMATION: ConceptMap/TG263CM: ConceptMap: The concept map has too many codes to validate (1,346)

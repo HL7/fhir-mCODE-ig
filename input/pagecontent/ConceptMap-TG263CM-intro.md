@@ -1,6 +1,6 @@
 ###  Structure of this Concept Map
 
-[TG263](https://www.aapm.org/pubs/reports/RPT_263.pdf) is a source for standards in radiotherapy, proposed in 2018 by the American Association of Physicists in Medicine (AAPM). It is focused on describing body structures and location. mCODE uses SNOMED CT codes and qualifiers for treatment locations. See the brief discussion in [RadiotherapyTreatmentLocationVS]. This concept map shows how each term in TG263 maps to SNOMED CT.
+[TG263] is a source for standards in radiotherapy, proposed in 2018 by the American Association of Physicists in Medicine (AAPM). It is focused on describing body structures and location. mCODE uses SNOMED CT codes and qualifiers for treatment locations. See the brief discussion in [RadiotherapyTreatmentLocationVS]. This concept map shows how each term in TG263 maps to SNOMED CT.
 
 Some of the TG263 terms are pre-coordinated, incorporating laterality and other qualifiers directly in the term. For the mapping to SNOMED CT, a code + laterality + additional qualifier(s) approach is used to uniquely map each TG263 concept. The mapping uses the 'product' field of each mapped element to enumerate the qualifiers needed in combination with the SNOMED CT code to express the same treatment location as the TG263 concept.
 

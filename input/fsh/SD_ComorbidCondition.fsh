@@ -1,5 +1,5 @@
 Profile: Comorbidities
-Parent: Observation
+Parent: USCoreObservationSimple
 Id: mcode-comorbidities
 Title: "Comorbidities Profile"
 Description: "General structure for capturing comorbid conditions with respect to a primary ('index') condition. The user can use this profile in three ways: (1) free-form, listing any conditions they wish to highlight as significant comorbidities, (2) following a formal paradigm such as the Charlson Comorbidity Index or the NCI Comorbidity Index, or (3) use disease categories defined for registry reporting purposes, such as those defined by Center for International Blood and Marrow Transplant Research (CIBMTR)."

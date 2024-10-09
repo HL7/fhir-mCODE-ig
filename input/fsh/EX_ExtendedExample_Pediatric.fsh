@@ -168,6 +168,7 @@ Description: "Extended pediatric example: example showing Lansky performance sta
 * valueInteger = 80
 * interpretation = NCIT#C69424 "Lansky Performance Status 80"
 * method = SCT#5880005 "Physical examination procedure (procedure)"
+* category = ObsCat#survy "Survey"
 
 Instance: cancer-related-medication-request-cyclophosphamide-brian-l
 InstanceOf: CancerRelatedMedicationRequest
@@ -373,6 +374,7 @@ Description: "Extended pediatric example: body surface area"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 * valueQuantity = 0.59 'm2' "square meter"
 
+/*
 Instance: all-risk-assessment-standard-brian-l
 InstanceOf: ALLRiskAssessment
 Description: "Extended pediatric example: ALL risk assessment standard"
@@ -382,6 +384,6 @@ Description: "Extended pediatric example: ALL risk assessment standard"
 * focus = Reference(primary-cancer-condition-brian-l)
 * effectiveDateTime = "2021-02-08"
 * performer = Reference(us-core-practitioner-owen-oncologist)
-
+*/
 
 

@@ -58,7 +58,7 @@ The data sender must assure that the values in these three fields are self-consi
 
 #### How to Report Staging or Risk Assessment Information
 
-Staging or risk assessment information should be provided as Observation resource(s) conforming to the [CancerStage] or [CancerRiskAssessment] profile or a constrained version of those profiles. CancerStage and CancerRiskAssessment are parent profiles that should be used only if a more specific profile corresponding to a particular staging system or risk assessment is unavailable. If a patient has been staged or assessed more than once, there will be multiple CancerStage or RiskAssessment observations. 
+Staging or risk assessment information SHOULD be provided as Observation resource(s) conforming to the [CancerStage] or [CancerRiskAssessment] profile or a constrained version of those profiles. CancerStage and CancerRiskAssessment are parent profiles that should be used only if a more specific profile corresponding to a particular staging system or risk assessment is unavailable. If a patient has been staged or assessed more than once, there will be multiple CancerStage or RiskAssessment observations. 
 
 In the CancerStage and CancerRiskAssessment profile and its descendants, the following elements are used to describe a stage or classification:
 
@@ -71,7 +71,7 @@ In the CancerStage and CancerRiskAssessment profile and its descendants, the fol
 | Prognostic Factors | `Observation.derivedFrom` | A reference to Observations contributing to the stage or risk assessment. |
 {: .grid }
 
-A reference to the CancerStage observation should be given in the PrimaryCancerCondition's `Condition.stage.assessment` element. If staging has been repeated for a patient, the reference in PrimaryCancerCondition should point to the most recent staging information.
+A reference to the CancerStage observation SHOULD be given in the PrimaryCancerCondition's `Condition.stage.assessment` element. If staging has been repeated for a patient, the reference in PrimaryCancerCondition SHOULD point to the most recent staging information.
 
 #### TNM Staging
 

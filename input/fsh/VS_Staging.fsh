@@ -48,6 +48,7 @@ Description: "Codes that identify the kind of stage reported in an Observation, 
 * SCT#405931009 "National Wilms Tumor Study Group Stage (observable entity)"
 * SCT#405916000 "Intergroup rhabdomyosarcoma study post-surgical clinical group (observable entity)"
 * SCT#385377005 "Gleason grade finding for prostatic cancer (finding)"
+* SCT#1342413004 "International Intraocular Retinoblastoma Classification (tumor staging)"
 // unapproved attribute, do not include! * include codes from system SCT where concept is-a #260760003 "Staging of disease (attribute)"
 // NCI Thesaurus terms
 * NCIT#C134969 "AIDS-Related Kaposi Sarcoma Stage"
@@ -78,6 +79,7 @@ Description: "Codes that identify the kind of stage reported in an Observation, 
 * NCIT#C174125 "Neoplastic Disease Extent Indicator"
 * NCIT#C141461 "Occult Stage"
 * NCIT#C133427 "International Neuroblastoma Risk Group Staging System"
+* NCIT#C198190 "Childhood Hepatoblastoma by Toronto Guidelines v2 Stage, Tier 2"
 
 // Observation.method
 ValueSet: CancerStagingMethodVS
@@ -186,3 +188,20 @@ Description: "A non-exhaustive value set containing codes that result from cance
 * NCIT#C148012 "Intergroup Rhabdomyosarcoma Group I"
 * NCIT#C148015 "Intergroup Rhabdomyosarcoma Group II"
 * NCIT#C148019 "Intergroup Rhabdomyosarcoma Group III"
+* NCIT#C198180 "Stage 0 Childhood Retinoblastoma by Toronto Guidelines v2"
+* NCIT#C198181 "Stage I Childhood Retinoblastoma by Toronto Guidelines v2"
+* NCIT#C198182 "Stage II Childhood Retinoblastoma by Toronto Guidelines v2"
+* NCIT#C198183 "Stage III Childhood Retinoblastoma by Toronto Guidelines v2"
+* NCIT#CL1914012 "Stage IV Childhood Retinoblastoma by Toronto Guidelines v2"
+* NCIT#C7139 "PRETEXT I Hepatoblastoma"
+* NCIT#C198011 "Localized PRETEX I Hepatoblastoma"
+* NCIT#C198015 "Metastatic PRETEX I Hepatoblastoma"
+* NCIT#C7140 "PRETEXT II Hepatoblastoma"
+* NCIT#C198012 "Localized PRETEX II Hepatoblastoma"
+* NCIT#C198016 "Metastatic PRETEX II Hepatoblastoma"
+* NCIT#C7141 "PRETEXT III Hepatoblastoma"
+* NCIT#C198013 "Localized PRETEX III Hepatoblastoma"
+* NCIT#C198017 "Metastatic PRETEX III Hepatoblastoma"
+* NCIT#C7142 "PRETEXT IV Hepatoblastoma"
+* NCIT#C198014 "Localized PRETEX IV Hepatoblastoma"
+* NCIT#C198018 "Metastatic PRETEX IV Hepatoblastoma"

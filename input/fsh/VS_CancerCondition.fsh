@@ -304,9 +304,9 @@ Description: "Codes representing the structure, arrangement, and behavioral char
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
 * include codes from system ICDO3
-* include codes from system SCT where concept is-a #367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
-* include codes from system SCT where concept is-a #399919001 "Carcinoma in situ - category (morphologic abnormality)"
-* include codes from system SCT where concept is-a #399983006 "In situ adenomatous neoplasm - category (morphologic abnormality)"
+* include codes from system SCT where concept is-a #1240414004 "Malignant neoplasm (morphologic abnormality)"
+* include codes from system SCT where concept is-a #1187138006 "Carcinoma in situ (morphologic abnormality)"
+* include codes from system SCT where concept is-a #60286009 "Adenocarcinoma in situ in adenomatous polyp (morphologic abnormality))"
 * SCT#399878004 "Malignant neoplasm with pilar differentiation (morphologic abnormality)"
 * SCT#253035009 "In situ melanocytic morphology (morphologic abnormality)"
 * exclude codes from system SCT where concept is-a #450893003 "Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia (morphologic abnormality)"

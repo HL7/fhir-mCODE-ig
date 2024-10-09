@@ -283,7 +283,7 @@ A specimen is a specimen. There was no real reason to distinguish specimens obta
 
 ### New Concept Map
 
-* A [concept map](ConceptMap-TG263CM.html) from [TG263](https://www.aapm.org/pubs/reports/RPT_263.pdf) to [RadiotherapyTreatmentLocationVS] has been added.
+* A [concept map](ConceptMap-TG263CM.html) from [TG263] to [RadiotherapyTreatmentLocationVS] has been added.
 
 
 ### Value Set Content Changes (Published in STU 2.1)

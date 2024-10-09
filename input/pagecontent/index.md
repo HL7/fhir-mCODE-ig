@@ -59,7 +59,7 @@ After the initial analysis, an open survey was conducted to validate and priorit
 
 In addition to information obtained from subject matter experts, several existing standards, nomenclatures, and guidelines were consulted during the development of this specification. These include:
 
-* [American Association of Physicists in Medicine (AAPM): Task Group 263 Final Report](https://www.aapm.org/pubs/reports/RPT_263.pdf)
+* [American Association of Physicists in Medicine (AAPM): Task Group 263 Final Report][TG263]
 * [American College of Surgeons (ACS): Standards for Registry Entry (STORE)](https://www.facs.org/-/media/files/quality-programs/cancer/ncdb/store_manual_2021.ashx)
 * [American Society for Radiation Oncology (ASTRO): Minimum Data Elements for Radiation Oncology](https://www.practicalradonc.org/article/S1879-8500(19)30232-2/fulltext)
 * [American Society for Radiation Oncology (ASTRO) Commission on Cancer Workgroup: A Multidisciplinary Consensus Recommendation on a Synoptic Radiation Treatment Summary](https://www.practicalradonc.org/article/S1879-8500(20)30002-3/fulltext)

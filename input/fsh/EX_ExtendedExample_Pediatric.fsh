@@ -168,7 +168,7 @@ Description: "Extended pediatric example: example showing Lansky performance sta
 * valueInteger = 80
 * interpretation = NCIT#C69424 "Lansky Performance Status 80"
 * method = SCT#5880005 "Physical examination procedure (procedure)"
-* category = ObsCat#survy "Survey"
+* category = ObsCat#survey "Survey"
 
 Instance: cancer-related-medication-request-cyclophosphamide-brian-l
 InstanceOf: CancerRelatedMedicationRequest

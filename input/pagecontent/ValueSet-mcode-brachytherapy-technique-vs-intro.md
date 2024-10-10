@@ -15,6 +15,6 @@ Valid combinations of modality and technique are described in the modality and t
 |  Intraluminal | Placement of a radiation source into a lumen, usually understood to mean the gastrointestinal, esophageal, endobrochial, or less commonly, within the bile duct or urinary bladder.  | Intraluminal brachytherapy (procedure)  | 384691004 |
 |  Intraoperative Radiation Therapy | A radiation treatment administered during surgery.   | Radiotherapy - intraoperative control (procedure)  | 168524008  |
 |  Surface | Use of a radiation source to deliver dose to the surface of a target (e.g., skin or eye).   | Surface brachytherapy (procedure)   | 14473006 |
-|   Oral | Delivery of radiopharaceutical by oral intake. | Oral radionuclide therapy (procedure)   | 16560241000119104  |
+|   Oral | Delivery of radiopharmaceutical by oral intake. | Oral radionuclide therapy (procedure)   | 16560241000119104  |
 {: .grid }
 {% include markdown-link-references.md %}

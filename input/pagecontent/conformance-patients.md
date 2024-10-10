@@ -55,7 +55,7 @@ In this approach, Senders can respond to a request using [`_include`](https://ww
 
 ### Conditions-Then-Patients Approach
 
-In this approach, Senders return a Bundle with the subset of Condition resources with a `code` in the [Primary Cancer Disorder Value Set][PrimaryCancerDisorderVS] in a single request, AND allow the Receiver to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
+In this approach, Senders will return a Bundle with the subset of Condition resources with a `code` in the [Primary Cancer Disorder Value Set][PrimaryCancerDisorderVS] in a single request, AND allow the Receiver to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
 
     GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
 

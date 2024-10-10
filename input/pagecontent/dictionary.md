@@ -6,7 +6,7 @@ The DD intentionally omits certain elements in FHIR that are not expected to be 
 
 * **Profiles not shown in the DD:** Not all profiles used by mCODE are included in the Data Dictionary. mCODE uses external profiles for vital signs and routine laboratory results. These profiles are not included in the DD because they are defined externally to mCODE.
 
-* **Data elements not shown in the DD:** Only elements marked as "Must Support"(MS) are included in data dictionary. These are elements that implementers may be expected to provide meaningful support for; see [Profile-Level Conformance Expectations](conformance-profiles.html#profile-level-conformance-expectations) for more information. Some of the MS elements are inherited from US Core.
+* **Data elements not shown in the DD:** Only elements marked as "Must Support"(MS) are included in the Data Dictionary. These are elements that implementers may be expected to provide meaningful support for; see [Profile-Level Conformance Expectations](conformance-profiles.html#profile-level-conformance-expectations) for more information. Some of the MS elements are inherited from US Core.
 
 Downloads:
 

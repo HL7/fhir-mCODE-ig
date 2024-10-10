@@ -30,7 +30,7 @@ The overall scope of mCODE and the relationships between mCODE profiles is shown
 
 2. If mCODE does not have a profile for a certain type of data, that data still can always be included with mCODE data using an appropriate resource or profile. The lack of an mCODE profile only means that mCODE does not impose requirements above and beyond the base FHIR specifications or US Core. ***Example:** mCODE does not include a profile for care teams. However, users can share care team information using [FHIR's CareTeam resource](https://hl7.org/fhir/R4B/careteam.html), using a profile such as [US Core CareTeam](http://hl7.org/fhir/us/core/STU6.1.0/StructureDefinition-us-core-careteam.html).*
   
-3. Additional profiles can be derived from mCODE profiles. It is expected that mCODE will serve as the basis for future implementation guides dealing with new use cases, particular types of cancer, or specific demographic groups using mCODE as a base. ***Example:** Radiation oncologists and vendors collaborated on a [radiation therapy implementation guide](http://hl7.org/fhir/us/codex-radiation-therapy/STU1/) that extends mCODE and facilitates structured data sharing between radiation oncology information systems and other health information systems.*
+3. Additional profiles can be derived from mCODE profiles. It is expected that mCODE will serve as the basis for future implementation guides dealing with new use cases, particular types of cancer, or specific demographic groups using mCODE as a base. ***Example:** Radiation oncologists and vendors collaborated on a [radiation therapy implementation guide](https://hl7.org/fhir/us/codex-radiation-therapy) that extends mCODE and facilitates structured data sharing between radiation oncology information systems and other health information systems.*
 
 <br/>
 <object data="mCodeDiagram.svg" type="image/svg+xml"></object>
@@ -81,7 +81,7 @@ In addition to information obtained from subject matter experts, several existin
 * [RECIST Guidelines v1.1](https://project.eortc.org/recist/wp-content/uploads/sites/4/2015/03/RECISTGuidelines.pdf)
 * [SJCARES Hospital-Based Cancer Registry](https://www.stjude.org/content/dam/en_US/shared/www/clinical/no-index/sjcares-data-dictionary.pdf)
 
-In addition, material was drawn from the [US Core Implementation Guide](http://hl7.org/fhir/us/core/) and the [Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/).
+In addition, material was drawn from the [US Core Implementation Guide]( {{site.data.fhir.ver.hl7fhiruscore}}) and the [Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/).
 
 ### Understanding this Guide
 

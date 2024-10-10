@@ -12,16 +12,17 @@
 [TG263]: https://www.aapm.org/pubs/reports/RPT_263.pdf
 
 <!-- US Core -->
-[USCoreMedicationRequest]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html
-[USCoreLaboratoryResultObservation]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html
-[USCoreClinicalTestObservation]:https://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-clinical-test.html
-[USCorePatient]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html
-[USCoreConditionProblemHealthConcern]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition-problems-health-concerns.html
-[USCoreProcedure]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html
-[USCorePractitioner]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitioner.html
-[USCoreSmokingStatus]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-smokingstatus.html
-[USCoreDiagnosticReport]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html
-[USCoreOrganization]:  http://hl7.org/fhir/us/core/StructureDefinition-us-core-organization.html
+[USCoreMedicationRequest]:  {{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-medicationrequest.html
+[USCoreLaboratoryResultObservation]:  {{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-observation-lab.html
+[USCoreClinicalTestObservation]: {{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-observation-clinical-test.html
+[USCorePatient]:  {{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-patient.html
+[USCoreConditionProblemHealthConcern]:  {{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-condition-problems-health-concerns.html
+[USCoreProcedure]:  {{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-procedure.html
+[USCorePractitioner]:  {{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-practitioner.html
+[USCoreSmokingStatus]:  {{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-smokingstatus.html
+[USCoreDiagnosticReport]:  {{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-diagnosticreport-lab.html
+[USCoreOrganization]:   {{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-organization.html
+[USCoreCareTeam]:   {{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-careteam.html
 
 <!-- R4 -->
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html

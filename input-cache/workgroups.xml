@@ -52,14 +52,14 @@
   <workgroup key="pher" webcode="pher" name="Public Health" listserv="pher@lists.HL7.org/"/>
   <workgroup key="pubs" webcode="publishing" name="Publishing" listserv="es@lists.HL7.org/"/>
   <workgroup key="security" webcode="secure" name="Security" listserv="security@lists.HL7.org/"/>
-  <workgroup key="soa" webcode="soa" name="Service Oriented Architecture" listserv="soa@lists.HL7.org/"/>
+  <workgroup key="soa" webcode="soa" name="Orchestration, Services, and Architecture" listserv="soa@lists.HL7.org/"/>
   <workgroup key="sd" webcode="structure" name="Structured Documents" listserv="strucdoc@lists.HL7.org/"/>
   <workgroup key="sgb" name="Standards Governance Board" deprecated="true"/>
   <workgroup key="templates" name="Templates" deprecated="true"/>
   <workgroup key="tsc" webcode="tsc" name="Technical Steering Committee"/>
   <workgroup key="tsmg" webcode="tsmanagement" name="Terminology Services Management Group" listserv="tsmg@lists.HL7.org/"/>
   <workgroup key="us-realm" webcode="usrealm" name="US Realm Task Force" deprecated="true"/>
-  <workgroup key="vocab" webcode="vocab" name="Terminology Infrastructure" listserv="ti@lists.HL7.org/"/>
+  <workgroup key="vocab" webcode="Vocab" name="Terminology Infrastructure" listserv="ti@lists.HL7.org/"/>
   <workgroup key="v2mg" webcode="v2management" name="V2 Mgmt Group" listserv="v2mgmtgrp@lists.HL7.org/"/>
   <workgroup key="eu" webcode="eu" name="HL7 Europe" listserv="europe@lists.hl7.org/"/>  
   <workgroup key="au-v2" webcode="au-v2" name="HL7 Australia V2" listserv="hl7v2wgballot@hl7.com.au"/>

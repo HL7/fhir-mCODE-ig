@@ -96,7 +96,7 @@ Description: "Example of Patient"
 * address.city = "Anytown"
 * address.postalCode = "12345"
 * address.country = "US"
-* communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
+* communication.language = urn:ietf:bcp:47#en-US "English (United States)"
 * communication.language.text = "English"
 * extension[USCoreRace].extension[ombCategory].valueCoding = OmbRaceCat#2054-5 "Black or African American"
 * extension[USCoreRace].extension[text].valueString = "Black or African American"
@@ -133,7 +133,7 @@ Description: "Example of Patient"
 * address.state = "MA"
 * address.postalCode = "12345"
 * address.country = "US"
-* communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
+* communication.language = urn:ietf:bcp:47#en-US "English (United States)"
 * communication.language.text = "English"
 * extension[USCoreRace].extension[ombCategory].valueCoding = OmbRaceCat#2106-3 "White"
 * extension[USCoreRace].extension[text].valueString = "White"
@@ -162,7 +162,7 @@ Description: "Example of Patient"
 * address.city = "Anytown"
 * address.postalCode = "12345"
 * address.country = "US"
-* communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
+* communication.language = urn:ietf:bcp:47#en-US "English (United States)"
 * communication.language.text = "English"
 * extension[USCoreRace].extension[ombCategory].valueCoding = OmbRaceCat#2106-3 "White"
 * extension[USCoreRace].extension[text].valueString = "White"
@@ -173,7 +173,7 @@ Description: "Example of Patient"
 Instance: us-core-practitioner-kyle-anydoc
 InstanceOf: USCorePractitioner
 Description: "Example of Practitioner"
-* identifier[NPI].value = "9988776655"
+* identifier[NPI].value = "9988776651"
 * name.family = "Anydoc"
 * name.given = "Kyle"
 * name.prefix = "Dr."
@@ -321,7 +321,7 @@ Description: "Example of CancerRelatedMedicationRequest - Chemo Infusion"
 * status = MedReqStatus#completed
 * intent = MedReqIntent#order
 * authoredOn = "2019-04-01"
-* medicationCodeableConcept = RXN#309311 "CISplatin 50 MG per 50 ML Injectable Solution"
+* medicationCodeableConcept = RXN#309311 "cisplatin 1 MG/ML Injectable Solution"
 * reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
 * requester = Reference(us-core-practitioner-kyle-anydoc)
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
@@ -341,7 +341,7 @@ Description: "Example of CancerRelatedMedicationRequest - Chemo Infusion"
 * statusReason = SCT#407563006 "Treatment not tolerated (situation)"
 * intent = MedReqIntent#order
 * authoredOn = "2019-05-15"
-* medicationCodeableConcept = RXN#309311 "CISplatin 50 MG per 50 ML Injectable Solution"
+* medicationCodeableConcept = RXN#309311 "cisplatin 1 MG/ML Injectable Solution"
 * reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
 * requester = Reference(us-core-practitioner-kyle-anydoc)
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
@@ -357,7 +357,7 @@ Description: "Hemoglobin lab result to support TNMStageGroup example"
 * effectiveDateTime = "2020-03-06"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 * valueQuantity = 13.5 'g/dl' "g/dl"
-* category = ObsCat#laboratory "laboratory"
+* category[us-core] = ObsCat#laboratory "laboratory"
 
 Instance: history-of-cancer-metastatic-to-liver
 InstanceOf: HistoryOfMetastaticCancer
@@ -403,22 +403,23 @@ Description: "Example of intermediate histologic grade."
 * status = #final "final"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 
-//Instance: tumor-morphology-report-non-small-cell-intermediate-grade
-//InstanceOf: TumorMorphology
-//Description: "Example of a tumor morphology report showing non-small cell cancer with an intermediate histologic grade."
-//* extension[relatedCondition].valueReference = Reference(primary-cancer-condition-nsclc)
-//* subject = Reference(cancer-patient-john-anyperson)
-//* effectiveDateTime = "2019-04-01"
-//* specimen = Reference(human-specimen-lung)
-//* result[0] = Reference(histologic-grade-intermediate)
-//* result[1] = Reference(histologic-behavior-and-type-non-small-cell)
-//* status = #final "final"
-//* issued = "2019-04-15T13:28:17.239+02:00"
+Instance: tumor-morphology-report-non-small-cell-intermediate-grade
+InstanceOf: TumorMorphology
+Description: "Example of a tumor morphology report showing non-small cell cancer with an intermediate histologic grade."
+* category[us-core] = ObsCat#laboratory
+* extension[relatedCondition].valueReference = Reference(primary-cancer-condition-nsclc)
+* subject = Reference(cancer-patient-john-anyperson)
+* effectiveDateTime = "2019-04-01"
+* specimen = Reference(human-specimen-lung)
+* hasMember[0] = Reference(histologic-grade-intermediate)
+* hasMember[+] = Reference(histologic-behavior-and-type-non-small-cell)
+* status = #final "final"
+* issued = "2019-04-15T13:28:17.239+02:00"
 
-/*
 Instance: rhabdomyosarcoma-risk-assessment-low
 InstanceOf: RhabdomyosarcomaRiskAssessment
 Description: "Example of rhabdomyosarcoma with a low risk assessment."
+* category[us-core] = ObsCat#laboratory
 * valueCodeableConcept = SCT#723505004 "Low risk (qualifier value)"
 * status = #final "final"
 * subject = Reference(cancer-patient-john-anyperson)
@@ -429,13 +430,13 @@ Description: "Example of rhabdomyosarcoma with a low risk assessment."
 Instance: all-risk-assessment-high
 InstanceOf: ALLRiskAssessment
 Description: "Example of leukemia with a standard risk assessment."
+* category[us-core] = ObsCat#laboratory
 * valueCodeableConcept = NCIT#C122458 "High Risk Acute Leukemia"
 * status = #final "final"
 * subject = Reference(cancer-patient-john-anyperson)
 * focus = Reference(primary-cancer-condition-nonspecific)
 * effectiveDateTime = "2021-04-01"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
-*/
 
 Instance: john-anyperson-hd
 InstanceOf: USCoreCondition
@@ -464,7 +465,7 @@ Description: "Example of Patient"
 * address.city = "Anytown"
 * address.postalCode = "12345"
 * address.country = "US"
-* communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
+* communication.language = urn:ietf:bcp:47#en-US "English (United States)"
 * communication.language.text = "English"
 * extension[USCoreRace].extension[ombCategory].valueCoding = OmbRaceCat#2106-3 "White"
 * extension[USCoreRace].extension[text].valueString = "White"
@@ -472,12 +473,12 @@ Description: "Example of Patient"
 * extension[USCoreEthnicity].extension[text].valueString = "Not Hispanic or Latino"
 * extension[USCoreBirthSex].valueCode = #F
 
-/*
 Instance: lansky-play-performance-status-twenty
 InstanceOf: LanskyPlayPerformanceStatus
 Description: "Example of Lansky Play Performance Status."
 * status = #final "final"
 * method = SCT#5880005 "Clinical examination"
+* category = ObsCat#exam "Exam"
 * subject = Reference(cancer-patient-lucy-child)
 * effectiveDateTime = "2019-04-01"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
@@ -488,13 +489,13 @@ Instance: deauville-scale-five
 InstanceOf: DeauvilleScale
 Description: "Example of Deauville Scale."
 * focus = Reference(primary-cancer-condition-nonspecific)
+* category = ObsCat#exam "Exam"
 * subject = Reference(cancer-patient-john-anyperson)
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * valueInteger = 5
 * interpretation = NCIT#C99750 "London Deauville Criteria Point Scale 5"
 * status = #final "final"
 * effectiveDateTime = "2019-04-01"
-*/
 
 Instance: body-surface-area-example
 InstanceOf: BodySurfaceArea
@@ -504,9 +505,3 @@ Description: "Example of body surface area."
 * subject = Reference(cancer-patient-lucy-child)
 * effectiveDateTime = "2023-04-01"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
-
-
-
-
-
-

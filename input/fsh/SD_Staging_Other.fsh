@@ -1,3 +1,29 @@
+// Lymphoma Stage
+
+Profile: LymphomaStage
+Id: mcode-lymphoma-stage
+Parent: CancerStage
+Title: "Lymphoma Stage Profile"
+Description: "Staging of lymphoma (both Hodgkins and Non-Hodgkins) by Ann Arbor, Cotswold, or Lugano staging systems. The method (required) indicates which of these related staging systems was used."
+* ^extension[FMM].valueInteger = 0
+* code = SCT#385388004 // "Lymphoma stage (observable entity)"
+* method 1..1 MS
+* method from LymphomaStagingMethodVS
+* value[x] from LymphomaStageValueVS (required)
+* insert ObservationComponentSlicingRules
+* component contains stage-modifier 0..* and clin-or-path-modifier 0..1 and bulky-modifier 0..1
+* component[stage-modifier].value[x] only CodeableConcept
+* component[stage-modifier].value[x] from LymphomaStageValueModifierVS
+* component[stage-modifier].code = SCT#106252000 "Staging classification for lymphoma (tumor staging)"
+
+* component[clin-or-path-modifier].value[x] only CodeableConcept
+* component[clin-or-path-modifier].value[x] from ClinOrPathModifierVS
+* component[clin-or-path-modifier].code = SCT#277366005 "Nature of staging values (qualifier value)"
+
+* component[bulky-modifier].value[x] only CodeableConcept
+* component[bulky-modifier].value[x] from LymphomaStageBulkyModifierVS
+* component[bulky-modifier].code = SCT#260873006 "Bulky disease status (attribute)"
+
 /*
 //  Leukemia Stage
 
@@ -32,33 +58,6 @@ Description: "Gynecologic tumor stage by International Federation of Gynecology 
 * code = SCT#385361009 // "International Federation of Gynecology and Obstetrics stage for gynecological malignancy (observable entity)"
 * method from FIGOStagingMethodVS (extensible)
 * value[x] from FIGOStageValueVS (extensible)
-
-// Lymphoma Stage
-
-Profile: LymphomaStage
-Id: mcode-lymphoma-stage
-Parent: CancerStage
-Title: "Lymphoma Stage Profile"
-Description: "Staging of lymphoma (both Hodgkins and Non-Hodgkins) by Ann Arbor, Cotswold, or Lugano staging systems. The method (required) indicates which of these related staging systems was used."
-* ^extension[FMM].valueInteger = 0
-* code = SCT#385388004 // "Lymphoma stage (observable entity)"
-* method 1..1 MS
-* method from LymphomaStagingMethodVS
-* value[x] from LymphomaStageValueVS (required)
-* insert ObservationComponentSlicingRules
-* component contains stage-modifier 0..* and clin-or-path-modifier 0..1 and bulky-modifier 0..1
-* component[stage-modifier].value[x] only CodeableConcept
-* component[stage-modifier].value[x] from LymphomaStageValueModifierVS
-* component[stage-modifier].code = SCT#106252000 "Staging classification for lymphoma (tumor staging)"
-
-* component[clin-or-path-modifier].value[x] only CodeableConcept
-* component[clin-or-path-modifier].value[x] from ClinOrPathModifierVS
-* component[clin-or-path-modifier].code = SCT#277366005 "Nature of staging values (qualifier value)"
-
-* component[bulky-modifier].value[x] only CodeableConcept
-* component[bulky-modifier].value[x] from LymphomaStageBulkyModifierVS
-* component[bulky-modifier].code = SCT#260873006 "Bulky disease status (attribute)"
-
 
 // Melanoma
 

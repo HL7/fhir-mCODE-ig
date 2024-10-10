@@ -46,7 +46,7 @@ Description: "GenomeX example: example organization"
 * type = http://terminology.hl7.org/CodeSystem/organization-type#other "Other"
 * name = "Gensop Labs, Inc."
 * identifier[0].system = "urn:oid:2.16.840.1.113883.4.7"  //CLIA number
-* identifier[0].value = "14Y73291001"
+* identifier[0].value = "14D7329100"
 * telecom[0].system = #phone
 * telecom[0].value = "555-555-5555"
 * telecom[1].system = #email

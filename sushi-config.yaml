@@ -53,6 +53,8 @@ pages:
     title: Identifying In-Scope Patients
   conformance-profiles.md:
     title: Profile Conformance
+  conformance-uscdi-plus.md:
+    title: USCDI+ Cancer Conformance
   terminology.md:
     title: Terminology
   dictionary.md:
@@ -99,6 +101,7 @@ menu:
     General Expectations: conformance-general.html
     Identifying mCODE Patients: conformance-patients.html
     Profile Conformance: conformance-profiles.html
+    USCDI+ Cancer Conformance: conformance-uscdi-plus.html
     Terminology: terminology.html
   FHIR Artifacts:
     Profiles: profiles.html

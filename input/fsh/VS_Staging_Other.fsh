@@ -12,6 +12,7 @@ Id: mcode-breslow-depth-stage-value-vs
 Title: "Breslow Depth Stage Value Set"
 Description: "Codes in the Breslow staging system representing melanoma depth."
 * insert SNOMEDCopyrightForVS
+* ^experimental = false
 * include codes from system SCT where concept descendant-of #385348009 "Breslow depth finding for melanoma (finding)"
 
 ValueSet: ClarkLevelValueVS
@@ -19,6 +20,7 @@ Id: mcode-clark-level-value-vs
 Title: "Clark Level Value Set"
 Description: "Levels for Clark staging of melanoma"
 * insert SNOMEDCopyrightForVS
+* ^experimental = false
 * include codes from system SCT where concept descendant-of #385347004 "Clark melanoma level finding (finding)"
 
 ValueSet: ClinOrPathModifierVS
@@ -26,6 +28,7 @@ Id: mcode-clin-or-path-modifier-vs
 Title: "Clinical or Pathologic Modifier"
 Description: "Stage value modifier indicating if staging was based on clinical or pathologic evidence."
 * insert SNOMEDCopyrightForVS
+* ^experimental = false
 * SCT#260998006 "Clinical staging (qualifier value)"
 * SCT#261023001 "Pathological staging (qualifier value)"
 
@@ -34,6 +37,7 @@ Id: mcode-fab-classification-value-vs
 Title: "FAB Classification Value"
 Description: "French American British classification for acute myeloid leukemias, acute lymphoblastic leukemias, and myelodysplastic syndromes."
 * insert SNOMEDCopyrightForVS
+* ^experimental = false
 * include codes from system SCT where concept descendant-of #278159002 "French-American-British type values (qualifier value)"
 
 ValueSet: FIGOStagingMethodVS
@@ -41,6 +45,7 @@ Id: mcode-figo-staging-method-vs
 Title: "FIGO Staging Method Value Set"
 Description: "Staging methods from International Federation of Gynecology and Obstetrics (FIGO)."
 * insert SNOMEDCopyrightForVS
+* ^experimental = false
 * include codes from system SCT where concept is-a #254383006 "International Federation of Gynecology and Obstetrics staging system of gynecological malignancy (tumor staging)"
 
 ValueSet: FIGOStageValueVS
@@ -86,6 +91,7 @@ Id: mcode-gleason-grade-group-value-vs
 Title: "Gleason Grade Value Set"
 Description: "Gleason grade for prostatic cancer, with values that explicitly reference the Gleason score."
 * insert SNOMEDCopyrightForVS
+* ^experimental = false
 * include codes from system SCT where concept descendant-of #1515521000004104 "International Society of Urological Pathology histologic grade group (qualifier value)"
 
 ValueSet: LymphomaStagingMethodVS
@@ -93,6 +99,7 @@ Id: mcode-lymphoma-staging-method-vs
 Title: "Lymphoma Staging System Value Set"
 Description: "Staging Systems used to stage lymphomas (Hodgkin's and non-Hodgkin's)."
 * insert SNOMEDCopyrightForVS
+* ^experimental = false
 * SCT#254373007 "Ann Arbor Hodgkin's disease tumor staging system (tumor staging)"
 * SCT#254374001 "Ann Arbor non-Hodgkin's lymphoma tumor staging system (tumor staging)"
 * SCT#254375000 "Cotswolds Hodgkin's disease tumor staging system (tumor staging)"
@@ -106,6 +113,7 @@ Id: mcode-lymphoma-stage-value-vs
 Title: "Lymphoma Stage Value Set"
 Description: "Stage values used in lymphoma staging systems."
 * insert SNOMEDCopyrightForVS
+* ^experimental = false
 * include codes from system SCT where concept descendant-of #385389007 "Lymphoma stage finding (finding)"
 * NCIT#C171157 "Ann Arbor Stage IIX (Bulky)"
 
@@ -114,6 +122,7 @@ Id: mcode-lymphoma-stage-value-modifier-vs
 Title: "Lymphoma Stage Value Modifier Value Set"
 Description: "Staging modifiers indicating symptoms and extent for lymphomas."
 * insert SNOMEDCopyrightForVS
+* ^experimental = false
 * include codes from system SCT where concept descendant-of #106252000 "Staging classification for lymphoma (tumor staging)"
 
 ValueSet: MyelomaISSValueVS
@@ -139,6 +148,7 @@ Id: mcode-rai-staging-method-vs
 Title: "Rai Staging System Value Set"
 Description: "Rai Staging Systems used to stage chronic lymphocytic leukemia (CLL)."
 * insert SNOMEDCopyrightForVS
+* ^experimental = false
 * SCT#1149131009 "Rai staging system for chronic lymphocytic leukemia (tumor staging)"
 * NCIT#C141206  "Chronic Lymphocytic Leukemia- Modified Rai Staging System"
 
@@ -158,6 +168,7 @@ Id: mcode-neuroblastoma-inss-value-vs
 Title: "International Neuroblastoma Staging System (INSS) for Neuroblastoma Stage Value Set"
 Description: "Codes in INSS staging system representing neuroblastoma stage."
 * insert SNOMEDCopyrightForVS
+* ^experimental = false
 * include codes from system SCT where concept descendant-of #409721000 "International neuroblastoma staging system stage finding (finding)"
 
 ValueSet: NeuroblastomaINRGSSValueVS
@@ -174,6 +185,7 @@ ValueSet: WilmsTumorStageValueVS
 Id: mcode-wilms-tumor-stage-value-vs
 Title: "Wilms Tumor Stage Value Set"
 Description: "Codes in the National Wilms Tumor Study Group representing Wilms Tumor stage."
+* ^experimental = false
 * insert SNOMEDCopyrightForVS
 * include codes from system SCT where concept descendant-of #405971004 "National Wilms Tumor Study Group Stage finding (finding)"
 
@@ -182,6 +194,7 @@ Id: mcode-wilms-tumor-body-site-vsCOG
 Title: "Wilms Tumor Body Site Value Set"
 Description: "Codes indicating the location of the Wilms Tumor."
 * insert SNOMEDCopyrightForVS
+* ^experimental = false
 * SCT#18639004 "Left kidney structure (body structure)"
 * SCT#9846003 "Right kidney structure (body structure)"
 
@@ -200,6 +213,7 @@ Id: mcode-rhabdomyosarcoma-clinical-group-value-vs
 Title: "Rhabdomyosarcoma Clinical Group Value"
 Description: "Intergroup code indicating whether the rhabdomyosarcoma is confined to its primary location or has extended beyond the site of origin."
 * insert SNOMEDCopyrightForVS
+* ^experimental = false
 * include codes from system SCT where concept descendant-of #405917009 "Intergroup rhabdomyosarcoma study post-surgical clinical group finding (finding)"
 * NCIT#C148012 "Intergroup Rhabdomyosarcoma Group I"
 * NCIT#C148015 "Intergroup Rhabdomyosarcoma Group II"
@@ -210,6 +224,7 @@ Id: mcode-cancer-staging-prognostic-factor-type-vs
 Title: "Cancer Staging Prognostic Factors Types"
 Description: "Types of prognostic factors used to determine cancer stage"
 * insert SNOMEDCopyrightForVS
+* ^experimental = false
 * SCT#106252000 "Staging classification for lymphoma (tumor staging)"
 * SCT#277366005 "Nature of staging values (qualifier value)"
 * SCT#260873006 "Bulky disease status (attribute)"
@@ -219,6 +234,7 @@ Id: mcode-cancer-staging-prognostic-factor-value-vs
 Title: "Cancer Staging Prognostic Factors Value"
 Description: "Values of prognostic factors used to determine cancer stage"
 * insert SNOMEDCopyrightForVS
+* ^experimental = false
 * include codes from system SCT where concept descendant-of #106252000 "Staging classification for lymphoma (tumor staging)"
 * SCT#260998006 "Clinical staging (qualifier value)"
 * SCT#261023001 "Pathological staging (qualifier value)"
@@ -229,6 +245,7 @@ ValueSet: InternationalRetinoblastomaStageValueVS
 Id: mcode-international-retinoblastoma-stage-value-vs
 Title: "International Retinoblastoma Stage Value"
 Description: "Codes in the international retinoblastoma staging system representing retinoblastoma stage."
+* ^experimental = false
 * NCIT#C198180 "Stage 0 Childhood Retinoblastoma by Toronto Guidelines v2"
 * NCIT#C198181 "Stage I Childhood Retinoblastoma by Toronto Guidelines v2"
 * NCIT#C198182 "Stage II Childhood Retinoblastoma by Toronto Guidelines v2"
@@ -239,6 +256,7 @@ ValueSet: PRETEXTValueVS
 Id: mcode-pretext-stage-value-vs
 Title: "PRETEXT Stage Value"
 Description: "Codes in the PRETEXT staging system representing hepatoblastoma stage."
+* ^experimental = false
 * NCIT#C7139 "PRETEXT I Hepatoblastoma"
 * NCIT#C198011 "Localized PRETEX I Hepatoblastoma"
 * NCIT#C198015 "Metastatic PRETEX I Hepatoblastoma"

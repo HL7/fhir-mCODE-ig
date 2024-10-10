@@ -4,17 +4,17 @@ Recording patient outcomes in mCODE involves disease status, tumor size, and dat
 
 Formal recording of disease status is often limited to clinical trials, involving precise criteria such as [RECIST](https://ctep.cancer.gov/protocolDevelopment/docs/recist_guideline.pdf). The lack of outcome data outside of trials greatly limits the application of real-world data. Disease status information is rarely found in structured form in EHRs. If recorded at all, the information is found in clinical notes, which is of limited usefulness.
 
-mCODE asks for disease status to be recorded in structured form as part of patient encounters. In mCODE, disease status is defined as "A clinician's qualitative judgment on the current trend of the cancer, e.g., whether it is stable, worsening (progressing), or improving (responding). The judgment may be based a single type or multiple kinds of evidence, such as imaging data, assessment of symptoms, tumor markers, laboratory data, etc." In other words, the disease status is an assessment by the oncologist that synthesizes all currently available information about the patient. The [ICAREdata™ Project](http://icaredata.org/) is conducting a study in association with a randomized controlled trial (RCT), which aims to demonstrate the ability to calculate equivalent clinical trial endpoints using computable clinical treatment data.
+mCODE asks for disease status to be recorded in a structured form as part of patient encounters. In mCODE, disease status is defined as "A clinician's qualitative judgment on the current trend of the cancer, e.g., whether it is stable, worsening (progressing), or improving (responding). The judgment may be based on a single type or multiple kinds of evidence, such as imaging data, assessment of symptoms, tumor markers, laboratory data, etc." In other words, the disease status is an assessment by the oncologist that synthesizes all currently available information about the patient. The [ICAREdata™ Project](http://icaredata.org/) is conducting a study in association with a randomized controlled trial (RCT), which aims to demonstrate the ability to calculate equivalent clinical trial endpoints using computable clinical treatment data.
 
 In addition, the history of tumor size is indicative of treatment efficacy.
 
 #### Remission and Relapse
 
-[PrimaryCancerCondition] has a status field, `Condition.clinicalStatus`, that records high-level status of the disease. When the [CancerDiseaseStatus] is determined to be in remission, an update to [PrimaryCancerCondition] is required. Specifically, the `Condition.clinicalStatus` element of [PrimaryCancerCondition] should be updated to `remission`. If subsequently there is a relapse, the  `clinicalStatus` field should be upated to `relapse`, then only in subsequent encounters is the [CancerDiseaseStatus] used to track the patient's status on an encounter-by-encounter basis.
+[PrimaryCancerCondition] has a status field, `Condition.clinicalStatus`, that records high-level status of the disease. When the [CancerDiseaseStatus] is determined to be in remission, an update to [PrimaryCancerCondition] is required. Specifically, the `Condition.clinicalStatus` element of [PrimaryCancerCondition] should be updated to `remission`. If subsequently there is a relapse, the  `clinicalStatus` field should be updated to `relapse`, then only in subsequent encounters is the [CancerDiseaseStatus] used to track the patient's status on an encounter-by-encounter basis.
 
 #### Date of Death
 
-Date of death data is recorded using the Patient resource. The death date can be obtained from several sources outside of the clinical setting. If available in the EHR, it can be reported through via mCODE, but more likely, it will be filled in from vital records, after the last clinical interaction.
+Date of death data is recorded using the Patient resource. The death date can be obtained from several sources outside of the clinical setting. If available in the EHR, it can be reported via mCODE, but more likely, it will be filled in from vital records, after the last clinical interaction.
 
 ### Tumor Identification
 

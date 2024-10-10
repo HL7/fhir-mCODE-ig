@@ -1,4 +1,4 @@
-Differing Capability Statements in mCODE are associated with different methods of determining which patients are “in-scope” for mCODE (meaning cancer patients whose data is presented or exchanged with the intention of conforming to mCODE). For further information, see [Identifying In-Scope Patients](conformance-patients.html).
+Different Capability Statements in mCODE are associated with alternative methods of determining which patients are “in-scope” for mCODE (meaning cancer patients whose data is presented or exchanged with the intention of conforming to mCODE). For further information, see [Identifying In-Scope Patients](conformance-patients.html).
 
 The following Capability Statements are defined in mCODE:
 

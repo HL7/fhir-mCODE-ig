@@ -17,11 +17,11 @@ Because the use of these code systems vary in different institutions, mCODE supp
 | Encoding | Code  | Histology Morphology Behavior Extension| Body Site |
 |----------|-------|-----------------------------|----------|
 | **SNOMED Encoded** | Any SNOMED CT code in the [Primary Cancer Disorder Value Set][PrimaryCancerDisorderVS] | Any SNOMED CT code in the [Histology Morphology Behavior Value Set][HistologyMorphologyBehaviorVS] | Any descendant of `123037004` "Body structure" |
-| **ICD-10-CM Encoded** | Any ICD-10-CM primary code (precoodinated) | omit | optional; must be consistent with primary code if provided but may contain more detail |
+| **ICD-10-CM Encoded** | Any ICD-10-CM primary code (precoordinated) | omit | optional; must be consistent with primary code if provided but may contain more detail |
 | **ICD-O-3 Encoded** | SNOMED CT code `55342001` "Neoplastic disease (disorder)", `363346000` "Malignant neoplastic disease (disorder)", or `20376005` "Benign neoplastic disease (disorder)" | Full ICD-O-3 morphology code* | Any ICD-O-3 Topology Code |
 {: .grid }
 
-*The ICD-O-3 morphology code should have the form `HHHH/B G` where HHHH is the 4-digit histology code, B is the 1-digit behavior code (i.e., /1, /2, or /3 suffix for primary cancers, and /6 suffix for secondary cancers), and G is the grade or equivalent in leukemias and lymphomas (1 digit). For more information, see [ICD-O Third Edition, Table 8](https://apps.who.int/iris/bitstream/handle/10665/96612/9789241548496_eng.pdf).
+*The ICD-O-3 morphology code should be in the form `HHHH/B G` where HHHH is the 4-digit histology code, B is the 1-digit behavior code (i.e., /1, /2, or /3 suffix for primary cancers, and /6 suffix for secondary cancers), and G is the grade or equivalent in leukemias and lymphomas (1 digit). For more information, see [ICD-O Third Edition, Table 8](https://apps.who.int/iris/bitstream/handle/10665/96612/9789241548496_eng.pdf).
 
 Implementers should reference the [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles for further details on the use of these terminologies and associated value sets.
 
@@ -47,7 +47,7 @@ In mCODE, staging and risk assessment information has three components:
 2. The staging or risk assessment system, method, or protocol used to perform the staging or risk assessment (e.g., AJCC 7th Edition)
 3. The actual stage or risk assessment value (e.g., cT3)
 
-The stage or risk assessment value (3) is always reported. To interpret the meaning of the stage or risk assessment value, the staging or risk assessment system or staging or risk assessment method must be known. Depending on the code used, the stage or risk assessment type (1) can identify the staging or risk assessment system, the kind of stage or risk assessment reported, and factors such as the timing (e.g., at diagnosis or posttherapy) and the type of evidence (e.g., clincal or pathologic). If the stage or risk assessment type does not imply the staging or risk assessment system, the staging or risk assessment system is reported separately (2). 
+The stage or risk assessment value (3) is always reported. To interpret the meaning of the stage or risk assessment value, the staging or risk assessment system or method must be known. Depending on the code used, the stage or risk assessment type (1) can identify the staging or risk assessment system, the kind of stage or risk assessment reported, and factors such as the timing (e.g., at diagnosis or posttherapy) and the type of evidence (e.g., clinical or pathologic). If the stage or risk assessment type does not imply the staging or risk assessment system, the staging or risk assessment system is reported separately (2). 
 
 A degree of redundancy may exist between these three elements. For example:
 
@@ -112,7 +112,7 @@ Representing stage information in this way, i.e., without an explicit staging sy
 
 Tumor markers are key prognostic factors in calculating cancer staging, identifying treatment options, and monitoring progression of disease. For example, an abnormal increase in prostate-specific antigen (PSA) levels is a prognostic factor for prostate cancer. Other tumor markers include estrogen receptor (ER) status, progesterone receptor (PR) status, carcinoembryonic antigen (CEA) levels, among others. mCODE distinguishes tumor marker tests from sequencing-based genomic tests measured at the DNA, RNA, or chromosomal level. The latter are addressed in the [Genomics](group-genomics.html) section.
 
-mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving serum and tissue-based tumor markers. This is less than ideal, since without specifying units of measure or answer sets on a per-test basis, reporting could vary. However, given the large number of tumor marker tests, creating individual profiles was judged impractical.
+mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving serum and tissue-based tumor markers. This is less than ideal. Not specifying units of measure or answer sets on a per-test basis, means reporting could vary. However, given the large number of tumor marker tests, creating individual profiles was judged impractical.
 
 ### Profiles
 
@@ -129,7 +129,7 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [CancerRiskAssessment]
 * Staging, AJCC TNM
   * [TNMStageGroup]
-  * [TNMPrimaryTumorCategory]All
+  * [TNMPrimaryTumorCategory]
   * [TNMRegionalNodesCategory]
   * [TNMDistantMetastasesCategory]
 * Staging, non-TNM (Draft Status)

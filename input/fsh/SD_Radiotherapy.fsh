@@ -50,7 +50,7 @@ Description: "A summary of a course of radiotherapy delivered to a patient. It r
 * reasonCode from CancerDisorderVS (extensible)
 * statusReason from TreatmentTerminationReasonVS (preferred)
 * reasonReference only Reference(USCoreCondition)
-* reasonCode and reasonReference and bodySite MS
+* reasonCode and reasonReference and bodySite and statusReason MS
 * obeys mcode-reason-required
 
 //---------- Extensions -------------------------

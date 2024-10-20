@@ -647,7 +647,7 @@ InstanceOf: CancerRelatedMedicationAdministration
 Description: "Extended example: example showing chemotherapy medication"
 * status = #completed "completed"
 * category = MedReqCat#outpatient
-* medicationCodeableConcept = RXN#1790099 "doxorubicin hydrochloride 20 MG per 10 ML Injection"
+* medicationCodeableConcept = RXN#1790099 "10 ML doxorubicin hydrochloride 2 MG/ML Injection"
 * subject = Reference(cancer-patient-jenny-m)
 * performer.actor = Reference(us-core-practitioner-nancy-oncology-nurse)
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
@@ -993,7 +993,7 @@ Description: "Extended example: example cancer patient"
 Instance: us-core-practitioner-jane-radiotech
 InstanceOf: USCorePractitioner
 Description: "Extended example: example PCP practitioner"
-* identifier[NPI].value = "234512367"
+* identifier[NPI].value = "2345123675"
 * name.family = "Radiologist"
 * name.given[0] = "Jane"
 * name.prefix[0] = "Dr."
@@ -1010,7 +1010,7 @@ Description: "Extended example: example PCP practitioner"
 Instance: us-core-practitioner-mary-obgyn
 InstanceOf: USCorePractitioner
 Description: "Extended example: example PCP practitioner"
-* identifier[NPI].value = "234512367"
+* identifier[NPI].value = "2345123675"
 * name.family = "Obgyn"
 * name.given[0] = "Mary"
 * name.prefix[0] = "Dr."
@@ -1028,7 +1028,7 @@ Description: "Extended example: example PCP practitioner"
 Instance: us-core-practitioner-owen-oncologist
 InstanceOf: USCorePractitioner
 Description: "Extended example: example practitioner"
-* identifier[NPI].value = "9988776655"
+* identifier[NPI].value = "9988776651"
 * name.family = "Oncologist"
 * name.given[0] = "Owen"
 * name.prefix[0] = "Dr."
@@ -1062,7 +1062,7 @@ Description: "Extended example: example practitioner (pathologist)"
 Instance: us-core-practitioner-nancy-oncology-nurse
 InstanceOf: USCorePractitioner
 Description: "Extended example: example RN practitioner"
-* identifier[NPI].value = "55667788"
+* identifier[NPI].value = "5566778895"
 * name.family = "Nurse"
 * name.given[0] = "Nancy"
 * name.prefix[0] = "Ms."
@@ -1094,7 +1094,7 @@ Description: "Extended example: example organization"
 Instance: us-core-organization-bedrock-medicine
 InstanceOf: USCoreOrganization
 Description: "Example of US Core Organization"
-* identifier[NPI].value = "1265710000"
+* identifier[NPI].value = "1265710008"
 * active = true
 * name = "Bedrock Medicine"
 * contact.telecom.system = #phone

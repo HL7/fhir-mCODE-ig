@@ -136,7 +136,7 @@
 
 ### [Tumor Morphology][TumorMorphology]
 
-* [Tumor Morphology Report - Non-Small Cell Carcinoma, Malignant, Primary Site, Intermediate Grade](DiagnosticReport-tumor-morphology-report-non-small-cell-intermediate-grade.html)
+* [Tumor Morphology Report - Non-Small Cell Carcinoma, Malignant, Primary Site, Intermediate Grade](Observation-tumor-morphology-report-non-small-cell-intermediate-grade.html)
 
 ### [Tumor Size][TumorSize]
 

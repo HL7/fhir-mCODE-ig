@@ -3,7 +3,6 @@ Id: mcode-cancer-stage
 Parent: USCoreObservationSimple
 Title: "Cancer Stage Profile"
 Description: "Profile for observations regarding cancer stage, grade, or classification. The stage is an assessment of the extent of the cancer in the body, according to a given cancer staging classification system. The key elements are the code, method, value, and optionally, prognostic factors referenced in the hasMember (if the prognostic factor is captured in a different profile) or component (if the prognostic factor is not captured in a different profile) element."
-* ^abstract = true
 * insert NotUsed(device)
 * insert NotUsed(referenceRange)
 * focus only Reference(PrimaryCancerCondition)

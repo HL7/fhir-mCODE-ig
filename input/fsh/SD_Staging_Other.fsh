@@ -111,7 +111,7 @@ Profile: ProstateGleasonGradeGroup
 Id: mcode-prostate-gleason-grade-group
 Parent: CancerStage
 Title: "Prostate Gleason Grade Group Profile"
-Description: "Gleason Grade Group for prostatic cancer"
+Description: "Gleason Grade Group for prostate cancer"
 * ^extension[FMM].valueInteger = 0
 * code = SCT#385377005 // Gleason grade finding for prostatic cancer (finding)
 * value[x] from GleasonGradeGroupValueVS (required)

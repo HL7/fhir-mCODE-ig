@@ -39,7 +39,7 @@ Description: "A summary of a course of radiotherapy delivered to a patient. It r
 * code = SCT#1217123003 // "Radiotherapy course of treatment (regime/therapy)"
 * extension contains
     ProcedureIntent named treatmentIntent 0..1 MS and
-    TreatmentTerminationReason named terminationReason 0..1 MS and
+    TreatmentTerminationReason named terminationReason 0..1 and
     RadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS and
     RadiotherapySessions named actualNumberOfSessions 0..1 MS and
     RadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
@@ -48,6 +48,7 @@ Description: "A summary of a course of radiotherapy delivered to a patient. It r
 * bodySite ^definition = "Coded body structure(s) treated in this course of radiotherapy. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToVolume extension."
 * insert BodySiteQualifierAndLaterality(bodySite)
 * reasonCode from CancerDisorderVS (extensible)
+* statusReason MS
 * statusReason from TreatmentTerminationReasonVS (preferred)
 * reasonReference only Reference(USCoreCondition)
 * reasonCode and reasonReference and bodySite and statusReason MS

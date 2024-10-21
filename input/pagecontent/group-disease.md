@@ -29,9 +29,9 @@ Histologic behavior, type, and grade can also be reported in the [HistologicBeha
 
 #### Clinical Status
 
-On initial diagnosis, the `Condition.clinicalStatus` element will be `active`. Subsequent changes to the disease status should be recorded by updating the `clinicalStatus` element. The permitted values are active, recurrence, relapse, inactive, remission, resolved. Recurrence and relapse are often used interchangeably in the context of cancer. The resource's history can be accessed to see the history of the status value. 
+On initial diagnosis, the `Condition.clinicalStatus` element will be `active`. Subsequent changes to the disease status SHOULD be recorded by updating the `clinicalStatus` element. The permitted values are active, recurrence, relapse, inactive, remission, resolved. Recurrence and relapse are often used interchangeably in the context of cancer. The resource's history can be accessed to see the history of the status value. 
 
-Note that there is another resource profile, the [CancerDiseaseStatus], that is used to record the patient's condition on an encounter-by-encounter basis, and uses values such as improved, stable, worsened, as well as full and partial remission. When the value of CancerDiseaseStatus indicates remission, the `Condition.clinicalStatus` should be updated to reflect that finding.
+Note that there is another resource profile, the [CancerDiseaseStatus], that is used to record the patient's condition on an encounter-by-encounter basis, and uses values such as improved, stable, worsened, as well as full and partial remission. When the value of CancerDiseaseStatus indicates remission, the `Condition.clinicalStatus` SHOULD be updated to reflect that finding.
 
 #### Body Location
 

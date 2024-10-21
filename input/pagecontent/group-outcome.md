@@ -10,7 +10,7 @@ In addition, the history of tumor size is indicative of treatment efficacy.
 
 #### Remission and Relapse
 
-[PrimaryCancerCondition] has a status field, `Condition.clinicalStatus`, that records high-level status of the disease. When the [CancerDiseaseStatus] is determined to be in remission, an update to [PrimaryCancerCondition] is required. Specifically, the `Condition.clinicalStatus` element of [PrimaryCancerCondition] should be updated to `remission`. If subsequently there is a relapse, the  `clinicalStatus` field should be upated to `relapse`, then only in subsequent encounters is the [CancerDiseaseStatus] used to track the patient's status on an encounter-by-encounter basis.
+[PrimaryCancerCondition] has a status field, `Condition.clinicalStatus`, that records high-level status of the disease. When the [CancerDiseaseStatus] is determined to be in remission, an update to [PrimaryCancerCondition] is required. Specifically, the `Condition.clinicalStatus` element of [PrimaryCancerCondition] SHOULD be updated to `remission`. If subsequently there is a relapse, the  `clinicalStatus` field SHOULD be upated to `relapse`, then only in subsequent encounters is the [CancerDiseaseStatus] used to track the patient's status on an encounter-by-encounter basis.
 
 #### Date of Death
 

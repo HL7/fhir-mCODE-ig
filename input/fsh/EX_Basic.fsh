@@ -415,6 +415,7 @@ Description: "Example of a tumor morphology report showing non-small cell cancer
 * hasMember[+] = Reference(histologic-behavior-and-type-non-small-cell)
 * status = #final "final"
 * issued = "2019-04-15T13:28:17.239+02:00"
+* performer = Reference(us-core-practitioner-kyle-anydoc)
 
 Instance: rhabdomyosarcoma-risk-assessment-low
 InstanceOf: RhabdomyosarcomaRiskAssessment

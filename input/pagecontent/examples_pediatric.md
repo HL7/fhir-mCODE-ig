@@ -38,11 +38,11 @@ Treatment options were discussed between the patient's family and the medical on
 | [`Genomic Variant: Chromosomal Translocation`](Observation-gx-genomic-variant-fusion-ETV6-RUNX1-brian-l.html) | [GenomicVariant] |
 | [`Performance Status: Lansky`](Observation-lansky-performance-status-brian-l.html) | [LanskyPlayPerformanceStatus] |
 | [`Medication Request: Cyclophosphamide`](MedicationRequest-cancer-related-medication-request-cyclophosphamide-brian-l.html) | [CancerRelatedMedicationRequest] | 
-| [`Medication Request: Idrarubicin`](MedicationRequest-cancer-related-medication-request-idarubicin-brian-l.html) | [CancerRelatedMedicationRequest] |  
+| [`Medication Request: Idarubicin`](MedicationRequest-cancer-related-medication-request-idarubicin-brian-l.html) | [CancerRelatedMedicationRequest] |  
 | [`MedicationRequest: Vincristine`](MedicationRequest-cancer-related-medication-request-vincristine-brian-l.html) | [CancerRelatedMedicationRequest] | 
 | [`MedicationRequest: Prednisone`](MedicationRequest-cancer-related-medication-request-prednisone-brian-l.html) | [CancerRelatedMedicationRequest] |
 | [`Medication Administration: Cyclophosphamide`](MedicationAdministration-cancer-related-medication-admin-cyclophosphamide-brian-l.html) | [CancerRelatedMedicationAdministration] | 
-| [`Medication Administration: Idrarubicin`](MedicationAdministration-cancer-related-medication-admin-idarubicin-brian-l.html) | [CancerRelatedMedicationAdministration] |  
+| [`Medication Administration: Idarubicin`](MedicationAdministration-cancer-related-medication-admin-idarubicin-brian-l.html) | [CancerRelatedMedicationAdministration] |  
 | [`MedicationAdministration: Vincristine`](MedicationAdministration-cancer-related-medication-admin-vincristine-brian-l.html) | [CancerRelatedMedicationAdministration] | 
 | [`MedicationAdministration: Prednisone`](MedicationAdministration-cancer-related-medication-admin-prednisone-brian-l.html) | [CancerRelatedMedicationAdministration] |
 | [`Body Surface Area`](Observation-body-surface-area-brian-l.html) | [BodySurfaceArea] |

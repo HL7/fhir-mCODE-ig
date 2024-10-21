@@ -35,7 +35,6 @@ The mCODE example [`Bundle-gx-genomic-bundle-adam-anyperson`](Bundle-gx-genomic-
 
 The GenomeX use case under the CodeX FHIR accelerator has a broader scope that is not limited to oncology-specific genomic tests, with the primary goal of validating the HL7 GRIG. However, it is widely recognized that the most prevalent and pervasive application for genomics and precision medicine is in the field of oncology. Consequently, there is a need for clarification and additional guidance between the mCODE FHIR IG.
 
-
 ### mCODE and the minimal and actionable set of data elements
 
 A minimal set of genomics elements may vary based on the type of test. For example:
@@ -56,21 +55,21 @@ Despite the variations, there is a general list of common elements. The Electron
 
 There is currently no general consensus on standardizing the ordering of next-generation sequencing (NGS) genomic tests. Regardless, mCODE provides some high level information on test codes that may be helpful for identifying tests.
 
-The identity of non-genomic laboratory tests is typically represented by a [Logical Observation Identifiers and Names (LOINC)](https://loinc.org/) code. However, many genomic tests and panels do not have LOINC codes, although some might have an identifier in the [NCBI Genomic Testing Registry (GTR)](https://www.ncbi.nlm.nih.gov/gtr/), a central location for voluntary submission of genomic test information by providers. While GTR is a viable source for identifying many genomic tests, the user should be aware that the GTR is not single authoritative source since the test data is voluntarily updated. Standardization of codes for genomic tests is essential to facilitate data analysis of genomic tests, and should be a priority for the genomics testing community in the near future. Implementers should also note that, to conform to the requirements of the [US Core Laboratory Result Profile](https://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html), if a suitable LOINC exists, it must be used. If there is no suitable code in LOINC, then a code from an alternative code system such as GTR can be used.
+The identity of non-genomic laboratory tests is typically represented by a [Logical Observation Identifiers and Names (LOINC)](https://loinc.org/) code. However, many genomic tests and panels do not have LOINC codes, although some might have an identifier in the [NCBI Genomic Testing Registry (GTR)](https://www.ncbi.nlm.nih.gov/gtr/), a central location for voluntary submission of genomic test information by providers. While GTR is a viable source for identifying many genomic tests, the user should be aware that the GTR is not a single authoritative source since the test data is voluntarily updated. Standardization of codes for genomic tests is essential to facilitate data analysis of genomic tests, and should be a priority for the genomics testing community in the near future. Implementers should also note that, to conform to the requirements of the [US Core Laboratory Result Profile](https://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html), if a suitable LOINC exists, it must be used. If there is no suitable code in LOINC, then a code from an alternative code system such as GTR can be used.
 
 ### Representing Variants
 
 #### Variant Nomenclature
 
-The [HL7 GRIG guidance on defining variants](https://hl7.org/fhir/uv/genomics-reporting/STU2/sequencing.html) states support for two reporting patterns for specifying variants:
+The [HL7 GRIG guidance on defining variants](https://hl7.org/fhir/uv/genomics-reporting/STU2/sequencing.html) states support for two reporting patterns of specifying variants:
 1. by [HGVS](http://varnomen.hgvs.org/) or [ISCN](https://www.karger.com/Book/Home/279152) nomenclature
 2. by providing multiple component details in the style of VCF columns
 
 Although mCODE should support both formats, it is preferable to use HGVS nomenclature for coding and protein variants where possible.
 
-A full representation of an HGVS variant should include the following: 
-* a transcript identifier or reference sequence id that includes the version number followed by a nomenclature which further characterizes the nature of the variant.
-* the reference sequence assembly version populated in the Variant observation component [reference-sequence-assembly](https://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-finding-definitions.html#Observation.component:reference-sequence-assembly).
+A full representation of an HGVS variant SHOULD include the following: 
+* a transcript identifier or reference sequence id that includes the version number followed by a nomenclature which further characterizes the nature of the variant
+* the reference sequence assembly version populated in the Variant observation component [reference-sequence-assembly](https://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-finding-definitions.html#Observation.component:reference-sequence-assembly)
 
 **NOTE**: The FHIR IG publisher validates HGVS-notated variants included in the FHIR examples, however it is not intended to validate all possible variants as there is no single HGVS validation tool that comprehensively covers the most up-to-date recognized variants for a given reference sequence. 
 

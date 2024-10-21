@@ -1,4 +1,4 @@
-**Sections 22.1 - 22.9 describe the changes between [STU 3 publication](https://hl7.org/fhir/us/mcode/STU3/) (October 2023) and the STU 4 ballot (May 2024). For a history of previous changes, please see the prior change logs in the [appropriate versions](https://hl7.org/fhir/us/mcode/history.html).**
+**Sections 23.1 - 23.9 describe the changes between [STU 3 publication](https://hl7.org/fhir/us/mcode/STU3/) (October 2023) and the STU 4 ballot (May 2024). For a history of previous changes, please see the prior change logs in the [appropriate versions](https://hl7.org/fhir/us/mcode/history.html).**
 
 ### Addition of non-TNM Staging Profiles
 
@@ -52,6 +52,7 @@ Body surface area is measured/calculated commonly for pediatric patients and use
 Adjusted the [ConditionStatusTrendVS] to avoid confusion. In mCODE STU3, some of the values can be true at the same time (example: a patient’s condition could have improved AND be in full remission). However, value[x] is 0.1. As a result, the codes for in full remission, partial remission, and distant metastasis present were moved into a maximum value set to ensure backward compatibility with this change.
 
 
+
 <br/>
 <br/>
 ----
@@ -62,6 +63,7 @@ Adjusted the [ConditionStatusTrendVS] to avoid confusion. In mCODE STU3, some of
 
 ### Inactive SNOMED CT Codes Replaced
 SNOMED CT can declare concepts inactive if they are duplicate, ambiguous, erroneous, or outdated. Several SNOMED CT codes used in mCODE STU 2 became inactive and had to be replaced for STU 3:
+
 
 * [Tumor] profile's morphology element was bound to 367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)" which is now inactive. This code has been replaced by an intensional value set, using code 1240414004 "Malignant neoplasm (morphologic abnormality)" and its descendants. This allows for a more detailed description of the tumor morphology. The old code remains conformant for backwards compatibility, but implementers should migrate to the new, replacement value set.
 * [primary-cancer-condition-jenny-m] Histology-Morphology-Behavior Extension: In this example instance, the inactive code 413448000 "Adenocarcinoma, no subtype, intermediate grade" has been replaced by 82711006 "Infiltrating duct carcinoma (morphologic abnormality)"
@@ -83,11 +85,12 @@ mCODE 2.1 and 3.0.0-ballot did not include any profiles for non-TNM staging, so 
 
 ### New History of Metastatic Disease Profile ([FHIR-41374](https://jira.hl7.org/browse/FHIR-41374))
 
-Recurrences and unrelated cancers sometimes occur years after previous metastatic disease, for example, in the case of an adult with history of childhood leukemia. The details of the previous disease may be unavailable, but the fact that the patient had cancer previously may be clinically significant. The profile [HistoryOfMetastaticCancer] provides a method of recording this fact in the absence of other details. This addition brings mCODE and [CMS's Enhancing Oncology Model](https://innovation.cms.gov/innovation-models/enhancing-oncology-model) into full alignment.
+Recurrences and unrelated cancers sometimes occur years after previous metastatic disease, for example, in the case of an adult with a history of childhood leukemia. The details of the previous disease may be unavailable, but the fact that the patient had cancer previously may be clinically significant. The profile [HistoryOfMetastaticCancer] provides a method of recording this fact in the absence of other details. This addition brings mCODE and [CMS's Enhancing Oncology Model](https://innovation.cms.gov/innovation-models/enhancing-oncology-model) into full alignment.
 
 ### Expanded Staging Type and Staging Method Value Sets ([FHIR-41162](https://jira.hl7.org/browse/FHIR-41162), [FHIR-41164](https://jira.hl7.org/browse/FHIR-41164), [FHIR-41032](https://jira.hl7.org/browse/FHIR-41032), [FHIR-41030](https://jira.hl7.org/browse/FHIR-41030))
 
 Additional stage type identifiers and staging methods were added to [CancerStageTypeVS] and [CancerStagingMethodVS]. These are values that could potentially be used in the future and inclusions or exclusions do not affect the immediate functionality of mCODE. Codes associated with pediatric cancers were moved out of mCODE in anticipation of an IG focused on pediatric cancer. Certain codes requested from SNOMED were added. Again, since the bindings of these value sets are extensible, inclusion or exclusion of particular values does not affect functionality.
+
 
 ### Clarification of Observation.code and Observation.method in CancerStage ([FHIR-41163](https://jira.hl7.org/browse/FHIR-41163))
 
@@ -107,13 +110,13 @@ A code representing the detection of metastases has been added, for when disease
 
 ### New Page for Genomics Examples
 
-In the ballot version, approximately 20 new examples involving genomics and next generation sequencing (NGS) we added. To increase the visibility of these examples, [a new page](examples_genomics.html) listing all these examples in one place was added.
+In the ballot version, approximately 20 new examples involving genomics and next generation sequencing (NGS) were added. To increase the visibility of these examples, [a new page](examples_genomics.html) listing all these examples in one place was added.
 
 ### Use StatusReason instead of TreatmentTerminationReason Extension [FHIR-41680](https://jira.hl7.org/browse/FHIR-41680)
 
-An mCODE user [pointed out](https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/Question.20about.20radiotheraphy.20summary.20profile) that the TreatmentTerminationReason extension was unnecessary, because FHIR natively includes a statusReason element that is meant to explain the current status of procedures and medication actions (requests and administrations). When status = "stopped" the statusReason provides the termination reason. Extensions should be avoided when n+ative FHIR elements provide the same functionality. Therefore, the [TreatmentTerminationReason] extension has been deprecated, and henceforth users should populate the statusReason field with the values from [TreatmentTerminationReasonVS]. Two additional values were added to the termination reason value set, representing termination due to pregnancy and termination due to conclusion of the clinical trial.
+An mCODE user [pointed out](https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/Question.20about.20radiotheraphy.20summary.20profile) that the TreatmentTerminationReason extension was unnecessary, because FHIR natively includes a statusReason element that is meant to explain the current status of procedures and medication actions (requests and administrations). When status = "stopped" the statusReason provides the termination reason. Extensions should be avoided when native FHIR elements provide the same functionality. Therefore, the [TreatmentTerminationReason] extension has been deprecated, and henceforth users should populate the statusReason field with the values from [TreatmentTerminationReasonVS]. Two additional values were added to the termination reason value set, representing termination due to pregnancy and termination due to conclusion of the clinical trial.
 
-### Relaxing Required Bindings for stage.type on PrimaryCancerCondition ([FHIR-41031](https://jira.hl7.org/browse/FHIR-41031)
+### Relaxing Required Bindings for stage.type on PrimaryCancerCondition ([FHIR-41031](https://jira.hl7.org/browse/FHIR-41031))
 The binding strength of `Condition.stage.type` in the [PrimaryCancerCondition] profile has been relaxed to extensible, since it is unreasonable to expect that the [CancerStagingMethodVS] valueset will encompass all possible staging methods.
 
 ### Change Conformance Verb from MUST to SHALL ([FHIR-40931](https://jira.hl7.org/browse/FHIR-40931))
@@ -130,7 +133,7 @@ HL7 specifications use [RFC 2119](https://tools.ietf.org/html/rfc2119) keywords 
 
 mCODE STU 3 accepts SNOMED equivalents of AJCC codes, in addition to AJCC codes as in STU 2. This provides maximum interoperability across AJCC licensed and unlicensed systems, but does not break existing applications.
 
-Based on a [new licensing agreement between SNOMED International and the American College of Surgeons](https://www.snomed.org/news-and-events/articles/SNOMED-ACS-AJCC-licensing-agreement), SNOMED CT now contains equivalents of AJCC staging codes. For example, SNOMED CT concept 1229967007 represents AJCC's cN0 category. To be clear, a clinician would never _see_ the SNOMED codes. The user interface would work with the familiar AJCC staging codes, whil the SNOMED equivalents would exist only in the back-end system.
+Based on a [new licensing agreement between SNOMED International and the American College of Surgeons](https://www.snomed.org/news-and-events/articles/SNOMED-ACS-AJCC-licensing-agreement), SNOMED CT now contains equivalents of AJCC staging codes. For example, SNOMED CT concept 1229967007 represents AJCC's cN0 category. To be clear, a clinician would never _see_ the SNOMED codes. The user interface would work with the familiar AJCC staging codes, while the SNOMED equivalents would exist only in the back-end system.
 
 Due to copyright restrictions still in effect, specific AJCC codes cannot be enumerated in HL7 standards. Because of this restriction, staging value sets were only vaguely defined in mCODE STU 2. In STU 3, however, mCODE has taken advantage of the new licensing agreement by redefining the staging value sets in terms of SNOMED CT's AJCC-equivalent codes, allowing specific enumeration of codes in staging-related profiles. The following value sets are now defined in terms of SNOMED CT:
 
@@ -156,12 +159,12 @@ Previously, the [CancerStage] profile contained optional elements specific to TN
 
 #### Value Set Renaming
 
-To support the separation of [TNMStageGroup] from more generic [CancerStage] profile, several value sets were renamed. In FHIR, renaming value sets has little or no impact on implementations, since value set names and ids are not used in information exchanges (although they are involved in validation algorithms). The following value sets were renamed for clarity:
+To support the separation of [TNMStageGroup] from the more generic [CancerStage] profile, several value sets were renamed. In FHIR, renaming value sets has little or no impact on implementations, since value set names and ids are not used in information exchanges (although they are involved in validation algorithms). The following value sets were renamed for clarity:
 
 * CancerStageGroupVS was renamed [TNMStageGroupVS], because it contains the TNM stage groups.
-* ObservationCodesDistantMetastasesVS was renamed [TNMDistantMetastasesStagingTypeVS] because it used for TNM staging.
-* ObservationCodesPrimaryTumorVS was renamed [TNMPrimaryTumorStagingTypeVS], because it used for TNM staging.
-* ObservationCodesRegionalNodesVS was renamed [TNMRegionalNodesStagingTypeVS], because it used for TNM staging.
+* ObservationCodesDistantMetastasesVS was renamed [TNMDistantMetastasesStagingTypeVS] because it is used for TNM staging.
+* ObservationCodesPrimaryTumorVS was renamed [TNMPrimaryTumorStagingTypeVS], because it is used for TNM staging.
+* ObservationCodesRegionalNodesVS was renamed [TNMRegionalNodesStagingTypeVS], because it is used for TNM staging.
 * ObservationCodesStageGroupVS was renamed [TNMStageGroupStagingTypeVS], because it used for TNM staging.
 * CancerStagingSystemVS was renamed [CancerStagingMethodVS], because it populates `Observation.method`.
 
@@ -176,8 +179,8 @@ In addition, the following new value sets are now associated with the parent pro
   * Several staging methods in SNOMED were added (see https://jira.hl7.org/browse/FHIR-37860), including:
     * SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
     * SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
-  * Staging systems from NCI Thesaurus that are not covered in SNOMED CT have been added.
-  * Certain children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448) were removed because they represent stage values rather than staging methods.
+  * Staging systems from NCI Thesaurus that are not covered in SNOMED CT have been added
+  * Certain children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448) were removed because they represent stage values rather than staging methods
 
 ### Comorbidity Redesign
 
@@ -204,6 +207,7 @@ Based on user feedback on the complexity of the STU 2 design, [comorbidities][Co
 
 ### Relaxing Required Bindings in Profiles and Extensions Related to Radiotherapy
 Based on user feedback that the required bindings on certain fields were a barrier to broader implementation the following changes were made:
+
 * [RadiotherapyModalityAndTechnique] Extension - [RadiotherapyModalityVS] and [RadiotherapyTechniqueVS] valuesets are bound with required strength, but they have been expanded with an the "un-encoded" value from the NULL Flavor codesystem.  If the "un-encoded" value is provided, and an invariant requires that the .text field of the codeable concept be provided.  A coded value can also be provided in the same CodeableConcept.
 * [TreatmentTerminationReason] Extension, [ProcedureIntent] Extension:  the valueset binding has been changed to extensible.
 * [RadiotherapyVolume] Profile, location field:  the valueset binding has been changed to extensible
@@ -239,7 +243,7 @@ As a result, there are new required values for `Condition.category` or `Observat
 
 ### Dependency on Genomics Reporting IG
 
-mCODE is now is explicitly dependent on the [Genomics Reporting IG STU2 (v2.0.0)](http://hl7.org/fhir/uv/genomics-reporting/STU2/index.html) (GRIG). This eliminates the duplication of profiles that existed in STU 1 and STU 2, and assures that the two IGs remain in synchronization. The following changes were made:
+mCODE is now explicitly dependent on the [Genomics Reporting IG STU2 (v2.0.0)](http://hl7.org/fhir/uv/genomics-reporting/STU2/index.html) (GRIG). This eliminates the duplication of profiles that existed in STU 1 and STU 2, and assures that the two IGs remain in synchronization. The following changes were made:
 
 * [GenomicsReport], [GenomicRegionStudied], and [GenomicVariant] now inherit from the corresponding profiles in GRIG.
 * Inheritance from US Core was removed from these profiles, since FHIR does not allow a profile to have two parents. Instances SHALL be consistent with US Core but the FHIR IG Publisher does not recognize US Core compliance because it does not derive from inheritance.
@@ -294,7 +298,7 @@ A specimen is a specimen. There was no real reason to distinguish specimens obta
     * SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
     * SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
     * SCT#246165003 "Extent of disease (attribute)"
-* New SNOMED Codes that have been issued since the STU 2 publication have replaced STU 2 temporary codes. These new terms include:
+* New SNOMED Codes were issued since the STU 2 publication have replaced STU 2 temporary codes. These new terms include:
   * #1204242009  "External beam radiation therapy using particle scanning technique (procedure)" //USCRS-33517
   * #1217011006  "non-adjacent (qualifier)" // formerly USCRS-33144
   * #1217123003 "Radiotherapy Course of Treatment (regime/therapy)" //USCRS-33529

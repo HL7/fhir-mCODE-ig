@@ -16,6 +16,7 @@ CBC and CMP results can be reported as individual laboratory observations or as 
 
 If DiagnosticReports are submitted, they must conform to the [US Core DiagnosticReport Profile for Laboratory Results Reporting][USCoreDiagnosticReport]. Examples of [CBC reporting](http://hl7.org/fhir/us/core/DiagnosticReport-cbc.html) and [CMP reporting](http://hl7.org/fhir/us/core/DiagnosticReport-metabolic-panel.html) are given in the [US Core IG](http://hl7.org/fhir/us/core/index.html).
 
+
 Beyond the requirements of US Core, under [Clinical Laboratory Improvement Amendments (CLIA)](https://www.cms.gov/Regulations-and-Guidance/Legislation/CLIA/index.html?redirect=/clia) regulations, laboratory tests must include information on the performing technologist, performing laboratory, and performing laboratory medical director. These three roles would ideally appear as [slices](https://www.hl7.org/fhir/profiling.html#slicing) on Observation.performer and/or DiagnosticReport.performer. However, slicing requires a [discriminator](https://www.hl7.org/fhir/profiling.html#discriminator), a field that can be checked to determine whether a resource found in Observation.performer or DiagnosticReport.performer corresponds to the performing technologist or the performing laboratory medical director. While the performing laboratory can be determined by its resource type, in the current design of FHIR, there is no indicator that would discriminate between the roles of the two Practitioner participants.
 
 ### Vital Signs
@@ -24,7 +25,7 @@ Vital signs are measurements of the most essential, or "vital" body functions. F
 
 ### History of Metastatic Disease
 
-Recurrences and unrelated cancers sometimes occur years after previous metastatic disease, for example, in the case of an adult with history of childhood leukemia. The details of the previous disease may be unavailable, but the fact that the patient had cancer previously may be clinically significant. The profile [HistoryOfMetastaticCancer] provides a method of recording this fact in the absence of other details.
+Recurrences and unrelated cancers sometimes occur years after previous metastatic disease, for example, in the case of an adult with a history of childhood leukemia. The details of the previous disease may be unavailable, but the fact that the patient had cancer previously may be clinically significant. The profile [HistoryOfMetastaticCancer] provides a method of recording this fact in the absence of other details.
 
 ### Profiles
 
@@ -45,6 +46,7 @@ Recurrences and unrelated cancers sometimes occur years after previous metastati
 * [ECOG performance status](https://loinc.org/LL529-9) (external)
 * [HistoryOfMetastaticMalignantNeoplasmVS]
 * [Karnofsky performance status](https://loinc.org/LL4986-7) (external)
+
 * [LanskyPlayPerformanceStatusVS]
 
 {% include markdown-link-references.md %}

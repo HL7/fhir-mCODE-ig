@@ -2,7 +2,7 @@ The mCODE **Disease Characterization** group includes data elements specific to 
 
 * **Cancer Diagnosis** - the date and location (body site/position and laterality) of the cancer diagnosis.
 * **Tumor Characteristics** - histological classification, grade, morphology, and behavior of the tumor cell, compared to that of a normal cell.
-* **CancerStage** - describes the severity of an individual's cancer based on the magnitude of the original (primary) tumor as well as on the extent cancer has spread in the body. Understanding the stage of the cancer helps doctors to develop a prognosis and design a treatment plan for individual patients. Staging calculations leverage results from the previous two categories, along with prognostic factors relevant to the cancer type, in order to assess an overall cancer stage group (source: [AJCC](https://cancerstaging.org/references-tools/Pages/What-is-Cancer-Staging.aspx)).
+* **CancerStage** - describes the severity of an individual's cancer based on the magnitude of the original (primary) tumor as well as the extent cancer has spread in the body. Understanding the stage of the cancer helps doctors to develop a prognosis and design a treatment plan for individual patients. Staging calculations leverage results from the previous two categories, along with prognostic factors relevant to the cancer type, in order to assess an overall cancer stage group (source: [AJCC](https://cancerstaging.org/references-tools/Pages/What-is-Cancer-Staging.aspx)).
 
 ### Representing the Cancer Diagnosis
 
@@ -29,13 +29,13 @@ Histologic behavior, type, and grade can also be reported in the [HistologicBeha
 
 #### Clinical Status
 
-On initial diagnosis, the `Condition.clinicalStatus` element will be `active`. Subsequent changes to the disease status should be recorded by updating the `clinicalStatus` element. The permitted values are active, recurrence, relapse, inactive, remission, resolved. Recurrence and relapse are often used interchangeably in the context of cancer. The resource's history can be accessed to see the history of the status value. 
+On initial diagnosis, the `Condition.clinicalStatus` element will be `active`. Subsequent changes to the disease status SHOULD be recorded by updating the `clinicalStatus` element. The permitted values are active, recurrence, relapse, inactive, remission, resolved. Recurrence and relapse are often used interchangeably in the context of cancer. The resource's history can be accessed to see the history of the status value. 
 
-Note that there is another resource profile, the [CancerDiseaseStatus], that is used to record the patient's condition on an encounter-by-encounter basis, and uses values such as improved, stable, worsened, as well as full and partial remission. When the value of CancerDiseaseStatus indicates remission, the `Condition.clinicalStatus` should be updated to reflect that finding.
+Note that there is another resource profile, the [CancerDiseaseStatus], that is used to record the patient's condition on an encounter-by-encounter basis, and uses values such as improved, stable, worsened, as well as full and partial remission. When the value of CancerDiseaseStatus indicates remission, the `Condition.clinicalStatus` SHOULD be updated to reflect that finding.
 
 #### Body Location
 
-Body locations in FHIR are typically represented using a single code. However, a single code is often insufficient to describe where a tumor is located, where a surgery is targeted, or where a radiation treatment is focused. When a single code is insufficient, FHIR recommends using a BodyStructure resource. This is appropriate when the BodyStructure is tracked over time, for example, in the case of [Tumor]. But generally, it is better to describe a body location without using an additional resource.
+Body locations in FHIR are typically represented using a single code. However, a single code is often insufficient to describe where a tumor is located, where a surgery is targeted, or where a radiation treatment is focused. When a single code is insufficient, FHIR recommends using a BodyStructure resource. This is appropriate when the BodyStructure is tracked over time, for example, in the case of a [Tumor]. But generally, it is better to describe a body location without using an additional resource.
 
 mCODE has adopted an approach that allows the user to add additional code or codes to further define the body site, without the need to create an independent resource. This takes the form of the [LateralityQualifier] and [BodyLocationQualifier] extensions. These extensions can be used to specify laterality, directionality, and plane.
 
@@ -75,7 +75,7 @@ A reference to the CancerStage observation SHOULD be given in the PrimaryCancerC
 
 #### TNM Staging
 
-TNM staging is used for many types of solid-tumor cancers. The [TNMStageGroup] profile is a specialization of [CancerStage] dedicated to AJCC TNM staging. This profile contains the stage group in `Observation.valueCodeableConcept` and provides optional references in `Observation.hasMember` to additional resources representing the T, N, and M categories. The `Observation.code` element value in TNMStageGroup is used to distinguish the type of staging, e.g., [clinical](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) or [pathologic](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathologic-staging). For other types staging (e.g., retreatment (r) or autopsy (a)), a code indicating "other" staging type is used.
+TNM staging is used for many types of solid-tumor cancers. The [TNMStageGroup] profile is a specialization of [CancerStage] dedicated to AJCC TNM staging. This profile contains the stage group in `Observation.valueCodeableConcept` and provides optional references in `Observation.hasMember` to additional resources representing the T, N, and M categories. The `Observation.code` element value in TNMStageGroup is used to distinguish the type of staging, e.g., [clinical](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) or [pathologic](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathologic-staging). For other types of staging (e.g., retreatment (r) or autopsy (a)), a code indicating "other" staging type is used.
 
 Clinical applications vary in their representation of T, N, and M staging category values, falling into one of two naming conventions:
 
@@ -92,7 +92,7 @@ Based on discussions with clinical experts, several common non-TNM staging syste
 
 Prognostic factors related to the cancer stage group or risk assessment can be specified with the `Observation.derivedFrom` element. For example, a hemoglobin lab result which was evaluated in the  staging of chronic lymphocytic leukemia (CLL) using the Binet staging system can be referenced under `Observation.derivedFrom` element. [This example of Binet staging](Observation-binet-stage-group-B.html) illustrates how this could be represented.
 
-**Terminology.** SNOMED CT does not offer codes for every staging system. When SNOMED codes are unavailable, mCODE falls back on codes from the NCI Thesaurus (NCIT). From an implementation perspective, managing two code systems is difficult when there is no consistency of which code system is used for what purpose. We are actively working with SNOMED International to create more consistent semantic approach to coding stages, by adding concepts required by non-TNM staging systems. The current approach of mixing SNOMED and NCIT depending on the cancer type should be regarded as temporary.
+**Terminology.** SNOMED CT does not offer codes for every staging system. When SNOMED codes are unavailable, mCODE falls back on codes from the NCI Thesaurus (NCIT). From an implementation perspective, managing two code systems is difficult when there is no consistency of which code system is used for what purpose. We are actively working with SNOMED International to create a more consistent semantic approach to coding stages, by adding concepts required by non-TNM staging systems. The current approach of mixing SNOMED and NCIT depending on the cancer type should be regarded as temporary.
 
 #### Summary Stage Information in PrimaryCancerCondition
 

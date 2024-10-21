@@ -24,6 +24,7 @@
 [USCoreOrganization]:   {{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-organization.html
 [USCoreCareTeam]:   {{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-careteam.html
 
+
 <!-- R4 -->
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html
 [R4Observation]: http://hl7.org/fhir/R4/observation.html

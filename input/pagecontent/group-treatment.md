@@ -12,8 +12,7 @@ Not all surgical procedures are relevant to treatment of cancer patients. To lim
 
 ### Radiotherapy
 
-A radiation oncology work group convened under [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home) has helped create new profiles and value sets for radiotherapy. The group included American Society for Radiation Oncology (ASTRO), American Association of Physicists in Medicine (AAPM), Integrating Healthcare Enterprise - Radiation Oncology (IHE-RO), Varian, Elekta, Epic, and Wemedoo. The group defined value sets for modality and technique for teleradiotherapy and brachytherapy, as well as profiles for delivery of both types of treatment. To limit the scope, mCODE focuses on high-level summarization of the treatment given, and avoids many details of the treatments. Ordering workflows is out of scope.
-
+A radiation oncology work group convened under [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home) has helped create new profiles and value sets for radiotherapy. The group included American Society for Radiation Oncology (ASTRO), American Association of Physicists in Medicine (AAPM), Integrating Healthcare Enterprise - Radiation Oncology (IHE-RO), Varian, Elekta, Epic, and Wemedoo. The group defined value sets for modalities and techniques for teleradiotherapy and brachytherapy, as well as profiles for delivery of both types of treatment. To limit the scope, mCODE focused on high-level summarization of the treatment given, and avoids many details of the treatments. Ordering workflows are out of scope.
 
 For definition of key terms in radiotherapy, see the [Radiotherapy Glossary](glossary.html) page.
 
@@ -52,7 +51,7 @@ For definition of key terms in radiotherapy, see the [Radiotherapy Glossary](glo
   * [ProcedureIntentVS]
   * [TreatmentTerminationReasonVS]
 * **Medication**
-  * [Medication Clinical Drug (RxNorm)](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion)  (external)
+  * [Medication Clinical Drug (RxNorm)](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion) (external)
   * [NormalizationBasisVS]
 * **Surgery**
   * [CancerRelatedSurgicalProcedureVS]

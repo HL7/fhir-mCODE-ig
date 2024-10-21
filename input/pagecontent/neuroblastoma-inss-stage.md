@@ -1,0 +1,13 @@
+The stage definitions for the Neuroblastoma INSS Stages can be found at [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2650389/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2650389/)
+
+The International Neuroblastoma Staging System (INSS) is a postsurgical staging system:
+* Stage 1: The cancer is still in the area where it started. It is on one side of the body (right or left). All visible tumor has been removed completely by surgery (although looking at the tumor's edges under the microscope after surgery may show some cancer cells). Lymph nodes near the tumor are free of cancer (although nodes enclosed within the tumor may contain neuroblastoma cells).
+* Stage 2A: The cancer is still in the area where it started and on one side of the body, but not all of the visible tumor could be removed by surgery. Lymph nodes near the tumor are free of cancer (although nodes enclosed within the tumor may contain neuroblastoma cells).
+* Stage 2B: The cancer is on one side of the body, and it may or may not have been removed completely by surgery. Nearby lymph nodes outside the tumor contain neuroblastoma cells, but the cancer has not spread to lymph nodes on the other side of the body or elsewhere.
+* Stage 3: The cancer has not spread to distant parts of the body, but one of the following is true:0
+    - The cancer can't be removed completely by surgery, and it has crossed the midline (defined as the spine) to the other side of the body. It may or may not have spread to nearby lymph nodes.
+    - The cancer is still in the area where it started and is on one side of the body. It has spread to lymph nodes that are relatively nearby but on the other side of the body.
+    - The cancer is in the middle of the body and is growing toward both sides (either directly or by spreading to nearby lymph nodes).
+* Stage 4: The cancer has spread to distant parts of the body such as distant lymph nodes, bones, liver, skin, bone marrow, or other organs (but the child does not meet the criteria for stage 4S).
+* Stage 4S (also called "special" neuroblastoma): The child is younger than 1 year old. The cancer is on one side of the body. It might have spread to lymph nodes on the same side of the body but not to nodes on the other side. The neuroblastoma has spread to the liver, skin, and/or the bone marrow. However, no more than 10% of marrow cells are cancer cells, and imaging tests such as an MIBG scan do not show cancer in the bone marrow.
+* Recurrent: While not a formal part of the staging system, this term is used to describe cancer that has come back (recurred) after it has been treated. The cancer might come back in the area where it first started or in another part of the body.

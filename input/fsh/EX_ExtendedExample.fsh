@@ -992,7 +992,7 @@ Description: "Extended example: example cancer patient"
 Instance: us-core-practitioner-jane-radiotech
 InstanceOf: USCorePractitioner
 Description: "Extended example: example PCP practitioner"
-* identifier[NPI].value = "2345123679"
+* identifier[NPI].value = "2345123677"
 * name.family = "Radiologist"
 * name.given[0] = "Jane"
 * name.prefix[0] = "Dr."
@@ -1009,7 +1009,7 @@ Description: "Extended example: example PCP practitioner"
 Instance: us-core-practitioner-mary-obgyn
 InstanceOf: USCorePractitioner
 Description: "Extended example: example PCP practitioner"
-* identifier[NPI].value = "2345123679"
+* identifier[NPI].value = "2345123675"
 * name.family = "Obgyn"
 * name.given[0] = "Mary"
 * name.prefix[0] = "Dr."
@@ -1044,7 +1044,7 @@ Description: "Extended example: example practitioner"
 Instance: us-core-practitioner-peter-pathologist
 InstanceOf: USCorePractitioner
 Description: "Extended example: example practitioner (pathologist)"
-* identifier[NPI].value = "1122334459"
+* identifier[NPI].value = "1122334455"
 * name.family = "Pathologist"
 * name.given[0] = "Peter"
 * name.prefix[0] = "Dr."
@@ -1061,7 +1061,7 @@ Description: "Extended example: example practitioner (pathologist)"
 Instance: us-core-practitioner-nancy-oncology-nurse
 InstanceOf: USCorePractitioner
 Description: "Extended example: example RN practitioner"
-* identifier[NPI].value = "5566778899"
+* identifier[NPI].value = "5566778895"
 * name.family = "Nurse"
 * name.given[0] = "Nancy"
 * name.prefix[0] = "Ms."
@@ -1093,7 +1093,7 @@ Description: "Extended example: example organization"
 Instance: us-core-organization-bedrock-medicine
 InstanceOf: USCoreOrganization
 Description: "Example of US Core Organization"
-* identifier[NPI].value = "1265710002"
+* identifier[NPI].value = "1265710008"
 * active = true
 * name = "Bedrock Medicine"
 * contact.telecom.system = #phone

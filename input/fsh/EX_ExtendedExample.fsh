@@ -725,7 +725,6 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 /*
 RuleSet: CourseSummaryContent
 * status = #completed "completed"
-* code = SCT_TBD#USCRS-33292
 * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
 * bodySite = SCT#78904004 "Chest Wall Structure (body structure)"
 * reasonCode = ICD10CM#C50.811 "Malignant neoplasm of overlapping sites of right female breast"
@@ -749,28 +748,28 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * insert CourseSummaryContent
 // Electrons
 * extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons"
-* extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 // Protons
 * extension[modalityAndTechnique][+].extension[modality][0].valueCodeableConcept = SCT#10611004 "External beam radiation therapy protons (procedure)"
 * extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT_TBD#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
 // Neutrons
 * extension[modalityAndTechnique][+].extension[modality][0].valueCodeableConcept = SCT#80347004 "External beam radiation therapy neutrons (procedure)"
 * extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#169317000 "Neutron capture therapy (procedure)"
-* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 // Carbon Ions
 * extension[modalityAndTechnique][+].extension[modality][0].valueCodeableConcept = SCT#1156505006 "External beam radiation therapy using carbon ions (procedure)"
 * extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT_TBD#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
 // Photons
 * extension[modalityAndTechnique][+].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
 * extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
-* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 // Brach LDR
@@ -814,7 +813,7 @@ InstanceOf: RadiotherapyCourseSummary
 Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
 * insert CourseSummaryContent
 * extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT_TBD#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
+* extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
 
 Instance: radiotherapy-treatment-invalid-carbonion-technique
 InstanceOf: RadiotherapyCourseSummary
@@ -845,7 +844,7 @@ InstanceOf: RadiotherapyCourseSummary
 Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
 * insert CourseSummaryContent
 * extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#80347004 "External beam radiation therapy neutrons (procedure)"
-* extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT_TBD#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
+* extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
 
 Instance: radiotherapy-treatment-invalid-brachperm-technique
 InstanceOf: RadiotherapyCourseSummary
@@ -993,7 +992,7 @@ Description: "Extended example: example cancer patient"
 Instance: us-core-practitioner-jane-radiotech
 InstanceOf: USCorePractitioner
 Description: "Extended example: example PCP practitioner"
-* identifier[NPI].value = "2345123675"
+* identifier[NPI].value = "2345123679"
 * name.family = "Radiologist"
 * name.given[0] = "Jane"
 * name.prefix[0] = "Dr."
@@ -1010,7 +1009,7 @@ Description: "Extended example: example PCP practitioner"
 Instance: us-core-practitioner-mary-obgyn
 InstanceOf: USCorePractitioner
 Description: "Extended example: example PCP practitioner"
-* identifier[NPI].value = "2345123675"
+* identifier[NPI].value = "2345123679"
 * name.family = "Obgyn"
 * name.given[0] = "Mary"
 * name.prefix[0] = "Dr."
@@ -1045,7 +1044,7 @@ Description: "Extended example: example practitioner"
 Instance: us-core-practitioner-peter-pathologist
 InstanceOf: USCorePractitioner
 Description: "Extended example: example practitioner (pathologist)"
-* identifier[NPI].value = "1122334455"
+* identifier[NPI].value = "1122334459"
 * name.family = "Pathologist"
 * name.given[0] = "Peter"
 * name.prefix[0] = "Dr."
@@ -1062,7 +1061,7 @@ Description: "Extended example: example practitioner (pathologist)"
 Instance: us-core-practitioner-nancy-oncology-nurse
 InstanceOf: USCorePractitioner
 Description: "Extended example: example RN practitioner"
-* identifier[NPI].value = "5566778895"
+* identifier[NPI].value = "5566778899"
 * name.family = "Nurse"
 * name.given[0] = "Nancy"
 * name.prefix[0] = "Ms."
@@ -1094,7 +1093,7 @@ Description: "Extended example: example organization"
 Instance: us-core-organization-bedrock-medicine
 InstanceOf: USCoreOrganization
 Description: "Example of US Core Organization"
-* identifier[NPI].value = "1265710008"
+* identifier[NPI].value = "1265710002"
 * active = true
 * name = "Bedrock Medicine"
 * contact.telecom.system = #phone
@@ -1110,7 +1109,6 @@ Instance: radiotherapy-treatment-summary-chest-wall-RTtestNonCompliant-m
 InstanceOf: RadiotherapyCourseSummary
 Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost,  THIS INSTANCE IS SUPPOSED TO FAIL VALIDATION!   Need to expand testing of modality/technique combination invariants."
 * status = #completed "completed"
-* code = SCT_TBD#USCRS-33292
 * category = SCT#108290001 //"Radiation oncology AND/OR radiotherapy (procedure)"
 * bodySite = SCT#78904004 //"Chest Wall Structure (body structure)"
 * reasonCode = ICD10CM#C50.811 //"Malignant neoplasm of overlapping sites of right female breast"

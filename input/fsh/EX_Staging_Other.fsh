@@ -1,6 +1,7 @@
 Instance: primary-cancer-condition-nonspecific
 InstanceOf: PrimaryCancerCondition
-Description: "An unspecified Primary Cancer Condition (PCC) used in IG examples. Any real PCC would use a specific diagnostic code."
+Description: "A non-specific Primary Cancer Condition (PCC) used in IG examples. Any real PCC would use a specific diagnostic code."
+
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item

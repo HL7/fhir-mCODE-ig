@@ -98,13 +98,10 @@ The following draft (maturity level 0) value sets are defined in this implementa
 * [WilmsTumorBodySiteVS]
 * [WilmsTumorStageValueVS]
 
-
-
-
 ### External Value Sets Used in mCODE
 
-* [ECOG performance status]
-* [Karnofsky performance status]
-* [Medication Clinical Drug (RxNorm)]
+* [ECOG performance status](https://loinc.org/LL529-9)
+* [Karnofsky performance status](https://loinc.org/LL4986-7)
+* [Medication Clinical Drug (RxNorm)](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion)
 
 {% include markdown-link-references.md %}

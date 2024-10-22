@@ -1,6 +1,6 @@
 ### mCODE Use of Genomics Elements
 
-mCODE includes genomics-related data elements necessary to inform cancer assessment and treatment options. The profiles directly derive from the [HL7 CGWG Clinical Genomics Reporting Implementation Guide](https://hl7.org/fhir/uv/genomics-reporting/STU2/index.html) (GRIG) STU2 release. The GRIG provides helpful foundational concepts and guidance for representing different types of genomics reports. mCODE assumes one is familiar with the GRIG content and uses this additional guidance to identify what is clinically actionable and minimal for the purpose of diagnosis, treatment, and monitoring of cancer patients.
+mCODE includes genomics-related data elements needed to inform cancer assessment and treatment options. The profiles directly derive from the [HL7 CGWG Clinical Genomics Reporting Implementation Guide](https://hl7.org/fhir/uv/genomics-reporting/STU2/index.html) (GRIG) STU2 release. The GRIG provides helpful foundational concepts and guidance for representing different types of genomics reports. mCODE assumes one is familiar with the GRIG content and uses this additional guidance to identify what is clinically actionable and minimal for the purpose of diagnosis, treatment, and monitoring of cancer patients.
 
 Three profiles relate to the capture of clinical genomics data:
 
@@ -33,8 +33,7 @@ The mCODE example [`Bundle-gx-genomic-bundle-adam-anyperson`](Bundle-gx-genomic-
 
 #### Positioning of mCODE with GenomeX
 
-The GenomeX use case under the CodeX FHIR accelerator has a broader scope that is not limited to oncology-specific genomic tests, and the primary goal of validating the HL7 GRIG. However, it is widely recognized that the most prevalent and pervasive application for genomics and precision medicine is in the field of oncology. Consequently, there is a need for clarification and additional guidance between the mCODE FHIR IG.
-
+The GenomeX use case under the CodeX FHIR accelerator has a broader scope that is not limited to oncology-specific genomic tests, with the primary goal of validating the HL7 GRIG. However, it is widely recognized that the most prevalent and pervasive application for genomics and precision medicine is in the field of oncology. Consequently, there is a need for clarification and additional guidance between the mCODE FHIR IG.
 
 ### mCODE and the minimal and actionable set of data elements
 
@@ -43,9 +42,9 @@ A minimal set of genomics elements may vary based on the type of test. For examp
 * A tumor-normal test will contain references to two specimens (one from a tumor specimen and a non-tumor specimen) as opposed to a cancer gene panel limited to one tumor specimen. 
 * A gene panel analyzing somatic variants for one patient will differ from a family trio sequencing test which could analyze genomic sequences for both parents and the child for rare diseases.
 
-**NOTE:** The initial mCODE scope will be with somatic variants in gene panels with the intention that these elements will also apply as a foundational for non-oncology use cases.
+**NOTE:** The initial mCODE scope will be with somatic variants in gene panels with the intention that these elements will also serve as foundational for non-oncology use cases.
 
-Despite the variations, there is a general list of common elements. The Electronic Medical Records and Genomics (eMERGE) program provides a good illustration of such elements found in [a generalized pharmacogenomics report](https://hl7.org/fhir/uv/genomics-reporting/STU2/pharmacogenomics.html#how-to-use-the-report-mapping-images) which includes pharmacogenomics. This conceptual depiction serves as a good start for mCODE scoping but needs further guidance on how to specifically show certain representation patterns, including the following:
+Despite the variations, there is a general list of common elements. The Electronic Medical Records and Genomics (eMERGE) program provides a good illustration of the sections found in [a generalized pharmacogenomics report](https://hl7.org/fhir/uv/genomics-reporting/STU2/pharmacogenomics.html#how-to-use-the-report-mapping-images) which includes pharmacogenomics. This conceptual representation  serves as a good start for mCODE scoping but needs further guidance on how to specifically show certain representation patterns. These include the following patterns which will be covered in the sections to follow:
 
 * Genomics test coding
 * Representing variants

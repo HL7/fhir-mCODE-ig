@@ -24,7 +24,7 @@ mCODE participants SHALL meet the following requirements for conformance:
 
 #### Identify In-Scope Patients
 
-To facilitate conformance testing, testing software must be able to determine which patients are "in-scope" (meaning cancer patients whose data is presented or exchanged with the intention of conforming to mCODE). In general, all patients with confirmed cancer diagnoses SHOULD be covered by mCODE, but mCODE provides several ways to to identify this group of in-scope patients. See the [Identifying In-Scope Patients](conformance-patients.html) page for details.
+To facilitate conformance testing, testing software must be able to determine which patients are "in-scope" (meaning cancer patients whose data is presented or exchanged with the intention of conforming to mCODE). In general, all patients with confirmed cancer diagnoses SHOULD be covered by mCODE, but mCODE provides several ways to identify this group of in-scope patients. See the [Identifying In-Scope Patients](conformance-patients.html) page for details.
 
 #### Follow Conformance Requirements for Supported Profiles
 
@@ -32,7 +32,7 @@ The information produced and consumed by mCODE participants is defined by a set 
 
 #### Populate and Meaningfully Process mCODE Resources
 
-mCODE Senders MUST be able to populate data elements Must-Support (MS) obligations, for all profiles they support (as declared in their CapabilityStatement). Receivers MUST be able to meaningfully process elements with MS obligations for each profiles they support (as declared in their CapabilityStatement). "Able to Populate" and "Meaningfully Process" have particular meanings, as discussed on the [Profile Conformance](conformance-profiles.html) page.
+mCODE Senders MUST be able to populate data elements Must-Support (MS) obligations, for all profiles they support (as declared in their CapabilityStatement). Receivers MUST be able to meaningfully process elements with MS obligations for each profile they support (as declared in their CapabilityStatement). "Able to Populate" and "Meaningfully Process" have particular meanings, as discussed on the [Profile Conformance](conformance-profiles.html) page.
 
 #### Support Querying mCODE-Conforming Resources
 
@@ -96,7 +96,7 @@ ALL mCODE participants SHALL at minimum support the [CancerPatient] and [Primary
 
 #### Support US Core Conformance Requirements
 
-Additional [conformance requirements from US Core](https://hl7.org/fhir/us/core/general-requirements.html) apply to RESTful interactions, searches, and resource formats in mCODE. mCODE "inherits" all US Core conformance requirements. US Core provides base profiles for many (but not all) mCODE profiles, outlines expectations for handling of missing or unknown data elements, and outlines how to associate provenance information associated with collection, transfer, and updating of clinical information.
+Additional [conformance requirements from US Core](https://hl7.org/fhir/us/core/general-requirements.html) apply to RESTful interactions, searches, and resource formats in mCODE. mCODE "inherits" all US Core conformance requirements. US Core provides base profiles for many (but not all) mCODE profiles, outlines expectations for handling of missing or unknown data elements, and outlines how to associate provenance information associated with collection, transfer, and updating clinical information.
 
 International users of mCODE may find US Core an impediment to implementation. Application of mCODE to other countries is open to further discussion.
 
@@ -119,7 +119,7 @@ The [mCODE Patient Bundle][MCODEPatientBundle] provides a mechanism to retrieve 
 
     GET [base]/Patient/[id]/$mcode-everything
 
-This endpoint SHALL support `start` and `end` parameters and MAY support the `_since`, `_type`, and `_count` parameters, which operate the same as in the [`Patient/[id]/$everything` operation](https://www.hl7.org/fhir/operation-patient-everything.html). The _since parameter is provided to support periodic queries to get additional information that has changed about the patient since the last query.
+This endpoint SHALL support `start` and `end` parameters and MAY support the `_since`, `_type`, and `_count` parameters, which operate the same as in the [`Patient/[id]/$everything` operation](https://www.hl7.org/fhir/operation-patient-everything.html). The _since parameter is provided to support periodic queries to obtain additional information that has changed about the patient since the last query.
 
 For some types of resources, such as vital signs, a large number of resources may exist. Senders may use their discretion to select the resources that are most relevant, e.g., a subset of the vital signs that were recorded. Alternatively, servers may refuse to serve the request and indicate that the client asked for too much data (see [OperationOutcome](https://www.hl7.org/fhir/operationoutcome.html)). To limit the number of included resources, callers MAY specify a `_count` parameter that pages through the results.
 
@@ -132,7 +132,7 @@ mCODE Patient Bundles SHALL be identified by an `id` value that matches the `id`
 
 Participants SHOULD populate `meta.profile` elements for all resources to indicate which profiles the resources claim to conform to. Servers SHOULD also implement [profile search](https://www.hl7.org/fhir/search.html#profile), which allows participants to query using the `_profile` parameter to return resources conforming to the profiles declared in `meta.profile`.
 
-Profile search and population of `meta.profile` originate as "SHALL" requirements in the base FHIR specification; they are not an additional requirements imposed by mCODE. However, in practice, few implementations have followed these requirements. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.
+Profile search and population of `meta.profile` originate as "SHALL" requirements in the base FHIR specification; they are not additional requirements imposed by mCODE. However, in practice, few implementations have followed these requirements. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.
 
 ### Capability Statements
 

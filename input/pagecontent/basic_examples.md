@@ -85,11 +85,11 @@
 
 ### [Histologic Behavior and Type][HistologicBehaviorAndType]
 
-* [Histoligic Behavior and Type - Non-Small Cell, Malignant, Primary Site](Observation-histologic-behavior-and-type-non-small-cell.html)
+* [Histologic Behavior and Type - Non-Small Cell, Malignant, Primary Site](Observation-histologic-behavior-and-type-non-small-cell.html)
 
 ### [Histologic Grade][HistologicGrade]
 
-* [Histoligic Grade - Intermediate](Observation-histologic-grade-intermediate.html)
+* [Histologic Grade - Intermediate](Observation-histologic-grade-intermediate.html)
 
 ### [Karnofsky Performance Status][KarnofskyPerformanceStatus]
 
@@ -136,7 +136,7 @@
 
 ### [Tumor Morphology][TumorMorphology]
 
-* [Tumor Morphology Report - Non-Small Cell Carcinoma, Malignant, Primary Site, Intermediate Grade](DiagnosticReport-tumor-morphology-report-non-small-cell-intermediate-grade.html)
+* [Tumor Morphology Report - Non-Small Cell Carcinoma, Malignant, Primary Site, Intermediate Grade](Observation-tumor-morphology-report-non-small-cell-intermediate-grade.html)
 
 ### [Tumor Size][TumorSize]
 

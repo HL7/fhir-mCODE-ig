@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2023May" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig" defaultVersion="3.0.0" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" url="http://hl7.org/fhir/us/mcode"><version code="current" url="http://build.fhir.org/ig/HL7/fhir-mCODE-ig"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2024May" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig" defaultVersion="3.0.0" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" url="http://hl7.org/fhir/us/mcode">
+<version code="current" url="http://build.fhir.org/ig/HL7/fhir-mCODE-ig"/>
+<version code="4.0.0-ballot" url="http://hl7.org/fhir/us/mcode/2024May"/>
 <version code="3.0.0" url="http://hl7.org/fhir/us/mcode/STU3"/>
-<version code="3.0.0-ballot" url="http://hl7.org/fhir/us/mcode/2023May"/>
+<version code="3.0.0-ballot" deprecated="true" url="http://hl7.org/fhir/us/mcode/2023May"/>
 <version code="2.1.0" url="http://hl7.org/fhir/us/mcode/STU2.1"/>
 <version code="2.0.0" deprecated="true" url="http://hl7.org/fhir/us/mcode/STU2"/>
 <version code="1.16.0" deprecated="true" url="http://hl7.org/fhir/us/mcode/2021May"/>
@@ -12,12 +14,15 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="StructureDefinition/mcode-ALL-risk-assessment" key="StructureDefinition-mcode-ALL-risk-assessment" name="ALL Risk Assessment Profile"/>
+<artifact id="ValueSet/mcode-all-risk-assessment-value-vs" key="ValueSet-mcode-all-risk-assessment-value-vs" name="Acute Lymphoblastic Leukemia (ALL) Risk Assessment Value Set"/>
 <artifact id="ValueSet/mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs" key="ValueSet-mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs" name="Benign Neoplasm of Brain and CNS Disorder Value Set"/>
 <artifact id="ValueSet/mcode-binet-stage-value-vs" key="ValueSet-mcode-binet-stage-value-vs" name="Binet Stage Value Set"/>
 <artifact id="StructureDefinition/mcode-body-location-qualifier" key="StructureDefinition-mcode-body-location-qualifier" name="Body Location Qualifier Extension"/>
 <artifact id="ValueSet/mcode-body-location-qualifier-vs" key="ValueSet-mcode-body-location-qualifier-vs" name="Body Location Qualifier Value Set"/>
 <artifact id="ValueSet/mcode-body-location-and-laterality-qualifier-vs" key="ValueSet-mcode-body-location-and-laterality-qualifier-vs" name="Body Location and Laterality Qualifier Value Set"/>
 <artifact id="StructureDefinition/mcode-body-structure-identifier" key="StructureDefinition-mcode-body-structure-identifier" name="Body Structure Identifier Profile"/>
+<artifact id="StructureDefinition/mcode-body-surface-area" key="StructureDefinition-mcode-body-surface-area" name="Body Surface Area"/>
 <artifact id="ValueSet/mcode-brachytherapy-high-dose-rate-electronic-technique-vs" key="ValueSet-mcode-brachytherapy-high-dose-rate-electronic-technique-vs" name="Brachytherapy High Dose Rate Electronic Technique Value Set"/>
 <artifact id="ValueSet/mcode-brachytherapy-high-dose-rate-technique-vs" key="ValueSet-mcode-brachytherapy-high-dose-rate-technique-vs" name="Brachytherapy High Dose Rate Technique Value Set"/>
 <artifact id="ValueSet/mcode-brachytherapy-low-dose-rate-temporary-technique-vs" key="ValueSet-mcode-brachytherapy-low-dose-rate-temporary-technique-vs" name="Brachytherapy Low Dose Rate Temporary Radation Technique Value Set"/>
@@ -43,6 +48,7 @@
 <artifact deprecated="true" id="Profile/mcode-cancer-related-radiation-procedure" key="cancer-related-radiation-procedure" name="Cancer Related Radiation Procedure"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-related-surgical-procedure" key="cancer-related-surgical-procedure" name="Cancer Related Surgical Procedure"/>
 <artifact deprecated="true" id="ValueSet/mcode-cancer-related-surgical-procedure-value-set" key="cancer-related-surgical-procedure-value-set" name="Cancer Related Surgical Procedure Value Set"/>
+<artifact id="StructureDefinition/mcode-cancer-risk-assessment" key="StructureDefinition-mcode-cancer-risk-assessment" name="Cancer Risk Assessment Profile"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-cancer-stage-group" key="StructureDefinition-mcode-cancer-stage-group" name="Cancer Stage Group Profile"/>
 <artifact deprecated="true" id="ValueSet/mcode-cancer-stage-group-vs" key="ValueSet-mcode-cancer-stage-group-vs" name="Cancer Stage Group Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-stage-parent" key="cancer-stage-parent" name="Cancer Stage Parent"/>
@@ -73,6 +79,8 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-condition-related" key="StructureDefinition-mcode-condition-related" name="Condition related to resource"/>
 <artifact id="ValueSet/mcode-cytologic-evidence-malignancy-vs" key="ValueSet-mcode-cytologic-evidence-malignancy-vs" name="Cytologic Evidence of Malignancy Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-dna-change-type-vs" key="ValueSet-mcode-dna-change-type-vs" name="DNA Change Type Value Set"/>
+<artifact id="StructureDefinition/mcode-deauville-scale" key="StructureDefinition-mcode-deauville-scale" name="Deauville Scale Profile"/>
+<artifact id="ValueSet/mcode-deauville-scale-vs" key="ValueSet-mcode-deauville-scale-vs" name="Deauville Scale Value Set"/>
 <artifact id="StructureDefinition/mcode-ecog-performance-status" key="ecog-performance-status" name="ECOG Performance Status Profile"/>
 <artifact id="ValueSet/mcode-teleradiotherapy-electron-beam-technique-vs" key="ValueSet-mcode-teleradiotherapy-electron-beam-technique-vs" name="Electron Beam Technique Value Set"/>
 <artifact deprecated="true" id="ValueSet/elixhauser-alcohol-abuse-vs" key="ValueSet-elixhauser-alcohol-abuse-vs" name="Elixhauser Alcohol Abuse Value Set"/>
@@ -119,6 +127,7 @@
 <artifact id="ValueSet/mcode-fab-classification-value-vs" key="ValueSet-mcode-fab-classification-value-vs" name="FAB Classification Value"/>
 <artifact id="ValueSet/mcode-figo-stage-value-vs" key="ValueSet-mcode-figo-stage-value-vs" name="FIGO Stage Value Set"/>
 <artifact id="ValueSet/mcode-figo-staging-method-vs" key="ValueSet-mcode-figo-staging-method-vs" name="FIGO Staging Method Value Set"/>
+<artifact id="OperationDefinition/mcode-patient-everything" key="OperationDefinition-mcode-patient-everything" name="Fetch mCODE Patient Bundle for a given Patient"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
 <artifact deprecated="true" id="ValueSet/mcode-genetic-specimen-type-vs" key="genetic-specimen-type-value-set" name="Genetic Specimen Type Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-genomic-molecular-consequence-vs" key="ValueSet-mcode-genomic-molecular-consequence-vs" name="Genomic Molecular Consequence Value Set"/>
@@ -131,6 +140,11 @@
 <artifact id="StructureDefinition/mcode-gynecologic-tumor-figo-stage" key="StructureDefinition-mcode-gynecologic-tumor-figo-stage" name="Gynecologic Tumor FIGO Stage Profile"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-sequence-variant-nomenclature-value-set" key="hgvs-sequence-variant-nomenclature-value-set" name="HGVS Sequence Variant Nomenclature Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgnc-vs" key="hugo-gene-nomenclature-committee-gene-names-value-set" name="HUGO Gene Nomenclature Committee Gene Names Value Set"/>
+<artifact id="StructureDefinition/mcode-histologic-behavior-and-type" key="StructureDefinition-mcode-histologic-behavior-and-type" name="Histologic Behavior and Type"/>
+<artifact id="ValueSet/mcode-histologic-behavior-and-type-vs" key="ValueSet-mcode-histologic-behavior-and-type-vs" name="Histologic Behavior and Type Value Set"/>
+<artifact id="StructureDefinition/mcode-histologic-grade" key="StructureDefinition-mcode-histologic-grade" name="Histologic Grade"/>
+<artifact id="ValueSet/mcode-histologic-grade-vs" key="ValueSet-mcode-histologic-grade-vs" name="Histologic Grade Value Set"/>
+<artifact id="ValueSet/mcode-histologic-grading-system-vs" key="ValueSet-mcode-histologic-grading-system-vs" name="Histologic Grading System Value Set"/>
 <artifact deprecated="true" id="Extension/mcode-histology-morphology-behavior-extension" key="histology-morphology-behavior-extension" name="Histology Morphology Behavior Extension"/>
 <artifact id="ValueSet/mcode-histology-morphology-behavior-vs" key="histology-morphology-behavior-value-set" name="Histology Morphology Behavior Value Set"/>
 <artifact id="StructureDefinition/mcode-histology-morphology-behavior" key="StructureDefinition-mcode-histology-morphology-behavior" name="Histology-Morphology-Behavior Extension"/>
@@ -139,14 +153,19 @@
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-vs" key="ValueSet-mcode-hgvs-vs" name="Human Genome Variation Society Sequence Variant Nomenclature Value Set"/>
 <artifact id="StructureDefinition/mcode-human-specimen" key="StructureDefinition-mcode-human-specimen" name="Human Specimen Profile"/>
 <artifact id="ValueSet/mcode-human-specimen-type-vs" key="ValueSet-mcode-human-specimen-type-vs" name="Human Specimen Type Value Set"/>
+<artifact id="ValueSet/mcode-neuroblastoma-INRGSS-value-vs" key="ValueSet-mcode-neuroblastoma-INRGSS-value-vs" name="International Neuroblastoma Risk Group Staging System (INRGSS) for Neuroblastoma Risk Assessment Value Set"/>
+<artifact id="ValueSet/mcode-neuroblastoma-inss-value-vs" key="ValueSet-mcode-neuroblastoma-inss-value-vs" name="International Neuroblastoma Staging System (INSS) for Neuroblastoma Stage Value Set"/>
 <artifact id="ValueSet/mcode-myeloma-iss-stage-value-vs" key="ValueSet-mcode-myeloma-iss-stage-value-vs" name="International Staging System (ISS) for Myeloma Stage Value Set"/>
 <artifact id="StructureDefinition/mcode-karnofsky-performance-status" key="karnofsky-performance-status" name="Karnofsky Performance Status Profile"/>
+<artifact id="StructureDefinition/mcode-lansky-play-performance-status" key="StructureDefinition-mcode-lansky-play-performance-status" name="Lansky Play Performance Status Profile"/>
+<artifact id="ValueSet/mcode-lansky-play-performance-vs" key="ValueSet-mcode-lansky-play-performance-vs" name="Lansky Play Performance Status VS"/>
 <artifact deprecated="true" id="Extension/mcode-laterality-extension" key="laterality-extension" name="Laterality Extension"/>
 <artifact id="StructureDefinition/mcode-laterality-qualifier" key="StructureDefinition-mcode-laterality-qualifier" name="Laterality Qualifier Extension"/>
 <artifact id="ValueSet/mcode-laterality-qualifier-vs" key="ValueSet-mcode-laterality-qualifier-vs" name="Laterality Qualifier Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-laterality-value-set" key="laterality-value-set" name="Laterality Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-location-qualifier" key="StructureDefinition-mcode-location-qualifier" name="Location Qualifier"/>
 <artifact deprecated="true" id="ValueSet/mcode-location-qualifier-vs" key="ValueSet-mcode-location-qualifier-vs" name="Location Qualifier Value Set"/>
+<artifact id="ValueSet/mcode-lymphoma-stage-bulky-modifier-vs" key="ValueSet-mcode-lymphoma-stage-bulky-modifier-vs" name="Lymphoma Stage Bulky Modifier Value Set"/>
 <artifact id="StructureDefinition/mcode-lymphoma-stage" key="StructureDefinition-mcode-lymphoma-stage" name="Lymphoma Stage Profile"/>
 <artifact id="ValueSet/mcode-lymphoma-stage-value-modifier-vs" key="ValueSet-mcode-lymphoma-stage-value-modifier-vs" name="Lymphoma Stage Value Modifier Value Set"/>
 <artifact id="ValueSet/mcode-lymphoma-stage-value-vs" key="ValueSet-mcode-lymphoma-stage-value-vs" name="Lymphoma Stage Value Set"/>
@@ -156,7 +175,11 @@
 <artifact id="ValueSet/mcode-melanoma-in-situ-disorder-vs" key="ValueSet-mcode-melanoma-in-situ-disorder-vs" name="Melanoma In-Situ Disorder Value Set"/>
 <artifact id="StructureDefinition/mcode-myeloma-iss-stage" key="StructureDefinition-mcode-myeloma-iss-stage" name="Myeloma ISS Stage Profile"/>
 <artifact id="StructureDefinition/mcode-myeloma-riss-stage" key="StructureDefinition-mcode-myeloma-riss-stage" name="Myeloma RISS Stage Profile"/>
+<artifact id="StructureDefinition/mcode-neuroblastoma-inrgss-stage" key="StructureDefinition-mcode-neuroblastoma-inrgss-stage" name="Neuroblastoma INRGSS Stage Profile"/>
+<artifact id="StructureDefinition/mcode-neuroblastoma-inss-stage" key="StructureDefinition-mcode-neuroblastoma-inss-stage" name="Neuroblastoma INSS Stage Profile"/>
 <artifact id="ValueSet/mcode-teleradiotherapy-neutron-beam-technique-vs" key="ValueSet-mcode-teleradiotherapy-neutron-beam-technique-vs" name="Neutron Beam Technique Value Set"/>
+<artifact id="StructureDefinition/mcode-normalization-basis" key="StructureDefinition-mcode-normalization-basis" name="Normalization Basis Extension"/>
+<artifact id="ValueSet/mcode-normalization-basis-vs" key="ValueSet-mcode-normalization-basis-vs" name="Normalization Basis Value Set"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
 <artifact id="StructureDefinition/mcode-tnm-category" key="StructureDefinition-mcode-tnm-category" name="Parent for T, N, and M Categories."/>
 <artifact id="ValueSet/mcode-teleradiotherapy-photon-beam-technique-vs" key="ValueSet-mcode-teleradiotherapy-photon-beam-technique-vs" name="Photon Beam Technique Value Set"/>
@@ -197,6 +220,12 @@
 <artifact deprecated="true" id="CodeSystem/loinc-requested-cs" key="CodeSystem-loinc-requested-cs" name="Requested LOINC Codes Code System"/>
 <artifact id="CodeSystem/snomed-requested-cs" key="CodeSystem-snomed-requested-cs" name="Requested SNOMED Codes Code System"/>
 <artifact id="ValueSet/mcode-myeloma-riss-stage-value-vs" key="ValueSet-mcode-myeloma-riss-stage-value-vs" name="Revised International Staging System (ISS) for Multiple Myeloma Stage Value Set"/>
+<artifact id="StructureDefinition/mcode-rhabdomyosarcoma-clinical-group-stage" key="StructureDefinition-mcode-rhabdomyosarcoma-clinical-group-stage" name="Rhabdomyocaroma Clinical Group Stage Profile"/>
+<artifact id="StructureDefinition/mcode-rhabdomyosarcoma-risk-assessment" key="StructureDefinition-mcode-rhabdomyosarcoma-risk-assessment" name="Rhabdomyocaroma Risk Assessment Profile"/>
+<artifact id="ValueSet/mcode-rhabdomyosarcoma-assessment-value-vs" key="ValueSet-mcode-rhabdomyosarcoma-assessment-value-vs" name="Rhabdomyosarcoma Assessment Value Set"/>
+<artifact id="ValueSet/mcode-rhabdomyosarcoma-clinical-group-value-vs" key="ValueSet-mcode-rhabdomyosarcoma-clinical-group-value-vs" name="Rhabdomyosarcoma Clinical Group Value"/>
+<artifact id="ValueSet/mcode-risk-assessment-type-vs" key="ValueSet-mcode-risk-assessment-type-vs" name="Risk Assessment Type Value Set"/>
+<artifact id="ValueSet/mcode-risk-assessment-vs" key="ValueSet-mcode-risk-assessment-vs" name="Risk Assessment Value Set"/>
 <artifact deprecated="true" id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>
 <artifact id="StructureDefinition/mcode-secondary-cancer-condition" key="secondary-cancer-condition" name="Secondary Cancer Condition Profile"/>
@@ -250,6 +279,7 @@
 <artifact id="ValueSet/mcode-tumor-marker-test-vs" key="tumor-marker-test-value-set" name="Tumor Marker Test Value Set"/>
 <artifact id="ValueSet/mcode-tumor-morphology-code-max-vs" key="ValueSet-mcode-tumor-morphology-code-max-vs" name="Tumor Morphology Code Max Value Set"/>
 <artifact id="ValueSet/mcode-tumor-morphology-code-vs" key="ValueSet-mcode-tumor-morphology-code-vs" name="Tumor Morphology Code Value Set"/>
+<artifact id="StructureDefinition/mcode-tumor-morphology" key="StructureDefinition-mcode-tumor-morphology" name="Tumor Morphology Report"/>
 <artifact id="StructureDefinition/mcode-tumor" key="StructureDefinition-mcode-tumor" name="Tumor Profile"/>
 <artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Tumor Size Method Value Set"/>
 <artifact id="StructureDefinition/mcode-tumor-size" key="StructureDefinition-mcode-tumor-size" name="Tumor Size Profile"/>
@@ -257,12 +287,23 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-tumor-specimen" key="StructureDefinition-mcode-tumor-specimen" name="Tumor Specimen Profile"/>
 <artifact deprecated="true" id="ValueSet/mcode-units-of-length-value-set" key="units-of-length-value-set" name="Units of Length Value Set"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
-<artifact id="Observation/binet-stage-group-A" key="Observation-binet-stage-group-A" name="binet-stage-group-A"/>
+<artifact id="ValueSet/mcode-wilms-tumor-body-site-vsCOG" key="ValueSet-mcode-wilms-tumor-body-site-vsCOG" name="Wilms Tumor Body Site Value Set"/>
+<artifact id="StructureDefinition/mcode-wilms-tumor-stage" key="StructureDefinition-mcode-wilms-tumor-stage" name="Wilms Tumor Stage Profile"/>
+<artifact id="ValueSet/mcode-wilms-tumor-stage-value-vs" key="ValueSet-mcode-wilms-tumor-stage-value-vs" name="Wilms Tumor Stage Value Set"/>
+<artifact id="Observation/all-risk-assessment-high" key="Observation-all-risk-assessment-high" name="all-risk-assessment-high"/>
+<artifact id="Observation/all-risk-assessment-standard-brian-l" key="Observation-all-risk-assessment-standard-brian-l" name="all-risk-assessment-standard-brian-l"/>
+<artifact deprecated="true" id="Observation/binet-stage-group-A" key="Observation-binet-stage-group-A" name="binet-stage-group-A"/>
+<artifact id="Observation/binet-stage-group-B" key="Observation-binet-stage-group-B" name="binet-stage-group-B"/>
+<artifact id="Observation/body-surface-area-brian-l" key="Observation-body-surface-area-brian-l" name="body-surface-area-brian-l"/>
+<artifact id="Observation/body-surface-area-example" key="Observation-body-surface-area-example" name="body-surface-area-example"/>
 <artifact id="Observation/bodyheight-jenny-m-2018-03-06" key="Observation-bodyheight-jenny-m-2018-03-06" name="bodyheight-jenny-m-2018-03-06"/>
 <artifact id="Observation/bodyweight-jenny-m-2018-03-16" key="Observation-bodyweight-jenny-m-2018-03-16" name="bodyweight-jenny-m-2018-03-16"/>
 <artifact id="Observation/bodyweight-jenny-m-2018-04-22" key="Observation-bodyweight-jenny-m-2018-04-22" name="bodyweight-jenny-m-2018-04-22"/>
+<artifact id="Observation/bone-marrow-aspirate-result-brian-l" key="Observation-bone-marrow-aspirate-result-brian-l" name="bone-marrow-aspirate-result-brian-l"/>
+<artifact id="Observation/bone-marrow-biopsy-result-brian-l" key="Observation-bone-marrow-biopsy-result-brian-l" name="bone-marrow-biopsy-result-brian-l"/>
 <artifact deprecated="true" id="Procedure/brachytherapy-treatment-phase-low-dose-rate-temporary" key="Procedure-brachytherapy-treatment-phase-low-dose-rate-temporary" name="brachytherapy-treatment-phase-low-dose-rate-temporary"/>
 <artifact id="Observation/cancer-disease-status-improved" key="Observation-cancer-disease-status-improved" name="cancer-disease-status-improved"/>
+<artifact id="Observation/cancer-disease-status-improved-brian-l" key="Observation-cancer-disease-status-improved-brian-l" name="cancer-disease-status-improved-brian-l"/>
 <artifact id="Observation/cancer-disease-status-jenny-m" key="Observation-cancer-disease-status-jenny-m" name="cancer-disease-status-jenny-m"/>
 <artifact deprecated="true" id="Observation/cancer-genetic-variant-germline-deletion" key="Observation-cancer-genetic-variant-germline-deletion" name="cancer-genetic-variant-germline-deletion"/>
 <artifact deprecated="true" id="Observation/cancer-genetic-variant-jenny-m" key="Observation-cancer-genetic-variant-jenny-m" name="cancer-genetic-variant-jenny-m"/>
@@ -270,29 +311,41 @@
 <artifact deprecated="true" id="DiagnosticReport/cancer-genomics-report-jenny-m" key="DiagnosticReport-cancer-genomics-report-jenny-m" name="cancer-genomics-report-jenny-m"/>
 <artifact deprecated="true" id="DiagnosticReport/cancer-genomics-report-john-anyperson" key="DiagnosticReport-cancer-genomics-report-john-anyperson" name="cancer-genomics-report-john-anyperson"/>
 <artifact id="Patient/cancer-patient-adam-everyman" key="Patient-cancer-patient-adam-everyman" name="cancer-patient-adam-everyman"/>
+<artifact id="Patient/cancer-patient-brian-l" key="Patient-cancer-patient-brian-l" name="cancer-patient-brian-l"/>
 <artifact id="Patient/cancer-patient-eve-anyperson" key="Patient-cancer-patient-eve-anyperson" name="cancer-patient-eve-anyperson"/>
 <artifact id="Patient/cancer-patient-jenny-m" key="Patient-cancer-patient-jenny-m" name="cancer-patient-jenny-m"/>
 <artifact id="Patient/cancer-patient-john-anyperson" key="Patient-cancer-patient-john-anyperson" name="cancer-patient-john-anyperson"/>
+<artifact id="Patient/cancer-patient-lucy-child" key="Patient-cancer-patient-lucy-child" name="cancer-patient-lucy-child"/>
 <artifact id="Observation/cancer-related-comorbidities-jenny-m" key="Observation-cancer-related-comorbidities-jenny-m" name="cancer-related-comorbidities-jenny-m"/>
 <artifact id="Observation/cancer-related-comorbidities-john-anyperson" key="Observation-cancer-related-comorbidities-john-anyperson" name="cancer-related-comorbidities-john-anyperson"/>
 <artifact deprecated="true" id="Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m" key="Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m" name="cancer-related-mcode-comorbidities-elixhauser-jenny-m"/>
 <artifact deprecated="true" id="Observation/cancer-related-mcode-comorbidities-elixhauser-john-anyperson" key="Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson" name="cancer-related-mcode-comorbidities-elixhauser-john-anyperson"/>
+<artifact id="MedicationAdministration/cancer-related-medication-admin-cyclophosphamide-brian-l" key="MedicationAdministration-cancer-related-medication-admin-cyclophosphamide-brian-l" name="cancer-related-medication-admin-cyclophosphamide-brian-l"/>
 <artifact id="MedicationAdministration/cancer-related-medication-admin-cyclophosphamide-jenny-m" key="MedicationAdministration-cancer-related-medication-admin-cyclophosphamide-jenny-m" name="cancer-related-medication-admin-cyclophosphamide-jenny-m"/>
 <artifact id="MedicationAdministration/cancer-related-medication-admin-doxorubicin-jenny-m" key="MedicationAdministration-cancer-related-medication-admin-doxorubicin-jenny-m" name="cancer-related-medication-admin-doxorubicin-jenny-m"/>
+<artifact id="MedicationAdministration/cancer-related-medication-admin-idarubicin-brian-l" key="MedicationAdministration-cancer-related-medication-admin-idarubicin-brian-l" name="cancer-related-medication-admin-idarubicin-brian-l"/>
 <artifact id="MedicationAdministration/cancer-related-medication-admin-paclitaxel-jenny-m" key="MedicationAdministration-cancer-related-medication-admin-paclitaxel-jenny-m" name="cancer-related-medication-admin-paclitaxel-jenny-m"/>
+<artifact id="MedicationAdministration/cancer-related-medication-admin-prednisone-brian-l" key="MedicationAdministration-cancer-related-medication-admin-prednisone-brian-l" name="cancer-related-medication-admin-prednisone-brian-l"/>
+<artifact id="MedicationAdministration/cancer-related-medication-admin-vincristine-brian-l" key="MedicationAdministration-cancer-related-medication-admin-vincristine-brian-l" name="cancer-related-medication-admin-vincristine-brian-l"/>
 <artifact deprecated="true" id="MedicationAdministration/cancer-related-medication-administration-doxorubicin-jenny-m" key="MedicationAdministration-cancer-related-medication-administration-doxorubicin-jenny-m" name="cancer-related-medication-administration-doxorubicin-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-anastrozole-jenny-m" key="MedicationRequest-cancer-related-medication-request-anastrozole-jenny-m" name="cancer-related-medication-request-anastrozole-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-cisplatin" key="MedicationRequest-cancer-related-medication-request-cisplatin" name="cancer-related-medication-request-cisplatin"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-cisplatin-stopped" key="MedicationRequest-cancer-related-medication-request-cisplatin-stopped" name="cancer-related-medication-request-cisplatin-stopped"/>
+<artifact id="MedicationRequest/cancer-related-medication-request-cyclophosphamide-brian-l" key="MedicationRequest-cancer-related-medication-request-cyclophosphamide-brian-l" name="cancer-related-medication-request-cyclophosphamide-brian-l"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-cyclophosphamide-jenny-m" key="MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m" name="cancer-related-medication-request-cyclophosphamide-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-doxorubicin-jenny-m" key="MedicationRequest-cancer-related-medication-request-doxorubicin-jenny-m" name="cancer-related-medication-request-doxorubicin-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-gefitinib" key="MedicationRequest-cancer-related-medication-request-gefitinib" name="cancer-related-medication-request-gefitinib"/>
+<artifact id="MedicationRequest/cancer-related-medication-request-idarubicin-brian-l" key="MedicationRequest-cancer-related-medication-request-idarubicin-brian-l" name="cancer-related-medication-request-idarubicin-brian-l"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-paclitaxel-jenny-m" key="MedicationRequest-cancer-related-medication-request-paclitaxel-jenny-m" name="cancer-related-medication-request-paclitaxel-jenny-m"/>
+<artifact id="MedicationRequest/cancer-related-medication-request-prednisone-brian-l" key="MedicationRequest-cancer-related-medication-request-prednisone-brian-l" name="cancer-related-medication-request-prednisone-brian-l"/>
+<artifact id="MedicationRequest/cancer-related-medication-request-vincristine-brian-l" key="MedicationRequest-cancer-related-medication-request-vincristine-brian-l" name="cancer-related-medication-request-vincristine-brian-l"/>
 <artifact id="Procedure/cancer-related-surgical-procedure-jenny-m" key="Procedure-cancer-related-surgical-procedure-jenny-m" name="cancer-related-surgical-procedure-jenny-m"/>
 <artifact id="Procedure/cancer-related-surgical-procedure-lobectomy" key="Procedure-cancer-related-surgical-procedure-lobectomy" name="cancer-related-surgical-procedure-lobectomy"/>
+<artifact id="Observation/deauville-scale-five" key="Observation-deauville-scale-five" name="deauville-scale-five"/>
 <artifact id="Observation/ecog-performance-status-fully-active" key="Observation-ecog-performance-status-fully-active" name="ecog-performance-status-fully-active"/>
 <artifact id="Observation/ecog-performance-status-jenny-m" key="Observation-ecog-performance-status-jenny-m" name="ecog-performance-status-jenny-m"/>
 <artifact id="FamilyMemberHistory/family-member-history-aunt-jenny-m" key="FamilyMemberHistory-family-member-history-aunt-jenny-m" name="family-member-history-aunt-jenny-m"/>
+<artifact id="FamilyMemberHistory/family-member-history-grandmother-brian-l" key="FamilyMemberHistory-family-member-history-grandmother-brian-l" name="family-member-history-grandmother-brian-l"/>
 <artifact id="FamilyMemberHistory/family-member-history-sister-jenny-m" key="FamilyMemberHistory-family-member-history-sister-jenny-m" name="family-member-history-sister-jenny-m"/>
 <artifact id="FamilyMemberHistory/family-member-history-uncle-jenny-m" key="FamilyMemberHistory-family-member-history-uncle-jenny-m" name="family-member-history-uncle-jenny-m"/>
 <artifact id="Observation/figo-stage-IIIA" key="Observation-figo-stage-IIIA" name="figo-stage-IIIA"/>
@@ -325,6 +378,7 @@
 <artifact id="Observation/gx-genomic-therapeutic-implication-crizotinib" key="Observation-gx-genomic-therapeutic-implication-crizotinib" name="gx-genomic-therapeutic-implication-crizotinib"/>
 <artifact id="Observation/gx-genomic-therapeutic-implication-lorlatinib" key="Observation-gx-genomic-therapeutic-implication-lorlatinib" name="gx-genomic-therapeutic-implication-lorlatinib"/>
 <artifact id="Observation/gx-genomic-tmb" key="Observation-gx-genomic-tmb" name="gx-genomic-tmb"/>
+<artifact id="Observation/gx-genomic-variant-fusion-ETV6-RUNX1-brian-l" key="Observation-gx-genomic-variant-fusion-ETV6-RUNX1-brian-l" name="gx-genomic-variant-fusion-ETV6-RUNX1-brian-l"/>
 <artifact id="Observation/gx-genomic-variant-fusion-met-alk" key="Observation-gx-genomic-variant-fusion-met-alk" name="gx-genomic-variant-fusion-met-alk"/>
 <artifact id="Observation/gx-genomic-variant-pertinent-negative-nras-kit-braf" key="Observation-gx-genomic-variant-pertinent-negative-nras-kit-braf" name="gx-genomic-variant-pertinent-negative-nras-kit-braf"/>
 <artifact id="Observation/gx-genomic-variant-somatic-bap1-indel" key="Observation-gx-genomic-variant-somatic-bap1-indel" name="gx-genomic-variant-somatic-bap1-indel"/>
@@ -343,17 +397,35 @@
 <artifact id="Organization/gx-us-core-organization-gensop-inc" key="Organization-gx-us-core-organization-gensop-inc" name="gx-us-core-organization-gensop-inc"/>
 <artifact deprecated="true" id="Organization/gx-us-core-organization-tempus-inc" key="Organization-gx-us-core-organization-tempus-inc" name="gx-us-core-organization-tempus-inc"/>
 <artifact deprecated="true" id="Organization/gx-us-core-organization-test-institution" key="Organization-gx-us-core-organization-test-institution" name="gx-us-core-organization-test-institution"/>
+<artifact id="Observation/hematocrit-brian-l" key="Observation-hematocrit-brian-l" name="hematocrit-brian-l"/>
+<artifact id="Observation/hemoglobin-brian-l" key="Observation-hemoglobin-brian-l" name="hemoglobin-brian-l"/>
+<artifact id="Observation/histologic-behavior-and-type-non-small-cell" key="Observation-histologic-behavior-and-type-non-small-cell" name="histologic-behavior-and-type-non-small-cell"/>
+<artifact id="Observation/histologic-grade-intermediate" key="Observation-histologic-grade-intermediate" name="histologic-grade-intermediate"/>
 <artifact id="Observation/history-of-cancer-metastatic-to-liver" key="Observation-history-of-cancer-metastatic-to-liver" name="history-of-cancer-metastatic-to-liver"/>
 <artifact id="Observation/hodgkins-lymphoma-stage-IIIe" key="Observation-hodgkins-lymphoma-stage-IIIe" name="hodgkins-lymphoma-stage-IIIe"/>
 <artifact id="Specimen/human-specimen-left-breast-jenny-m" key="Specimen-human-specimen-left-breast-jenny-m" name="human-specimen-left-breast-jenny-m"/>
 <artifact id="Specimen/human-specimen-lung" key="Specimen-human-specimen-lung" name="human-specimen-lung"/>
+<artifact id="Observation/immunophenotype-brian-l" key="Observation-immunophenotype-brian-l" name="immunophenotype-brian-l"/>
 <artifact id="BodyStructure/jenny-m-chest-wall-lymph-nodes-treatment-volume" key="BodyStructure-jenny-m-chest-wall-lymph-nodes-treatment-volume" name="jenny-m-chest-wall-lymph-nodes-treatment-volume"/>
 <artifact id="BodyStructure/jenny-m-chest-wall-treatment-volume" key="BodyStructure-jenny-m-chest-wall-treatment-volume" name="jenny-m-chest-wall-treatment-volume"/>
 <artifact id="Condition/john-anyperson-chf" key="Condition-john-anyperson-chf" name="john-anyperson-chf"/>
+<artifact id="Condition/john-anyperson-hd" key="Condition-john-anyperson-hd" name="john-anyperson-hd"/>
 <artifact id="BodyStructure/john-anyperson-treatment-volume" key="BodyStructure-john-anyperson-treatment-volume" name="john-anyperson-treatment-volume"/>
 <artifact id="Observation/karnofsky-performance-status-normal-activity" key="Observation-karnofsky-performance-status-normal-activity" name="karnofsky-performance-status-normal-activity"/>
 <artifact id="Observation/lab-result-observation-hemoglobin" key="Observation-lab-result-observation-hemoglobin" name="lab-result-observation-hemoglobin"/>
+<artifact id="Observation/lansky-performance-status-brian-l" key="Observation-lansky-performance-status-brian-l" name="lansky-performance-status-brian-l"/>
+<artifact id="Observation/lansky-play-performance-status-twenty" key="Observation-lansky-play-performance-status-twenty" name="lansky-play-performance-status-twenty"/>
 <artifact deprecated="true" id="CodeSystem/mcode-catch-code-cs" key="CodeSystem-mcode-catch-code-cs" name="mCODE Catch Codes"/>
+<artifact id="CapabilityStatement/mcode-receiver-patients-and-cancer-conditions" key="CapabilityStatement-mcode-receiver-patients-and-cancer-conditions" name="mCODE Data Receiver CapabilityStatement: Get in-scope patients (and associated Conditions) using _include"/>
+<artifact id="CapabilityStatement/mcode-receiver-patients-with-cancer-condition" key="CapabilityStatement-mcode-receiver-patients-with-cancer-condition" name="mCODE Data Receiver CapabilityStatement: Get in-scope patients using reverse chaining"/>
+<artifact id="CapabilityStatement/mcode-receiver-patient-bundle" key="CapabilityStatement-mcode-receiver-patient-bundle" name="mCODE Data Receiver: Get Bundle for a Patient"/>
+<artifact id="CapabilityStatement/mcode-receiver-cancer-conditions-then-patients" key="CapabilityStatement-mcode-receiver-cancer-conditions-then-patients" name="mCODE Data Receiver: Get Conditions then Patients"/>
+<artifact id="CapabilityStatement/mcode-receiver-patients-in-group" key="CapabilityStatement-mcode-receiver-patients-in-group" name="mCODE Data Receiver: Get Patients in Group"/>
+<artifact id="CapabilityStatement/mcode-sender-patients-and-cancer-conditions" key="CapabilityStatement-mcode-sender-patients-and-cancer-conditions" name="mCODE Data Sender CapabilityStatement: Get in-scope patients (and associated Conditions) using _include"/>
+<artifact id="CapabilityStatement/mcode-sender-patients-with-cancer-condition" key="CapabilityStatement-mcode-sender-patients-with-cancer-condition" name="mCODE Data Sender CapabilityStatement: Get in-scope patients using reverse chaining"/>
+<artifact id="CapabilityStatement/mcode-sender-patient-bundle" key="CapabilityStatement-mcode-sender-patient-bundle" name="mCODE Data Sender: Get Bundle for a Patient"/>
+<artifact id="CapabilityStatement/mcode-sender-cancer-conditions-then-patients" key="CapabilityStatement-mcode-sender-cancer-conditions-then-patients" name="mCODE Data Sender: Get Conditions then Patients"/>
+<artifact id="CapabilityStatement/mcode-sender-patients-in-group" key="CapabilityStatement-mcode-sender-patients-in-group" name="mCODE Data Sender: Get Patients in Group"/>
 <artifact id="StructureDefinition/mcode-patient-bundle" key="StructureDefinition-mcode-patient-bundle" name="mCODE Patient Bundle Profile"/>
 <artifact id="Group/group-mcode-patients" key="Group-group-mcode-patients" name="mCODE Patient Group Example"/>
 <artifact id="StructureDefinition/mcode-patient-group" key="StructureDefinition-mcode-patient-group" name="mCODE Patient Group Profile"/>
@@ -387,24 +459,17 @@
 <artifact deprecated="true" id="Example/mcode-tnm-pathological-stage-group-example-01" key="mcode-tnm-pathological-stage-group-example-01" name="mCODETNMPathologicalStageGroupExample01"/>
 <artifact deprecated="true" id="Example/mcode-tumor-marker-example-01" key="mcode-tumor-marker-example-01" name="mCODETumorMarkerExample01"/>
 <artifact id="Bundle/mcode-patient-bundle-jenny-m" key="Bundle-mcode-patient-bundle-jenny-m" name="mcode-patient-bundle-jenny-m"/>
-<artifact id="OperationDefinition/mcode-patient-everything" key="OperationDefinition-mcode-patient-everything" name="Fetch mCODE Patient Bundle for a given Patient"/>
-<artifact id="CapabilityStatement/mcode-receiver-patients-and-cancer-conditions" key="CapabilityStatement-mcode-receiver-patients-and-cancer-conditions" name="mCODE Data Receiver CapabilityStatement: Get in-scope patients (and associated Conditions) using _include"/>
-<artifact id="CapabilityStatement/mcode-receiver-patients-with-cancer-condition" key="CapabilityStatement-mcode-receiver-patients-with-cancer-condition" name="mCODE Data Receiver CapabilityStatement: Get in-scope patients using reverse chaining"/>
-<artifact id="CapabilityStatement/mcode-receiver-patient-bundle" key="CapabilityStatement-mcode-receiver-patient-bundle" name="mCODE Data Receiver: Get Bundle for a Patient"/>
-<artifact id="CapabilityStatement/mcode-receiver-cancer-conditions-then-patients" key="CapabilityStatement-mcode-receiver-cancer-conditions-then-patients" name="mCODE Data Receiver: Get Conditions then Patients"/>
-<artifact id="CapabilityStatement/mcode-receiver-patients-in-group" key="CapabilityStatement-mcode-receiver-patients-in-group" name="mCODE Data Receiver: Get Patients in Group"/>
-<artifact id="CapabilityStatement/mcode-sender-patients-and-cancer-conditions" key="CapabilityStatement-mcode-sender-patients-and-cancer-conditions" name="mCODE Data Sender CapabilityStatement: Get in-scope patients (and associated Conditions) using _include"/>
-<artifact id="CapabilityStatement/mcode-sender-patients-with-cancer-condition" key="CapabilityStatement-mcode-sender-patients-with-cancer-condition" name="mCODE Data Sender CapabilityStatement: Get in-scope patients using reverse chaining"/>
-<artifact id="CapabilityStatement/mcode-sender-patient-bundle" key="CapabilityStatement-mcode-sender-patient-bundle" name="mCODE Data Sender: Get Bundle for a Patient"/>
-<artifact id="CapabilityStatement/mcode-sender-cancer-conditions-then-patients" key="CapabilityStatement-mcode-sender-cancer-conditions-then-patients" name="mCODE Data Sender: Get Conditions then Patients"/>
-<artifact id="CapabilityStatement/mcode-sender-patients-in-group" key="CapabilityStatement-mcode-sender-patients-in-group" name="mCODE Data Sender: Get Patients in Group"/><artifact id="Observation/melanoma-breslow-depth-stage" key="Observation-melanoma-breslow-depth-stage" name="melanoma-breslow-depth-stage"/>
+<artifact id="Observation/melanoma-breslow-depth-stage" key="Observation-melanoma-breslow-depth-stage" name="melanoma-breslow-depth-stage"/>
 <artifact id="Observation/melanoma-clark-level-4" key="Observation-melanoma-clark-level-4" name="melanoma-clark-level-4"/>
 <artifact id="Observation/multiple-myeloma-iss-stage-II" key="Observation-multiple-myeloma-iss-stage-II" name="multiple-myeloma-iss-stage-II"/>
 <artifact id="Observation/multiple-myeloma-riss-stage-II" key="Observation-multiple-myeloma-riss-stage-II" name="multiple-myeloma-riss-stage-II"/>
+<artifact id="Observation/neuroblastoma-inrgss-stage-MS" key="Observation-neuroblastoma-inrgss-stage-MS" name="neuroblastoma-inrgss-stage-MS"/>
+<artifact id="Observation/neuroblastoma-inss-stage-III" key="Observation-neuroblastoma-inss-stage-III" name="neuroblastoma-inss-stage-III"/>
 <artifact id="Observation/no-history-of-metastatic-cancer" key="Observation-no-history-of-metastatic-cancer" name="no-history-of-metastatic-cancer"/>
 <artifact deprecated="true" id="Observation/observation-smoking-history-jenny-m" key="Observation-observation-smoking-history-jenny-m" name="observation-smoking-history-jenny-m"/>
 <artifact id="Observation/observation-smoking-pack-years-jenny-m" key="Observation-observation-smoking-pack-years-jenny-m" name="observation-smoking-pack-years-jenny-m"/>
 <artifact id="Condition/primary-cancer-condition-breast" key="Condition-primary-cancer-condition-breast" name="primary-cancer-condition-breast"/>
+<artifact id="Condition/primary-cancer-condition-brian-l" key="Condition-primary-cancer-condition-brian-l" name="primary-cancer-condition-brian-l"/>
 <artifact id="Condition/primary-cancer-condition-cll" key="Condition-primary-cancer-condition-cll" name="primary-cancer-condition-cll"/>
 <artifact id="Condition/primary-cancer-condition-jenny-m" key="Condition-primary-cancer-condition-jenny-m" name="primary-cancer-condition-jenny-m"/>
 <artifact id="Condition/primary-cancer-condition-nonspecific" key="Condition-primary-cancer-condition-nonspecific" name="primary-cancer-condition-nonspecific"/>
@@ -412,6 +477,8 @@
 <artifact id="Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m" key="Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m" name="radiotherapy-treatment-summary-chest-wall-jenny-m"/>
 <artifact id="Procedure/radiotherapy-treatment-summary-other-with-text" key="Procedure-radiotherapy-treatment-summary-other-with-text" name="radiotherapy-treatment-summary-other-with-text"/>
 <artifact id="Observation/rai-stage-II" key="Observation-rai-stage-II" name="rai-stage-II"/>
+<artifact id="Observation/rhabdomyosarcoma-clinical-group-stage-IA" key="Observation-rhabdomyosarcoma-clinical-group-stage-IA" name="rhabdomyosarcoma-clinical-group-stage-IA"/>
+<artifact id="Observation/rhabdomyosarcoma-risk-assessment-low" key="Observation-rhabdomyosarcoma-risk-assessment-low" name="rhabdomyosarcoma-risk-assessment-low"/>
 <artifact id="Condition/secondary-cancer-condition-brain-mets" key="Condition-secondary-cancer-condition-brain-mets" name="secondary-cancer-condition-brain-mets"/>
 <artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-boost-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-boost-jenny-m" name="teleradiotherapy-treatment-phase-boost-jenny-m"/>
 <artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-chest-wall-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-chest-wall-jenny-m" name="teleradiotherapy-treatment-phase-chest-wall-jenny-m"/>
@@ -433,14 +500,18 @@
 <artifact id="Observation/tumor-marker-test-her2-jenny-m" key="Observation-tumor-marker-test-her2-jenny-m" name="tumor-marker-test-her2-jenny-m"/>
 <artifact id="Observation/tumor-marker-test-oncotype-dx-jenny-m" key="Observation-tumor-marker-test-oncotype-dx-jenny-m" name="tumor-marker-test-oncotype-dx-jenny-m"/>
 <artifact id="Observation/tumor-marker-test-pr-jenny-m" key="Observation-tumor-marker-test-pr-jenny-m" name="tumor-marker-test-pr-jenny-m"/>
+<artifact id="DiagnosticReport/tumor-morphology-report-non-small-cell-intermediate-grade" key="DiagnosticReport-tumor-morphology-report-non-small-cell-intermediate-grade" name="tumor-morphology-report-non-small-cell-intermediate-grade"/>
 <artifact id="Observation/tumor-size-jenny-m" key="Observation-tumor-size-jenny-m" name="tumor-size-jenny-m"/>
 <artifact id="Observation/tumor-size-pathology" key="Observation-tumor-size-pathology" name="tumor-size-pathology"/>
 <artifact id="Specimen/tumor-specimen-left-breast-jenny-m" key="Specimen-tumor-specimen-left-breast-jenny-m" name="tumor-specimen-left-breast-jenny-m"/>
 <artifact id="Specimen/tumor-specimen-lobular-carcinoma-left-breast" key="Specimen-tumor-specimen-lobular-carcinoma-left-breast" name="tumor-specimen-lobular-carcinoma-left-breast"/>
 <artifact id="Condition/us-core-condition-anxiety-jenny-m" key="Condition-us-core-condition-anxiety-jenny-m" name="us-core-condition-anxiety-jenny-m"/>
+<artifact id="Condition/us-core-condition-atrial-septal-defect-brian-l" key="Condition-us-core-condition-atrial-septal-defect-brian-l" name="us-core-condition-atrial-septal-defect-brian-l"/>
 <artifact id="Condition/us-core-condition-depression-jenny-m" key="Condition-us-core-condition-depression-jenny-m" name="us-core-condition-depression-jenny-m"/>
 <artifact id="Condition/us-core-condition-hypertension-jenny-m" key="Condition-us-core-condition-hypertension-jenny-m" name="us-core-condition-hypertension-jenny-m"/>
+<artifact id="DiagnosticReport/us-core-diagnosticreport-cbc-brian-l" key="DiagnosticReport-us-core-diagnosticreport-cbc-brian-l" name="us-core-diagnosticreport-cbc-brian-l"/>
 <artifact id="DiagnosticReport/us-core-diagnosticreport-lab-jenny-m" key="DiagnosticReport-us-core-diagnosticreport-lab-jenny-m" name="us-core-diagnosticreport-lab-jenny-m"/>
+<artifact id="Observation/us-core-lumbar-puncture-result-brian-l" key="Observation-us-core-lumbar-puncture-result-brian-l" name="us-core-lumbar-puncture-result-brian-l"/>
 <artifact id="Observation/us-core-observation-lab-neutrophils-jenny-m" key="Observation-us-core-observation-lab-neutrophils-jenny-m" name="us-core-observation-lab-neutrophils-jenny-m"/>
 <artifact id="Observation/us-core-observation-lab-sentinel-nodes-jenny-m" key="Observation-us-core-observation-lab-sentinel-nodes-jenny-m" name="us-core-observation-lab-sentinel-nodes-jenny-m"/>
 <artifact id="Observation/us-core-observation-lab-tumor-dcis-jenny-m" key="Observation-us-core-observation-lab-tumor-dcis-jenny-m" name="us-core-observation-lab-tumor-dcis-jenny-m"/>
@@ -456,8 +527,13 @@
 <artifact id="Practitioner/us-core-practitioner-owen-oncologist" key="Practitioner-us-core-practitioner-owen-oncologist" name="us-core-practitioner-owen-oncologist"/>
 <artifact id="Practitioner/us-core-practitioner-peter-pathologist" key="Practitioner-us-core-practitioner-peter-pathologist" name="us-core-practitioner-peter-pathologist"/>
 <artifact id="Procedure/us-core-procedure-biopsy-jenny-m" key="Procedure-us-core-procedure-biopsy-jenny-m" name="us-core-procedure-biopsy-jenny-m"/>
+<artifact id="Procedure/us-core-procedure-bone-marrow-aspiration-brian-l" key="Procedure-us-core-procedure-bone-marrow-aspiration-brian-l" name="us-core-procedure-bone-marrow-aspiration-brian-l"/>
+<artifact id="Procedure/us-core-procedure-bone-marrow-biopsy-brian-l" key="Procedure-us-core-procedure-bone-marrow-biopsy-brian-l" name="us-core-procedure-bone-marrow-biopsy-brian-l"/>
+<artifact id="Procedure/us-core-procedure-lumbar-puncture-brian-l" key="Procedure-us-core-procedure-lumbar-puncture-brian-l" name="us-core-procedure-lumbar-puncture-brian-l"/>
 <artifact id="Procedure/us-core-procedure-mammogram-jenny-m" key="Procedure-us-core-procedure-mammogram-jenny-m" name="us-core-procedure-mammogram-jenny-m"/>
 <artifact id="Observation/us-core-smokingstatus-jenny-m" key="Observation-us-core-smokingstatus-jenny-m" name="us-core-smokingstatus-jenny-m"/>
+<artifact id="Observation/white-blood-cell-brian-l" key="Observation-white-blood-cell-brian-l" name="white-blood-cell-brian-l"/>
+<artifact id="Observation/wilms-tumor-stage-III" key="Observation-wilms-tumor-stage-III" name="wilms-tumor-stage-III"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
@@ -471,6 +547,7 @@
 <page key="group-disease" name="Disease Characterization"/>
 <page key="downloads" name="Download Specification"/>
 <page key="examples" name="Extended Example"/>
+<page key="examples_pediatric" name="Extended Pediatric Example"/>
 <page deprecated="true" key="extensions" name="Extensions"/>
 <page key="group-genomics" name="Genomics"/>
 <page key="examples_genomics" name="Genomics Examples"/>
@@ -488,4 +565,5 @@
 <page key="terminology" name="Terminology"/>
 <page key="group-treatment" name="Treatments"/>
 <page deprecated="true" key="valuesets" name="Value Sets"/>
+<page key="ImplementationGuide-hl7.fhir.us.mcode" name="mCODE Implementation Guide Resource"/>
 </specification>

@@ -374,16 +374,13 @@ Description: "Extended pediatric example: body surface area"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 * valueQuantity = 0.59 'm2' "square meter"
 
-/*
 Instance: all-risk-assessment-standard-brian-l
 InstanceOf: ALLRiskAssessment
 Description: "Extended pediatric example: ALL risk assessment standard"
 * valueCodeableConcept = NCIT#C122457 "Standard Risk Acute Leukemia"
 * status = #final "final"
+* category = ObsCat#exam "Exam"
 * subject = Reference(cancer-patient-brian-l)
 * focus = Reference(primary-cancer-condition-brian-l)
 * effectiveDateTime = "2021-02-08"
 * performer = Reference(us-core-practitioner-owen-oncologist)
-*/
-
-

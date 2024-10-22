@@ -647,7 +647,7 @@ InstanceOf: CancerRelatedMedicationAdministration
 Description: "Extended example: example showing chemotherapy medication"
 * status = #completed "completed"
 * category = MedReqCat#outpatient
-* medicationCodeableConcept = RXN#1790099 "doxorubicin hydrochloride 20 MG per 10 ML Injection"
+* medicationCodeableConcept = RXN#1790099 "10 ML doxorubicin hydrochloride 2 MG/ML Injection"
 * subject = Reference(cancer-patient-jenny-m)
 * performer.actor = Reference(us-core-practitioner-nancy-oncology-nurse)
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
@@ -1028,7 +1028,7 @@ Description: "Extended example: example PCP practitioner"
 Instance: us-core-practitioner-owen-oncologist
 InstanceOf: USCorePractitioner
 Description: "Extended example: example practitioner"
-* identifier[NPI].value = "9988776655"
+* identifier[NPI].value = "9988776651"
 * name.family = "Oncologist"
 * name.given[0] = "Owen"
 * name.prefix[0] = "Dr."

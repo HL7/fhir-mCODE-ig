@@ -992,7 +992,7 @@ Description: "Extended example: example cancer patient"
 Instance: us-core-practitioner-jane-radiotech
 InstanceOf: USCorePractitioner
 Description: "Extended example: example PCP practitioner"
-* identifier[NPI].value = "2345123677"
+* identifier[NPI].value = "2345123675"
 * name.family = "Radiologist"
 * name.given[0] = "Jane"
 * name.prefix[0] = "Dr."

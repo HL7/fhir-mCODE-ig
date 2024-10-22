@@ -68,8 +68,10 @@ The [HL7 GRIG guidance on defining variants](https://hl7.org/fhir/uv/genomics-re
 Although mCODE should support both formats, it is preferable to use HGVS nomenclature for coding and protein variants where possible.
 
 A full representation of an HGVS variant SHOULD include the following: 
-* a transcript identifier or reference sequence id that includes the version number followed by a nomenclature which further characterizes the nature of the variant
-* the reference sequence assembly version populated in the Variant observation component [reference-sequence-assembly](https://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-finding-definitions.html#Observation.component:reference-sequence-assembly)
+
+* a transcript identifier or reference sequence id that includes the version number followed by a nomenclature which further characterizes the nature of the variant.
+* the reference sequence assembly version populated in the Variant observation component [reference-sequence-assembly](https://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-finding-definitions.html#Observation.component:reference-sequence-assembly).
+
 
 **NOTE**: The FHIR IG publisher validates HGVS-notated variants included in the FHIR examples, however it is not intended to validate all possible variants as there is no single HGVS validation tool that comprehensively covers the most up-to-date recognized variants for a given reference sequence. 
 

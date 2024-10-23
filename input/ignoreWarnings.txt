@@ -76,9 +76,6 @@ Target Code System http://snomed.info/sct is only supported on the terminology s
 WARNING: Observation/gx-genomic-tmb: Observation.value.ofType(Quantity): UCUM Codes that contain human readable annotations like {Base} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked, and the Quantity.unit SHOULD contain the annotation
 UCUM Codes that contain human readable annotations like {Base} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked, and the Quantity.unit SHOULD contain the annotation
 
-# SNOMED version is specified in exp-params. Noted publisher issue to be fixed - https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/different.20potential.20matches.20for.20SCT.20url/near/430754062 
-There are multiple different potential matches for the url 'http://snomed.info/sct'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version 'null', found versions: 3.2.1, {{unversioned}}
-
 # TG263 codesystem and valueset are placeholder only.   There is no terminology resource that will support validity checking 
 WARNING: ConceptMap/TG263CM: ConceptMap.group[0].source: Source Code System http://hl7.org/fhir/us/mcode/CodeSystem/tg263-cs doesn't have all content (content = not-present), so the source codes cannot be checked
 WARNING: ValueSet.where(id = 'tg263-vs'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://hl7.org/fhir/us/mcode/CodeSystem/tg263-cs

@@ -52,7 +52,7 @@ Description: "mCODE Example for Genomic Variant gene fusion event"
 * component[gene-studied][0].valueCodeableConcept = HGNC#HGNC:1014 "BCR" // NOTE: HGNC and HGVS codes have special characters in them so SUSHI needs to handle this.
 * component[gene-studied][1].valueCodeableConcept = HGNC#HGNC:76 "ABL1"
 //* component[molecularConsequence].valueCodeableConcept = SO#SO:001565 "gene_fusion"
-* component[genomic-hgvs].valueCodeableConcept = HGVS#NM_005157.6(ABL1):c.1076T>G "NM_005157.6(ABL1):c.1076T>G"   // "NM_005157.6(ABL1):c.1076T>G (p.Phe359Cys)"
+* component[genomic-hgvs].valueCodeableConcept = HGVS#NM_005157.6:c.1076T>G "NM_005157.6:c.1076T>G"   // "NM_005157.6(ABL1):c.1076T>G (p.Phe359Cys)"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 

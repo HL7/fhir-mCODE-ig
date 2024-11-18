@@ -3,7 +3,7 @@ canonical: http://hl7.org/fhir/us/mcode
 version:  4.0.0
 name: MinimalCommonOncologyDataElements
 title: "minimal Common Oncology Data Elements (mCODE) Implementation Guide"
-status: trial-use
+status: active
 publisher:
   name: HL7 International / Clinical Interoperability Council
   url: http://www.hl7.org/Special/committees/cic

@@ -84,7 +84,7 @@ Note that the required code for morphology used in STU2 is now inactive.  A new 
 * identifier ^short = "Stable identifier(s) for this tumor"
 * identifier ^definition = "Stable identifier(s) for this specific tumor. The identifiers MUST be unique within the context of the referenced `CancerPatient`."
 * identifier ^comment = "If applicable, an identifier should correspond to the physical tag inserted into the tumor during a procedure that is used for tracking the tumor by radiology and pathology."
-* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Slice containing at least one tumor identifier"

@@ -14,7 +14,7 @@ license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.uv.genomics-reporting: 2.0.0
-  hl7.fhir.uv.extensions: 5.1.0-cibuild
+#  hl7.fhir.uv.extensions: 5.1.0-cibuild
   hl7.fhir.us.core: 
     version: 6.1.0
     id: hl7fhiruscore

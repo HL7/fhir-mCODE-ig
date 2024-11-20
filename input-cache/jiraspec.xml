@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2024May" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig" defaultVersion="3.0.0" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" url="http://hl7.org/fhir/us/mcode">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2024May" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig" defaultVersion="4.0.0" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" url="http://hl7.org/fhir/us/mcode">
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-mCODE-ig"/>
+<version code="4.0.0" url="http://hl7.org/fhir/us/mcode/STU4"/>
 <version code="4.0.0-ballot" url="http://hl7.org/fhir/us/mcode/2024May"/>
 <version code="3.0.0" url="http://hl7.org/fhir/us/mcode/STU3"/>
 <version code="3.0.0-ballot" deprecated="true" url="http://hl7.org/fhir/us/mcode/2023May"/>

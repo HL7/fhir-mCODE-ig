@@ -90,7 +90,7 @@ Description:  "A specimen taken from a Patient for the purpose of oncology-relat
 * subject only Reference(CancerPatient)
 * subject ^definition = "The patient associated with this specimen."
 * insert BodySiteQualifierAndLaterality(collection.bodySite)
-* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Slicing by identifier.type"

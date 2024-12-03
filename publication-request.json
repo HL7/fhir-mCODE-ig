@@ -5,7 +5,7 @@
     "status" : "trial-use",
     "sequence" : "STU4",
     "desc" : "minimal Common Oncology Data Elements (mCODE) STU4",
-    "descmd" : "STU4",
+    "descmd" : "minimal Common Oncology Data Elements (mCODE) STU4",
     "changes" : "change_log.html",
     "mode" : "milestone"
   }

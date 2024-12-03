@@ -24,7 +24,8 @@
   <workgroup key="dev" webcode="healthcaredevices" name="Devices" listserv="healthcaredevices@lists.HL7.org/"/>
   <workgroup key="ec" webcode="ec" name="Emergency Care" listserv="emergencycare@lists.HL7.org/"/>
   <workgroup key="ehr" webcode="ehr" name="Electronic Health Record" listserv="ehr@lists.HL7.org/"/>
-  <workgroup key="director" name="FHIR Director"/>
+  <workgroup key="ex" webcode="ec" name="Executive Committee" listserv="emergencycare@lists.HL7.org/"/>
+  <workgroup key="director" name="FHIR Director" listserv="fhir-director@hl7.org"/>
   <workgroup key="fgb" name="FHIR Governance Board" deprecated="true"/>
   <workgroup key="fhir-i" webcode="fiwg" name="FHIR Infrastructure" listserv="fhir@lists.HL7.org/"/>
   <workgroup key="fmg" webcode="fhirmg" name="FHIR Mgmt Group" listserv="fmg@lists.HL7.org/"/>

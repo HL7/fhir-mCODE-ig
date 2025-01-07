@@ -117,7 +117,9 @@ INFORMATION: Observation/lansky-performance-status-brian-l: Observation.category
 
 # TG263 is a terminology managed by the AAPM.  Mapping is included here for documentation purposes.
 INFORMATION: CodeSystem/tg263-cs: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+
 # This valueset is known to be quite large, so inability to validate is not a problem.
-INFORMATION: ValueSet/mcode-primary-malignant-neoplasm-disorder-vs: ValueSet.compose.include[1]: The value set include has too many codes to validate (0), so each individual code has not been checked
+INFORMATION: ValueSet/mcode-primary-malignant-neoplasm-disorder-vs: ValueSet.compose.include[1]: The value set include has too many codes to validate (1,046), so each individual code has not been checked
+
 # This issue is a commentary on SNOMEDCT, rather than on the valueset.   ALl values have been checked. 
 INFORMATION: ValueSet/mcode-radiotherapy-treatment-location-vs: ValueSet.compose.include[0]: This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended (examples for FSN: [Aortic structure (body structure), Ascending aorta structure (body structure), Branch of brachiocephalic artery (body structure), Carotid artery structure (body structure), Structure of celiac artery (body structure)] and examples for no FSN: [Tumor bed (morphologic abnormality), Scar (morphologic abnormality), Vaginal cuff (morphologic abnormality)])

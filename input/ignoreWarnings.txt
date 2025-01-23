@@ -157,3 +157,8 @@ INFORMATION: ValueSet/mcode-primary-malignant-neoplasm-disorder-vs: ValueSet.com
 
 # This issue is a commentary on SNOMEDCT, rather than on the valueset.   ALl values have been checked. 
 INFORMATION: ValueSet/mcode-radiotherapy-treatment-location-vs: ValueSet.compose.include[0]: This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended (examples for FSN: [Aortic structure (body structure), Ascending aorta structure (body structure), Branch of brachiocephalic artery (body structure), Carotid artery structure (body structure), Structure of celiac artery (body structure)] and examples for no FSN: [Tumor bed (morphologic abnormality), Scar (morphologic abnormality), Vaginal cuff (morphologic abnormality)])
+
+# The meaning of these info messages is not clear
+INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/.basedOn[0]: Details for ServiceRequest/gx-order-tumornormal-gensop-inc matching against profile http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1
+INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/.result[0]: Details for Observation/gx-genomic-variant-somatic-bap1-indel matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[14].resource/*Observation/gx-genomic-diagnostic-implication-bap1*/.derivedFrom[0]: Details for Observation/gx-genomic-variant-somatic-bap1-indel matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1

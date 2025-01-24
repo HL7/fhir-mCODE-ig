@@ -37,7 +37,7 @@ Description: "GenomeX example: Order information"
 * subject = Reference(gx-cancer-patient-adam-anyperson)
 * code = https://www.gensop.com#XT.V4 "xT - 648 gene panel"
 * reasonCode[0].coding[0] = ICD10CM#C34.9 "Malignant neoplasm of unspecified part of bronchus or lung"
-* reasonCode[0].coding[1] = ICDO3#"C34.9 8140/3" "Lung adenocarcinoma"
+* reasonCode[0].coding[1] = ICDO3#8140/3 "Adenocarcinoma, NOS"
 
 Instance: gx-us-core-organization-gensop-inc
 InstanceOf: USCoreOrganization

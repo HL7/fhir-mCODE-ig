@@ -386,7 +386,7 @@ Description: "Example of non-small cell lung cancer."
 * extension[relatedCondition].valueReference = Reference(primary-cancer-condition-nsclc)
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = ICDO3#"C34.9 80463/3" "non small cell"
+* valueCodeableConcept = ICDO3#80463/3 "Non-small cell carcinoma"
 * specimen = Reference(human-specimen-lung)
 * status = #final "final"
 * performer = Reference(us-core-practitioner-kyle-anydoc)

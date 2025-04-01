@@ -59,13 +59,13 @@
 
 * [ECOG Performance - Fully Active](Observation-ecog-performance-status-fully-active.html)
 
-### [Genomic Region Studied][GenomicRegionStudied]
+<!--TODO How is this represented in GRIG STU3? ### [Genomic Region Studied][GenomicRegionStudied]
 
 * [Genomic Region Studied - STK11](Observation-genomic-region-studied-stk11.html)
 
 ### [Genomics Report][GenomicsReport]
 
-* [Genomic Diagnostic Report - John Anyperson](DiagnosticReport-genomics-report-john-anyperson.html)
+* [Genomic Diagnostic Report - John Anyperson](DiagnosticReport-genomics-report-john-anyperson.html)-->
 
 ### [History of Metastatic Cancer][HistoryOfMetastaticCancer]
 

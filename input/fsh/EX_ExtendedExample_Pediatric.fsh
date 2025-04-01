@@ -64,7 +64,7 @@ Instance: hematocrit-brian-l
 InstanceOf: USCoreObservationLab
 Description: "Extended pediatric example: example showing hematocrit blood test result"
 * status = #final "final"
-* code = LNC#20570-8 "Hct VFr Bld"
+* code = LNC#20570-8 "Hct VFr Bld Calc"
 * subject = Reference(cancer-patient-brian-l)
 * effectiveDateTime = "2024-01-04"
 * valueQuantity = 22.3 '%' "%"

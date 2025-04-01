@@ -35,11 +35,12 @@
 [R4ServiceRequest]: http://hl7.org/fhir/R4/servicerequest.html
 
 <!-- Genomics -->
-[Variant]: http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-variant.html
-[TherapeuticImplication]: http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-therapeutic-implication.html
-[DiagnosticImplication]: http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-diagnostic-implication.html
+[Variant]: http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-variant.html
+[TherapeuticImplication]: http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-therapeutic-implication.html
+[DiagnosticImplication]: http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-diagnostic-implication.html
+<!-- TODO How is this represented in GRIG STU3? 
 [MSI]: http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-msi.html
-[TMB]: http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-tmb.html
+[TMB]: http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-tmb.html-->
 
 <!-- Other links -->
 [in-scope patient]: conformance-patients.html

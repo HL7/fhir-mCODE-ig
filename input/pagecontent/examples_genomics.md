@@ -8,9 +8,9 @@
 
 * [Patient bundle containing genomics test data and related resources](Bundle-gx-genomic-bundle-adam-anyperson.html)
 
-### [Genomics Report][GenomicsReport]
+<!-- TODO How is this represented in GRIG STU3? ### [Genomics Report][GenomicsReport]
 
-* [Genomics Report](DiagnosticReport-gx-genomics-report-adam-anyperson.html)
+* [Genomics Report](DiagnosticReport-gx-genomics-report-adam-anyperson.html)-->
 
 ### [Genomic Variants][GenomicVariant]
 
@@ -25,9 +25,9 @@
 * [Genomic Variant - POLRMT](Observation-gx-genomic-variant-somatic-polrmt.html)
 * [Genomic Variant gene fusion event](Observation-gx-genomic-variant-fusion-met-alk.html)
 
-### [Microsatellite Instability][MSI]
+<!-- TODO How is this represented in GRIG STU3? ### [Microsatellite Instability][MSI]
 
-* [Microsatellite Instability](Observation-gx-genomic-msi.html)
+* [Microsatellite Instability](Observation-gx-genomic-msi.html)-->
 
 ### [Specimens for Genomic Testing][HumanSpecimen]
 
@@ -58,9 +58,9 @@
 * [Therapeutic Implications-crizotinib](Observation-gx-genomic-therapeutic-implication-crizotinib.html)	
 * [Therapeutic Implications-lorlatinib](Observation-gx-genomic-therapeutic-implication-lorlatinib.html)
 
-### [Tumor Mutation Burden][TMB]
+<!-- TODO How is this represented in GRIG STU3? ### [Tumor Mutation Burden][TMB]
 
-* [Tumor Mutation Burden](Observation-gx-genomic-tmb.html)
+* [Tumor Mutation Burden](Observation-gx-genomic-tmb.html)-->
 
 
 {% include markdown-link-references.md %}

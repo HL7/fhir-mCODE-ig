@@ -56,27 +56,28 @@ Description: "mCODE Example for Genomic Variant gene fusion event"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
-Instance: genomics-report-john-anyperson
-InstanceOf: mcode-genomics-report
-Description: "mCODE Example for Genomics Report"
-* status = #final "Final"
-* code = LNC#51969-4 "Genetic analysis report"
-* subject = Reference(cancer-patient-john-anyperson)
-* effectiveDateTime = "2019-04-01"
-* specimen = Reference(Specimen/human-specimen-lung)
-* issued = "2019-04-01T11:45:33+11:00"
-* result[variant] = Reference(Observation/genomic-variant-somatic-single-nucleotide)
-* result[region-studied] = Reference(genomic-region-studied-stk11)
+// TODO How is this represented in GRIG STU3? 
+// Instance: genomics-report-john-anyperson
+// InstanceOf: mcode-genomics-report
+// Description: "mCODE Example for Genomics Report"
+// * status = #final "Final"
+// * code = LNC#51969-4 "Genetic analysis report"
+// * subject = Reference(cancer-patient-john-anyperson)
+// * effectiveDateTime = "2019-04-01"
+// * specimen = Reference(Specimen/human-specimen-lung)
+// * issued = "2019-04-01T11:45:33+11:00"
+// * result[variant] = Reference(Observation/genomic-variant-somatic-single-nucleotide)
+// * result[region-studied] = Reference(genomic-region-studied-stk11)
 
-Instance: genomic-region-studied-stk11
-InstanceOf: GenomicRegionStudied
-Description: "mCODE Example for Genomic Region Studied"
-* status = #final "final"
-* subject = Reference(cancer-patient-john-anyperson)
-* effectiveDateTime = "2019-04-01"
-* issued = "2019-04-01T11:45:33+11:00"
-* component[gene-studied].valueCodeableConcept = HGNC#HGNC:11389 "STK11"
-* performer = Reference(us-core-practitioner-owen-oncologist)
+// Instance: genomic-region-studied-stk11
+// InstanceOf: GenomicRegionStudied
+// Description: "mCODE Example for Genomic Region Studied"
+// * status = #final "final"
+// * subject = Reference(cancer-patient-john-anyperson)
+// * effectiveDateTime = "2019-04-01"
+// * issued = "2019-04-01T11:45:33+11:00"
+// * component[gene-studied].valueCodeableConcept = HGNC#HGNC:11389 "STK11"
+// * performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: tumor-marker-test-egf
 InstanceOf: TumorMarkerTest

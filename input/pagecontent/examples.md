@@ -25,7 +25,7 @@ In addition to providing examples of mCODE profiles, this extended example demon
 
 During a routine screening mammography in February 2018, an abnormality was detected as a possible mass and suspected breast cancer. The gynecologist performing the biopsy refers the patient to an oncologist for further workup. An ultrasound-guided biopsy was performed along with prognostic tumor marker tests with [`ER positive`](Observation-tumor-marker-test-er-jenny-m.html), [`PR negative`](Observation-tumor-marker-test-pr-jenny-m.html), and [`HER2 negative`](Observation-tumor-marker-test-her2-jenny-m.html). The patient is referred to an oncologist who clinically reviews the mammogram and tumor marker results, and clinical staged the [`cancer diagnosis`](Condition-primary-cancer-condition-jenny-m.html) as [`cT3`](Observation-tnm-clinical-primary-tumor-category-jenny-m.html)[`N0`](Observation-tnm-clinical-regional-nodes-category-jenny-m.html).
 
-Genetic counseling ordered a [7 gene panel](https://www.invitae.com/en/physician/tests/50001/), and the [`panel results`](DiagnosticReport-genomics-report-jenny-m.html) revealed a [`pathogenic variant`](Observation-genomic-variant-jenny-m.html) [in PALB2 (`c.3549C>A`)](https://www.ncbi.nlm.nih.gov/clinvar/variation/128144/).[^1]
+Genetic counseling ordered a [7 gene panel](https://www.invitae.com/en/physician/tests/50001/), and the panel results revealed a [`pathogenic variant`](Observation-genomic-variant-jenny-m.html) [in PALB2 (`c.3549C>A`)](https://www.ncbi.nlm.nih.gov/clinvar/variation/128144/).[^1]
 
 [^1]: For the purposes of this example, we are assuming that a single relevant variant was returned by the clinical genomics laboratory. In practice, genomics testing may return (many) more variants. The standards for representing genomics data are currently under development by the [HL7 Clinical Genomics Work Group](https://confluence.hl7.org/display/CGW/WorkGroup+Home). The expectation is that mCODE will adopt those standards when they are completed.
 
@@ -55,8 +55,6 @@ A timeline of the narrative is illustrated in the following diagram:
 | [`Clinical Regional Lymph Nodes Category: cN0`](Observation-tnm-clinical-regional-nodes-category-jenny-m.html) | [TNMRegionalNodesCategory]|
 | [`Clinical Distant Metastases Category: cM0`](Observation-tnm-clinical-distant-metastases-category-jenny-m.html)|[TNMDistantMetastasesCategory]|
 | [`Comorbidities: Anxiety, Depression, Hypertension`](Observation-cancer-related-comorbidities-jenny-m.html) | [Comorbidities] |
-| [`Genomic Region: BRCA1`](Observation-genomic-region-studied-jenny-m.html) |[GenomicRegionStudied]|
-| [`Genomics Report`](DiagnosticReport-genomics-report-jenny-m.html)| [GenomicsReport] |
 | [`Genomic Variant Results: Pathogenic Variant in PALB2`](Observation-genomic-variant-jenny-m.html) | [GenomicVariant] |
 | [`Human Specimen: Left Breast`](Specimen-human-specimen-left-breast-jenny-m.html) | [HumanSpecimen] |
 | [`mCODE Patient Bundle: Jenny M`](Bundle-mcode-patient-bundle-jenny-m.html) | [MCODEPatientBundle]|
@@ -73,7 +71,6 @@ A timeline of the narrative is illustrated in the following diagram:
 | [`Pathologic Distant Metastases Category: pM0`](Observation-tnm-pathologic-distant-metastases-category-jenny-m.html)| [TNMDistantMetastasesCategory]|
 | [`Performance Status: ECOG`](Observation-ecog-performance-status-jenny-m.html) | [ECOGPerformanceStatus] |
 | [`Radiation Treatment Summary`](Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m.html) | [RadiotherapyCourseSummary]|
-| [`Seven Gene Panel: BRCA1, BRCA2, CDH1, PALB2, PTEN, STK11, TP53`](Observation-genomic-region-studied-jenny-m.html) |[GenomicRegionStudied]|
 | [`Surgical Procedure: Partial Mastectomy`](Procedure-cancer-related-surgical-procedure-jenny-m.html)|[CancerRelatedSurgicalProcedure] |
 | [`Tumor Marker ER Positive`](Observation-tumor-marker-test-er-jenny-m.html)| [TumorMarkerTest] |
 | [`Tumor Marker PR Negative`](Observation-tumor-marker-test-pr-jenny-m.html)| [TumorMarkerTest] |

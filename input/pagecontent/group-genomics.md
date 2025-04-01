@@ -1,6 +1,6 @@
 ### mCODE Use of Genomics Elements
 
-mCODE includes genomics-related data elements needed to inform cancer assessment and treatment options. The profiles directly derive from the [HL7 CGWG Clinical Genomics Reporting Implementation Guide](https://hl7.org/fhir/uv/genomics-reporting/STU2/index.html) (GRIG) STU2 release. The GRIG provides helpful foundational concepts and guidance for representing different types of genomics reports. mCODE assumes one is familiar with the GRIG content and uses this additional guidance to identify what is clinically actionable and minimal for the purpose of diagnosis, treatment, and monitoring of cancer patients.
+mCODE includes genomics-related data elements needed to inform cancer assessment and treatment options. The profiles directly derive from the [HL7 CGWG Clinical Genomics Reporting Implementation Guide](https://hl7.org/fhir/uv/genomics-reporting/STU3/index.html) (GRIG) STU3 release. The GRIG provides helpful foundational concepts and guidance for representing different types of genomics reports. mCODE assumes one is familiar with the GRIG content and uses this additional guidance to identify what is clinically actionable and minimal for the purpose of diagnosis, treatment, and monitoring of cancer patients.
 
 Three profiles relate to the capture of clinical genomics data:
 
@@ -10,10 +10,10 @@ Three profiles relate to the capture of clinical genomics data:
 
 Additionally, the following GRIG profiles are optionally included in the mCODE bundle:
 
-* [Diagnostic Implication](https://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-diagnostic-implication.html)
-* [Therapeutic Implication](https://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-therapeutic-implication.html)
-* [Tumor Mutation Burden (TMB)](https://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-tmb.html)
-* [Microsatellite Instability (MSI)](https://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-msi.html)
+* [Diagnostic Implication](https://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-diagnostic-implication.html)
+* [Therapeutic Implication](https://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-therapeutic-implication.html)
+<!--TODO How is this represented in GRIG STU3? * [Tumor Mutation Burden (TMB)](https://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-tmb.html)
+* [Microsatellite Instability (MSI)](https://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-msi.html)-->
 
 The diagram below illustrates the distinction within an mCODE bundle.
 
@@ -44,7 +44,7 @@ A minimal set of genomics elements may vary based on the type of test. For examp
 
 **NOTE:** The initial mCODE scope will be with somatic variants in gene panels with the intention that these elements will also serve as foundational for non-oncology use cases.
 
-Despite the variations, there is a general list of common elements. The Electronic Medical Records and Genomics (eMERGE) program provides a good illustration of the sections found in [a generalized pharmacogenomics report](https://hl7.org/fhir/uv/genomics-reporting/STU2/pharmacogenomics.html#how-to-use-the-report-mapping-images) which includes pharmacogenomics. This conceptual representation  serves as a good start for mCODE scoping but needs further guidance on how to specifically show certain representation patterns. These include the following patterns which will be covered in the sections to follow:
+Despite the variations, there is a general list of common elements. The Electronic Medical Records and Genomics (eMERGE) program provides a good illustration of the sections found in [a generalized pharmacogenomics report](https://hl7.org/fhir/uv/genomics-reporting/STU3/pharmacogenomics.html#how-to-use-the-report-mapping-images) which includes pharmacogenomics. This conceptual representation  serves as a good start for mCODE scoping but needs further guidance on how to specifically show certain representation patterns. These include the following patterns which will be covered in the sections to follow:
 
 * Genomics test coding
 * Representing variants
@@ -61,7 +61,7 @@ The identity of non-genomic laboratory tests is typically represented by a [Logi
 
 #### Variant Nomenclature
 
-The [HL7 GRIG guidance on defining variants](https://hl7.org/fhir/uv/genomics-reporting/STU2/sequencing.html) states support for two reporting patterns of specifying variants:
+The [HL7 GRIG guidance on defining variants](https://hl7.org/fhir/uv/genomics-reporting/STU3/sequencing.html) states support for two reporting patterns of specifying variants:
 1. by [HGVS](http://varnomen.hgvs.org/) or [ISCN](https://www.karger.com/Book/Home/279152) nomenclature
 2. by providing multiple component details in the style of VCF columns
 
@@ -70,7 +70,7 @@ Although mCODE should support both formats, it is preferable to use HGVS nomencl
 A full representation of an HGVS variant SHOULD include the following: 
 
 * a transcript identifier or reference sequence id that includes the version number followed by a nomenclature which further characterizes the nature of the variant.
-* the reference sequence assembly version populated in the Variant observation component [reference-sequence-assembly](https://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-finding-definitions.html#Observation.component:reference-sequence-assembly).
+* the reference sequence assembly version populated in the Variant observation component [reference-sequence-assembly](https://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-finding-definitions.html#Observation.component:reference-sequence-assembly).
 
 
 **NOTE**: The FHIR IG publisher validates HGVS-notated variants included in the FHIR examples, however it is not intended to validate all possible variants as there is no single HGVS validation tool that comprehensively covers the most up-to-date recognized variants for a given reference sequence. 
@@ -79,7 +79,7 @@ Every FHIR genomics resource referenced by a genomics report (e.g.: Variant, Dia
 
 #### Representing Clinical Significance
 
-A genomics report will oftentimes include the classification, or clinical significance, of a variant using a five-tier terminology from the American College of Medical Genetics and Genomics (ACMG) and the Association for Molecular Pathology (AMP) [2015 Guidelines for the interpretation of sequence variants](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544753/). The five-tier terminology includes the following categories: pathogenic, likely pathogenic, uncertain significance, likely benign, and benign. In alignment with the GRIG, this is represented in the [DiagnosticImplication](https://hl7.org/fhir/uv/genomics-reporting/StructureDefinition-diagnostic-implication.html) profile as an Observation component, clinical-significance.
+A genomics report will oftentimes include the classification, or clinical significance, of a variant using a five-tier terminology from the American College of Medical Genetics and Genomics (ACMG) and the Association for Molecular Pathology (AMP) [2015 Guidelines for the interpretation of sequence variants](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544753/). The five-tier terminology includes the following categories: pathogenic, likely pathogenic, uncertain significance, likely benign, and benign. In alignment with the GRIG, this is represented in the [DiagnosticImplication](https://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-diagnostic-implication.html) profile as an Observation component, clinical-significance.
 
 #### Pertinent Negatives
 

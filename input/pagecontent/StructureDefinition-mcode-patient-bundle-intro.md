@@ -15,7 +15,7 @@ In addition, the bundle SHOULD contain the following non-mCODE resources, follow
 
 * US Core Observation resources representing vital signs, e.g., patient height, weight, blood pressure
 * Laboratory results from Comprehensive Metabolic Panels (CMP) and Complete Blood Counts (CBC)
-* Relevant resources from the Genomic Reporting IG that interpret genomic findings in terms of implications or medication recommendations, including but not limited to [DiagnosticImplication](http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-diagnostic-implication.html) resources representing evidence for or against a particular disease, condition, or cancer diagnosis.
+* Relevant resources from the Genomic Reporting IG that interpret genomic findings in terms of implications or medication recommendations, including but not limited to [DiagnosticImplication](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-diagnostic-implication.html) resources representing evidence for or against a particular disease, condition, or cancer diagnosis.
 * Additional resources relevant to the patient but not part of mCODE, such as smoking status, family member history, and diagnostic procedures.
 * Any other resources deemed relevant to care of the cancer patient
 

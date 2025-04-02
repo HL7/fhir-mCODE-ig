@@ -290,7 +290,7 @@ Description: "GenomeX mCODE Example for Clinical Significance of VUS - POLRMT"
 * component[clinical-significance].valueCodeableConcept = LNC#LA26333-7 "Uncertain significance"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
-// ******* Tumor Mutation Burden *********
+// ******* Tumor Mutation Burden (mlt: deprecated in GRIG STU3) *********
 // Instance: gx-genomic-tmb
 // InstanceOf: TMB
 // Description: "Example for Tumor Mutation Burden"
@@ -301,7 +301,19 @@ Description: "GenomeX mCODE Example for Clinical Significance of VUS - POLRMT"
 // * valueQuantity.value = 57.1
 // * performer = Reference(us-core-practitioner-owen-oncologist)
 
-// ******* Microsatellite Instability *********
+// ******* Tumor Mutation Burden (revised) *********
+Instance: tumormarkertest-tmb
+InstanceOf: TumorMarkerTest
+Description: "Example for Tumor Mutation Burden"
+* status = #final "final"
+* effectiveDateTime = "2019-04-01"
+* category[us-core] = ObsCat#laboratory
+* code = LNC#94076-7 "Mutations/Megabase [# Ratio] in Tumor" // LOINC code for Tumor mutation burden
+* subject = Reference(gx-cancer-patient-adam-anyperson)
+* valueQuantity.value = 57.1
+* performer = Reference(us-core-practitioner-owen-oncologist)
+
+// ******* Microsatellite Instability (mlt: deprecated in GRIG STU3) *********
 // Instance: gx-genomic-msi
 // InstanceOf: MSI
 // Description: "Example for Microsatellite Instability"
@@ -311,6 +323,18 @@ Description: "GenomeX mCODE Example for Clinical Significance of VUS - POLRMT"
 // * subject = Reference(gx-cancer-patient-adam-anyperson)
 // * valueCodeableConcept = LNC#LA26203-2 "MSI-H"
 // * performer = Reference(us-core-practitioner-owen-oncologist)
+
+// ******* Microsatellite Instability (revised) *********
+Instance: tumormarkertest-msi
+InstanceOf: TumorMarkerTest
+Description: "Example for Microsatellite Instability"
+* status = #final "final"
+* effectiveDateTime = "2019-04-01"
+* category[us-core] = ObsCat#laboratory
+* code = LNC#81695-9 "Microsatellite instability [Interpretation] in Cancer specimen Qualitative"
+* subject = Reference(gx-cancer-patient-adam-anyperson)
+* valueCodeableConcept = LNC#LA26203-2 "MSI-H"  // bound to LOINC answer list for MSI - https://loinc.org/LL3994-2
+* performer = Reference(us-core-practitioner-owen-oncologist)
 
 // ******** Therapeutic Implications *********
 

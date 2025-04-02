@@ -38,7 +38,7 @@
 [Variant]: http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-variant.html
 [TherapeuticImplication]: http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-therapeutic-implication.html
 [DiagnosticImplication]: http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-diagnostic-implication.html
-<!-- TODO How is this represented in GRIG STU3? 
+<!-- TODO How is this represented in GRIG STU3? - MLT: both profiles have been deprecated in STU3. mCODE narrative to represent in TumorMarkerTest.
 [MSI]: http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-msi.html
 [TMB]: http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-tmb.html-->
 

@@ -1,4 +1,4 @@
-// TODO How is this represented in GRIG STU3? 
+// TODO How is this represented in GRIG STU3?  // MLT: Profile deprecated in GRIG STU3. It's now under Genomic Study Analysis.
 // Profile:    GenomicRegionStudied
 // Parent:     RegionStudied
 // Id:         mcode-genomic-region-studied
@@ -47,19 +47,19 @@ Description:    "Details about a set of changes in the tested sample compared to
 * status and category and code and subject and effective[x] and effectiveDateTime and value[x] and dataAbsentReason and method and specimen and component MS
 
 // TODO How is this represented in GRIG STU3? 
-// Profile:     GenomicsReport
-// Parent:      http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report
-// Id:          mcode-genomics-report
-// Title:      "Genomics Report Profile"
-// Description:    "Genomic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
-// * ^extension[FMM].valueInteger = 1
-// * category[Genetics].coding 1..1  // To prevent the message "The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)"
-// * subject only Reference(CancerPatient)
-// * specimen only Reference(HumanSpecimen)
-// * result[variant] only Reference(GenomicVariant)
+Profile:    GenomicsReport
+Parent:      CGReport
+Id:          mcode-genomics-report
+Title:      "Genomics Report Profile"
+Description:    "Genomic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
+* ^extension[FMM].valueInteger = 1
+* category[Genetics].coding 1..1  // To prevent the message "The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)"
+* subject only Reference(CancerPatient)
+* specimen only Reference(HumanSpecimen)
+* result[variant] only Reference(GenomicVariant)
 // * result[region-studied] only Reference(GenomicRegionStudied)
 // * result[region-studied] and result[variant] MS
-// * status and category and code and subject and effective[x] and effectiveDateTime and issued and performer and result and specimen MS
+* status and category and code and subject and effective[x] and effectiveDateTime and issued and performer and result and specimen MS
 
 Profile: TumorMarkerTest
 Parent:  USCoreObservationLab

@@ -6,10 +6,11 @@ Three profiles relate to the capture of clinical genomics data:
 
 * [GenomicsReport] - Contains results of genomic analyses. Genomic reports vary in complexity and content, as simple as the results for a single discrete variant to complex sequences. This profile inherits from the profile of the same name in GRIG.
 * [GenomicVariant] - Used to record variants that could be found from tests that broadly analyze genomic regions (e.g.: exome tests) and stores results for any variants that could have been found. The region in which the variant was found could be specified in the RegionStudied attribute of the GenomicsReport profile. This profile derives from the Variant profile in GRIG.
-* [GenomicRegionStudied] - Used to record the portion(s) of the genome that was tested for variants. This profile derives from the RegionStudied profile in GRIG.
 
 Additionally, the following GRIG profiles are optionally included in the mCODE bundle:
 
+* [Genomic Study](https://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genomic-study.html)
+* [Genomic Study Analysis](https://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genomic-study-analysis.html)
 * [Diagnostic Implication](https://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-diagnostic-implication.html)
 * [Therapeutic Implication](https://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-therapeutic-implication.html)
 <!--TODO How is this represented in GRIG STU3? * [Tumor Mutation Burden (TMB)](https://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-tmb.html)
@@ -22,6 +23,12 @@ The diagram below illustrates the distinction within an mCODE bundle.
 </div>>
 
 <br/>
+
+<blockquote class="stu-note">
+    <p>
+    The GRIG STU3 publication made significant changes affecting the prior mCODE representation for key elements. These include: Region Studied, Tumor Mutation Burden (TMB), Microsatellite Instability (MSI). Reference the mCODE Change Log for further details.
+    </p>
+</blockquote>
 
 The mCODE example [`Bundle-gx-genomic-bundle-adam-anyperson`](Bundle-gx-genomic-bundle-adam-anyperson.html) demonstrates a bundle containing resources conforming with the GRIG genomics report.
 

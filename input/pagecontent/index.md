@@ -25,7 +25,7 @@ The overall scope of mCODE and the relationships between mCODE profiles is shown
 3. Additional profiles can be derived from mCODE profiles. It is expected that mCODE will serve as the basis for future implementation guides dealing with new use cases, particular types of cancer, or specific demographic groups using mCODE as a base. ***Example:** Radiation oncologists and vendors collaborated on a [radiation therapy implementation guide](https://hl7.org/fhir/us/codex-radiation-therapy) that extends mCODE and facilitates structured data sharing between radiation oncology information systems and other health information systems.*
 
 <br/>
-<object data="mCodeDiagram.svg" type="image/svg+xml"></object>
+<object data="mCodeDiagram4-1.svg" type="image/svg+xml"></object>
 <br/>
 
 ### Data Dictionary

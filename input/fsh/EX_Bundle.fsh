@@ -46,8 +46,8 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-distant-metastases-category-jenny-m"
 * entry[+].resource = human-specimen-left-breast-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Specimen/human-specimen-left-breast-jenny-m"
-* entry[+].resource = genomic-region-studied-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/genomic-region-studied-jenny-m"
+// * entry[+].resource = genomic-region-studied-jenny-m
+// * entry[=].fullUrl = "http://example.org/fhir/Observation/genomic-region-studied-jenny-m"
 * entry[+].resource = ecog-performance-status-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/ecog-performance-status-jenny-m"
 * entry[+].resource = tumor-marker-test-er-jenny-m

@@ -1,19 +1,19 @@
 ### mCODE Use of Genomics Elements
 
-mCODE includes genomics-related data elements needed to inform cancer assessment and treatment options. The profiles directly derive from the [HL7 CGWG Clinical Genomics Reporting Implementation Guide](https://hl7.org/fhir/uv/genomics-reporting/STU2/index.html) (GRIG) STU2 release. The GRIG provides helpful foundational concepts and guidance for representing different types of genomics reports. mCODE assumes one is familiar with the GRIG content and uses this additional guidance to identify what is clinically actionable and minimal for the purpose of diagnosis, treatment, and monitoring of cancer patients.
+mCODE includes genomics-related data elements needed to inform cancer assessment and treatment options. The profiles directly derive from the [HL7 CGWG Clinical Genomics Reporting Implementation Guide](https://hl7.org/fhir/uv/genomics-reporting/STU3/index.html) (GRIG) STU3 release. The GRIG provides helpful foundational concepts and guidance for representing different types of genomics reports. mCODE assumes one is familiar with the GRIG content and uses this additional guidance to identify what is clinically actionable and minimal for the purpose of diagnosis, treatment, and monitoring of cancer patients.
 
-Three profiles relate to the capture of clinical genomics data:
+The GRIG STU3 release introduces a new and more flexible paradigm for representing 
 
-* [GenomicsReport] - Contains results of genomic analyses. Genomic reports vary in complexity and content, as simple as the results for a single discrete variant to complex sequences. This profile inherits from the profile of the same name in GRIG.
+Two profiles are relevant in the minimal capture of clinical genomics data:
+
+* [GenomicsReport] - Contains results of genomic analyses. Genomic reports vary in complexity and content, as simple as the results for a single discrete variant to complex sequences. This profile inherits from the profile of the same name in GRIG. The GRIG STU3 represents GenomicReport as a container for one or more [GenomicStudy](https://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genomic-study.html) resources that represent individual analyses of genomic data.
 * [GenomicVariant] - Used to record variants that could be found from tests that broadly analyze genomic regions (e.g.: exome tests) and stores results for any variants that could have been found. The region in which the variant was found could be specified in the RegionStudied attribute of the GenomicsReport profile. This profile derives from the Variant profile in GRIG.
-* [GenomicRegionStudied] - Used to record the portion(s) of the genome that was tested for variants. This profile derives from the RegionStudied profile in GRIG.
+<!-- * [GenomicRegionStudied] - Used to record the portion(s) of the genome that was tested for variants. This profile derives from the RegionStudied profile in GRIG. -->
 
 Additionally, the following GRIG profiles are optionally included in the mCODE bundle:
 
-* [Diagnostic Implication](https://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-diagnostic-implication.html)
-* [Therapeutic Implication](https://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-therapeutic-implication.html)
-* [Tumor Mutation Burden (TMB)](https://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-tmb.html)
-* [Microsatellite Instability (MSI)](https://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-msi.html)
+* [Diagnostic Implication](https://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-diagnostic-implication.html)
+* [Therapeutic Implication](https://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-therapeutic-implication.html)
 
 The diagram below illustrates the distinction within an mCODE bundle.
 
@@ -93,10 +93,11 @@ Represent pertinent negatives by creating one instance of GenomicVariant with th
 
 A fusion gene is made by joining parts of two different genes. Fusion genes, and the fusion proteins that come from them, arise when part of the DNA from one chromosome moves to another chromosome. Fusion proteins produced by this change may lead to the development of some types of cancer (source: [NCI Cancer Dictionary](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/fusion-gene)).
 
-mCODE represents a fusion gene as an instance of **GenomicVariant** with the following changes:
+mCODE represents a fusion gene as a combination of two resources: **GenomicVariant** and **MolecularConsequence**:
 
-* The _**molecularConsequence**_ component is fixed to the SequenceOntology code _SO:001565_ (gene_fusion)
-* Two _**geneStudied**_ components are included, one for each gene involved in the fusion event
+* _**GenomicVariant**_ shall contain two **gene-studied**_ components, one for each gene involved in the fusion event
+* The _**MolecularConsequence**_ resource _derivedFrom_ element shall reference the GenomicVariant instance which represents the fusion genes.
+
 
 The diagram below shows an example representation for the gene fusion BCR_ABL1:
 

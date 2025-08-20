@@ -66,17 +66,17 @@ Description: "mCODE Example for Genomics Report"
 * specimen = Reference(Specimen/human-specimen-lung)
 * issued = "2019-04-01T11:45:33+11:00"
 * result[variant] = Reference(Observation/genomic-variant-somatic-single-nucleotide)
-* result[region-studied] = Reference(genomic-region-studied-stk11)
+// * result[region-studied] = Reference(genomic-region-studied-stk11)
 
-Instance: genomic-region-studied-stk11
-InstanceOf: GenomicRegionStudied
-Description: "mCODE Example for Genomic Region Studied"
-* status = #final "final"
-* subject = Reference(cancer-patient-john-anyperson)
-* effectiveDateTime = "2019-04-01"
-* issued = "2019-04-01T11:45:33+11:00"
-* component[gene-studied].valueCodeableConcept = HGNC#HGNC:11389 "STK11"
-* performer = Reference(us-core-practitioner-owen-oncologist)
+// Instance: genomic-region-studied-stk11
+// InstanceOf: GenomicRegionStudied
+// Description: "mCODE Example for Genomic Region Studied"
+// * status = #final "final"
+// * subject = Reference(cancer-patient-john-anyperson)
+// * effectiveDateTime = "2019-04-01"
+// * issued = "2019-04-01T11:45:33+11:00"
+// * component[gene-studied].valueCodeableConcept = HGNC#HGNC:11389 "STK11"
+// * performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: tumor-marker-test-egf
 InstanceOf: TumorMarkerTest

@@ -99,12 +99,12 @@ Description: "GenomeX mCODE Example for Genomic Variant - BAP1"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:950 "BAP1"
 * component[gene-studied].valueCodeableConcept.coding[1] = ENTREZ#3815 "BAP1"
-* component[transcript-ref-seq].valueCodeableConcept = NCBI#NM_004656 "NM_004656.4"
-* component[coding-hgvs].valueCodeableConcept = HGVS#NM_004656.4:c.1768C>T "NM_004656.4:c.1768C>T"
-* component[protein-hgvs].valueCodeableConcept = HGVS#NP_004647.1:p.(Gln590Ter) "NP_004647.1:p.(Gln590Ter)"  // Mutalizer normalized HGVS string for HGVS#p.Q590* "p.Q590*".
+// * component[transcript-ref-seq].valueCodeableConcept = NCBI#NM_004656 "NM_004656.4"
+// * component[coding-hgvs].valueCodeableConcept = HGVS#NM_004656.4:c.1768C>T "NM_004656.4:c.1768C>T"
+// * component[protein-hgvs].valueCodeableConcept = HGVS#NP_004647.1:p.(Gln590Ter) "NP_004647.1:p.(Gln590Ter)"  // Mutalizer normalized HGVS string for HGVS#p.Q590* "p.Q590*".
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[sample-allelic-frequency].valueQuantity = 57.4 '%' "%"
-* component[molecular-consequence].valueCodeableConcept = SO#SO:0001587 "stop_gained"
+// * component[molecular-consequence].valueCodeableConcept = SO#SO:0001587 "stop_gained"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
@@ -115,7 +115,7 @@ Description: "GenomeX mCODE Example for functional effect (loss of function) - B
 * subject = Reference(gx-cancer-patient-adam-anyperson)
 * effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx-genomic-variant-somatic-bap1-indel)
-* component[functional-effect].valueCodeableConcept = SO#SO:0002054 "loss of function variant"
+// component[functional-effect].valueCodeableConcept = SO#SO:0002054 "loss of function variant"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-variant-somatic-cdkn2a-cnv
@@ -129,7 +129,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - CDKN2A"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:1787 "CDKN2A"
 * component[gene-studied].valueCodeableConcept.coding[1] = ENTREZ#1029 "CDKN2A"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
-* component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
+// * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
@@ -144,7 +144,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - CDKN2B"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:1788 "CDKN2B"
 * component[gene-studied].valueCodeableConcept.coding[1] = ENTREZ#1030 "CDKN2B"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
-* component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
+// * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
@@ -159,7 +159,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - KDM5D"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:11115 "KDM5D"
 * component[gene-studied].valueCodeableConcept.coding[1] = ENTREZ#8284 "KDM5D"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
-* component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
+// * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
@@ -174,7 +174,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - MTAP"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:7413 "MTAP"
 * component[gene-studied].valueCodeableConcept.coding[1] = ENTREZ#4507 "MTAP"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
-* component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
+// * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
@@ -189,7 +189,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - MYCN"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:7559 "MYCN"
 * component[gene-studied].valueCodeableConcept.coding[1] = ENTREZ#4613 "MYCN"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
-* component[molecular-consequence].valueCodeableConcept = SO#SO:0001742 "copy_number_gain"
+// * component[molecular-consequence].valueCodeableConcept = SO#SO:0001742 "copy_number_gain"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
@@ -241,10 +241,10 @@ Description: "GenomeX mCODE Example for Genomic Variant - POF1B"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:13711 "POF1B"
 * component[gene-studied].valueCodeableConcept.coding[1] = ENTREZ#79983 "POF1B"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
-* component[molecular-consequence].valueCodeableConcept = SO#SO:0001583 "missense_variant"
-* component[transcript-ref-seq].valueCodeableConcept = NCBI#NM_004656 "NM_004656"
-* component[coding-hgvs].valueCodeableConcept = HGVS#NM_001307940.2:c.430C>T "NM_001307940.2:c.430C>T"
-* component[protein-hgvs].valueCodeableConcept = HGVS#NP_001294869.1:p.(Pro144Ser) "NP_001294869.1:p.(Pro144Ser)"  // VariantValidator normalized HGVS string for p.P144S*".
+// * component[molecular-consequence].valueCodeableConcept = SO#SO:0001583 "missense_variant"
+// * component[transcript-ref-seq].valueCodeableConcept = NCBI#NM_004656 "NM_004656"
+// * component[coding-hgvs].valueCodeableConcept = HGVS#NM_001307940.2:c.430C>T "NM_001307940.2:c.430C>T"
+// * component[protein-hgvs].valueCodeableConcept = HGVS#NP_001294869.1:p.(Pro144Ser) "NP_001294869.1:p.(Pro144Ser)"  // VariantValidator normalized HGVS string for p.P144S*".
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[sample-allelic-frequency].valueQuantity = 78.6 '%' "%"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
@@ -271,10 +271,10 @@ Description: "GenomeX mCODE Example for Genomic Variant - POLRMT"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:9200 "POLRMT"
 * component[gene-studied].valueCodeableConcept.coding[0] = ENTREZ#5442 "POLRMT"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
-* component[molecular-consequence].valueCodeableConcept = SO#SO:0001583 "missense_variant"
-* component[transcript-ref-seq].valueCodeableConcept = NCBI#NM_004656 "NM_005035"
-* component[coding-hgvs].valueCodeableConcept = HGVS#NM_005035.4:c.598G>A "NM_005035.4:c.598G>A"
-* component[protein-hgvs].valueCodeableConcept = HGVS#NP_005026.3:p.(Gly200Arg) "NP_005026.3:p.(Gly200Arg)"  // VariantValidator normalized HGVS string for p.G200R
+// * component[molecular-consequence].valueCodeableConcept = SO#SO:0001583 "missense_variant"
+// * component[transcript-ref-seq].valueCodeableConcept = NCBI#NM_004656 "NM_005035"
+// * component[coding-hgvs].valueCodeableConcept = HGVS#NM_005035.4:c.598G>A "NM_005035.4:c.598G>A"
+// * component[protein-hgvs].valueCodeableConcept = HGVS#NP_005026.3:p.(Gly200Arg) "NP_005026.3:p.(Gly200Arg)"  // VariantValidator normalized HGVS string for p.G200R
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[sample-allelic-frequency].valueQuantity = 75.6 '%' "%"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
@@ -292,22 +292,24 @@ Description: "GenomeX mCODE Example for Clinical Significance of VUS - POLRMT"
 
 // ******* Tumor Mutation Burden *********
 Instance: gx-genomic-tmb
-InstanceOf: TMB
+InstanceOf: Observation
 Description: "Example for Tumor Mutation Burden"
 * status = #final "final"
 * effectiveDateTime = "2019-04-01"
-* category[labCategory] = ObsCat#laboratory
+* category = ObsCat#laboratory
+* code = LNC#94076-7
 * subject = Reference(gx-cancer-patient-adam-anyperson)
 * valueQuantity.value = 57.1
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
 // ******* Microsatellite Instability *********
 Instance: gx-genomic-msi
-InstanceOf: MSI
+InstanceOf: Observation
 Description: "Example for Microsatellite Instability"
 * status = #final "final"
 * effectiveDateTime = "2019-04-01"
-* category[labCategory] = ObsCat#laboratory
+* category = ObsCat#laboratory
+* code = LNC#81695-9
 * subject = Reference(gx-cancer-patient-adam-anyperson)
 * valueCodeableConcept = LNC#LA26203-2 "MSI-H"
 * performer = Reference(us-core-practitioner-owen-oncologist)
@@ -323,7 +325,7 @@ Description: "Example of how Genomics Reporting IG Therapeutic Implications fits
 * category[labCategory] = ObsCat#laboratory
 * derivedFrom = Reference(gx-genomic-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1727455 "alectinib"
-* component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
+// * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-therapeutic-implication-brigatinib
@@ -335,7 +337,7 @@ Description: "Example of how Genomics Reporting IG Therapeutic Implications fits
 * category[labCategory] = ObsCat#laboratory
 * derivedFrom = Reference(gx-genomic-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1921217 "brigatinib"
-* component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
+// * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-therapeutic-implication-ceritinib
@@ -347,7 +349,7 @@ Description: "Example of how Genomics Reporting IG Therapeutic Implications fits
 * effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx-genomic-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1535457 "ceritinib"
-* component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
+// * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-therapeutic-implication-crizotinib
@@ -359,7 +361,7 @@ Description: "Example of how Genomics Reporting IG Therapeutic Implications fits
 * category[labCategory] = ObsCat#laboratory
 * derivedFrom = Reference(gx-genomic-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1148495 "crizotinib"
-* component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
+// * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
 Instance: gx-genomic-therapeutic-implication-lorlatinib
@@ -371,7 +373,7 @@ Description: "Example of how Genomics Reporting IG Therapeutic Implications fits
 * category[labCategory] = ObsCat#laboratory
 * derivedFrom = Reference(gx-genomic-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#2103164 "lorlatinib"
-* component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
+// * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
 // ********** Genomics Report ***********

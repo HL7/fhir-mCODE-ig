@@ -1,6 +1,13 @@
 
 For a history of changes prior to STU4, please see the prior change logs in the [appropriate versions](https://hl7.org/fhir/us/mcode/history.html).
 
+### Alignment of mCODE with the HL7 Genomics Reporting FHIR Implementation Guide (GRIG) v3.0.0 (STU3)
+mCODE STU4 alignment with GRIG STU3 resulted in several substantive and breaking changes:
+* deprecated mCODE profiles - Region Studied
+* deprecated GRIG profiles that were used by mCODE - TMB, MSI
+* removal elements from the GenomicVariant - molecular-consequence, protein-hgvs, amino-acid-change-type.
+* addition of a new profile in GRIG STU3 named Molecular Consequence which now includes the removed elements from GenomicVariant.
+
 ### Support for Staging Systems
 See the section on cancer staging.
 

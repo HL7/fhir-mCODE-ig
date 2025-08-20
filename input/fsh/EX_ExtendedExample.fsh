@@ -336,26 +336,26 @@ Description: "Extended example: example of gene panel report"
 * issued = "2020-03-15T00:00:01+00:00"
 * specimen = Reference(human-specimen-left-breast-jenny-m)
 * result[0] = Reference(genomic-variant-jenny-m)
-* result[1] = Reference(genomic-region-studied-jenny-m)
+// * result[1] = Reference(genomic-region-studied-jenny-m)
 * performer = Reference(us-core-practitioner-owen-oncologist)
 
-Instance: genomic-region-studied-jenny-m
-InstanceOf: GenomicRegionStudied
-Description: "Extended example: example showing which regions were included in the genomics panel"
-* status = #final "final"
-* code = LNC#53041-0 "DNA region of interest panel"
-* subject = Reference(cancer-patient-jenny-m)
-* performer = Reference(us-core-practitioner-owen-oncologist)
-* effectiveDateTime = "2018-03-15"
-* issued = "2018-03-15T00:00:01+00:00"
-* component.code = LNC#48018-6 "Gene studied [ID]"
-* component[gene-studied].valueCodeableConcept.coding[+] = HGNC#1100 "BRCA1"
-* component[gene-studied].valueCodeableConcept.coding[+] = HGNC#1101 "BRCA2"
-* component[gene-studied].valueCodeableConcept.coding[+] = HGNC#1748 "CDH1"
-* component[gene-studied].valueCodeableConcept.coding[+] = HGNC#26144 "PALB2"
-* component[gene-studied].valueCodeableConcept.coding[+] = HGNC#9588 "PTEN"
-* component[gene-studied].valueCodeableConcept.coding[+] = HGNC#11389 "STK11"
-* component[gene-studied].valueCodeableConcept.coding[+] = HGNC#11998 "TP53"
+// Instance: genomic-region-studied-jenny-m
+// InstanceOf: GenomicRegionStudied
+// Description: "Extended example: example showing which regions were included in the genomics panel"
+// * status = #final "final"
+// * code = LNC#53041-0 "DNA region of interest panel"
+// * subject = Reference(cancer-patient-jenny-m)
+// * performer = Reference(us-core-practitioner-owen-oncologist)
+// * effectiveDateTime = "2018-03-15"
+// * issued = "2018-03-15T00:00:01+00:00"
+// * component.code = LNC#48018-6 "Gene studied [ID]"
+// * component[gene-studied].valueCodeableConcept.coding[+] = HGNC#1100 "BRCA1"
+// * component[gene-studied].valueCodeableConcept.coding[+] = HGNC#1101 "BRCA2"
+// * component[gene-studied].valueCodeableConcept.coding[+] = HGNC#1748 "CDH1"
+// * component[gene-studied].valueCodeableConcept.coding[+] = HGNC#26144 "PALB2"
+// * component[gene-studied].valueCodeableConcept.coding[+] = HGNC#9588 "PTEN"
+// * component[gene-studied].valueCodeableConcept.coding[+] = HGNC#11389 "STK11"
+// * component[gene-studied].valueCodeableConcept.coding[+] = HGNC#11998 "TP53"
 
 Instance: genomic-variant-jenny-m
 InstanceOf: GenomicVariant
